@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
 
-public class Darkness : MonoBehaviour
+public class DarkForegroundBehaviour : MonoBehaviour
 {
     Tilemap tile;
 

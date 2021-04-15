@@ -14,6 +14,7 @@ public class EnemySpider : EnemyScript
         {
             PlayerController.Instance.playerHealthComponent.TakeDamage(damagetoGive);
             Debug.Log("Damage given to player: " + damagetoGive);
+            
         }
     }
 
