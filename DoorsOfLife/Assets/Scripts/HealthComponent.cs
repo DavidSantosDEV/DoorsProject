@@ -1,0 +1,90 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HealthComponent : MonoBehaviour
+{
+    [Header("Health Settings")]
+    [SerializeField]
+    protected float MaxHealth;
+    [SerializeField][Range(0,2)]
+    protected float invencibilityTime = 1f;
+    //[SerializeField]
+    //private bool isPlayer = false;
+    [SerializeField]
+    private bool RecoverableHealth = false;
+
+    protected bool IframesOn=false;
+    protected bool isDead=false;
+    [SerializeField] //This is just for show
+    protected float currentHealth;
+
+    //private Animator myAnimator=null;
+    //private PlayerAnimation myPlayerAnimation=null;
+
+    // Start is called before the first frame update
+    protected virtual void Start()
+    {
+        currentHealth = MaxHealth;
+    }
+
+    public virtual void TakeDamage(float dmgVal)
+    {
+        if (isDead || IframesOn) return;
+        currentHealth = Mathf.Clamp(currentHealth - dmgVal, 0, MaxHealth);
+        StartCoroutine(Invencible());
+        if (currentHealth == 0)
+        {
+            Die();
+        }
+    }
+
+    public virtual void Heal(float ammount)
+    {
+
+    }
+
+    public void BeginInvencibilityPeriod()
+    {
+        IframesOn = true;
+        Invoke(nameof(EndInvencibilityPeriod), invencibilityTime);
+    }
+
+    public void EndInvencibilityPeriod()
+    {
+        IframesOn = false;
+    }
+
+    private IEnumerator RecoverLifeOverTime()
+    {
+        while (true)
+        {
+            
+            yield return new WaitForSeconds(0.1f);
+            OnHealthRecouped();
+        }
+        
+    }
+
+    protected virtual void OnHealthRecouped()
+    {
+        Debug.Log("Health recovered");
+    }
+
+    protected IEnumerator Invencible()
+    {
+        IframesOn = true;
+        yield return new WaitForSeconds(invencibilityTime);
+        IframesOn = false;
+    }
+
+    protected virtual void Die()
+    {
+        isDead = true;
+    }
+
+    public void DestroyTheParent()
+    {
+        Destroy(gameObject);
+    }
+}

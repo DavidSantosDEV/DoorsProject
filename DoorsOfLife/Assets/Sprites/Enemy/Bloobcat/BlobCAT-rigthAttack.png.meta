@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 98af6de507da63f42bda531c6aea89cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3463644290576123844
+    second: BlobCAT-rigthAttack_0
+  - first:
+      213: -4310837211703962340
+    second: BlobCAT-rigthAttack_1
+  - first:
+      213: 2384740585825731495
+    second: BlobCAT-rigthAttack_2
+  - first:
+      213: 1180788992485594207
+    second: BlobCAT-rigthAttack_3
+  - first:
+      213: -6755579257816613658
+    second: BlobCAT-rigthAttack_4
+  - first:
+      213: -7242130794547252533
+    second: BlobCAT-rigthAttack_5
+  - first:
+      213: -5324870634752132929
+    second: BlobCAT-rigthAttack_6
+  - first:
+      213: 5586586595445250651
+    second: BlobCAT-rigthAttack_7
+  - first:
+      213: 8224344509944973952
+    second: BlobCAT-rigthAttack_8
+  - first:
+      213: -798781962947205026
+    second: BlobCAT-rigthAttack_9
+  - first:
+      213: 7038323229428294637
+    second: BlobCAT-rigthAttack_10
+  - first:
+      213: -3911582031510790256
+    second: BlobCAT-rigthAttack_11
+  - first:
+      213: -2500524964616935040
+    second: BlobCAT-rigthAttack_12
+  - first:
+      213: 3582118823144519404
+    second: BlobCAT-rigthAttack_13
+  - first:
+      213: 5584308726255251784
+    second: BlobCAT-rigthAttack_14
+  - first:
+      213: -4741404228641989201
+    second: BlobCAT-rigthAttack_15
+  - first:
+      213: -2944012390479844175
+    second: BlobCAT-rigthAttack_16
+  - first:
+      213: 9198487036158238394
+    second: BlobCAT-rigthAttack_17
+  - first:
+      213: -7577015080676834409
+    second: BlobCAT-rigthAttack_18
+  - first:
+      213: 607284997809391632
+    second: BlobCAT-rigthAttack_19
+  - first:
+      213: -3052765891330584905
+    second: BlobCAT-rigthAttack_20
+  - first:
+      213: 2566792750857135652
+    second: BlobCAT-rigthAttack_21
+  - first:
+      213: 6726439085323799911
+    second: BlobCAT-rigthAttack_22
+  - first:
+      213: -8433808830715005005
+    second: BlobCAT-rigthAttack_23
+  - first:
+      213: -6926534048187825875
+    second: BlobCAT-rigthAttack_24
+  - first:
+      213: -6691342696863731083
+    second: BlobCAT-rigthAttack_25
+  - first:
+      213: -4565951345498304877
+    second: BlobCAT-rigthAttack_26
+  - first:
+      213: -3681225964666162355
+    second: BlobCAT-rigthAttack_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3876ef6ed9aeefc0800000000000000
+      internalID: -3463644290576123844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 384
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1599df4564dc24c0800000000000000
+      internalID: -4310837211703962340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_2
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 384
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3899b8dec481120800000000000000
+      internalID: 2384740585825731495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_3
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 384
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f549bc32551036010800000000000000
+      internalID: 1180788992485594207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_4
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 384
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecf7d5257c5f32a0800000000000000
+      internalID: -6755579257816613658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_5
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 384
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2f71ea968ce7b90800000000000000
+      internalID: -7242130794547252533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8b0bcbe524a16b0800000000000000
+      internalID: -5324870634752132929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_7
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 288
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a1978d8ea878d40800000000000000
+      internalID: 5586586595445250651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_8
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 288
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a44b1e1cdb22270800000000000000
+      internalID: 8224344509944973952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_9
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 288
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58ea8d69082ae4f0800000000000000
+      internalID: -798781962947205026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_10
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 288
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de32470cfa52da160800000000000000
+      internalID: 7038323229428294637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_11
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 288
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f9ff5edd447b9c0800000000000000
+      internalID: -3911582031510790256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089e2040bc95c4dd0800000000000000
+      internalID: -2500524964616935040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_13
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 192
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6f4cc371e36b130800000000000000
+      internalID: 3582118823144519404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_14
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 192
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841fe8813337f7d40800000000000000
+      internalID: 5584308726255251784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_15
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 192
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad524f99f5233eb0800000000000000
+      internalID: -4741404228641989201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_16
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 192
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bca9133454c427d0800000000000000
+      internalID: -2944012390479844175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_17
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 192
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe5f35493797af70800000000000000
+      internalID: 9198487036158238394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793ca7acde809d690800000000000000
+      internalID: -7577015080676834409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_19
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 96
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0184adbec728d6800800000000000000
+      internalID: 607284997809391632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_20
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 96
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7becfc8989562a5d0800000000000000
+      internalID: -3052765891330584905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_21
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 96
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42623ee48641f9320800000000000000
+      internalID: 2566792750857135652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_22
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 96
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d470cb5bc195d50800000000000000
+      internalID: 6726439085323799911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_23
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 96
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7fdad7d8715fa80800000000000000
+      internalID: -8433808830715005005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21cd154bf100ef90800000000000000
+      internalID: -6926534048187825875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_25
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572780bf4439323a0800000000000000
+      internalID: -6691342696863731083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_26
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e4bd5517b72a0c0800000000000000
+      internalID: -4565951345498304877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlobCAT-rigthAttack_27
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 238
+        height: 96
+      alignment: 9
+      pivot: {x: 0.15, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43f0263d78a9ecc0800000000000000
+      internalID: -3681225964666162355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

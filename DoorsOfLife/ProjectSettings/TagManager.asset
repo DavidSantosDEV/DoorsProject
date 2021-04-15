@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Reflectable
+  - PlayerFeet
+  - EnemyFeet
+  - ObjectMovable
+  - Interactible
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Object
+  - Enemy
+  - PostProcessing
+  - UINoPostProcess
+  - Player
+  - BossArm
+  - BossHead
+  - Obstacle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 1603675923
+    locked: 0
+  - name: Background
+    uniqueID: 1151517435
+    locked: 0
+  - name: BackgroundCeiling
+    uniqueID: 2753796371
+    locked: 0
+  - name: Middle
+    uniqueID: 1909559719
+    locked: 0
+  - name: MiddleUp
+    uniqueID: 2406452569
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1950792561
+    locked: 0
+  - name: Darkness
+    uniqueID: 128419897
+    locked: 0
+  - name: PlayerUI
+    uniqueID: 3977714529
+    locked: 0

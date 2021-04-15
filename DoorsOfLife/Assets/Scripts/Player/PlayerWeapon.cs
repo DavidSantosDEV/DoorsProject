@@ -1,0 +1,122 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerWeapon : MonoBehaviour
+{
+    //Angle to vector 2 = (Vector2)(Quaternion.Euler(0, 0, aimAngle) * Vector2.right)
+
+    public enum AttackState
+    {
+        Idle,
+        Preparing, //May be useless, probably deleting preparing state
+        Attacking,
+        WaitFollow
+    }
+
+
+
+    [Header("Melee Weapon Settings")]
+    [SerializeField]
+    private float damage=20f;
+    [SerializeField][Range(0,3)]
+    private float meleeWidth = 2f;
+    [SerializeField][Range(0.5f,2f)]
+    private float meleeRange = 1;
+    /*[SerializeField][Range(1,2)]
+    private float damageMultiplier=1.1f;*/
+    private AttackState currentAttackState=AttackState.Idle;
+    private ushort currentAttackChain = 0;
+    [SerializeField]
+    private Transform attackPoint;
+    [SerializeField]
+    private LayerMask weaponHitLayers;
+
+    private Vector2 currentAttackDirection;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (!attackPoint) attackPoint = transform;
+    }
+
+    //Melee -----------------------------------------------------------
+    public void ChangeAttackState(AttackState state)
+    {
+        currentAttackState = state;
+    }
+
+    public void PlayerAttack(Vector2 AttackDirection)
+    {
+        currentAttackDirection = AttackDirection;
+        attackPoint.localPosition = AttackDirection * meleeRange;
+
+        //Debug.Log(attackPoint.localPosition);
+
+        switch (currentAttackState)
+        {
+            case AttackState.Idle:
+                ResetAttack();
+                doAttack(currentAttackChain);
+                break;
+            case AttackState.WaitFollow:
+                currentAttackChain++;
+                doAttack(currentAttackChain);
+                break;
+        }
+    }
+
+    private void ResetAttack()
+    {
+        currentAttackChain = 0;
+    }
+
+    private void doAttack(ushort attacknum)
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, meleeWidth, weaponHitLayers);
+        foreach(Collider2D hit in hits)
+        {
+            switch (hit.gameObject.tag)
+            {
+                case "Enemy":
+
+                    float damageMultiplied = damage;
+                    switch (attacknum)
+                    {
+                        case 0:
+                            damageMultiplied = damage;
+                            break;
+                        case 1:
+                            damageMultiplied = damage * 1.2f;
+                            break;
+                        case 2:
+                            damageMultiplied = damage * 1.3f;
+                            break;
+                    }
+                    HealthComponent enemyHealth = hit.gameObject.GetComponent<HealthComponent>();
+                    enemyHealth.TakeDamage(damageMultiplied);
+
+                    break;
+
+                case "ObjectMovable":
+                    ObjectMove objMove = hit.GetComponent<ObjectMove>();
+                    Vector2 dir = new Vector2(Mathf.RoundToInt(currentAttackDirection.x), Mathf.RoundToInt(currentAttackDirection.y));
+                    if(!(dir.x==dir.y || dir.x == -dir.y))
+                    {
+                        objMove.MoveObject(dir);
+                    }
+                    return;
+                    
+
+            }
+            //CameraShake.Instance.Shake(0.01f, 0.2f);
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, meleeWidth);
+    }
+
+}
