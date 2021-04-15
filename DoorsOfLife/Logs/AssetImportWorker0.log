@@ -90,3 +90,83 @@ Received Import Request.
 Start importing Assets/Scripts/DarkForegroundBehaviour.cs using Guid(634fbfe9667be644aad38d4fc2f9b2dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86fea3f3a2b175190f4813271bab25ba') in 0.006111 seconds
   Import took 0.012151 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001998 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.848 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3401 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 154.5 MB.
+System memory in use after: 154.8 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4026.
+Total: 2.496700 ms (FindLiveObjects: 0.303000 ms CreateObjectMapping: 0.094000 ms MarkObjects: 2.080900 ms  DeleteObjects: 0.018100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 682.432746 seconds.
+  path: Assets/Scripts/Utilities/Puzzle/PuzzleMasterBase.cs
+  artifactKey: Guid(fb84400ea5a9e6b4781518cc18a5f25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Utilities/Puzzle/PuzzleMasterBase.cs using Guid(fb84400ea5a9e6b4781518cc18a5f25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958269d2ebc6f1d5185baa6cb789ae58') in 0.010914 seconds
+  Import took 0.016878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.087738 seconds.
+  path: Assets/Scripts/Utilities/Puzzle/PuzzleChess.cs
+  artifactKey: Guid(9e42d38a2a80d3947b2e301a8535f3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Utilities/Puzzle/PuzzleChess.cs using Guid(9e42d38a2a80d3947b2e301a8535f3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58c580dbb5edfa13fcc4674556b3a55a') in 0.006048 seconds
+  Import took 0.012754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004729 seconds.
+  path: Assets/Scripts/Utilities/Puzzle/PuzzleChess.cs
+  artifactKey: Guid(9e42d38a2a80d3947b2e301a8535f3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Utilities/Puzzle/PuzzleChess.cs using Guid(9e42d38a2a80d3947b2e301a8535f3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58c580dbb5edfa13fcc4674556b3a55a') in 0.002070 seconds
+  Import took 0.007155 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002496 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.901 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 154.6 MB.
+System memory in use after: 154.9 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4031.
+Total: 2.790800 ms (FindLiveObjects: 0.472700 ms CreateObjectMapping: 0.093900 ms MarkObjects: 2.201800 ms  DeleteObjects: 0.020900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 357.524810 seconds.
+  path: Assets/Scripts/Utilities/Puzzle/PuzzleChessMaster.cs
+  artifactKey: Guid(9e42d38a2a80d3947b2e301a8535f3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Utilities/Puzzle/PuzzleChessMaster.cs using Guid(9e42d38a2a80d3947b2e301a8535f3cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c50afb0475e6f38bcaedad505bc99fd') in 0.012139 seconds
+  Import took 0.018891 seconds .
+

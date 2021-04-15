@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectMove : MonoBehaviour
+public class ObjectPusher : MonoBehaviour
 {
     [SerializeField]
     private float moveDistanceMultiplier = 1;
@@ -10,6 +10,8 @@ public class ObjectMove : MonoBehaviour
     private float timeToMove=0.1f;
     [SerializeField]
     private LayerMask layersCheck;
+
+    public bool canPush = true; //If its false just don't move bruh
 
     private float raySize = 3;
     private bool isMoving=false;
@@ -24,7 +26,7 @@ public class ObjectMove : MonoBehaviour
 
     public void MoveObject(Vector3 direction)
     {
-        if (isMoving) return;
+        if (isMoving || !canPush) return;
         direction*= moveDistanceMultiplier;
         if (CheckCollision(direction)) return;
         StartCoroutine(Move(direction));

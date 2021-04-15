@@ -99,7 +99,7 @@ public class PlayerWeapon : MonoBehaviour
                     break;
 
                 case "ObjectMovable":
-                    ObjectMove objMove = hit.GetComponent<ObjectMove>();
+                    ObjectPusher objMove = hit.GetComponent<ObjectPusher>();
                     Vector2 dir = new Vector2(Mathf.RoundToInt(currentAttackDirection.x), Mathf.RoundToInt(currentAttackDirection.y));
                     if(!(dir.x==dir.y || dir.x == -dir.y))
                     {

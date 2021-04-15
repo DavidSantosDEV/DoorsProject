@@ -9,8 +9,21 @@ public class PuzzleCollider : MonoBehaviour
     [SerializeField]
     private GameObject myFitObject;
 
+    private ObjectPusher pusher;
+
+    private void Start()
+    {
+        if(myFitObject)
+        pusher = myFitObject.GetComponent<ObjectPusher>();
+    }
+
 
     private bool amIHappy = false;
+
+    public ObjectPusher ReturnFitObject()
+    {
+        return pusher;
+    }
 
     public bool GetIsSet()
     {

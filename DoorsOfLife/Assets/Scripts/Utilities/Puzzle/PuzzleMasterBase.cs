@@ -7,11 +7,11 @@ public class PuzzleMasterBase : MonoBehaviour
 {
 
     [SerializeField]
-    private PuzzleCollider[] myChildren;
+    protected PuzzleCollider[] myColliders;
 
     private void Start()
     {
-        foreach(PuzzleCollider Pchild in myChildren)
+        foreach(PuzzleCollider Pchild in myColliders)
         {
             if(Pchild)
             Pchild.SetMaster(this);
@@ -20,7 +20,7 @@ public class PuzzleMasterBase : MonoBehaviour
 
     public void UpdateMaster()
     {
-        foreach(PuzzleCollider Pchild in myChildren)
+        foreach(PuzzleCollider Pchild in myColliders)
         {
             if (Pchild.GetIsSet() == false) return;
         }
