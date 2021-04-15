@@ -8,6 +8,7 @@ public class PuzzleChessMaster : PuzzleMasterBase
     {
         base.DoAction();
         DisableMovementOfChilds();
+        DoWinEvent();
     }
 
     private void DisableMovementOfChilds()
@@ -16,5 +17,10 @@ public class PuzzleChessMaster : PuzzleMasterBase
         {
             child.ReturnFitObject().canPush = false;
         }
+    }
+
+    private void DoWinEvent()
+    {
+        
     }
 }

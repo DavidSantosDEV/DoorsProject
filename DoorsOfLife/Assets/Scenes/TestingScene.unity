@@ -458,13 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634fbfe9667be644aad38d4fc2f9b2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
   Speed: 2
-  originalCol:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!19719996 &385970492
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2573,13 +2567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634fbfe9667be644aad38d4fc2f9b2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
   Speed: 2
-  originalCol:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!19719996 &614194725
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -8381,6 +8369,10 @@ PrefabInstance:
       propertyPath: layersCheck.m_Bits
       value: 8256
       objectReference: {fileID: 0}
+    - target: {fileID: 1788542368050252970, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252971, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8431,7 +8423,7 @@ PrefabInstance:
       objectReference: {fileID: -5793913985548570082, guid: 152563eaffe00814a81264aff70e5e6c, type: 3}
     - target: {fileID: 1788542368050252973, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_Name
-      value: ChessPiece (3)
+      value: King
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
@@ -8673,7 +8665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252970, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.54
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252971, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_RootOrder
@@ -8737,7 +8729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252973, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_Name
-      value: ChessPiece (6)
+      value: Knight2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
@@ -8879,7 +8871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252970, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.54
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252971, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_RootOrder
@@ -8943,7 +8935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252973, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_Name
-      value: ChessPiece (5)
+      value: Bishop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
@@ -11713,13 +11705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634fbfe9667be644aad38d4fc2f9b2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
   Speed: 2
-  originalCol:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!19719996 &1221305839
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -14140,17 +14126,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1229392969 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7862727748073143252, guid: c3b7eade9afa3314e87b9ce4c7e47dc5, type: 3}
-  m_PrefabInstance: {fileID: 1833371814}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f88977750ba5cd458c8fb8500771b51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1229392971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7862727748073143243, guid: c3b7eade9afa3314e87b9ce4c7e47dc5, type: 3}
@@ -20479,10 +20454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb84400ea5a9e6b4781518cc18a5f25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myChildren:
-  - {fileID: 1229392969}
-  - {fileID: 1229392969}
-  - {fileID: 1229392969}
+  myColliders: []
 --- !u!4 &1509797217
 Transform:
   m_ObjectHideFlags: 0
@@ -20937,7 +20909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252970, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.5
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252971, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_RootOrder
@@ -21001,7 +20973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788542368050252973, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
       propertyPath: m_Name
-      value: ChessPiece (4)
+      value: Knight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ea35057a0b4e64f9b0460ad5899e0d, type: 3}
