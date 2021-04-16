@@ -1,10 +1,12 @@
-/[Ll]ibrary/
+[Ll]ibrary/
 /[Pp]ackageCache/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+
+
 
 #Don't delete this package
 #!*/[Ll]ibrary\[Pp]ackageCache\com.unity.inputsystem@1.0.2
