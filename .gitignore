@@ -6,6 +6,9 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+#Don't delete this package
+!*/Library\PackageCache\com.unity.inputsystem@1.0.2
+
 # Visual Studio cache directory
 .vs/
 
