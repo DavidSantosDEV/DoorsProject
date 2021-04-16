@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour
 
         myPlayerControls.Gameplay.DebugL1.started += cntx => TestFunc();
 
+        myPlayerControls.Gameplay.DebugR1.started += cntx => OnIsDead();
         //-----------------------------------
 
 
@@ -290,6 +291,16 @@ public class PlayerController : MonoBehaviour
     private void OnSkipDialog()
     {
         interactionData.ContinueInteract();
+    }
+
+    public void OnIsDead()
+    {
+        enabled = false;
+    }
+
+    public void ResetDeath()
+    {
+
     }
 
     #endregion

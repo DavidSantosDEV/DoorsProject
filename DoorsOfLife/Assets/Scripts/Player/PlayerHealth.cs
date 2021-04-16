@@ -38,6 +38,7 @@ public class PlayerHealth : HealthComponent
     {
         base.Die();
         _playerAnimation.PlayDeathAnimation();
+        PlayerController.Instance.OnIsDead();
         GameManager.Instance.ShowGameOver();  
     }
 }
