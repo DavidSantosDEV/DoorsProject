@@ -1,4 +1,4 @@
-[Ll]ibrary/
+/[Ll]ibrary/
 /[Pp]ackageCache/
 [Tt]emp/
 [Oo]bj/
@@ -7,7 +7,7 @@
 Assets/AssetStoreTools*
 
 #Don't delete this package
-!*/[Ll]ibrary\[Pp]ackageCache\com.unity.inputsystem@1.0.2
+#!*/[Ll]ibrary\[Pp]ackageCache\com.unity.inputsystem@1.0.2
 
 # Visual Studio cache directory
 .vs/
