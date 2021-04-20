@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void TestFunc()
     {
-        GameManager.Instance.ChangeToMenu();
+        GameManager.Instance.ShowGameOver();
     }
 
     // Start is called before the first frame update
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
         myPlayerControls.Gameplay.DebugL1.started += cntx => TestFunc();
 
-        myPlayerControls.Gameplay.DebugR1.started += cntx => OnIsDead();
+        //myPlayerControls.Gameplay.DebugR1.started += cntx => OnIsDead();
         //-----------------------------------
 
 

@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
 {
 
     public SoundBasics soundSet;
+
+    [Header("Key related stuff")]
+    public bool[] key;
+
     public static GameManager Instance { get; private set; } = null;
 
     // Start is called before the first frame update
@@ -81,7 +85,9 @@ public class GameManager : MonoBehaviour
 
     public void ShowGameOver()
     {
-
+        UIManager.Instance.GameOverScreen();
+        Debug.Log("Game Over");
+        ChangeToMenu();
     }
 
 

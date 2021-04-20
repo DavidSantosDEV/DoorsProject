@@ -425,10 +425,12 @@ MonoBehaviour:
   imageButtonInteract: {fileID: 988863156}
   deviceInputPromptData: {fileID: 11400000, guid: 32b2c03b8c901644c8ca50fa47d5f7ad, type: 2}
   healthBar: {fileID: 0}
-  Dialoguebackground: {fileID: 0}
+  dialoguecase: {fileID: 0}
   DialogueTextDisplay: {fileID: 0}
+  dialogueNameText: {fileID: 0}
   dialogueAvatarImage: {fileID: 0}
   dialogueButtonPromptImage: {fileID: 0}
+  gameOverCase: {fileID: 0}
   masterAudioSlider: {fileID: 788739105}
   sfxAudioSlider: {fileID: 0}
   musicAudioSlider: {fileID: 0}
@@ -1164,6 +1166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundSet: {fileID: 11400000, guid: 73f9d76347c177b438122ccb5b9710b8, type: 2}
+  key: 
 --- !u!4 &1156057261
 Transform:
   m_ObjectHideFlags: 0
@@ -1188,7 +1191,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2382950478708869271, guid: a56f9e8fb93c21148916a5d348a22ed6, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 1a91f01f55e137242b807ab94b7a3fbe, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -41,6 +41,10 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image dialogueButtonPromptImage=null;
 
+    [Header("Game Over screen")]
+    [SerializeField]
+    private GameObject gameOverCase;
+
     [Header("Audio Sliders")]
     [SerializeField]
     private Slider masterAudioSlider;
@@ -130,10 +134,6 @@ public class UIManager : MonoBehaviour
     public void ShowDialogueCase(bool showImage)
     {
         dialoguecase.SetActive(true);
-        /*Dialoguebackground.enabled = true;
-        DialogueTextDisplay.enabled = true;
-        dialogueAvatarImage.enabled = showImage;
-        //dialogueButtonPromptImage.enabled = true;*/
     }
 
     public void ShowContinueDialogueButton()
@@ -149,11 +149,6 @@ public class UIManager : MonoBehaviour
     public void HideDialogueCase()
     {
         if(dialoguecase)dialoguecase.SetActive(false);
-        /*if(Dialoguebackground) Dialoguebackground.enabled = false;
-        if(DialogueTextDisplay) DialogueTextDisplay.enabled = false;
-        if (dialogueNameText) dialogueNameText.enabled = false;
-        if(dialogueAvatarImage) dialogueAvatarImage.enabled = false;
-        if(dialogueButtonPromptImage) dialogueButtonPromptImage.enabled = false;*/
     }
 
     public void SetAvatarDialogue(Sprite Avatar)
@@ -176,9 +171,15 @@ public class UIManager : MonoBehaviour
     {
         pauseMenuCanvas.enabled = true;
         eventSystem.enabled = true;
-        //GetComponent<AudioSource>().Play();
     }
 
+    //Game Over stuff
+
+    public void GameOverScreen()
+    {
+        eventSystem.SetSelectedGameObject(gameOverCase);
+        eventSystem.enabled = true;
+    }
 
 
     //Audio Related stuff

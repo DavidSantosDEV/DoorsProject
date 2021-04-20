@@ -10,7 +10,7 @@ public class EnemySpider : EnemyScript
 
         attackPoint.localPosition = directionForAttack * meleeAttackRange;
         Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, meleePointWidth, enemyHitLayer);
-        if (hit && hit.CompareTag("Player"))
+        if (hit /*&& hit.CompareTag("Player")*/)
         {
             PlayerController.Instance.playerHealthComponent.TakeDamage(damagetoGive);
             Debug.Log("Damage given to player: " + damagetoGive);

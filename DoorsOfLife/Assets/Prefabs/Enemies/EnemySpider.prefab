@@ -166,7 +166,6 @@ MonoBehaviour:
   deAggroTime: 10
   findPlayerDistance: 3
   rangeToAttack: 1.4
-  bulletprefab: {fileID: 0}
   timeBetweenAttack: 1
   vanishAfterDeathTime: 10
   startPos: {fileID: 0}
@@ -194,7 +193,6 @@ GameObject:
   - component: {fileID: 772737161}
   - component: {fileID: 772737162}
   - component: {fileID: 3185948590550210047}
-  - component: {fileID: 4804001291160160805}
   m_Layer: 7
   m_Name: EnemySpider
   m_TagString: EnemyFeet
@@ -418,32 +416,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4804001291160160805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8617100946218732395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 0
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 000000001327965ffbc2a244139923a4a791d171598d6f8f71bb46743988a707611b17ed
-  m_ShapePath:
-  - {x: -0.14582825, y: 1.0995722, z: 0}
-  - {x: 0.14744282, y: 1.1049557, z: 0}
-  - {x: 0.10583496, y: 1.2795143, z: 0}
-  - {x: -0.11948013, y: 1.2831249, z: 0}
-  m_ShapePathHash: -1344719947
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 20254
 --- !u!1 &8617100946899029657
 GameObject:
   m_ObjectHideFlags: 0
