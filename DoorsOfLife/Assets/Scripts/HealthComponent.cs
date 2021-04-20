@@ -42,6 +42,7 @@ public class HealthComponent : MonoBehaviour
     public virtual void Heal(float ammount)
     {
         currentHealth = Mathf.Clamp(currentHealth+ammount,0,MaxHealth);
+        OnHealthRecouped();
     }
 
     public void BeginInvencibilityPeriod()
@@ -59,9 +60,9 @@ public class HealthComponent : MonoBehaviour
     {
         while (true)
         {
-            
+            Heal(1);
             yield return new WaitForSeconds(0.1f);
-            OnHealthRecouped();
+            //OnHealthRecouped();
         }
         
     }
