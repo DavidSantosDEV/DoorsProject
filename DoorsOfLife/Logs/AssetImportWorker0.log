@@ -910,3 +910,146 @@ System memory in use after: 154.5 MB.
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4231.
 Total: 3.757100 ms (FindLiveObjects: 0.511000 ms CreateObjectMapping: 0.244700 ms MarkObjects: 2.960600 ms  DeleteObjects: 0.039000 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003792 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.321 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 154.2 MB.
+System memory in use after: 154.5 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4235.
+Total: 4.718400 ms (FindLiveObjects: 0.795500 ms CreateObjectMapping: 0.409100 ms MarkObjects: 3.471200 ms  DeleteObjects: 0.041000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 209.631525 seconds.
+  path: Assets/Sprites/Envionrenment/House/Carpet.png
+  artifactKey: Guid(28762118f40c13f4f87159909424c42e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Envionrenment/House/Carpet.png using Guid(28762118f40c13f4f87159909424c42e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b257f728cecf4800c974e2e49860312') in 0.158725 seconds
+  Import took 0.165931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Sprites/Envionrenment/House/chess.png
+  artifactKey: Guid(152563eaffe00814a81264aff70e5e6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Envionrenment/House/chess.png using Guid(152563eaffe00814a81264aff70e5e6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e642f680280b0453aac069ce52f82afc') in 0.042169 seconds
+  Import took 0.050057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Sprites/Envionrenment/House/Carpet.png
+  artifactKey: Guid(28762118f40c13f4f87159909424c42e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Envionrenment/House/Carpet.png using Guid(28762118f40c13f4f87159909424c42e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b257f728cecf4800c974e2e49860312') in 0.037321 seconds
+  Import took 0.043829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 268.968190 seconds.
+  path: Assets/Sprites/Envionrenment/ChessFloor.png
+  artifactKey: Guid(afa8f5c6bf5ad6e4ab6ca2c01ef1e94c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Envionrenment/ChessFloor.png using Guid(afa8f5c6bf5ad6e4ab6ca2c01ef1e94c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10cd347edcbd0b762c16b74482e28688') in 0.024304 seconds
+  Import took 0.032101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Sprites/Circle.png
+  artifactKey: Guid(3cc91e1a12756c64e950eb3527166cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Circle.png using Guid(3cc91e1a12756c64e950eb3527166cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e66aae8787f5354820a1db7276df423') in 0.019655 seconds
+  Import took 0.026766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Sprites/Controller Icons Pack (by NullSave)/Textures/Filled/Sheets/ps4.png
+  artifactKey: Guid(10045ad39fef69944b33bedc39310592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Controller Icons Pack (by NullSave)/Textures/Filled/Sheets/ps4.png using Guid(10045ad39fef69944b33bedc39310592) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b813b57209662757213818ffb3d1e2') in 0.102395 seconds
+  Import took 0.110567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Sprites/Controller Icons Pack (by NullSave)/Textures/Filled/Sheets/switch.png
+  artifactKey: Guid(e35b1509688e6294cad1ada6c91b7693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Controller Icons Pack (by NullSave)/Textures/Filled/Sheets/switch.png using Guid(e35b1509688e6294cad1ada6c91b7693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe9560c10be7093ba81031f032c84d8f') in 0.098404 seconds
+  Import took 0.105179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Sprites/Controller Icons Pack (by NullSave)/Textures/Filled/Sheets/xbox.png
+  artifactKey: Guid(fe9aa33e50412c242bd73e9324bc7922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Controller Icons Pack (by NullSave)/Textures/Filled/Sheets/xbox.png using Guid(fe9aa33e50412c242bd73e9324bc7922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd02bf6b05361f059e2c731d48b032e') in 0.092714 seconds
+  Import took 0.098646 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Sprites/Envionrenment/House/DarkTileset.png
+  artifactKey: Guid(62b85e855995f914b8d4f33a067c7bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Envionrenment/House/DarkTileset.png using Guid(62b85e855995f914b8d4f33a067c7bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9949e83a22f757726d693577016145e0') in 0.074058 seconds
+  Import took 0.079872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Sprites/Envionrenment/House/cushion.png
+  artifactKey: Guid(80c913abf70c2214dbc40775bc30696d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Envionrenment/House/cushion.png using Guid(80c913abf70c2214dbc40775bc30696d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b0a9762b4eac113c5be89870eb607d') in 0.024146 seconds
+  Import took 0.030940 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002439 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.301 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 154.3 MB.
+System memory in use after: 154.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4251.
+Total: 4.708200 ms (FindLiveObjects: 0.681800 ms CreateObjectMapping: 0.265800 ms MarkObjects: 3.710800 ms  DeleteObjects: 0.048200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003736 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.302 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 154.3 MB.
+System memory in use after: 154.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4255.
+Total: 5.012500 ms (FindLiveObjects: 0.607100 ms CreateObjectMapping: 0.431100 ms MarkObjects: 3.931100 ms  DeleteObjects: 0.042000 ms)
+
