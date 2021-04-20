@@ -41,7 +41,7 @@ public class HealthComponent : MonoBehaviour
 
     public virtual void Heal(float ammount)
     {
-
+        currentHealth = Mathf.Clamp(currentHealth+ammount,0,MaxHealth);
     }
 
     public void BeginInvencibilityPeriod()
