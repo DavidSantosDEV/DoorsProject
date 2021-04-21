@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeToLevel()
     {
-        if(Time.timescale==0) UnPauseGame();
+        if(Time.timeScale==0) UnPauseGame();
         SceneManager.LoadScene(1);
     }
 
