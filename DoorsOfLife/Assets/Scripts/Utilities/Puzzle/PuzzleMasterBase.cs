@@ -31,5 +31,6 @@ public class PuzzleMasterBase : MonoBehaviour
     protected virtual void DoAction()
     {
         Debug.Log("Puzzle Complete: "+gameObject.name);
+        Destroy(this);
     }
 }

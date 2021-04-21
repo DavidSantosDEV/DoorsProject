@@ -6,9 +6,9 @@ public class PuzzleChessMaster : PuzzleMasterBase
 {
     protected override void DoAction()
     {
-        base.DoAction();
         DisableMovementOfChilds();
-        DoWinEvent();
+        VictoryScenario();
+        base.DoAction();//Destroy component, no longer needed
     }
 
     private void DisableMovementOfChilds()
@@ -19,8 +19,8 @@ public class PuzzleChessMaster : PuzzleMasterBase
         }
     }
 
-    private void DoWinEvent()
+    private void VictoryScenario()
     {
-        
+
     }
 }
