@@ -21,6 +21,6 @@ public class PuzzleChessMaster : PuzzleMasterBase
 
     private void VictoryScenario()
     {
-
+        GameManager.Instance.SetKey(DoorsAndNumbers.HouseDoor, true);
     }
 }
