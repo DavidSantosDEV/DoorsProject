@@ -1948,3 +1948,25 @@ Received Import Request.
 Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/Wall.prefab using Guid(51b7fbaec2e1615419d0cdbc32432354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '802cda8a924112329fbb46b17f91add1') in 0.006301 seconds
   Import took 0.013425 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.047243 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.721 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3402 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 152.2 MB.
+System memory in use after: 152.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4036.
+Total: 3.564300 ms (FindLiveObjects: 0.891900 ms CreateObjectMapping: 0.336700 ms MarkObjects: 2.283400 ms  DeleteObjects: 0.051200 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
