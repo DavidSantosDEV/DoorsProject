@@ -37,7 +37,6 @@ public class PuzzleCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enter trig");
         if (collision.gameObject== myFitObject)
         {
             amIHappy = true;

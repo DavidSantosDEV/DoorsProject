@@ -9,7 +9,7 @@ public class PuzzleMasterBase : MonoBehaviour
     [SerializeField]
     protected PuzzleCollider[] myColliders;
 
-    private void Start()
+    protected virtual void Start()
     {
         foreach(PuzzleCollider Pchild in myColliders)
         {

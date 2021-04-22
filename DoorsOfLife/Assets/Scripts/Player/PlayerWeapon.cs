@@ -105,7 +105,7 @@ public class PlayerWeapon : MonoBehaviour
                     {
                         objMove.MoveObject(dir);
                     }
-                    return;
+                    break;
                     
 
             }

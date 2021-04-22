@@ -13,11 +13,17 @@ public enum DoorsAndNumbers : int
 
 public class GameManager : MonoBehaviour
 {
+    public PuzzleChessMaster puzzlechess;
+
+    public void ResetPieces()
+    {
+        puzzlechess.ResetPositions();
+    }
 
     public SoundBasics soundSet;
 
     [Header("Key related stuff")]
-    public bool[] key;
+    public bool[] key = new bool[2];
 
     public static GameManager Instance { get; private set; } = null;
 

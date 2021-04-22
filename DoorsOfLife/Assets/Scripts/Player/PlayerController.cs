@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
         myPlayerControls.Gameplay.DebugL1.started += cntx => TestFunc();
 
-        //myPlayerControls.Gameplay.DebugR1.started += cntx => OnIsDead();
+        myPlayerControls.Gameplay.DebugR1.started += cntx => GameManager.Instance.ResetPieces();
         //-----------------------------------
 
 

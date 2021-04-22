@@ -39,12 +39,15 @@ public class InteractDialogue : IInteractibleBase
 
     private void Awake()
     {
+        myAudioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
         typeInteraction = InteractionType.DialogInteraction;
         textDisplay = UIManager.Instance.GetDialoguetText();
 
         textNameDisplay = UIManager.Instance.GetDialogueSpeakerNameText();
-
-        myAudioSource = GetComponent<AudioSource>();
     }
 
     public override void OnInteract()
@@ -67,6 +70,7 @@ public class InteractDialogue : IInteractibleBase
     {
         base.OnStopInteraction();
         UIManager.Instance.HideDialogueCase();
+        Index = 0;
     }
 
 
@@ -74,8 +78,12 @@ public class InteractDialogue : IInteractibleBase
 
     private IEnumerator Type()
     {
-        myAudioSource.clip = SentencesAndEvents[Index].sound;
-        myAudioSource.Play();
+        if (SentencesAndEvents[Index].sound)
+        {
+            myAudioSource.clip = SentencesAndEvents[Index].sound;
+            myAudioSource.Play();
+        }
+        
         foreach (char letter in SentencesAndEvents[Index].Sentence.ToCharArray())//sentences[Index].ToCharArray())
         {
             textDisplay.text += letter;
