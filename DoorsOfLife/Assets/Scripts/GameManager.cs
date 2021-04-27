@@ -70,9 +70,9 @@ public class GameManager : MonoBehaviour
 
     #region KeysForDoors
 
-    public bool GetKey(int door)
+    public bool GetKey(DoorsAndNumbers door)
     {
-        return key[door];
+        return key[(int)door];
     }
 
     public void SetKey(DoorsAndNumbers door,bool val)

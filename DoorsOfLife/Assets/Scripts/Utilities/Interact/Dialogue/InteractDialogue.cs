@@ -55,7 +55,7 @@ public class InteractDialogue : IInteractibleBase
         base.OnInteract();
         Debug.Log("Dialog Start");
         UIManager.Instance.SetAvatarDialogue(displayAvatar);
-        UIManager.Instance.ShowDialogueCase(showImage);
+        UIManager.Instance.ShowDialogueCase(showImage,true);
         textNameDisplay.text = displaySpeakerName;
         StartTyping();
     }

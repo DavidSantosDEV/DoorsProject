@@ -131,9 +131,11 @@ public class UIManager : MonoBehaviour
         return dialogueNameText;
     }
 
-    public void ShowDialogueCase(bool showImage)
+    public void ShowDialogueCase(bool showImage,bool showName)
     {
         dialoguecase.SetActive(true);
+        dialogueAvatarImage.enabled = showImage;
+        dialogueNameText.enabled = showName;
     }
 
     public void ShowContinueDialogueButton()
