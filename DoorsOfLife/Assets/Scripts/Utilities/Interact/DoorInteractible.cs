@@ -78,13 +78,20 @@ public class DoorInteractible : IInteractibleBase
     {
         base.OnStopInteraction();
         UIManager.Instance.HideDialogueCase();
+        if (isOpen)
+        {
+            Debug.Log("Am OPEN");
+            isInteractible = false;
+            Destroy(myCol); //Why would I need this collider anymore
+        }
+        
     }
-
+    bool isOpen = false;
     private void OpenDoor()
     {
-        Destroy(myCol); //Why would I need this collider anymore
         mySpriteRenderer.sprite = spriteOpen;
-        isInteractible = false;
+        isOpen = true;
+        //enabled = false;
     }
 
     private void PlaySound(AudioClip clip) //ease of use stuff
