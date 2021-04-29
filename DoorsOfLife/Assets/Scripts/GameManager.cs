@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
     }
 
     
+    //Frame counting
+
     float deltaTime = 0.0f; // <- DEBUG ONLY
 
     private void Update()
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
     }
     void OnGUI()
     {
+        if (!Debug.isDebugBuild) return;
         int w = Screen.width, h = Screen.height;
 
         GUIStyle style = new GUIStyle();
@@ -83,6 +86,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
 
+    #region Pause and Game Over
 
     public void PauseToggle()
     {
@@ -114,10 +118,12 @@ public class GameManager : MonoBehaviour
     {
         UIManager.Instance.GameOverScreen();
         Debug.Log("Game Over");
-        ChangeToMenu();
+        //ChangeToMenu();
     }
 
+    #endregion
 
+    #region Level Changing 
     public void ChangeToLevel()
     {
         if(Time.timeScale==0) UnPauseGame();
@@ -130,10 +136,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    #endregion
+
     public void CloseGame()
     {
         Application.Quit();
     }
+
+
+
 
 
     //AUDIO STUFF HERE

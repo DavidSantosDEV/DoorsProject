@@ -62,8 +62,9 @@ public class PlayerController : MonoBehaviour
         return transform.position;
     }
 
-    private void TestFunc()
+    private void DebugGameOver()
     {
+        if(Debug.isDebugBuild) //Just in case i forget
         GameManager.Instance.ShowGameOver();
     }
 
@@ -89,7 +90,12 @@ public class PlayerController : MonoBehaviour
 
         myInput.actions = myPlayerControls.asset;
 
-        
+        //DEBUG ONLY
+        myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
+
+        myPlayerControls.Gameplay.DebugR1.started += cntx => GameManager.Instance.ResetPieces();
+
+
         //myInput.onControlsChanged += cntx => this.OnControlsChanged();
 
         //Gameplay--------------------------
@@ -104,10 +110,6 @@ public class PlayerController : MonoBehaviour
         myPlayerControls.Gameplay.Attack.started += cntx => OnAttack();
 
         myPlayerControls.Gameplay.Pause.started += cntx => GameManager.Instance.PauseToggle();
-
-        myPlayerControls.Gameplay.DebugL1.started += cntx => TestFunc();
-
-        myPlayerControls.Gameplay.DebugR1.started += cntx => GameManager.Instance.ResetPieces();
         //-----------------------------------
 
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7848ac0cb378ad449a89609813615ad
+guid: fbaa5f40e6e543744be7f6e781be80c3
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -158,6 +158,51 @@ TextureImporter:
   - first:
       213: 295293985540484726
     second: basewall_51
+  - first:
+      213: 500487990778891149
+    second: basewall_52
+  - first:
+      213: -7026523444341593049
+    second: basewall_53
+  - first:
+      213: 1962482866507911262
+    second: basewall_54
+  - first:
+      213: 4388768833760120996
+    second: basewall_55
+  - first:
+      213: -9149653587378740568
+    second: basewall_56
+  - first:
+      213: 2365804104727700198
+    second: basewall_57
+  - first:
+      213: -5565057490888657314
+    second: basewall_58
+  - first:
+      213: 5709153550791667127
+    second: basewall_59
+  - first:
+      213: 6166762095816710334
+    second: basewall_60
+  - first:
+      213: 3290273293847990521
+    second: basewall_61
+  - first:
+      213: -158689983258876958
+    second: basewall_62
+  - first:
+      213: -2041004640207238050
+    second: basewall_63
+  - first:
+      213: 6901327528470845977
+    second: basewall_64
+  - first:
+      213: 3933386873676214745
+    second: basewall_65
+  - first:
+      213: 4798043170399241503
+    second: basewall_66
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -244,7 +289,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -598,7 +655,7 @@ TextureImporter:
       name: basewall_16
       rect:
         serializedVersion: 2
-        x: 320
+        x: 288
         y: 436
         width: 32
         height: 32
@@ -619,7 +676,7 @@ TextureImporter:
       name: basewall_17
       rect:
         serializedVersion: 2
-        x: 416
+        x: 320
         y: 436
         width: 32
         height: 32
@@ -640,7 +697,7 @@ TextureImporter:
       name: basewall_18
       rect:
         serializedVersion: 2
-        x: 448
+        x: 416
         y: 436
         width: 32
         height: 32
@@ -661,8 +718,8 @@ TextureImporter:
       name: basewall_19
       rect:
         serializedVersion: 2
-        x: 96
-        y: 404
+        x: 448
+        y: 436
         width: 32
         height: 32
       alignment: 0
@@ -682,7 +739,7 @@ TextureImporter:
       name: basewall_20
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 404
         width: 32
         height: 32
@@ -703,7 +760,7 @@ TextureImporter:
       name: basewall_21
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 404
         width: 32
         height: 32
@@ -724,7 +781,7 @@ TextureImporter:
       name: basewall_22
       rect:
         serializedVersion: 2
-        x: 192
+        x: 160
         y: 404
         width: 32
         height: 32
@@ -745,7 +802,7 @@ TextureImporter:
       name: basewall_23
       rect:
         serializedVersion: 2
-        x: 416
+        x: 192
         y: 404
         width: 32
         height: 32
@@ -766,7 +823,7 @@ TextureImporter:
       name: basewall_24
       rect:
         serializedVersion: 2
-        x: 448
+        x: 288
         y: 404
         width: 32
         height: 32
@@ -787,8 +844,8 @@ TextureImporter:
       name: basewall_25
       rect:
         serializedVersion: 2
-        x: 96
-        y: 372
+        x: 416
+        y: 404
         width: 32
         height: 32
       alignment: 0
@@ -808,8 +865,8 @@ TextureImporter:
       name: basewall_26
       rect:
         serializedVersion: 2
-        x: 128
-        y: 372
+        x: 448
+        y: 404
         width: 32
         height: 32
       alignment: 0
@@ -829,7 +886,7 @@ TextureImporter:
       name: basewall_27
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 372
         width: 32
         height: 32
@@ -850,7 +907,7 @@ TextureImporter:
       name: basewall_28
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 372
         width: 32
         height: 32
@@ -871,7 +928,7 @@ TextureImporter:
       name: basewall_29
       rect:
         serializedVersion: 2
-        x: 224
+        x: 160
         y: 372
         width: 32
         height: 32
@@ -892,7 +949,7 @@ TextureImporter:
       name: basewall_30
       rect:
         serializedVersion: 2
-        x: 256
+        x: 192
         y: 372
         width: 32
         height: 32
@@ -913,7 +970,7 @@ TextureImporter:
       name: basewall_31
       rect:
         serializedVersion: 2
-        x: 320
+        x: 224
         y: 372
         width: 32
         height: 32
@@ -934,7 +991,7 @@ TextureImporter:
       name: basewall_32
       rect:
         serializedVersion: 2
-        x: 352
+        x: 256
         y: 372
         width: 32
         height: 32
@@ -955,7 +1012,7 @@ TextureImporter:
       name: basewall_33
       rect:
         serializedVersion: 2
-        x: 384
+        x: 320
         y: 372
         width: 32
         height: 32
@@ -976,7 +1033,7 @@ TextureImporter:
       name: basewall_34
       rect:
         serializedVersion: 2
-        x: 416
+        x: 352
         y: 372
         width: 32
         height: 32
@@ -997,7 +1054,7 @@ TextureImporter:
       name: basewall_35
       rect:
         serializedVersion: 2
-        x: 448
+        x: 384
         y: 372
         width: 32
         height: 32
@@ -1018,8 +1075,8 @@ TextureImporter:
       name: basewall_36
       rect:
         serializedVersion: 2
-        x: 128
-        y: 340
+        x: 416
+        y: 372
         width: 32
         height: 32
       alignment: 0
@@ -1039,8 +1096,8 @@ TextureImporter:
       name: basewall_37
       rect:
         serializedVersion: 2
-        x: 224
-        y: 340
+        x: 448
+        y: 372
         width: 32
         height: 32
       alignment: 0
@@ -1060,7 +1117,7 @@ TextureImporter:
       name: basewall_38
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 340
         width: 32
         height: 32
@@ -1081,7 +1138,7 @@ TextureImporter:
       name: basewall_39
       rect:
         serializedVersion: 2
-        x: 320
+        x: 224
         y: 340
         width: 32
         height: 32
@@ -1102,7 +1159,7 @@ TextureImporter:
       name: basewall_40
       rect:
         serializedVersion: 2
-        x: 352
+        x: 256
         y: 340
         width: 32
         height: 32
@@ -1123,7 +1180,7 @@ TextureImporter:
       name: basewall_41
       rect:
         serializedVersion: 2
-        x: 384
+        x: 320
         y: 340
         width: 32
         height: 32
@@ -1144,7 +1201,7 @@ TextureImporter:
       name: basewall_42
       rect:
         serializedVersion: 2
-        x: 416
+        x: 352
         y: 340
         width: 32
         height: 32
@@ -1165,7 +1222,7 @@ TextureImporter:
       name: basewall_43
       rect:
         serializedVersion: 2
-        x: 448
+        x: 384
         y: 340
         width: 32
         height: 32
@@ -1186,8 +1243,8 @@ TextureImporter:
       name: basewall_44
       rect:
         serializedVersion: 2
-        x: 128
-        y: 308
+        x: 416
+        y: 340
         width: 32
         height: 32
       alignment: 0
@@ -1207,8 +1264,8 @@ TextureImporter:
       name: basewall_45
       rect:
         serializedVersion: 2
-        x: 224
-        y: 308
+        x: 448
+        y: 340
         width: 32
         height: 32
       alignment: 0
@@ -1228,7 +1285,7 @@ TextureImporter:
       name: basewall_46
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 308
         width: 32
         height: 32
@@ -1249,7 +1306,7 @@ TextureImporter:
       name: basewall_47
       rect:
         serializedVersion: 2
-        x: 320
+        x: 224
         y: 308
         width: 32
         height: 32
@@ -1270,7 +1327,7 @@ TextureImporter:
       name: basewall_48
       rect:
         serializedVersion: 2
-        x: 352
+        x: 256
         y: 308
         width: 32
         height: 32
@@ -1291,7 +1348,7 @@ TextureImporter:
       name: basewall_49
       rect:
         serializedVersion: 2
-        x: 384
+        x: 320
         y: 308
         width: 32
         height: 32
@@ -1312,8 +1369,8 @@ TextureImporter:
       name: basewall_50
       rect:
         serializedVersion: 2
-        x: 224
-        y: 276
+        x: 352
+        y: 308
         width: 32
         height: 32
       alignment: 0
@@ -1333,8 +1390,8 @@ TextureImporter:
       name: basewall_51
       rect:
         serializedVersion: 2
-        x: 256
-        y: 276
+        x: 384
+        y: 308
         width: 32
         height: 32
       alignment: 0
@@ -1346,6 +1403,321 @@ TextureImporter:
       bones: []
       spriteID: 67e2378b058191400800000000000000
       internalID: 295293985540484726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_52
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 308
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b89b80d2712f600800000000000000
+      internalID: 500487990778891149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_53
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 308
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ca01ec726cc7e90800000000000000
+      internalID: -7026523444341593049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_54
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 276
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e509ef7f4c32c3b10800000000000000
+      internalID: 1962482866507911262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_55
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 276
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0d399600a08ec30800000000000000
+      internalID: 4388768833760120996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_56
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 276
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2696a0a86e50180800000000000000
+      internalID: -9149653587378740568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_57
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 276
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2a4767c4605d020800000000000000
+      internalID: 2365804104727700198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_58
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 244
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5674fc62b1f4c2b0800000000000000
+      internalID: -5565057490888657314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_59
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 244
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bde813f7ecfa3f40800000000000000
+      internalID: 5709153550791667127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_60
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 212
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb89f77047db49550800000000000000
+      internalID: 6166762095816710334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_61
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 212
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f093cdc02669ad20800000000000000
+      internalID: 3290273293847990521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_62
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 180
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3217e0d483ccdf0800000000000000
+      internalID: -158689983258876958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_63
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 180
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c068be715eca3e0800000000000000
+      internalID: -2041004640207238050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_64
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 148
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a112582d076cf50800000000000000
+      internalID: 6901327528470845977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_65
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 148
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1b7a98582369630800000000000000
+      internalID: 3933386873676214745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basewall_66
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 116
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15c2a4a7d2169240800000000000000
+      internalID: 4798043170399241503
       vertices: []
       indices: 
       edges: []

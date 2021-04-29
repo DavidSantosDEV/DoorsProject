@@ -44,6 +44,8 @@ public class UIManager : MonoBehaviour
     [Header("Game Over screen")]
     [SerializeField]
     private GameObject gameOverCase;
+    [SerializeField]
+    private GameObject firstSelectedDeathButton;
 
     [Header("Audio Sliders")]
     [SerializeField]
@@ -180,7 +182,8 @@ public class UIManager : MonoBehaviour
 
     public void GameOverScreen()
     {
-        eventSystem.SetSelectedGameObject(gameOverCase);
+        gameOverCase.SetActive(true);
+        eventSystem.SetSelectedGameObject(firstSelectedDeathButton);
         eventSystem.enabled = true;
     }
 
