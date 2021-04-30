@@ -52,14 +52,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
-                },
-                {
-                    "name": "Grab",
-                    "type": "Button",
-                    "id": "b176296b-966e-48a4-b158-06b760fe9728",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -247,17 +239,6 @@
                     "processors": "",
                     "groups": "Keyboard and Mouse",
                     "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0c29c8f7-8909-447d-8228-af38fe57daf7",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

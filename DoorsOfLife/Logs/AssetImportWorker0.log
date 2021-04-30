@@ -15,11 +15,11 @@ C:/Users/2202226/Documents/GitHub/DoorsProject/DoorsOfLife
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56268
+57484
 Successfully changed project path to: C:/Users/2202226/Documents/GitHub/DoorsProject/DoorsOfLife
 C:/Users/2202226/Documents/GitHub/DoorsProject/DoorsOfLife
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 66.41 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 66.15 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -36,1025 +36,66 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56212
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56272
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001152 seconds.
+Registered in 0.001250 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 62.31 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 100.74 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.694 seconds
+- Completed reload, in  2.719 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001623 seconds.
+Registered in 0.001778 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 65.48 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 93.56 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.014 seconds
+- Completed reload, in  1.409 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3563 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 160.4 MB.
 System memory in use after: 160.6 MB.
 
 Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4012.
-Total: 2.527900 ms (FindLiveObjects: 0.267200 ms CreateObjectMapping: 0.129400 ms MarkObjects: 2.065900 ms  DeleteObjects: 0.063900 ms)
+Total: 2.804600 ms (FindLiveObjects: 0.460100 ms CreateObjectMapping: 0.268400 ms MarkObjects: 2.009300 ms  DeleteObjects: 0.065600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Sprites/Envionrenment/House/basewall.png
-  artifactKey: Guid(e7848ac0cb378ad449a89609813615ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/basewall.png using Guid(e7848ac0cb378ad449a89609813615ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b22fd48432b7a3a155f48c3fbf9f6f7f') in 0.155390 seconds
-  Import took 0.160731 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 194.215954 seconds.
-  path: Assets/Sprites/Envionrenment/House/basewall.png
-  artifactKey: Guid(e7848ac0cb378ad449a89609813615ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/basewall.png using Guid(e7848ac0cb378ad449a89609813615ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57ed86352c2bdc34b37222adea6d8666') in 0.093851 seconds
-  Import took 0.099598 seconds .
+  path: Assets/Scripts/Player/Input/PlayerControls.inputactions
+  artifactKey: Guid(02a427c338ef7c346b033273bb7c2c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Input/PlayerControls.inputactions using Guid(02a427c338ef7c346b033273bb7c2c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af97e03c21f9fdb127884a25bf6c821') in 0.041520 seconds
+  Import took 0.047193 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001705 seconds.
+Registered in 0.001580 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.918 seconds
+- Completed reload, in  0.974 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 151.8 MB.
-System memory in use after: 152.0 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4023.
-Total: 2.767300 ms (FindLiveObjects: 0.412000 ms CreateObjectMapping: 0.200500 ms MarkObjects: 2.135300 ms  DeleteObjects: 0.018200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 897.277191 seconds.
-  path: Assets/Sprites/Envionrenment/House/basewall 1.png
-  artifactKey: Guid(fbaa5f40e6e543744be7f6e781be80c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/basewall 1.png using Guid(fbaa5f40e6e543744be7f6e781be80c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9db5f54ba71ead5b4090707390d9191') in 0.065442 seconds
-  Import took 0.071223 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.536491 seconds.
-  path: Assets/Sprites/Envionrenment/House/basewall.png
-  artifactKey: Guid(fbaa5f40e6e543744be7f6e781be80c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/basewall.png using Guid(fbaa5f40e6e543744be7f6e781be80c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '491b6436c7f231e3ae43ab5b95ebbb4f') in 0.024832 seconds
-  Import took 0.030352 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.796242 seconds.
-  path: Assets/Sprites/Envionrenment/House/basewall.png
-  artifactKey: Guid(fbaa5f40e6e543744be7f6e781be80c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/basewall.png using Guid(fbaa5f40e6e543744be7f6e781be80c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6da64fe74d99aa5bd48f4a9e3ec27444') in 0.028861 seconds
-  Import took 0.034934 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.783025 seconds.
-  path: Assets/Sprites/Envionrenment/House/basewall.png
-  artifactKey: Guid(fbaa5f40e6e543744be7f6e781be80c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/basewall.png using Guid(fbaa5f40e6e543744be7f6e781be80c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dd44087eeb419b58b0fbb029ab99e4c') in 0.117731 seconds
-  Import took 0.123787 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.254538 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_0.asset
-  artifactKey: Guid(5944b255bdef2d446b1fd32757bc8b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_0.asset using Guid(5944b255bdef2d446b1fd32757bc8b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62fd6d3bac093da9607166a7f6006dd5') in 0.013376 seconds
-  Import took 0.018894 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_8.asset
-  artifactKey: Guid(bb6fe4f128babc449aa4ddffbaac8989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_8.asset using Guid(bb6fe4f128babc449aa4ddffbaac8989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd614534544d219bab0a0ab1fcab20aab') in 0.010228 seconds
-  Import took 0.015884 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_46.asset
-  artifactKey: Guid(7d7b5f88ba52e884cad12e3ef8505304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_46.asset using Guid(7d7b5f88ba52e884cad12e3ef8505304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d4c2d47a364520f40a800cdb6ebed8a') in 0.011020 seconds
-  Import took 0.018337 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000402 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_44.asset
-  artifactKey: Guid(e71b665bd7e969c41af5826156c84ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_44.asset using Guid(e71b665bd7e969c41af5826156c84ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a10c1febd71cfbe139faf5463333eafb') in 0.011221 seconds
-  Import took 0.018194 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_40.asset
-  artifactKey: Guid(80da642c1916f1242916144456f3ad2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_40.asset using Guid(80da642c1916f1242916144456f3ad2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10220914df7f0f8d815140711a81e78e') in 0.016220 seconds
-  Import took 0.025832 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000959 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_22.asset
-  artifactKey: Guid(40ba5b08d07d5af4b9f4baa4751964f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_22.asset using Guid(40ba5b08d07d5af4b9f4baa4751964f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4111d3dd382fd7f72fcfb284f6be4a') in 0.009177 seconds
-  Import took 0.015527 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_15.asset
-  artifactKey: Guid(9eeb7767c16f9054ba2d7a59c6527984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_15.asset using Guid(9eeb7767c16f9054ba2d7a59c6527984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29496a200c99587ad2069a4975177732') in 0.011547 seconds
-  Import took 0.020552 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_35.asset
-  artifactKey: Guid(22617fa2e48679946904c6d0ea415765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_35.asset using Guid(22617fa2e48679946904c6d0ea415765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e8e29c1f4f6af012da0a1f3ab8fdca') in 0.014341 seconds
-  Import took 0.020847 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_18.asset
-  artifactKey: Guid(e014b012a59c8ec44a23ed366b653da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_18.asset using Guid(e014b012a59c8ec44a23ed366b653da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '982b277c81decf5dc2a84abf37b79741') in 0.009835 seconds
-  Import took 0.015638 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000356 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_30.asset
-  artifactKey: Guid(16a522ed544f2a545a4abff40f2e24d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_30.asset using Guid(16a522ed544f2a545a4abff40f2e24d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92c02289362822e6b49968e9823c3f0c') in 0.011626 seconds
-  Import took 0.018676 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_23.asset
-  artifactKey: Guid(3ab2f8eaa9474ab449e63c5f82813a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_23.asset using Guid(3ab2f8eaa9474ab449e63c5f82813a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17d7451e1dbe0fd1723ee8308e5f5001') in 0.010700 seconds
-  Import took 0.018298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_42.asset
-  artifactKey: Guid(b6220bdd8f9d20e46b708b3074b98a46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_42.asset using Guid(b6220bdd8f9d20e46b708b3074b98a46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e5b77a3a367127c44fb79e94919be64') in 0.014055 seconds
-  Import took 0.025287 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_11.asset
-  artifactKey: Guid(481c23f1975a4bc4c988748085ca5990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_11.asset using Guid(481c23f1975a4bc4c988748085ca5990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5818cb2aac43cc04c936177ca0485f1a') in 0.006659 seconds
-  Import took 0.011795 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_50.asset
-  artifactKey: Guid(af6a77fba0e9faf41bc6d8175097b3ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_50.asset using Guid(af6a77fba0e9faf41bc6d8175097b3ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20c241d156263f7a1f4cd8cf1b279890') in 0.016001 seconds
-  Import took 0.022233 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_19.asset
-  artifactKey: Guid(a9c45d2a22f38514abb2e2102527f8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_19.asset using Guid(a9c45d2a22f38514abb2e2102527f8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e20293ef9cb01b63cf53ac88917be782') in 0.010381 seconds
-  Import took 0.015848 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000209 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_49.asset
-  artifactKey: Guid(b021f238c066fca44a966ecce0189de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_49.asset using Guid(b021f238c066fca44a966ecce0189de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac416fc50cbc444fb769721a7fcf3f4') in 0.014280 seconds
-  Import took 0.020436 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000284 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_48.asset
-  artifactKey: Guid(44871b38307235647b42d1b41e5cccb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_48.asset using Guid(44871b38307235647b42d1b41e5cccb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d6000d38aca101694c2553d65b76bda') in 0.011946 seconds
-  Import took 0.019147 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_12.asset
-  artifactKey: Guid(f035b9f465815ad47942673a3033a2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_12.asset using Guid(f035b9f465815ad47942673a3033a2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7526d66ce1449d74e6b4ecf2e9aef4c') in 0.007445 seconds
-  Import took 0.024084 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000410 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_2.asset
-  artifactKey: Guid(809b02105f78f99428cab78f380869bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_2.asset using Guid(809b02105f78f99428cab78f380869bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ea4d103810122799a4dc1ab44573c1b') in 0.011598 seconds
-  Import took 0.019815 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/Wall.prefab
-  artifactKey: Guid(51b7fbaec2e1615419d0cdbc32432354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/Wall.prefab using Guid(51b7fbaec2e1615419d0cdbc32432354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '505b752a502b35fe85cc4eb8c955a7b1') in 0.017773 seconds
-  Import took 0.026821 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000273 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_17.asset
-  artifactKey: Guid(0b42949fec062d441a89d41e71f9daf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_17.asset using Guid(0b42949fec062d441a89d41e71f9daf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff5ac7e562efba5b953fe5f112f53728') in 0.006976 seconds
-  Import took 0.014760 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_26.asset
-  artifactKey: Guid(b301f6d02f6939b4bb78a8ea5317b541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_26.asset using Guid(b301f6d02f6939b4bb78a8ea5317b541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fb386d949654306dd26a675a06583da') in 0.015392 seconds
-  Import took 0.021444 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_28.asset
-  artifactKey: Guid(6d4d06faf8a5bf04f8f265cdf1e5dd3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_28.asset using Guid(6d4d06faf8a5bf04f8f265cdf1e5dd3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b8c076c8507fb06845e58c47216a05') in 0.011092 seconds
-  Import took 0.018211 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_5.asset
-  artifactKey: Guid(db328a4f122f2fa46bf543ddc5ddac13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_5.asset using Guid(db328a4f122f2fa46bf543ddc5ddac13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe0407f3f21117f3f8538f5443dc6fc4') in 0.012525 seconds
-  Import took 0.019429 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000510 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_41.asset
-  artifactKey: Guid(2adaee5083c5c2441bec45ce5a9a06dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_41.asset using Guid(2adaee5083c5c2441bec45ce5a9a06dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c78583ac0ba7ee7092e2e33a2cf7439b') in 0.008848 seconds
-  Import took 0.017183 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_24.asset
-  artifactKey: Guid(d27eececd4574f54c83238fcdf5618a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_24.asset using Guid(d27eececd4574f54c83238fcdf5618a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daad3ab9f03d28c55b3fccd1917b9360') in 0.008879 seconds
-  Import took 0.015459 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_29.asset
-  artifactKey: Guid(10465932abb955441bcbae84d8aa2238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_29.asset using Guid(10465932abb955441bcbae84d8aa2238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b1418b8c3590ffe05bb783263026f5a') in 0.008231 seconds
-  Import took 0.017929 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_38.asset
-  artifactKey: Guid(cc35422b463b5e64e86719d30b6dcaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_38.asset using Guid(cc35422b463b5e64e86719d30b6dcaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c975fe1a05c1b37fc0bb95700c5a5cf') in 0.008287 seconds
-  Import took 0.022461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_3.asset
-  artifactKey: Guid(8287c75384a494947a2475c65579e532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_3.asset using Guid(8287c75384a494947a2475c65579e532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '966afc1b74643ddf78a40daee9389200') in 0.006622 seconds
-  Import took 0.012459 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_9.asset
-  artifactKey: Guid(41e6ba2bd2351e047b203f9514eebc39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_9.asset using Guid(41e6ba2bd2351e047b203f9514eebc39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '042ac8d15e991f4af02686a2314176e7') in 0.007360 seconds
-  Import took 0.019408 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_32.asset
-  artifactKey: Guid(3b1e1ed96a4aea84ea3de7b0b11a93f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_32.asset using Guid(3b1e1ed96a4aea84ea3de7b0b11a93f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '183e70254f7cbcf471d4cfedc320be59') in 0.010164 seconds
-  Import took 0.019002 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000812 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_7.asset
-  artifactKey: Guid(1fa978f50cd50594fb0f8ac7f455acc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_7.asset using Guid(1fa978f50cd50594fb0f8ac7f455acc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0b778503017bd7a695c23b7d9be6ed') in 0.012055 seconds
-  Import took 0.020616 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_6.asset
-  artifactKey: Guid(46d6926a3b76bdf478b5ac341d90ee54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_6.asset using Guid(46d6926a3b76bdf478b5ac341d90ee54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cdcf60deae5ce562113ee9f86125136') in 0.007702 seconds
-  Import took 0.017060 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000426 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_33.asset
-  artifactKey: Guid(17d3665d1ed29c74c8d60389b02354b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_33.asset using Guid(17d3665d1ed29c74c8d60389b02354b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02a0974a555ec3501b744c6e55bd4b22') in 0.009468 seconds
-  Import took 0.025914 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_43.asset
-  artifactKey: Guid(3cce986ec94c09d4aa5c15d93dabd79b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_43.asset using Guid(3cce986ec94c09d4aa5c15d93dabd79b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c1f9a60f7e7046b06bd1dcf8f127f0') in 0.014491 seconds
-  Import took 0.021461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_1.asset
-  artifactKey: Guid(75f1f2fd563cbb04c94a10dae38b3cb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_1.asset using Guid(75f1f2fd563cbb04c94a10dae38b3cb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd94f98bc81867e7ded73999bf00c043') in 0.010427 seconds
-  Import took 0.019405 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_34.asset
-  artifactKey: Guid(93b0e1b86ff891e42922710c629c2b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_34.asset using Guid(93b0e1b86ff891e42922710c629c2b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16686dc552a22e0f5f33e7d1d13b31e') in 0.009246 seconds
-  Import took 0.025145 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000349 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_36.asset
-  artifactKey: Guid(1c9a195338ae31d409ee41b56c865412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_36.asset using Guid(1c9a195338ae31d409ee41b56c865412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42dc5d9523446c538d388eed17ae99c9') in 0.013173 seconds
-  Import took 0.020383 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_13.asset
-  artifactKey: Guid(41f42bf4c85742544bf6bbb740cc130b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_13.asset using Guid(41f42bf4c85742544bf6bbb740cc130b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4b2f61519fafb4b34074c2e825d3494') in 0.008299 seconds
-  Import took 0.013591 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_39.asset
-  artifactKey: Guid(509b718c359b3e84a87c40edf52a0f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_39.asset using Guid(509b718c359b3e84a87c40edf52a0f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17639e6aa697ac1b66645da633787675') in 0.013697 seconds
-  Import took 0.019574 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_4.asset
-  artifactKey: Guid(06c44c9099da0814d976d4310ebb53d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_4.asset using Guid(06c44c9099da0814d976d4310ebb53d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64a6520f0bc087c6749af1a761a2412b') in 0.013426 seconds
-  Import took 0.018808 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_27.asset
-  artifactKey: Guid(18d8c90f1289cae408cd0deaf098e81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_27.asset using Guid(18d8c90f1289cae408cd0deaf098e81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3d324979b245f393a47255569a6c7b4') in 0.017708 seconds
-  Import took 0.026683 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_20.asset
-  artifactKey: Guid(e0ddaedc6e65d524fb2f639521c9e729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_20.asset using Guid(e0ddaedc6e65d524fb2f639521c9e729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3a720a229e9ff2052e71e6fab730446') in 0.008725 seconds
-  Import took 0.014665 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000222 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_16.asset
-  artifactKey: Guid(c0f64317af498d54ea7b208ab6366602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_16.asset using Guid(c0f64317af498d54ea7b208ab6366602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc4e67659fa934a58468dff8797aea4f') in 0.014122 seconds
-  Import took 0.020085 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000266 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_47.asset
-  artifactKey: Guid(8e078d3fee2f41c44b8d830d66c64eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_47.asset using Guid(8e078d3fee2f41c44b8d830d66c64eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f306f9b52d20fe6729afbb686aa5288') in 0.013268 seconds
-  Import took 0.018566 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_14.asset
-  artifactKey: Guid(522afca8a29be2945815ea713cbd1e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_14.asset using Guid(522afca8a29be2945815ea713cbd1e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd08db8d5302ce8e8894c367f1972b705') in 0.014902 seconds
-  Import took 0.022394 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000806 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_45.asset
-  artifactKey: Guid(678315863dcfd734592aae5584b36916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_45.asset using Guid(678315863dcfd734592aae5584b36916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07480377e5fadcd2ad06c22502c65ccb') in 0.008412 seconds
-  Import took 0.020086 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000239 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_51.asset
-  artifactKey: Guid(4f3bdf42a118a704282982724ee94e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_51.asset using Guid(4f3bdf42a118a704282982724ee94e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd903aa5ed0015f20701d4807cb35b86a') in 0.014202 seconds
-  Import took 0.020519 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000266 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_31.asset
-  artifactKey: Guid(e344f6f757d0dc54ea8653d0f7944df4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_31.asset using Guid(e344f6f757d0dc54ea8653d0f7944df4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c7514ea10a91ed13718da02f018cec8') in 0.010815 seconds
-  Import took 0.016516 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000353 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_10.asset
-  artifactKey: Guid(f5d5439682721554b9c6fdd70ff6ada7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_10.asset using Guid(f5d5439682721554b9c6fdd70ff6ada7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0094ed59f09948f75c568ac3386e2afc') in 0.012917 seconds
-  Import took 0.020437 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_37.asset
-  artifactKey: Guid(5f492e897561c8243a6abd0926c4d56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_37.asset using Guid(5f492e897561c8243a6abd0926c4d56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ce2631b0b089cf80efde467a1392e42') in 0.007510 seconds
-  Import took 0.020005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000674 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_21.asset
-  artifactKey: Guid(23869f5aa483b7a4c89883f75efe79f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_21.asset using Guid(23869f5aa483b7a4c89883f75efe79f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632e0a542e835f6d5fbc1a69d2d18bec') in 0.006681 seconds
-  Import took 0.014899 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000385 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_25.asset
-  artifactKey: Guid(353ae75c3e7b017458da4a8d41a2c27c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/Wall/basewall_25.asset using Guid(353ae75c3e7b017458da4a8d41a2c27c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c690b8c74fc4810b069c8467b28fe52b') in 0.009638 seconds
-  Import took 0.020173 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.901898 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_0.asset
-  artifactKey: Guid(0347958111d07bd4786f756ec54a154d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_0.asset using Guid(0347958111d07bd4786f756ec54a154d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da30c84cc3f2a25b777b77afdaf27cf4') in 0.003314 seconds
-  Import took 0.008470 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_22.asset
-  artifactKey: Guid(359226d470216864791bb24aa37c4042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_22.asset using Guid(359226d470216864791bb24aa37c4042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e02f4ef270b09414eeae2215489525') in 0.003064 seconds
-  Import took 0.007778 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_15.asset
-  artifactKey: Guid(40fb969e6002c854d8930029ee733766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_15.asset using Guid(40fb969e6002c854d8930029ee733766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5868072a28b55320d6744a2ea0ad075') in 0.003246 seconds
-  Import took 0.008169 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000299 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_6.asset
-  artifactKey: Guid(bc9a8e5bed8d5a843a6b685654796ae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_6.asset using Guid(bc9a8e5bed8d5a843a6b685654796ae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6f022381974717d6fd06d20c27324f') in 0.003384 seconds
-  Import took 0.009915 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_19.asset
-  artifactKey: Guid(337629e813aede443a7c1f82137b7a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_19.asset using Guid(337629e813aede443a7c1f82137b7a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2891fd8015f5a8ceb8d617d3466aa44a') in 0.002947 seconds
-  Import took 0.010999 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000454 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_24.asset
-  artifactKey: Guid(358bcbfb3307c8b41b52a9ff87530217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_24.asset using Guid(358bcbfb3307c8b41b52a9ff87530217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2709a2b9e2f112626406bb3c58e2fb9c') in 0.003904 seconds
-  Import took 0.011324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000365 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_3.asset
-  artifactKey: Guid(97d9625f520b37d429a8a303beeeddf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_3.asset using Guid(97d9625f520b37d429a8a303beeeddf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb536782885e9c784795d956012bbfc2') in 0.008937 seconds
-  Import took 0.023211 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_26.asset
-  artifactKey: Guid(19fd8ad810807644da6866eccdde8762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_26.asset using Guid(19fd8ad810807644da6866eccdde8762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ca0afceafb550635f9f7266520505aa') in 0.010053 seconds
-  Import took 0.016214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_47.asset
-  artifactKey: Guid(799b2720b9c488544a6914ca8351d214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_47.asset using Guid(799b2720b9c488544a6914ca8351d214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '815526c725306cabcc8851b7518983f4') in 0.002986 seconds
-  Import took 0.008453 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000463 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_1.asset
-  artifactKey: Guid(6016d4454cda84e4d8e8f06692665e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_1.asset using Guid(6016d4454cda84e4d8e8f06692665e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37b4c07241b241088695391d872f8912') in 0.003275 seconds
-  Import took 0.009858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_50.asset
-  artifactKey: Guid(dbd379c468fd1684f8afb0dbbd9b9f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_50.asset using Guid(dbd379c468fd1684f8afb0dbbd9b9f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fab641630c97d2c524949499479b433') in 0.007524 seconds
-  Import took 0.016324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000301 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_18.asset
-  artifactKey: Guid(b5011c46c8063ce448f449f2010cd63b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_18.asset using Guid(b5011c46c8063ce448f449f2010cd63b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a1f77563df4b9160bb82b3e2059eb40') in 0.002892 seconds
-  Import took 0.013134 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000403 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_23.asset
-  artifactKey: Guid(df0b115adfa66a444a2048f38d3fa018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_23.asset using Guid(df0b115adfa66a444a2048f38d3fa018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e628edd7ab1f9088a836c12e1cb0500c') in 0.003046 seconds
-  Import took 0.009507 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000603 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_10.asset
-  artifactKey: Guid(d734244825aaf97449bce56c136931c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_10.asset using Guid(d734244825aaf97449bce56c136931c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5daa0050d734a23f6dd7d9715f18b67') in 0.004510 seconds
-  Import took 0.017407 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000747 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_30.asset
-  artifactKey: Guid(876e0099a28b3be43904c112ceaebf7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_30.asset using Guid(876e0099a28b3be43904c112ceaebf7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb21cb7f89a1e2c19a8d24cf225cfff6') in 0.003270 seconds
-  Import took 0.011181 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_49.asset
-  artifactKey: Guid(b7754e3537b9eac42bf196c8963282ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_49.asset using Guid(b7754e3537b9eac42bf196c8963282ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35dc8db45978f280254b7f7f050f1da9') in 0.007738 seconds
-  Import took 0.015260 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_2.asset
-  artifactKey: Guid(6c987f3e0c590a94bb8d31bd612e3329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_2.asset using Guid(6c987f3e0c590a94bb8d31bd612e3329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12cbf590e7eb08d3216179226e5fbcaf') in 0.008834 seconds
-  Import took 0.014978 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_4.asset
-  artifactKey: Guid(bc3f4a38e3c662444831c9014b13ce66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_4.asset using Guid(bc3f4a38e3c662444831c9014b13ce66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6d92bfd57bad0f585f7aba002b06641') in 0.008770 seconds
-  Import took 0.015279 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_52.asset
-  artifactKey: Guid(9fac06c77347e8744ba0ccffe964100c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_52.asset using Guid(9fac06c77347e8744ba0ccffe964100c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8472e3f244d003e8bbd62cb8d2a4af1') in 0.013378 seconds
-  Import took 0.018700 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_39.asset
-  artifactKey: Guid(06238bebc565c6245945bc2df721c30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_39.asset using Guid(06238bebc565c6245945bc2df721c30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd02c749ccbcb35aea074702ca1603eb') in 0.008705 seconds
-  Import took 0.017081 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_36.asset
-  artifactKey: Guid(71c58fa9266bfe74eb34ad43dacabc0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_36.asset using Guid(71c58fa9266bfe74eb34ad43dacabc0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45cae4a9f233be0120620dab5b0aa5ad') in 0.005838 seconds
-  Import took 0.013651 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_40.asset
-  artifactKey: Guid(a9be233c71b68f64d9d961ae03136939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_40.asset using Guid(a9be233c71b68f64d9d961ae03136939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eb1a213b32f9f21c0aea7cd5cbb87e5') in 0.002982 seconds
-  Import took 0.009790 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_46.asset
-  artifactKey: Guid(461d251753b42614e81b4fe78d516398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_46.asset using Guid(461d251753b42614e81b4fe78d516398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '202aa031fa392916a1d0f616e5f46e76') in 0.010059 seconds
-  Import took 0.019835 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000239 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_32.asset
-  artifactKey: Guid(03cb3a7e05e44b1499f169546c1f787f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_32.asset using Guid(03cb3a7e05e44b1499f169546c1f787f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e5806f60bae5167e955c0ec62365b95') in 0.002954 seconds
-  Import took 0.009957 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000601 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_20.asset
-  artifactKey: Guid(2731a9281a08e1c4c8b03b49b9112e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_20.asset using Guid(2731a9281a08e1c4c8b03b49b9112e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c5fd54565a922feb7425253049dd0f') in 0.003035 seconds
-  Import took 0.011631 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_7.asset
-  artifactKey: Guid(dfcdd6b1afbf1ad489f5c9c5b846f2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_7.asset using Guid(dfcdd6b1afbf1ad489f5c9c5b846f2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e22d4d0c57950456c120b4570f237d0c') in 0.006577 seconds
-  Import took 0.017675 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_33.asset
-  artifactKey: Guid(f9a88df18bd4473468e7e9c0aa8896f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_33.asset using Guid(f9a88df18bd4473468e7e9c0aa8896f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6cbaf26cf1226afaf129765ac788a5d') in 0.006207 seconds
-  Import took 0.016369 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_44.asset
-  artifactKey: Guid(8b74eccd7cc56134aa8c34ea156cf84c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_44.asset using Guid(8b74eccd7cc56134aa8c34ea156cf84c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd75852e7666e96de6df6bf6a4eac721') in 0.002985 seconds
-  Import took 0.008365 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000573 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_43.asset
-  artifactKey: Guid(edcb591a4b2d06e4ca99ca1047cc0f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_43.asset using Guid(edcb591a4b2d06e4ca99ca1047cc0f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe063f48e4a845b9693d240f8c223a9d') in 0.012339 seconds
-  Import took 0.021771 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_21.asset
-  artifactKey: Guid(61d7682d82b291a4b9f52ba28cb98884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_21.asset using Guid(61d7682d82b291a4b9f52ba28cb98884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08442371afd7aa544378b0c713afdcd') in 0.008376 seconds
-  Import took 0.015122 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_28.asset
-  artifactKey: Guid(afa4061046eb0d84b9fd8edd3ef739f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_28.asset using Guid(afa4061046eb0d84b9fd8edd3ef739f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b1478c257a807b05d4fab33196e128') in 0.007594 seconds
-  Import took 0.013083 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000275 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_34.asset
-  artifactKey: Guid(b77e536506378d54a92544a1be2e2af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_34.asset using Guid(b77e536506378d54a92544a1be2e2af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42c376b5b953833b1b7c83c8011217e8') in 0.009151 seconds
-  Import took 0.016400 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_16.asset
-  artifactKey: Guid(1aa19652cf0788a42b714a433af256fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_16.asset using Guid(1aa19652cf0788a42b714a433af256fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3a00603b105c7c9ac0a62f828984dba') in 0.003059 seconds
-  Import took 0.012412 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000293 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_5.asset
-  artifactKey: Guid(0703f7cbded29cb47b0de514d60fa415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_5.asset using Guid(0703f7cbded29cb47b0de514d60fa415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17e65dfc33e241842f7d081d72469b39') in 0.005103 seconds
-  Import took 0.012174 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000840 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_8.asset
-  artifactKey: Guid(d5dd48df3e17bea458d437fc8ed15b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_8.asset using Guid(d5dd48df3e17bea458d437fc8ed15b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '120d94baaa81314fa6e29d75195c9c49') in 0.008224 seconds
-  Import took 0.018511 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_14.asset
-  artifactKey: Guid(f3866d092d44e8d48adfe53c235d192c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_14.asset using Guid(f3866d092d44e8d48adfe53c235d192c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f357c740d5487e47cd452ba8a7f0d9eb') in 0.006652 seconds
-  Import took 0.013287 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000733 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_35.asset
-  artifactKey: Guid(3b4038ceb731a3b4f99e72a975baf359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_35.asset using Guid(3b4038ceb731a3b4f99e72a975baf359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b30dfe727fc8070098ea8e72fa0e601') in 0.003007 seconds
-  Import took 0.011585 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000233 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_48.asset
-  artifactKey: Guid(5f6af1c98f0a4744ebc114c0521d995a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_48.asset using Guid(5f6af1c98f0a4744ebc114c0521d995a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d4b0dc94734150413b684df5380b456') in 0.007287 seconds
-  Import took 0.017525 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_13.asset
-  artifactKey: Guid(004556feaed49844fb8da08c30eae175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_13.asset using Guid(004556feaed49844fb8da08c30eae175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63cbeca144dd7d5d8645ffe39efa977') in 0.003730 seconds
-  Import took 0.013167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_25.asset
-  artifactKey: Guid(ea1722d708efc1d46a450571ba067c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_25.asset using Guid(ea1722d708efc1d46a450571ba067c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd471cacc67f0c3d5588416850699214d') in 0.003221 seconds
-  Import took 0.011544 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000231 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/NewWall.prefab
-  artifactKey: Guid(f1f3c4a10dd73e54eb975be3600e4772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/NewWall.prefab using Guid(f1f3c4a10dd73e54eb975be3600e4772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3cc64a05030e4bd566e15bd9c7b025e') in 0.012892 seconds
-  Import took 0.019995 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_12.asset
-  artifactKey: Guid(4dda9b4cd8975114ababe0e5a2b0bdef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_12.asset using Guid(4dda9b4cd8975114ababe0e5a2b0bdef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3086a49ae7f63c3647af6b5b6fe94d56') in 0.007328 seconds
-  Import took 0.013288 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_42.asset
-  artifactKey: Guid(bb7dff1200e3ab64495424899095e13b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_42.asset using Guid(bb7dff1200e3ab64495424899095e13b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3d5e13a6bc6bda55538c9e886a91da9') in 0.004151 seconds
-  Import took 0.014656 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000285 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_37.asset
-  artifactKey: Guid(5f1c0d2c83294974f9e0d8d58c6baaef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_37.asset using Guid(5f1c0d2c83294974f9e0d8d58c6baaef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb09d362529a9487113054e99a607358') in 0.003537 seconds
-  Import took 0.012463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000598 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_45.asset
-  artifactKey: Guid(59fc3f30d0eea2149adc03e21f8f386e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_45.asset using Guid(59fc3f30d0eea2149adc03e21f8f386e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f76c105d3db08f20fa64d4a71e3a5309') in 0.003223 seconds
-  Import took 0.011812 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000242 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_9.asset
-  artifactKey: Guid(56cf196c70e50974e87b2b54c4defb3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_9.asset using Guid(56cf196c70e50974e87b2b54c4defb3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea86e0b305c80f33ca79c8c6d612dfcb') in 0.003248 seconds
-  Import took 0.016218 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000409 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_31.asset
-  artifactKey: Guid(8c5a0785257c5e142b9d395a956dd91d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_31.asset using Guid(8c5a0785257c5e142b9d395a956dd91d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3a96261e99576cc1d8150541dc5f773') in 0.003242 seconds
-  Import took 0.016146 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000334 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_11.asset
-  artifactKey: Guid(d4096c9ad55b5c54ea6baf53da009741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_11.asset using Guid(d4096c9ad55b5c54ea6baf53da009741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71032d60e6888329bcf5fbab89b1c4b1') in 0.002934 seconds
-  Import took 0.012247 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000228 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_41.asset
-  artifactKey: Guid(90c2792322aba554ab231a654025e888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_41.asset using Guid(90c2792322aba554ab231a654025e888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b92ac6bcb6a77c02c7396b270ccfa5c') in 0.005511 seconds
-  Import took 0.012167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_51.asset
-  artifactKey: Guid(e00a6dc10e1bc744498e1cff30b14b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_51.asset using Guid(e00a6dc10e1bc744498e1cff30b14b63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e76be5a07a608faa50da808e199271') in 0.006349 seconds
-  Import took 0.015008 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_17.asset
-  artifactKey: Guid(6e6a4e52ce762f64ea16f1226e7621b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_17.asset using Guid(6e6a4e52ce762f64ea16f1226e7621b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad394a1bf931a48c518817ac021373ce') in 0.003043 seconds
-  Import took 0.008746 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000495 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_27.asset
-  artifactKey: Guid(4b24e782dc7f00344bed87736c070514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_27.asset using Guid(4b24e782dc7f00344bed87736c070514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93edbc90d881f40c3f8f7e6024f25076') in 0.003317 seconds
-  Import took 0.011204 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_38.asset
-  artifactKey: Guid(3afec0191fd78174782608b58f786a7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_38.asset using Guid(3afec0191fd78174782608b58f786a7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '021f2a7437b250d427900497aa8a2f9f') in 0.007329 seconds
-  Import took 0.014700 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_29.asset
-  artifactKey: Guid(30cd584e59c43524cb0c7dc0b57a3c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Tilemaps/NewWall/basewall_29.asset using Guid(30cd584e59c43524cb0c7dc0b57a3c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccac388a5241c87859ede93432339321') in 0.003017 seconds
-  Import took 0.013267 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001613 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.894 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 151.9 MB.
-System memory in use after: 152.2 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4029.
-Total: 3.306700 ms (FindLiveObjects: 0.732300 ms CreateObjectMapping: 0.250300 ms MarkObjects: 2.306700 ms  DeleteObjects: 0.016400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001739 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.899 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.0 MB.
-System memory in use after: 152.2 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4033.
-Total: 2.777600 ms (FindLiveObjects: 0.395700 ms CreateObjectMapping: 0.181800 ms MarkObjects: 2.185500 ms  DeleteObjects: 0.013800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001628 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.871 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.0 MB.
-System memory in use after: 152.2 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4037.
-Total: 2.932800 ms (FindLiveObjects: 0.467400 ms CreateObjectMapping: 0.196400 ms MarkObjects: 2.253200 ms  DeleteObjects: 0.015000 ms)
+System memory in use before: 148.8 MB.
+System memory in use after: 149.1 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4016.
+Total: 2.891300 ms (FindLiveObjects: 0.504600 ms CreateObjectMapping: 0.219200 ms MarkObjects: 2.111000 ms  DeleteObjects: 0.055000 ms)
 
 ========================================================================
 Received Prepare
@@ -1062,82 +103,68 @@ Registering precompiled user dll's ...
 Registered in 0.001632 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.892 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.9 MB.
+System memory in use after: 149.1 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4020.
+Total: 2.632700 ms (FindLiveObjects: 0.420800 ms CreateObjectMapping: 0.164300 ms MarkObjects: 2.029600 ms  DeleteObjects: 0.016800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 112.465100 seconds.
+  path: Assets/Scenes/Menu.unity
+  artifactKey: Guid(b5e5ca0147d20f14782324d93bb9ac58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu.unity using Guid(b5e5ca0147d20f14782324d93bb9ac58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a8b70d3da96025e4f662b56d0f77c7') in 0.027482 seconds
+  Import took 0.033386 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001769 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.891 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 148.9 MB.
+System memory in use after: 149.2 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4024.
+Total: 2.442800 ms (FindLiveObjects: 0.282100 ms CreateObjectMapping: 0.145200 ms MarkObjects: 1.998700 ms  DeleteObjects: 0.016100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001578 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.906 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.62 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.0 MB.
-System memory in use after: 152.2 MB.
+System memory in use before: 149.0 MB.
+System memory in use after: 149.2 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4041.
-Total: 2.846200 ms (FindLiveObjects: 0.444100 ms CreateObjectMapping: 0.153600 ms MarkObjects: 2.230600 ms  DeleteObjects: 0.017100 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4028.
+Total: 3.508300 ms (FindLiveObjects: 0.689600 ms CreateObjectMapping: 0.354000 ms MarkObjects: 2.443200 ms  DeleteObjects: 0.020600 ms)
 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001837 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.893 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.0 MB.
-System memory in use after: 152.2 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4045.
-Total: 3.166600 ms (FindLiveObjects: 0.496800 ms CreateObjectMapping: 0.199200 ms MarkObjects: 2.451900 ms  DeleteObjects: 0.017400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001666 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.881 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.0 MB.
-System memory in use after: 152.3 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4049.
-Total: 2.869000 ms (FindLiveObjects: 0.423800 ms CreateObjectMapping: 0.158100 ms MarkObjects: 2.269700 ms  DeleteObjects: 0.016500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001676 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.883 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3405 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.1 MB.
-System memory in use after: 152.3 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4053.
-Total: 2.989200 ms (FindLiveObjects: 0.638200 ms CreateObjectMapping: 0.217800 ms MarkObjects: 2.113600 ms  DeleteObjects: 0.018100 ms)
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file

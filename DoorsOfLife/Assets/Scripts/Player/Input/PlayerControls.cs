@@ -65,14 +65,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""Grab"",
-                    ""type"": ""Button"",
-                    ""id"": ""b176296b-966e-48a4-b158-06b760fe9728"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -260,17 +252,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
                     ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0c29c8f7-8909-447d-8228-af38fe57daf7"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -517,7 +498,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_DebugR1 = m_Gameplay.FindAction("DebugR1", throwIfNotFound: true);
         m_Gameplay_DebugL1 = m_Gameplay.FindAction("DebugL1", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
-        m_Gameplay_Grab = m_Gameplay.FindAction("Grab", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_MenuNavigation = m_Menu.FindAction("MenuNavigation", throwIfNotFound: true);
@@ -581,7 +561,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_DebugR1;
     private readonly InputAction m_Gameplay_DebugL1;
     private readonly InputAction m_Gameplay_Pause;
-    private readonly InputAction m_Gameplay_Grab;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -592,7 +571,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @DebugR1 => m_Wrapper.m_Gameplay_DebugR1;
         public InputAction @DebugL1 => m_Wrapper.m_Gameplay_DebugL1;
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
-        public InputAction @Grab => m_Wrapper.m_Gameplay_Grab;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -620,9 +598,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Pause.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
-                @Grab.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnGrab;
-                @Grab.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnGrab;
-                @Grab.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnGrab;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -645,9 +620,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
-                @Grab.started += instance.OnGrab;
-                @Grab.performed += instance.OnGrab;
-                @Grab.canceled += instance.OnGrab;
             }
         }
     }
@@ -760,7 +732,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnDebugR1(InputAction.CallbackContext context);
         void OnDebugL1(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnGrab(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {
