@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     #region Interaction
 
-    //private bool isInteracting=false;
+    private bool isInteracting=false;
     /*private bool isInDialog = false;
     private float holdTimeInteract;*/
 
