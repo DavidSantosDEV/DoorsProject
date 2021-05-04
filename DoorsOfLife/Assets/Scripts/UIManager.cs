@@ -27,11 +27,15 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image healthBar=null;
 
-    [Header("Dialogue System")]
+    [Header("General")]
     [SerializeField]
     GameObject dialoguecase;
-    //[SerializeField]
-    //private Image Dialoguebackground = null;
+    [SerializeField]
+    GameObject dialogueStuff;
+    [SerializeField]
+    GameObject promptStuff;
+
+    [Header("DialogueSystem")]
     [SerializeField]
     private TextMeshProUGUI DialogueTextDisplay;
     [SerializeField]
@@ -40,6 +44,12 @@ public class UIManager : MonoBehaviour
     private Image dialogueAvatarImage = null;
     [SerializeField]
     private Image dialogueButtonPromptImage=null;
+
+    [Header("Prompt System")]
+    [SerializeField]
+    private GameObject promptSelectedButton;
+    [SerializeField]
+    private TextMeshProUGUI promptTextDisplay;
 
     [Header("Game Over screen")]
     [SerializeField]
@@ -57,8 +67,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Slider dialogueAudioSlider;
 
-
-    private EventSystem eventSystem;
+    [SerializeField]
+    private EventSystem eventSystemMenu, eventSystemPrompt;
+    
     public static UIManager Instance { get; private set; } = null;
     private void Awake()
     {
@@ -70,7 +81,7 @@ public class UIManager : MonoBehaviour
         {
             DestroyImmediate(gameObject);
         }
-        eventSystem = UnityEngine.EventSystems.EventSystem.current;
+        //eventSystemMenu = UnityEngine.EventSystems.EventSystem.current;
     }
 
     
@@ -79,7 +90,8 @@ public class UIManager : MonoBehaviour
     {
 
         //Hide stuff
-
+        eventSystemMenu.enabled = false;
+        eventSystemPrompt.enabled = false;
         PromptsChange();
         HideDialogueCase();
         if (!isMainMenu)
@@ -123,7 +135,7 @@ public class UIManager : MonoBehaviour
     }
 
     //Dialogue
-    public TextMeshProUGUI GetDialoguetText()
+    public TextMeshProUGUI GetDialogueText()
     {
         return DialogueTextDisplay;
     }
@@ -136,6 +148,8 @@ public class UIManager : MonoBehaviour
     public void ShowDialogueCase(bool showImage,bool showName)
     {
         dialoguecase.SetActive(true);
+        dialogueStuff.SetActive(true);
+        promptStuff.SetActive(false);
         dialogueAvatarImage.enabled = showImage;
         dialogueNameText.enabled = showName;
     }
@@ -161,20 +175,49 @@ public class UIManager : MonoBehaviour
         dialogueAvatarImage.preserveAspect = true;
     }
 
+    //Prompt stuff
 
+    public void ShowPromptCase()
+    {
+        dialoguecase.SetActive(true);
+        dialogueStuff.SetActive(false);
+        promptStuff.SetActive(true);
+
+        eventSystemPrompt.enabled = true;
+
+        eventSystemMenu.SetSelectedGameObject(promptSelectedButton);
+    }
+
+    public void HidePromptCase()
+    {
+        eventSystemPrompt.enabled = false;
+        dialoguecase.SetActive(false);
+    }
+
+    public void ShowButtonsPrompt()
+    {
+
+    }
+
+    public TextMeshProUGUI GetPromptText()
+    {
+        return promptTextDisplay;
+    }
+
+    //------------------------
 
     //Pause menu stuff
 
     public void HidePauseCanvas()
     {
         pauseMenuCanvas.enabled = false;
-        eventSystem.enabled = false;
+        eventSystemMenu.enabled = false;
     }
 
     public void ShowPauseCanvas()
     {
         pauseMenuCanvas.enabled = true;
-        eventSystem.enabled = true;
+        eventSystemMenu.enabled = true;
     }
 
 
@@ -183,8 +226,8 @@ public class UIManager : MonoBehaviour
     public void GameOverScreen()
     {
         gameOverCase.SetActive(true);
-        eventSystem.SetSelectedGameObject(firstSelectedDeathButton);
-        eventSystem.enabled = true;
+        eventSystemMenu.SetSelectedGameObject(firstSelectedDeathButton);
+        eventSystemMenu.enabled = true;
     }
 
 

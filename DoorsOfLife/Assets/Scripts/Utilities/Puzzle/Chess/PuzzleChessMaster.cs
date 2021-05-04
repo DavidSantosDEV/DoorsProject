@@ -38,7 +38,13 @@ public class PuzzleChessMaster : PuzzleMasterBase
         GameManager.Instance.SetKey(DoorsAndNumbers.HouseDoor, true);
     }
 
-    public void ResetPositions()
+    public override void ResetPuzzle()
+    {
+        base.ResetPuzzle();
+        ResetPositions();
+    }
+
+    private void ResetPositions()
     {
         Debug.Log("Resetting puzzle");
         for(int i = 0; i < positions.Count; i++)

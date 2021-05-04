@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     private string currentActionMap;
     private string actionMapGameplay = "Gameplay";
     private string actionMapMenu = "Menu";
-    private string actionMapDialog = "InDialog";
+    private string actionMapInteraction = "InInteraction";
     #endregion
 
     //Get position
@@ -119,9 +119,9 @@ public class PlayerController : MonoBehaviour
 
         //-----------------------------------
 
-        //In dialog
+        //In Interaction
 
-        myPlayerControls.InDialog.NextDialog.started += cntx => OnSkipDialog();
+        myPlayerControls.InInteraction.ContinueInteract.started += cntx => ContinueInteract();
 
         //--------------------------
 
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
         currentActionMap = actionMapGameplay; //Lets assume its always the gameplay starting
 
-        myInput.actions.FindActionMap(actionMapDialog).Disable();
+        myInput.actions.FindActionMap(actionMapInteraction).Disable();
         myInput.actions.FindActionMap(actionMapMenu).Disable();
 
         Debug.Log(currentActionMap);
@@ -290,7 +290,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void OnSkipDialog()
+    private void ContinueInteract()
     {
         interactionData.ContinueInteract();
     }
@@ -355,8 +355,8 @@ public class PlayerController : MonoBehaviour
 
     public void EnableDialogControls()
     {
-        myInput.SwitchCurrentActionMap(actionMapDialog);
+        myInput.SwitchCurrentActionMap(actionMapInteraction);
         myInput.actions.FindActionMap(currentActionMap).Disable();
-        currentActionMap = actionMapDialog;
+        currentActionMap = actionMapInteraction;
     }
 }

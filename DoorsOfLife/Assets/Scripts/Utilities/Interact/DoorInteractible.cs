@@ -39,7 +39,7 @@ public class DoorInteractible : IInteractibleBase
         myAudioSource = GetComponent<AudioSource>();
         if (myAudioSource) myAudioSource = gameObject.AddComponent<AudioSource>();
 
-        textDisplay = UIManager.Instance.GetDialoguetText();
+        textDisplay = UIManager.Instance.GetDialogueText();
         if (!textDisplay) Debug.Log("null text");
     }
 

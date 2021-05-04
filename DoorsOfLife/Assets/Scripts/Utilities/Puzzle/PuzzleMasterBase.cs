@@ -33,4 +33,10 @@ public class PuzzleMasterBase : MonoBehaviour
         Debug.Log("Puzzle Complete: "+gameObject.name);
         Destroy(this);
     }
+
+    public virtual void ResetPuzzle()
+    {
+        Debug.Log("Puzzle Reset");
+
+    }
 }

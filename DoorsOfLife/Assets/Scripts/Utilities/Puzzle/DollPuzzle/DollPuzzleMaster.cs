@@ -5,7 +5,7 @@ using UnityEngine;
 public class DollPuzzleMaster : MonoBehaviour
 {
     [SerializeField]
-    private PuzzlePiece[] myPieces;
+    private DollPuzzlePiece[] myPieces;
     // Start is called before the first frame update
     void Start()
     {

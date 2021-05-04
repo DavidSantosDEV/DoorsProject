@@ -35,7 +35,7 @@ public class DialogueSytem : MonoBehaviour
 
     private void Start()
     {
-        textDisplay = UIManager.Instance.GetDialoguetText();
+        textDisplay = UIManager.Instance.GetDialogueText();
     }
 
     IEnumerator Type()

@@ -422,13 +422,13 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ]
         },
         {
-            ""name"": ""InDialog"",
-            ""id"": ""03ec1ce9-4a2f-45a8-ab56-cf36147be234"",
+            ""name"": ""InInteraction"",
+            ""id"": ""31975c74-409d-45ec-9a66-42c13e18a3d7"",
             ""actions"": [
                 {
-                    ""name"": ""NextDialog"",
+                    ""name"": ""ContinueInteract"",
                     ""type"": ""Button"",
-                    ""id"": ""0923f23b-a322-4fde-b262-dfb1ab43adfc"",
+                    ""id"": ""e1cb5ab8-16a1-40e6-a465-316a74fe06e7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -437,23 +437,124 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""eb45e6ff-bc31-41e9-9d6e-fadb32204114"",
+                    ""id"": ""b1dd8eaa-c5ee-44bb-b2f1-68d66f11a1cc"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""NextDialog"",
+                    ""action"": ""ContinueInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f0ce7f98-074a-4817-813e-c1cb795d9b2a"",
+                    ""id"": ""20e4ebea-34eb-4d64-82ff-d065611d6d59"",
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""NextDialog"",
+                    ""action"": ""ContinueInteract"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Prompt"",
+            ""id"": ""3976c447-8f02-4754-b926-22ef6c5f836b"",
+            ""actions"": [
+                {
+                    ""name"": ""MovePrompt"",
+                    ""type"": ""Value"",
+                    ""id"": ""51f7e310-1334-453c-af25-53f1b6bd254f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ConfirmPrompt"",
+                    ""type"": ""Button"",
+                    ""id"": ""8ee0b189-00b0-4000-a25f-c1eddcdb26c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""5375cc9a-432a-414d-b03d-7a040fba799f"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovePrompt"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""1946b0dd-dfa6-4bcd-b315-d6cd69b8aeef"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovePrompt"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""a9d38b98-fb89-4a3c-b75b-a62079a6766a"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovePrompt"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""7f2817c9-1200-437b-96a5-38129808955b"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovePrompt"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""e77b3031-d00d-4ebf-8cf8-ff493dd79a85"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovePrompt"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f826b65-a0da-4631-9e88-183c09199f04"",
+                    ""path"": ""<Gamepad>/dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""MovePrompt"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1eab5a4e-58d8-46f1-ab28-3feaf4f17a22"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ConfirmPrompt"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -503,9 +604,13 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Menu_MenuNavigation = m_Menu.FindAction("MenuNavigation", throwIfNotFound: true);
         m_Menu_Confirm = m_Menu.FindAction("Confirm", throwIfNotFound: true);
         m_Menu_UnPause = m_Menu.FindAction("UnPause", throwIfNotFound: true);
-        // InDialog
-        m_InDialog = asset.FindActionMap("InDialog", throwIfNotFound: true);
-        m_InDialog_NextDialog = m_InDialog.FindAction("NextDialog", throwIfNotFound: true);
+        // InInteraction
+        m_InInteraction = asset.FindActionMap("InInteraction", throwIfNotFound: true);
+        m_InInteraction_ContinueInteract = m_InInteraction.FindAction("ContinueInteract", throwIfNotFound: true);
+        // Prompt
+        m_Prompt = asset.FindActionMap("Prompt", throwIfNotFound: true);
+        m_Prompt_MovePrompt = m_Prompt.FindAction("MovePrompt", throwIfNotFound: true);
+        m_Prompt_ConfirmPrompt = m_Prompt.FindAction("ConfirmPrompt", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -674,38 +779,79 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     }
     public MenuActions @Menu => new MenuActions(this);
 
-    // InDialog
-    private readonly InputActionMap m_InDialog;
-    private IInDialogActions m_InDialogActionsCallbackInterface;
-    private readonly InputAction m_InDialog_NextDialog;
-    public struct InDialogActions
+    // InInteraction
+    private readonly InputActionMap m_InInteraction;
+    private IInInteractionActions m_InInteractionActionsCallbackInterface;
+    private readonly InputAction m_InInteraction_ContinueInteract;
+    public struct InInteractionActions
     {
         private @PlayerControls m_Wrapper;
-        public InDialogActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @NextDialog => m_Wrapper.m_InDialog_NextDialog;
-        public InputActionMap Get() { return m_Wrapper.m_InDialog; }
+        public InInteractionActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ContinueInteract => m_Wrapper.m_InInteraction_ContinueInteract;
+        public InputActionMap Get() { return m_Wrapper.m_InInteraction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(InDialogActions set) { return set.Get(); }
-        public void SetCallbacks(IInDialogActions instance)
+        public static implicit operator InputActionMap(InInteractionActions set) { return set.Get(); }
+        public void SetCallbacks(IInInteractionActions instance)
         {
-            if (m_Wrapper.m_InDialogActionsCallbackInterface != null)
+            if (m_Wrapper.m_InInteractionActionsCallbackInterface != null)
             {
-                @NextDialog.started -= m_Wrapper.m_InDialogActionsCallbackInterface.OnNextDialog;
-                @NextDialog.performed -= m_Wrapper.m_InDialogActionsCallbackInterface.OnNextDialog;
-                @NextDialog.canceled -= m_Wrapper.m_InDialogActionsCallbackInterface.OnNextDialog;
+                @ContinueInteract.started -= m_Wrapper.m_InInteractionActionsCallbackInterface.OnContinueInteract;
+                @ContinueInteract.performed -= m_Wrapper.m_InInteractionActionsCallbackInterface.OnContinueInteract;
+                @ContinueInteract.canceled -= m_Wrapper.m_InInteractionActionsCallbackInterface.OnContinueInteract;
             }
-            m_Wrapper.m_InDialogActionsCallbackInterface = instance;
+            m_Wrapper.m_InInteractionActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @NextDialog.started += instance.OnNextDialog;
-                @NextDialog.performed += instance.OnNextDialog;
-                @NextDialog.canceled += instance.OnNextDialog;
+                @ContinueInteract.started += instance.OnContinueInteract;
+                @ContinueInteract.performed += instance.OnContinueInteract;
+                @ContinueInteract.canceled += instance.OnContinueInteract;
             }
         }
     }
-    public InDialogActions @InDialog => new InDialogActions(this);
+    public InInteractionActions @InInteraction => new InInteractionActions(this);
+
+    // Prompt
+    private readonly InputActionMap m_Prompt;
+    private IPromptActions m_PromptActionsCallbackInterface;
+    private readonly InputAction m_Prompt_MovePrompt;
+    private readonly InputAction m_Prompt_ConfirmPrompt;
+    public struct PromptActions
+    {
+        private @PlayerControls m_Wrapper;
+        public PromptActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MovePrompt => m_Wrapper.m_Prompt_MovePrompt;
+        public InputAction @ConfirmPrompt => m_Wrapper.m_Prompt_ConfirmPrompt;
+        public InputActionMap Get() { return m_Wrapper.m_Prompt; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PromptActions set) { return set.Get(); }
+        public void SetCallbacks(IPromptActions instance)
+        {
+            if (m_Wrapper.m_PromptActionsCallbackInterface != null)
+            {
+                @MovePrompt.started -= m_Wrapper.m_PromptActionsCallbackInterface.OnMovePrompt;
+                @MovePrompt.performed -= m_Wrapper.m_PromptActionsCallbackInterface.OnMovePrompt;
+                @MovePrompt.canceled -= m_Wrapper.m_PromptActionsCallbackInterface.OnMovePrompt;
+                @ConfirmPrompt.started -= m_Wrapper.m_PromptActionsCallbackInterface.OnConfirmPrompt;
+                @ConfirmPrompt.performed -= m_Wrapper.m_PromptActionsCallbackInterface.OnConfirmPrompt;
+                @ConfirmPrompt.canceled -= m_Wrapper.m_PromptActionsCallbackInterface.OnConfirmPrompt;
+            }
+            m_Wrapper.m_PromptActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @MovePrompt.started += instance.OnMovePrompt;
+                @MovePrompt.performed += instance.OnMovePrompt;
+                @MovePrompt.canceled += instance.OnMovePrompt;
+                @ConfirmPrompt.started += instance.OnConfirmPrompt;
+                @ConfirmPrompt.performed += instance.OnConfirmPrompt;
+                @ConfirmPrompt.canceled += instance.OnConfirmPrompt;
+            }
+        }
+    }
+    public PromptActions @Prompt => new PromptActions(this);
     private int m_GamepadSchemeIndex = -1;
     public InputControlScheme GamepadScheme
     {
@@ -739,8 +885,13 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnConfirm(InputAction.CallbackContext context);
         void OnUnPause(InputAction.CallbackContext context);
     }
-    public interface IInDialogActions
+    public interface IInInteractionActions
     {
-        void OnNextDialog(InputAction.CallbackContext context);
+        void OnContinueInteract(InputAction.CallbackContext context);
+    }
+    public interface IPromptActions
+    {
+        void OnMovePrompt(InputAction.CallbackContext context);
+        void OnConfirmPrompt(InputAction.CallbackContext context);
     }
 }

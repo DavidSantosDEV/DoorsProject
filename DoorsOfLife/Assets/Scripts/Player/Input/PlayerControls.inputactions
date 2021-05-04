@@ -409,13 +409,13 @@
             ]
         },
         {
-            "name": "InDialog",
-            "id": "03ec1ce9-4a2f-45a8-ab56-cf36147be234",
+            "name": "InInteraction",
+            "id": "31975c74-409d-45ec-9a66-42c13e18a3d7",
             "actions": [
                 {
-                    "name": "NextDialog",
+                    "name": "ContinueInteract",
                     "type": "Button",
-                    "id": "0923f23b-a322-4fde-b262-dfb1ab43adfc",
+                    "id": "e1cb5ab8-16a1-40e6-a465-316a74fe06e7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -424,23 +424,124 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "eb45e6ff-bc31-41e9-9d6e-fadb32204114",
+                    "id": "b1dd8eaa-c5ee-44bb-b2f1-68d66f11a1cc",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "NextDialog",
+                    "action": "ContinueInteract",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "f0ce7f98-074a-4817-813e-c1cb795d9b2a",
+                    "id": "20e4ebea-34eb-4d64-82ff-d065611d6d59",
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard and Mouse",
-                    "action": "NextDialog",
+                    "action": "ContinueInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Prompt",
+            "id": "3976c447-8f02-4754-b926-22ef6c5f836b",
+            "actions": [
+                {
+                    "name": "MovePrompt",
+                    "type": "Value",
+                    "id": "51f7e310-1334-453c-af25-53f1b6bd254f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ConfirmPrompt",
+                    "type": "Button",
+                    "id": "8ee0b189-00b0-4000-a25f-c1eddcdb26c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "5375cc9a-432a-414d-b03d-7a040fba799f",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePrompt",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "1946b0dd-dfa6-4bcd-b315-d6cd69b8aeef",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePrompt",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "a9d38b98-fb89-4a3c-b75b-a62079a6766a",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePrompt",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "7f2817c9-1200-437b-96a5-38129808955b",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePrompt",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "e77b3031-d00d-4ebf-8cf8-ff493dd79a85",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePrompt",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "0f826b65-a0da-4631-9e88-183c09199f04",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "MovePrompt",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1eab5a4e-58d8-46f1-ab28-3feaf4f17a22",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ConfirmPrompt",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

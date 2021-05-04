@@ -15,9 +15,9 @@ public class GameManager : MonoBehaviour
 {
     public PuzzleChessMaster puzzlechess;
 
-    public void ResetPieces()
+    public void ResetPieces() //DELETE AFTER
     {
-        puzzlechess.ResetPositions();
+        puzzlechess.ResetPuzzle();
     }
 
     public SoundBasics soundSet;

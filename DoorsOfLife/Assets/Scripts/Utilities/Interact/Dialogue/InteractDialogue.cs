@@ -45,7 +45,7 @@ public class InteractDialogue : IInteractibleBase
     private void Start()
     {
         typeInteraction = InteractionType.DialogInteraction;
-        textDisplay = UIManager.Instance.GetDialoguetText();
+        textDisplay = UIManager.Instance.GetDialogueText();
 
         textNameDisplay = UIManager.Instance.GetDialogueSpeakerNameText();
     }
