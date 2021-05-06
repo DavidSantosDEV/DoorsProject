@@ -39,13 +39,21 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+    }
 
     void Start()
     {
         SetAudioPrevious();
     }
 
-    
+    private void OnSceneLoaded(Scene scene,LoadSceneMode mode)
+    {
+
+    }
     //Frame counting
 
     float deltaTime = 0.0f; // <- DEBUG ONLY
@@ -127,13 +135,25 @@ public class GameManager : MonoBehaviour
     public void ChangeToLevel()
     {
         if(Time.timeScale==0) UnPauseGame();
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadLevel(1));
     }
 
     public void ChangeToMenu()
     {
         if (Time.timeScale == 0) UnPauseGame();
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadLevel(0));
+    }
+
+    private IEnumerator LoadLevel(int level)
+    {
+        AsyncOperation sceneLoading = SceneManager.LoadSceneAsync(level);
+        while (!sceneLoading.isDone)
+        {
+            Debug.Log("Progress: " + sceneLoading.progress);
+            yield return null;
+        }
+        Debug.Log("Scene Loaded");
+        yield return null;
     }
 
     #endregion
