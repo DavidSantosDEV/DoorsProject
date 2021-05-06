@@ -1814,8 +1814,16 @@ MonoBehaviour:
     m_ActionName: Menu/UnPause[/DualShock4GamepadHID/start]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 0923f23b-a322-4fde-b262-dfb1ab43adfc
-    m_ActionName: InDialog/NextDialog[/DualShock4GamepadHID/buttonSouth]
+    m_ActionId: e1cb5ab8-16a1-40e6-a465-316a74fe06e7
+    m_ActionName: InInteraction/ContinueInteract[/Keyboard/x]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 51f7e310-1334-453c-af25-53f1b6bd254f
+    m_ActionName: Prompt/MovePrompt[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8ee0b189-00b0-4000-a25f-c1eddcdb26c3
+    m_ActionName: Prompt/ConfirmPrompt
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Menu
