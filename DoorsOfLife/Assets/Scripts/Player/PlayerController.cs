@@ -198,6 +198,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    IInteractibleBase interactible; 
     private void CheckForInteractible()
     {
         //Ray rayToCast = new Ray(transform.position, lastMovementInput * interactReach);
@@ -207,12 +208,13 @@ public class PlayerController : MonoBehaviour
         if (_Hits && _Hits.transform.CompareTag("Interactible"))
         {
             //hit = true; // Debug variable
-            IInteractibleBase interactible = _Hits.transform.GetComponent<IInteractibleBase>();
+            interactible = _Hits.transform.GetComponent<IInteractibleBase>();
             if (interactible)
             {
                 if (interactionData.IsEmpty())
                 {
                     interactionData.Interactible = interactible;
+                    interactible.ShowPrompt();
                     ShowInteractPrompt();
                 }
                 else
@@ -220,6 +222,7 @@ public class PlayerController : MonoBehaviour
                     if (!interactionData.IsSameInteractible(interactible))
                     {
                         interactionData.Interactible = interactible;
+                        interactible.ShowPrompt();
                         ShowInteractPrompt();
                     }
                     else
@@ -231,12 +234,18 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            if (interactible) interactible.HidePrompt();
             interactionData.ResetData();
             HideInteractPrompt();
         }
     }
 
     //Events
+
+    public Vector2 ReturnFacingDir()
+    {
+        return lastMovementInput;
+    }
 
 #region Events
     private void OnInteract()

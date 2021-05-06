@@ -32,8 +32,9 @@ public class DoorInteractible : IInteractibleBase
     private Collider2D myCol;
     private AudioSource myAudioSource;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         myCol = GetComponent<Collider2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAudioSource = GetComponent<AudioSource>();

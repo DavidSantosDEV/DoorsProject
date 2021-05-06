@@ -90,7 +90,9 @@ public class UIManager : MonoBehaviour
     {
 
         //Hide stuff
-        eventSystemMenu.enabled = false;
+        
+        eventSystemMenu.enabled = isMainMenu;
+        if(eventSystemPrompt)
         eventSystemPrompt.enabled = false;
         PromptsChange();
         HideDialogueCase();

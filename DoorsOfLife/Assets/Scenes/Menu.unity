@@ -195,6 +195,17 @@ RectTransform:
   m_AnchoredPosition: {x: -5.000061, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &234840054 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1660845778125761987, guid: 362d5060f0f51c143ac35f3a6e42d6c3, type: 3}
+  m_PrefabInstance: {fileID: 1280458988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &235419991
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,16 +449,22 @@ MonoBehaviour:
   deviceInputPromptData: {fileID: 11400000, guid: 32b2c03b8c901644c8ca50fa47d5f7ad, type: 2}
   healthBar: {fileID: 0}
   dialoguecase: {fileID: 0}
+  dialogueStuff: {fileID: 0}
+  promptStuff: {fileID: 0}
   DialogueTextDisplay: {fileID: 0}
   dialogueNameText: {fileID: 0}
   dialogueAvatarImage: {fileID: 0}
   dialogueButtonPromptImage: {fileID: 0}
+  promptSelectedButton: {fileID: 0}
+  promptTextDisplay: {fileID: 0}
   gameOverCase: {fileID: 0}
   firstSelectedDeathButton: {fileID: 0}
   masterAudioSlider: {fileID: 788739105}
   sfxAudioSlider: {fileID: 0}
   musicAudioSlider: {fileID: 0}
   dialogueAudioSlider: {fileID: 0}
+  eventSystemMenu: {fileID: 234840054}
+  eventSystemPrompt: {fileID: 0}
 --- !u!4 &437101684
 Transform:
   m_ObjectHideFlags: 0

@@ -98,8 +98,9 @@ public class PlayerWeapon : MonoBehaviour
 
                     break;
 
-                case "ObjectMovable":
+                case "ObjectMovable": //DELETE LATER
                     ObjectPusher objMove = hit.GetComponent<ObjectPusher>();
+                    if (!objMove) return;
                     Vector2 dir = new Vector2(Mathf.RoundToInt(currentAttackDirection.x), Mathf.RoundToInt(currentAttackDirection.y));
                     if(!(dir.x==dir.y || dir.x == -dir.y))
                     {
@@ -111,6 +112,11 @@ public class PlayerWeapon : MonoBehaviour
             }
             //CameraShake.Instance.Shake(0.01f, 0.2f);
         }
+    }
+
+    public Vector2 ReturnAttackDirMove()
+    {
+        return new Vector2(Mathf.RoundToInt(currentAttackDirection.x), Mathf.RoundToInt(currentAttackDirection.y));
     }
 
     void OnDrawGizmos()

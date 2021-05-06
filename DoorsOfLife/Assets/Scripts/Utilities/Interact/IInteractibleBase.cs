@@ -12,6 +12,7 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public bool isInteractible;
     public InteractionType typeInteraction;
 
+    public Canvas promptCanvas;
 
     public AudioSource InteractionSound => interactionSound;
     public float HoldDuration => holdDuration;
@@ -19,6 +20,11 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public bool MultipleUse => multipleUse;
     public bool IsInteractible => isInteractible;
     public InteractionType TypeInteraction=>typeInteraction;
+
+    protected virtual void Start()
+    {
+        HidePrompt();
+    }
 
     public virtual void OnInteract()
     {
@@ -35,5 +41,31 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     {
         Debug.Log("Interaction Stopped");
         PlayerController.Instance.StoppedInteracting();
+    }
+
+    public virtual void ShowPrompt()
+    {
+        if (promptCanvas)
+        {
+            promptCanvas.enabled = true;
+        }
+        else
+        {
+            //Debug.Log("Object :" + gameObject.name + " needs prompt");
+        }
+        
+    }
+
+    public virtual void HidePrompt()
+    {
+        if (promptCanvas)
+        {
+            promptCanvas.enabled = false;
+
+        }
+        else
+        {
+            //Debug.Log("Object :" + gameObject.name + " needs prompt");
+        }
     }
 }

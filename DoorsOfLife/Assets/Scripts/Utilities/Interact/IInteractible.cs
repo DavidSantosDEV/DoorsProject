@@ -7,6 +7,7 @@ public enum InteractionType
     DialogInteraction,
     ItemPickup,
     ItemTouch,
+    PushObj,
 }
 public interface IInteractible
 {
