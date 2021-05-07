@@ -255,11 +255,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!interactionData.IsEmpty())
         {
-            //isInteracting = true;
-            interactionData.Interact();
-            HideInteractPrompt();
-            //Play Interaction Animation Depending on type
-            //playerAnimation.PlayInteractionAnimation(interactionData.GetTypeOfInteraction() ,lastMovementInput);
+            interactionData.Interact();        
         }
         
     }
@@ -335,17 +331,6 @@ public class PlayerController : MonoBehaviour
             //playerVisuals.UpdatePlayerVisuals(); //Line of code to update ui when you make it
             //RemoveAllBindingOverrides();
         }
-    }
-
-    private void ShowInteractPrompt()
-    {
-        UIManager.Instance.ShowInteractButton();
-        //Debug.Log(myPlayerControls.Gameplay.Interact.GetBindingDisplayString());
-    }  
-
-    private void HideInteractPrompt()
-    {
-        UIManager.Instance.HideInteractButton();
     }
 
     #endregion

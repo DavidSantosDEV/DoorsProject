@@ -26,6 +26,7 @@ public class InteractionData : ScriptableObject
         if (myInteractible.IsInteractible)
         {
             myInteractible.OnInteract();
+            myInteractible.HidePrompt();
             //ResetData();
         }
     }

@@ -98,7 +98,7 @@ public class UIManager : MonoBehaviour
         HideDialogueCase();
         if (!isMainMenu)
         {
-            HideInteractButton();
+            //HideInteractButton();
 
             HidePauseCanvas();
         }
@@ -115,13 +115,13 @@ public class UIManager : MonoBehaviour
 
     //Show Buttons
 
-    public void ShowInteractButton()
+    /*public void ShowInteractButton()
     {
         //imageButtonInteract.sprite = deviceInputPromptData.GetButtonInteractSprite();
         //Debug.Log(PlayerController.Instance.myInput.devices[0].name);
         imageButtonInteract.enabled = true;   
     
-    }
+    }*/
 
     public void PromptsChange()
     {
@@ -131,10 +131,10 @@ public class UIManager : MonoBehaviour
         dialogueButtonPromptImage.sprite = deviceInputPromptData.GetButtonInteractSprite();
     }
 
-    public void HideInteractButton()
+    /*public void HideInteractButton()
     {
         imageButtonInteract.enabled = false;
-    }
+    }*/
 
     //Dialogue
     public TextMeshProUGUI GetDialogueText()

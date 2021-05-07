@@ -258,6 +258,9 @@ MonoBehaviour:
     m_Bits: 64
   interactionData: {fileID: 11400000, guid: 1b2a5e957a316574abed9c3fc82fa33b, type: 2}
   myInput: {fileID: 0}
+  speedInteractCode: 100
+  offsetXInteract: 0
+  offsetYInteract: -0.2
 --- !u!114 &2985027686227906103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +377,7 @@ MonoBehaviour:
   - {x: -0.17569923, y: 0.54587173, z: 0}
   m_ShapePathHash: -69664539
   m_Mesh: {fileID: 0}
-  m_InstanceId: -102996
+  m_InstanceId: -3384
 --- !u!1 &2985027686281125181
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +551,7 @@ GameObject:
   - component: {fileID: 2985027688147305503}
   - component: {fileID: 2985027688147305496}
   - component: {fileID: 2985027688147305497}
-  - component: {fileID: 718306164}
+  - component: {fileID: 2985027687147040621}
   m_Layer: 10
   m_Name: Player
   m_TagString: PlayerFeet
@@ -620,39 +623,14 @@ SortingGroup:
   m_SortingLayerID: 1909559719
   m_SortingLayer: 4
   m_SortingOrder: 0
---- !u!114 &718306164
-MonoBehaviour:
+--- !u!81 &2985027687147040621
+AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2985027688147305498}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 0
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 000000001327965ffbc2a244139923a4592fed22a791d171598d6f8f71bb46743988a707611b17ed
-  m_ShapePath:
-  - {x: -0.06448984, y: -0.04358411, z: 0}
-  - {x: 0.058829784, y: -0.037522793, z: 0}
-  - {x: 0.18162298, y: 0.17652726, z: 0}
-  - {x: 0.20303106, y: 0.6370921, z: 0}
-  - {x: 0.119776726, y: 0.8429167, z: 0}
-  - {x: 0.16103745, y: 1.2200592, z: 0}
-  - {x: -0.008275032, y: 1.3415203, z: 0}
-  - {x: -0.16685343, y: 1.2130761, z: 0}
-  - {x: -0.11454439, y: 0.85616684, z: 0}
-  - {x: -0.20433044, y: 0.62639856, z: 0}
-  - {x: -0.17672777, y: 0.18061662, z: 0}
-  m_ShapePathHash: -1850987505
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 19926
+  m_Enabled: 1
 --- !u!1 &2985027688180788834
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
