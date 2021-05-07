@@ -41,6 +41,10 @@ public class PlayerController : MonoBehaviour
 
     #region Interaction
 
+    [SerializeField]
+    private float speedInteractCode=2;
+    [SerializeField]
+    private float offsetXInteract = 0, offsetYInteract = 0;
     private bool isInteracting=false;
     /*private bool isInDialog = false;
     private float holdTimeInteract;*/
@@ -194,39 +198,39 @@ public class PlayerController : MonoBehaviour
         while (enabled)
         {
             CheckForInteractible();
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(1/speedInteractCode);
         }
     }
 
-    IInteractibleBase interactible; 
+    //IInteractibleBase interactible; 
     private void CheckForInteractible()
     {
-        //Ray rayToCast = new Ray(transform.position, lastMovementInput * interactReach);
+        Vector3 startpos = transform.position + new Vector3(offsetXInteract, offsetYInteract);
         RaycastHit2D _Hits;
-        _Hits = Physics2D.Raycast(transform.position, lastMovementInput,interactReach,interactibleLayer);
-        //bool hit=false; //debug variable only, delete later
+        _Hits = Physics2D.Raycast(startpos/*transform.position*/, lastMovementInput,interactReach,interactibleLayer);
+
+        
+
         if (_Hits && _Hits.transform.CompareTag("Interactible"))
         {
-            //hit = true; // Debug variable
-            interactible = _Hits.transform.GetComponent<IInteractibleBase>();
+            IInteractibleBase interactible = _Hits.transform.GetComponent<IInteractibleBase>();
             if (interactible)
             {
                 if (interactionData.IsEmpty())
                 {
                     interactionData.Interactible = interactible;
-                    interactible.ShowPrompt();
-                    ShowInteractPrompt();
+                    Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
                 }
                 else
                 {
                     if (!interactionData.IsSameInteractible(interactible))
                     {
                         interactionData.Interactible = interactible;
-                        interactible.ShowPrompt();
-                        ShowInteractPrompt();
+                        Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
                     }
                     else
                     {
+                        Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.blue, 0.2f);
                         return;
                     }
                 }
@@ -234,9 +238,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (interactible) interactible.HidePrompt();
+            Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.red, 0.2f);
             interactionData.ResetData();
-            HideInteractPrompt();
         }
     }
 

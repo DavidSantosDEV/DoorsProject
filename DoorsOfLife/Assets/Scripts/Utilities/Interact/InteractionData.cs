@@ -10,7 +10,15 @@ public class InteractionData : ScriptableObject
     public IInteractibleBase Interactible
     {
         get => myInteractible;
-        set => myInteractible = value;
+        set
+        {
+
+            if(myInteractible)
+            myInteractible.HidePrompt(); //Clear previous value
+
+            myInteractible = value;
+            myInteractible.ShowPrompt(); // Show new value
+        }
     }
 
     public void Interact()
@@ -42,6 +50,11 @@ public class InteractionData : ScriptableObject
 
     public void ResetData()
     {
+        if(myInteractible)
+        myInteractible.HidePrompt();
+
+        //Debug.Log(myInteractible);
+
         myInteractible = null;
     }
 

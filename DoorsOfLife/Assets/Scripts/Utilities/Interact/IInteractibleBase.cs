@@ -23,6 +23,7 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
 
     protected virtual void Start()
     {
+        if (!promptCanvas) promptCanvas = GetComponentInChildren<Canvas>();
         HidePrompt();
     }
 

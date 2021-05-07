@@ -76,7 +76,24 @@ public class PlayerWeapon : MonoBehaviour
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, meleeWidth, weaponHitLayers);
         foreach(Collider2D hit in hits)
         {
-            switch (hit.gameObject.tag)
+            if (hit.gameObject.CompareTag("Enemy")){
+                float damageMultiplied = damage;
+                switch (attacknum)
+                {
+                    case 0:
+                        damageMultiplied = damage;
+                        break;
+                    case 1:
+                        damageMultiplied = damage * 1.2f;
+                        break;
+                    case 2:
+                        damageMultiplied = damage * 1.3f;
+                        break;
+                }
+                HealthComponent enemyHealth = hit.gameObject.GetComponent<HealthComponent>();
+                enemyHealth.TakeDamage(damageMultiplied);
+            }
+            /*switch (hit.gameObject.tag)
             {
                 case "Enemy":
 
@@ -109,7 +126,7 @@ public class PlayerWeapon : MonoBehaviour
                     break;
                     
 
-            }
+            }*/
             //CameraShake.Instance.Shake(0.01f, 0.2f);
         }
     }

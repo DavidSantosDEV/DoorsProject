@@ -26,7 +26,7 @@ public class InteractPushObject : IInteractibleBase
     protected override void Start()
     {
         base.Start();
-        typeInteraction = InteractionType.PushObj;
+        typeInteraction = InteractionType.OneTimeClick;
         raySize = ((GetComponent<Collider2D>().bounds.size.x * 1.5f) * moveDistanceMultiplier) - distanceRayTolerance;
     }
 

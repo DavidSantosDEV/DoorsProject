@@ -21,6 +21,7 @@ public class DarkForegroundBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.CompareTag("Player"))
         StartCoroutine(nameof(InvisibleStart));
     }
 
@@ -36,6 +37,7 @@ public class DarkForegroundBehaviour : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if(collision.CompareTag("Player"))
         StopCoroutine(nameof(InvisibleStart));
         tile.color = originalCol;
     }

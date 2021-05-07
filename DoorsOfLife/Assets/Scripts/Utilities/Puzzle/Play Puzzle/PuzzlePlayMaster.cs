@@ -20,6 +20,7 @@ public class PuzzlePlayMaster : PuzzleMasterBase
     {
         for(int i = 0; i < myMovables.Length; i++)
         {
+            if(myMovables[i])
             originalPositions.Add(myMovables[i].transform.position);
         }
     }
