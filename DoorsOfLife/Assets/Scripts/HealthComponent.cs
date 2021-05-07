@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
@@ -9,20 +10,13 @@ public class HealthComponent : MonoBehaviour
     protected float MaxHealth;
     [SerializeField][Range(0,2)]
     protected float invencibilityTime = 1f;
-    //[SerializeField]
-    //private bool isPlayer = false;
-    [SerializeField]
-    private bool RecoverableHealth = false;
+
 
     protected bool IframesOn=false;
     protected bool isDead=false;
-    [SerializeField] //This is just for show
+    [ReadOnly] //This is just for show
     protected float currentHealth;
 
-    //private Animator myAnimator=null;
-    //private PlayerAnimation myPlayerAnimation=null;
-
-    // Start is called before the first frame update
     protected virtual void Start()
     {
         currentHealth = MaxHealth;
@@ -42,7 +36,7 @@ public class HealthComponent : MonoBehaviour
     public virtual void Heal(float ammount)
     {
         currentHealth = Mathf.Clamp(currentHealth+ammount,0,MaxHealth);
-        OnHealthRecouped();
+        //OnHealthRecouped();
     }
 
     public void BeginInvencibilityPeriod()
@@ -56,7 +50,7 @@ public class HealthComponent : MonoBehaviour
         IframesOn = false;
     }
 
-    private IEnumerator RecoverLifeOverTime()
+    /*private IEnumerator RecoverLifeOverTime()
     {
         while (true)
         {
@@ -70,7 +64,7 @@ public class HealthComponent : MonoBehaviour
     protected virtual void OnHealthRecouped()
     {
         Debug.Log("Health recovered");
-    }
+    }*/
 
     protected IEnumerator Invencible()
     {

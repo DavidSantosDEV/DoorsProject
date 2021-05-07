@@ -45,9 +45,7 @@ public class PlayerController : MonoBehaviour
     private float speedInteractCode=2;
     [SerializeField]
     private float offsetXInteract = 0, offsetYInteract = 0;
-    private bool isInteracting=false;
-    /*private bool isInDialog = false;
-    private float holdTimeInteract;*/
+    //private bool isInteracting=false;
 
     #endregion
 
@@ -59,7 +57,6 @@ public class PlayerController : MonoBehaviour
     private string actionMapInteraction = "InInteraction";
     #endregion
 
-    //Get position
 
     public Vector2 GetPosition()
     {
@@ -75,8 +72,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        //Singleton Patern
 
+        #region Singleton
         if (Instance == null)
         {
             Instance = this;
@@ -85,54 +82,48 @@ public class PlayerController : MonoBehaviour
         {
             DestroyImmediate(gameObject);
         }
-        //Settup for actions
+
+        #endregion
+
+        #region Getting Components
+        playerMovement = GetComponent<PlayerMovement>();
+        playerWeapon = GetComponent<PlayerWeapon>();
+        playerAnimation = GetComponent<PlayerAnimation>();
+        playerHealthComponent = GetComponent<PlayerHealth>();
 
         myPlayerControls = new PlayerControls();
         myInput = GetComponent<PlayerInput>();
-
-        
+        #endregion
 
         myInput.actions = myPlayerControls.asset;
 
-        //DEBUG ONLY
+        #region Debug
         myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
 
         myPlayerControls.Gameplay.DebugR1.started += cntx => GameManager.Instance.ResetPieces();
+        #endregion
 
-
-        //myInput.onControlsChanged += cntx => this.OnControlsChanged();
-
-        //Gameplay--------------------------
+        #region Gameplay
         myPlayerControls.Gameplay.Movement.performed += cntx => OnMovement(cntx.ReadValue<Vector2>());
         myPlayerControls.Gameplay.Movement.canceled += cntx => onStopMovement();
 
-        //myPlayerControls.Gameplay.Dash.started += cntx => playerMovement.Dodge();
-
-        myPlayerControls.Gameplay.Interact.started += cntx => OnInteract(); //bInteractPressed = true;
-        //myController.Gameplay.Interact.canceled += cntx => bInteractPressed = false;
+        myPlayerControls.Gameplay.Interact.started += cntx => OnInteract();
 
         myPlayerControls.Gameplay.Attack.started += cntx => OnAttack();
 
         myPlayerControls.Gameplay.Pause.started += cntx => GameManager.Instance.PauseToggle();
-        //-----------------------------------
+        #endregion
 
-
-        //Menu-------------------------------
+        #region Menu
 
         myPlayerControls.Menu.UnPause.started += cntx => GameManager.Instance.PauseToggle();
 
-        //-----------------------------------
+        #endregion
 
-        //In Interaction
-
+        #region In Interaction
         myPlayerControls.InInteraction.ContinueInteract.started += cntx => ContinueInteract();
 
-        //--------------------------
-
-
-        //Testing
-        //myPlayerControls.Gameplay.DebugR1.performed += cntx => playerRumble.CallRumblePulseTest();
-        //myPlayerControls.Gameplay.DebugL1.performed += cntx => playerRumble.RumbleLinear(20, 10, 40, 20, 3);
+        #endregion
 
         myPlayerControls.Enable();
 
@@ -145,18 +136,12 @@ public class PlayerController : MonoBehaviour
         Debug.Log(currentActionMap);
         currentControlScheme = myInput.currentControlScheme;
 
-        
+
 
         //Other components
-        playerMovement = GetComponent<PlayerMovement>();
-        playerWeapon = GetComponent<PlayerWeapon>();
-        playerAnimation = GetComponent<PlayerAnimation>();
         
 
 
-        playerHealthComponent = GetComponent<PlayerHealth>();
-
-        
     }
 
     private void Start()
@@ -190,7 +175,7 @@ public class PlayerController : MonoBehaviour
     {
         playerMovement.UpdateMovementData(rawMovementInput);
 
-        playerAnimation.UpdateMovementAnimation(rawMovementInput);//.x, rawMovementInput.y, rawMovementInput.magnitude);
+        playerAnimation.UpdateMovementAnimation(rawMovementInput);
     }
 
     private IEnumerator RoutineCheckInteractible() //So this is in a couroutine so that its not as heavy
@@ -207,7 +192,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 startpos = transform.position + new Vector3(offsetXInteract, offsetYInteract);
         RaycastHit2D _Hits;
-        _Hits = Physics2D.Raycast(startpos/*transform.position*/, lastMovementInput,interactReach,interactibleLayer);
+        _Hits = Physics2D.Raycast(startpos, lastMovementInput,interactReach,interactibleLayer);
 
         
 
@@ -269,14 +254,12 @@ public class PlayerController : MonoBehaviour
                 break;
 
         }
-        //isInteracting = true;
     }
 
     public void StoppedInteracting()
     {
         interactionData.ResetData();
         EnableGameplayControls();
-        //isInteracting = false;
     }
     public void OnMovement(Vector2 context)
     {
@@ -292,7 +275,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnAttack()
     {
-        //Debug.Log(lastMovementInput);
         playerWeapon.PlayerAttack(lastMovementInput);
         playerAnimation.PlayAttackAnimation();
     }
@@ -315,7 +297,7 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    //Calling UI
+    
 #region UIRelated
     public void OnControlsChanged()
     {
@@ -327,9 +309,6 @@ public class PlayerController : MonoBehaviour
 
             if(UIManager.Instance!=null) UIManager.Instance.PromptsChange();
             if (GamepadRumbler.Instance != null) GamepadRumbler.Instance.SetGamepad();
-            
-            //playerVisuals.UpdatePlayerVisuals(); //Line of code to update ui when you make it
-            //RemoveAllBindingOverrides();
         }
     }
 
