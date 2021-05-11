@@ -26,7 +26,7 @@ public class ShowOnlyDrawer : PropertyDrawer
                 valueStr = "(not supported)";
                 break;
         }
-
+        
         EditorGUI.LabelField(position, label.text, valueStr);
     }
 }
