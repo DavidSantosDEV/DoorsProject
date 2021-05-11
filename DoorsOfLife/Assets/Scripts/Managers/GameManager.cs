@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Level Changing 
+
     public void ChangeToLevel()
     {
         if(Time.timeScale==0) UnPauseGame();

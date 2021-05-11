@@ -78,6 +78,15 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.ShowGameOver();
     }
 
+    private void debugCompletePuzzleChess()
+    {
+        if (!Debug.isDebugBuild) return;
+        PuzzleChessMaster pz=
+        FindObjectOfType<PuzzleChessMaster>();
+        if(pz)
+        pz.DebugComplete();
+    }
+
     #region showingPrompt
 
     public void ShowPrompt(string text)
@@ -124,7 +133,7 @@ public class PlayerController : MonoBehaviour
         #region Debug
         myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
 
-        //myPlayerControls.Gameplay.DebugR1.started += cntx => GameManager.Instance.ResetPieces();
+        myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzleChess();
         #endregion
 
         #region Gameplay
