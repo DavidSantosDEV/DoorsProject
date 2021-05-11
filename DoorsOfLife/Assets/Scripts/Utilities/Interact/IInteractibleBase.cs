@@ -10,11 +10,14 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public float holdDuration;
     public bool holdInteract;
     public bool multipleUse;
-    public bool isInteractible;
+    public bool isInteractible=true;
     public InteractionType typeInteraction;
 
-    public Canvas promptCanvas;
-    private Image promptImg;
+    //public Canvas promptCanvas;
+
+    //private Image promptImg;
+
+    public string textInteract="Interact";
 
     public AudioSource InteractionSound => interactionSound;
     public float HoldDuration => holdDuration;
@@ -23,12 +26,12 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public bool IsInteractible => isInteractible;
     public InteractionType TypeInteraction=>typeInteraction;
 
-    protected virtual void Start()
+    /*protected virtual void Start()
     {
         if (!promptCanvas) promptCanvas = GetComponentInChildren<Canvas>();
         if (promptCanvas) promptImg = GetComponentInChildren<Image>();
         HidePrompt();
-    }
+    }*/
 
     public virtual void OnInteract()
     {
@@ -47,7 +50,7 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
         PlayerController.Instance.StoppedInteracting();
     }
 
-    public virtual void ShowPrompt()
+    /*public virtual void ShowPrompt()
     {
         if (promptCanvas)
         {
@@ -77,5 +80,5 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public virtual void ChangePrompt(Sprite spt)
     {
         promptImg.sprite = spt;
-    }
+    }*/
 }

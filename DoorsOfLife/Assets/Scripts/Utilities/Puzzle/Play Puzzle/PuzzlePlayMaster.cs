@@ -34,6 +34,7 @@ public class PuzzlePlayMaster : PuzzleMasterBase
 
     protected override void DoAction()
     {
+        Debug.Log("Puzzle complete!");
         base.DoAction();
     }
 

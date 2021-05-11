@@ -13,12 +13,9 @@ public enum DoorsAndNumbers : int
 
 public class GameManager : MonoBehaviour
 {
-    public PuzzleChessMaster puzzlechess;
-
-    public void ResetPieces() //DELETE AFTER
-    {
-        puzzlechess.ResetPuzzle();
-    }
+    public bool LockFPS=false;
+    [Range(30, 144)]
+    public int lockedFPS = 60;
 
     public SoundBasics soundSet;
 
@@ -37,6 +34,11 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+
+        if (LockFPS)
+        {
+            Application.targetFrameRate = lockedFPS;
         }
     }
     private void OnEnable()

@@ -35,7 +35,7 @@ public class InputPromptData : ScriptableObject
         string var="";
         if (PlayerController.Instance!=null)
         {
-            var = PlayerController.Instance.myInput.devices[0].name;
+            var = PlayerController.Instance.GetMyInput().devices[0].name;//myInput.devices[0].name;
         }
         else if(PlayerMenuController.Instance!=null)
         {

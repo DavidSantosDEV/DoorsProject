@@ -13,11 +13,11 @@ public class InteractionData : ScriptableObject
         set
         {
 
-            if(myInteractible)
-            myInteractible.HidePrompt(); //Clear previous value
+            /*if(myInteractible)
+            myInteractible.HidePrompt(); //Clear previous value*/
 
             myInteractible = value;
-            myInteractible.ShowPrompt(); // Show new value
+            //myInteractible.ShowPrompt(); // Show new value
         }
     }
 
@@ -26,7 +26,7 @@ public class InteractionData : ScriptableObject
         if (myInteractible.IsInteractible)
         {
             myInteractible.OnInteract();
-            myInteractible.HidePrompt();
+            //myInteractible.HidePrompt();
             //ResetData();
         }
     }
@@ -51,8 +51,8 @@ public class InteractionData : ScriptableObject
 
     public void ResetData()
     {
-        if(myInteractible)
-        myInteractible.HidePrompt();
+        /*if(myInteractible)
+        myInteractible.HidePrompt();*/
 
         //Debug.Log(myInteractible);
 
@@ -64,11 +64,11 @@ public class InteractionData : ScriptableObject
         return myInteractible.TypeInteraction;
     }
 
-    public void ControlsChanged()
+    /*public void ControlsChanged()
     {
         if (myInteractible)
         {
             myInteractible.ChangePrompt(UIManager.Instance.getInteractSprite());
         }
-    }
+    }*/
 }

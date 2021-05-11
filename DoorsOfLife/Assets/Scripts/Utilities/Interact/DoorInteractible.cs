@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class DoorInteractible : IInteractibleBase
 {
-    
+    [SerializeField]
+    bool IsLocked = true;
 
     [SerializeField]
     private DoorsAndNumbers myKey;
 
     [SerializeField]
-    private string doorIsClosed, doorOpens;
+    private string doorIsClosed="This door is closed.", doorOpens="Door is open.";
     string SentencetoType;
 
     [SerializeField]
     private Sprite spriteOpen, spriteClosed;
-    
 
     [SerializeField][Range(1,float.MaxValue)]
     private float typeSpeed=20;
@@ -32,9 +32,8 @@ public class DoorInteractible : IInteractibleBase
     private Collider2D myCol;
     private AudioSource myAudioSource;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         myCol = GetComponent<Collider2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAudioSource = GetComponent<AudioSource>();
@@ -47,18 +46,30 @@ public class DoorInteractible : IInteractibleBase
     public override void OnInteract()
     {
         base.OnInteract();
-        Debug.Log("Nice cock bro"); 
-        if (GameManager.Instance.GetKey(myKey))
+        Debug.Log("Nice cock bro");
+        if (IsLocked)
         {
-            OpenDoor();
-            PlaySound(openSound);
-            StartTyping(doorOpens);
+            if (GameManager.Instance.GetKey(myKey))
+            {
+                OpenRout();
+            }
+            else
+            {
+                PlaySound(closedSound);
+                StartTyping(doorIsClosed);
+            }
         }
         else
         {
-            PlaySound(closedSound);
-            StartTyping(doorIsClosed);
+            OpenRout();
         }
+    }
+
+    private void OpenRout()
+    {
+        OpenDoor();
+        PlaySound(openSound);
+        StartTyping(doorOpens);
     }
 
     public override void OnContinueInteract()

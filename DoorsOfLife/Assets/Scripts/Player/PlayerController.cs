@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine;
 
 
@@ -25,30 +27,37 @@ public class PlayerController : MonoBehaviour
     private Vector2 rawMovementInput;
     private Vector2 lastMovementInput;
 
+    //-----------------------------------
     [Header("Player Interaction")]
+    [SerializeField]
+    private float speedInteractCheck = 8; // 1/8 = 0.125 ms
+    [SerializeField]
+    private float offsetXInteract = 0, offsetYInteract = 0;
     [SerializeField]
     private float interactReach = 1f;
     [SerializeField]
     private LayerMask interactibleLayer;
     public InteractionData interactionData;
+    [SerializeField]
+    private GameObject interactCanvas;
+    [SerializeField]
+    private Image imgPrompt=null;
+    [SerializeField]
+    private TextMeshProUGUI textPrompt=null;
+    
     //Input components
 
 
+
     private PlayerControls myPlayerControls;
-    public PlayerInput myInput;
+    private PlayerInput myInput;
+
+    public PlayerInput GetMyInput()
+    {
+        return myInput;
+    }
 
     private string currentControlScheme;
-
-    #region Interaction
-
-    [SerializeField]
-    private float speedInteractCode=2;
-    [SerializeField]
-    private float offsetXInteract = 0, offsetYInteract = 0;
-    //private bool isInteracting=false;
-
-    #endregion
-
 
     #region ActionMaps
     private string currentActionMap;
@@ -65,9 +74,24 @@ public class PlayerController : MonoBehaviour
 
     private void DebugGameOver()
     {
-        if(Debug.isDebugBuild) //Just in case i forget
+        if(Debug.isDebugBuild)
         GameManager.Instance.ShowGameOver();
     }
+
+    #region showingPrompt
+
+    public void ShowPrompt(string text)
+    {
+        interactCanvas.SetActive(true);
+        imgPrompt.sprite = UIManager.Instance.getInteractSprite();
+        textPrompt.text = text;
+    }
+    public void HidePrompt()
+    {
+        interactCanvas.SetActive(false);
+    }
+
+    #endregion
 
     // Start is called before the first frame update
     private void Awake()
@@ -100,7 +124,7 @@ public class PlayerController : MonoBehaviour
         #region Debug
         myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
 
-        myPlayerControls.Gameplay.DebugR1.started += cntx => GameManager.Instance.ResetPieces();
+        //myPlayerControls.Gameplay.DebugR1.started += cntx => GameManager.Instance.ResetPieces();
         #endregion
 
         #region Gameplay
@@ -136,7 +160,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(currentActionMap);
         currentControlScheme = myInput.currentControlScheme;
 
-
+        HidePrompt();
 
         //Other components
         
@@ -183,7 +207,7 @@ public class PlayerController : MonoBehaviour
         while (enabled)
         {
             CheckForInteractible();
-            yield return new WaitForSeconds(1/speedInteractCode);
+            yield return new WaitForSeconds(1/speedInteractCheck);
         }
     }
 
@@ -204,6 +228,7 @@ public class PlayerController : MonoBehaviour
                 if (interactionData.IsEmpty())
                 {
                     interactionData.Interactible = interactible;
+                    ShowPrompt(interactible.textInteract);
                     Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
                 }
                 else
@@ -211,11 +236,12 @@ public class PlayerController : MonoBehaviour
                     if (!interactionData.IsSameInteractible(interactible))
                     {
                         interactionData.Interactible = interactible;
+                        ShowPrompt(interactible.textInteract);
                         Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
                     }
                     else
                     {
-                        Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.blue, 0.2f);
+                        Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
                         return;
                     }
                 }
@@ -224,6 +250,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.red, 0.2f);
+            HidePrompt();
             interactionData.ResetData();
         }
     }
@@ -240,7 +267,8 @@ public class PlayerController : MonoBehaviour
     {
         if (!interactionData.IsEmpty())
         {
-            interactionData.Interact();        
+            interactionData.Interact();
+            HidePrompt();
         }
         
     }
@@ -310,7 +338,7 @@ public class PlayerController : MonoBehaviour
             if(UIManager.Instance!=null) UIManager.Instance.PromptsChange();
             if (GamepadRumbler.Instance != null) GamepadRumbler.Instance.SetGamepad();
 
-            interactionData.ControlsChanged();
+            //interactionData.ControlsChanged();
         }
     }
 

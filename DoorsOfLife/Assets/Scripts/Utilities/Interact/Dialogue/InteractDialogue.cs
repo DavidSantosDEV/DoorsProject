@@ -42,9 +42,8 @@ public class InteractDialogue : IInteractibleBase
         myAudioSource = GetComponent<AudioSource>();
     }
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         typeInteraction = InteractionType.DialogInteraction;
         textDisplay = UIManager.Instance.GetDialogueText();
 

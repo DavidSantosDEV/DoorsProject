@@ -160,7 +160,7 @@ public class UIManager : MonoBehaviour
         promptStuff.SetActive(false);
         dialogueAvatarImage.enabled = showImage;
         avatarcaseImg.enabled = showImage;
-        //dialogueNameText.enabled = showName;
+        dialogueNameText.enabled = showName;
         dialogueNameImg.enabled = showName;
     }
 

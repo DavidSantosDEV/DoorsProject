@@ -23,9 +23,8 @@ public class InteractPushObject : IInteractibleBase
     private Vector3 origPos;
     private Vector3 targetPos;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         typeInteraction = InteractionType.OneTimeClick;
         raySize = ((GetComponent<Collider2D>().bounds.size.x * 1.5f) * moveDistanceMultiplier) - distanceRayTolerance;
     }

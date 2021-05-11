@@ -21,7 +21,7 @@ public class InteractPrompt : IInteractibleBase
 
     
 
-    protected override void Start()
+    private void Start()
     {
         if (!myAudio) myAudio = gameObject.AddComponent<AudioSource>();
     }
