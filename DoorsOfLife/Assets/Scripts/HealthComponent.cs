@@ -14,8 +14,8 @@ public class HealthComponent : MonoBehaviour
 
     protected bool IframesOn=false;
     protected bool isDead=false;
-    [SerializeField]//[ReadOnly] //This is just for show
-    protected float currentHealth;
+    //[SerializeField]//[ReadOnly] //This is just for show
+    [ShowOnly][SerializeField]protected float currentHealth;
 
     protected virtual void Start()
     {
