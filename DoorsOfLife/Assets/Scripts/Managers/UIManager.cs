@@ -41,7 +41,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI dialogueNameText;
     [SerializeField]
-    private Image dialogueAvatarImage = null;
+    private Image dialogueNameImg;
+    [SerializeField]
+    private Image avatarcaseImg,dialogueAvatarImage = null;
     [SerializeField]
     private Image dialogueButtonPromptImage=null;
 
@@ -131,6 +133,10 @@ public class UIManager : MonoBehaviour
         dialogueButtonPromptImage.sprite = deviceInputPromptData.GetButtonInteractSprite();
     }
 
+    public Sprite getInteractSprite()
+    {
+        return deviceInputPromptData.GetButtonInteractSprite();
+    }
     /*public void HideInteractButton()
     {
         imageButtonInteract.enabled = false;
@@ -153,7 +159,9 @@ public class UIManager : MonoBehaviour
         dialogueStuff.SetActive(true);
         promptStuff.SetActive(false);
         dialogueAvatarImage.enabled = showImage;
-        dialogueNameText.enabled = showName;
+        avatarcaseImg.enabled = showImage;
+        //dialogueNameText.enabled = showName;
+        dialogueNameImg.enabled = showName;
     }
 
     public void ShowContinueDialogueButton()

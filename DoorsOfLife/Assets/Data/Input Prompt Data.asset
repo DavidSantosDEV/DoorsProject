@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fde9e509454e54eb9ca537194bf563, type: 3}
   m_Name: Input Prompt Data
   m_EditorClassIdentifier: 
-  southButtonPlayStation: {fileID: 21300052, guid: 10045ad39fef69944b33bedc39310592, type: 3}
-  northButtonPlayStation: {fileID: 21300048, guid: 10045ad39fef69944b33bedc39310592, type: 3}
-  westButtonPlayStation: {fileID: 21300046, guid: 10045ad39fef69944b33bedc39310592, type: 3}
-  eastButtonPlayStation: {fileID: 21300050, guid: 10045ad39fef69944b33bedc39310592, type: 3}
+  southButtonPlayStation: {fileID: 5543941588292853863, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
+  northButtonPlayStation: {fileID: -9205221584584489300, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
+  westButtonPlayStation: {fileID: 1202984965197363600, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
+  eastButtonPlayStation: {fileID: -1863859237976802683, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
   southButtonMicrosoft: {fileID: 21300052, guid: fe9aa33e50412c242bd73e9324bc7922, type: 3}
   northButtonMicrosoft: {fileID: 21300050, guid: fe9aa33e50412c242bd73e9324bc7922, type: 3}
   westButtonMicrosoft: {fileID: 21300048, guid: fe9aa33e50412c242bd73e9324bc7922, type: 3}
@@ -25,6 +25,6 @@ MonoBehaviour:
   L1Trigger: {fileID: 21300028, guid: 10045ad39fef69944b33bedc39310592, type: 3}
   L2Trigger: {fileID: 21300036, guid: 10045ad39fef69944b33bedc39310592, type: 3}
   DPADFull: {fileID: 21300000, guid: 10045ad39fef69944b33bedc39310592, type: 3}
-  LAnalog: {fileID: 21300016, guid: 10045ad39fef69944b33bedc39310592, type: 3}
-  RAnalog: {fileID: 21300018, guid: 10045ad39fef69944b33bedc39310592, type: 3}
-  KeyInteract: {fileID: 21300014, guid: 179cb3a3dc172f84f9d63d186b2b85d6, type: 3}
+  LAnalog: {fileID: -168777754515822616, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
+  RAnalog: {fileID: -168777754515822616, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
+  KeyInteract: {fileID: 3434086634727231013, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}

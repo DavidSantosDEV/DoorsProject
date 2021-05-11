@@ -309,6 +309,8 @@ public class PlayerController : MonoBehaviour
 
             if(UIManager.Instance!=null) UIManager.Instance.PromptsChange();
             if (GamepadRumbler.Instance != null) GamepadRumbler.Instance.SetGamepad();
+
+            interactionData.ControlsChanged();
         }
     }
 

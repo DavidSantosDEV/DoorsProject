@@ -63,4 +63,12 @@ public class InteractionData : ScriptableObject
     {
         return myInteractible.TypeInteraction;
     }
+
+    public void ControlsChanged()
+    {
+        if (myInteractible)
+        {
+            myInteractible.ChangePrompt(UIManager.Instance.getInteractSprite());
+        }
+    }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class IInteractibleBase : MonoBehaviour,IInteractible
@@ -13,6 +14,7 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public InteractionType typeInteraction;
 
     public Canvas promptCanvas;
+    private Image promptImg;
 
     public AudioSource InteractionSound => interactionSound;
     public float HoldDuration => holdDuration;
@@ -24,6 +26,7 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     protected virtual void Start()
     {
         if (!promptCanvas) promptCanvas = GetComponentInChildren<Canvas>();
+        if (promptCanvas) promptImg = GetComponentInChildren<Image>();
         HidePrompt();
     }
 
@@ -48,6 +51,7 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     {
         if (promptCanvas)
         {
+            ChangePrompt(UIManager.Instance.getInteractSprite());
             promptCanvas.enabled = true;
         }
         else
@@ -68,5 +72,10 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
         {
             //Debug.Log("Object :" + gameObject.name + " needs prompt");
         }
+    }
+
+    public virtual void ChangePrompt(Sprite spt)
+    {
+        promptImg.sprite = spt;
     }
 }
