@@ -10,6 +10,7 @@ TagManager:
   - EnemyFeet
   - ObjectMovable
   - Interactible
+  - Puz
   layers:
   - Default
   - TransparentFX

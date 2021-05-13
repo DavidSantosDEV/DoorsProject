@@ -10,13 +10,16 @@ public class InteractDialogue : IInteractibleBase
 
     private TextMeshProUGUI textDisplay = null;
     private TextMeshProUGUI textNameDisplay = null;
+
     [SerializeField]
     [Range(0, 0.2f)]
     private float textTypeTime = 0.2f;
 
     [Header("Dialogue Settings")]
     [SerializeField]
-    private bool showImage=true;
+    private bool showImage = true;
+    [SerializeField]
+    private bool showName=true;
     [SerializeField]
     private string displaySpeakerName="?";
     [SerializeField]
@@ -36,17 +39,13 @@ public class InteractDialogue : IInteractibleBase
     private bool canContinue = false;
     private int Index;
 
-
-    private void Awake()
-    {
-        myAudioSource = GetComponent<AudioSource>();
-    }
-
     private void Start()
     {
+        myAudioSource = GetComponent<AudioSource>();
         typeInteraction = InteractionType.DialogInteraction;
         textDisplay = UIManager.Instance.GetDialogueText();
 
+        if(showName)
         textNameDisplay = UIManager.Instance.GetDialogueSpeakerNameText();
     }
 
@@ -55,7 +54,8 @@ public class InteractDialogue : IInteractibleBase
         base.OnInteract();
         Debug.Log("Dialog Start");
         UIManager.Instance.SetAvatarDialogue(displayAvatar);
-        UIManager.Instance.ShowDialogueCase(showImage,true);
+        UIManager.Instance.ShowDialogueCase(showImage,showName);
+        if(showName)
         textNameDisplay.text = displaySpeakerName;
         StartTyping();
     }

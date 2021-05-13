@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class PuzzlePlayMaster : PuzzleMasterBase
 {
+    
+
     [SerializeField]
     private GameObject[] myMovables;
 
-    [SerializeField]
+    [SerializeField][ShowOnly]
     List<Vector2> originalPositions = new List<Vector2>();
+
+    [SerializeField]
+    private GameObject showGameObject;
 
     protected override void Start()
     {
         base.Start();
+        showGameObject.SetActive(false);
         SetOriginalPositions();
     }
 
     private void SetOriginalPositions()
     {
+        originalPositions.Clear();
         for(int i = 0; i < myMovables.Length; i++)
         {
             if(myMovables[i])
@@ -35,6 +42,7 @@ public class PuzzlePlayMaster : PuzzleMasterBase
     protected override void DoAction()
     {
         Debug.Log("Puzzle complete!");
+        showGameObject.SetActive(true);
         base.DoAction();
     }
 

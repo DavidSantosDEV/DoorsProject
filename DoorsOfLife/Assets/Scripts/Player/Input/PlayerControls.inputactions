@@ -52,6 +52,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Debug3",
+                    "type": "Button",
+                    "id": "d6348bd6-e67b-4317-8a09-1c0a1fc351e2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -239,6 +247,17 @@
                     "processors": "",
                     "groups": "Keyboard and Mouse",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22779c26-da48-4efc-9814-afab54b22aad",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Debug3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

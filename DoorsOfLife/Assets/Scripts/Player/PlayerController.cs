@@ -38,16 +38,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private LayerMask interactibleLayer;
     public InteractionData interactionData;
-    [SerializeField]
-    private GameObject interactCanvas;
+    private GameObject interactCanvas=null;
     [SerializeField]
     private Image imgPrompt=null;
     [SerializeField]
     private TextMeshProUGUI textPrompt=null;
-    
+
     //Input components
 
-
+    private void OnDestroy()
+    {
+        interactionData.ResetData();
+        Instance = null;
+        interactCanvas = null;
+    }
 
     private PlayerControls myPlayerControls;
     private PlayerInput myInput;
@@ -78,13 +82,22 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.ShowGameOver();
     }
 
-    private void debugCompletePuzzleChess()
+    private void debugCompletePuzzle()
     {
         if (!Debug.isDebugBuild) return;
-        PuzzleChessMaster pz=
-        FindObjectOfType<PuzzleChessMaster>();
-        if(pz)
-        pz.DebugComplete();
+        PuzzlePlayMaster pz=
+        FindObjectOfType<PuzzlePlayMaster>();
+        if (pz)
+        {
+            pz.debugCompletePuzzle();
+        }
+    }
+
+    private void DebugFunc3()
+    {
+        if (!Debug.isDebugBuild) return;
+        PuzzleChessMaster pz = FindObjectOfType<PuzzleChessMaster>();
+        if (pz) pz.debugCompletePuzzle();
     }
 
     #region showingPrompt
@@ -105,7 +118,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-
+        /*
         #region Singleton
         if (Instance == null)
         {
@@ -126,6 +139,8 @@ public class PlayerController : MonoBehaviour
 
         myPlayerControls = new PlayerControls();
         myInput = GetComponent<PlayerInput>();
+
+        interactCanvas = GetComponentInChildren<Canvas>().gameObject;
         #endregion
 
         myInput.actions = myPlayerControls.asset;
@@ -133,7 +148,9 @@ public class PlayerController : MonoBehaviour
         #region Debug
         myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
 
-        myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzleChess();
+        myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzle();
+
+        myPlayerControls.Gameplay.Debug3.started += cntx => DebugFunc3();
         #endregion
 
         #region Gameplay
@@ -174,11 +191,89 @@ public class PlayerController : MonoBehaviour
         //Other components
         
 
-
+        */
     }
 
     private void Start()
     {
+        #region Singleton
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
+
+        #endregion
+
+        #region Getting Components
+        playerMovement = GetComponent<PlayerMovement>();
+        playerWeapon = GetComponent<PlayerWeapon>();
+        playerAnimation = GetComponent<PlayerAnimation>();
+        playerHealthComponent = GetComponent<PlayerHealth>();
+
+        myPlayerControls = new PlayerControls();
+        myInput = GetComponent<PlayerInput>();
+
+        interactCanvas = GetComponentInChildren<Canvas>().gameObject;
+
+        Debug.Log(interactCanvas);
+        #endregion
+
+        myInput.actions = myPlayerControls.asset;
+
+        #region Debug
+        myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
+
+        myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzle();
+
+        myPlayerControls.Gameplay.Debug3.started += cntx => DebugFunc3();
+        #endregion
+
+        #region Gameplay
+        myPlayerControls.Gameplay.Movement.performed += cntx => OnMovement(cntx.ReadValue<Vector2>());
+        myPlayerControls.Gameplay.Movement.canceled += cntx => onStopMovement();
+
+        myPlayerControls.Gameplay.Interact.started += cntx => OnInteract();
+
+        myPlayerControls.Gameplay.Attack.started += cntx => OnAttack();
+
+        myPlayerControls.Gameplay.Pause.started += cntx => GameManager.Instance.PauseToggle();
+        #endregion
+
+        #region Menu
+
+        myPlayerControls.Menu.UnPause.started += cntx => GameManager.Instance.PauseToggle();
+
+        #endregion
+
+        #region In Interaction
+        myPlayerControls.InInteraction.ContinueInteract.started += cntx => ContinueInteract();
+
+        #endregion
+
+        myPlayerControls.Enable();
+
+
+        currentActionMap = actionMapGameplay; //Lets assume its always the gameplay starting
+
+        myInput.actions.FindActionMap(actionMapInteraction).Disable();
+        myInput.actions.FindActionMap(actionMapMenu).Disable();
+
+        Debug.Log(currentActionMap);
+        currentControlScheme = myInput.currentControlScheme;
+
+        HidePrompt();
+
+        //Other components
+
+
+
+
+
+
         StartCoroutine(nameof(RoutineCheckInteractible));
     }
 

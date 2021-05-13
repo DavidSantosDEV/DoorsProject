@@ -52,9 +52,4 @@ public class PuzzleChessMaster : PuzzleMasterBase
             myMovables[i].transform.position = positions[i];
         }
     }
-
-    public void DebugComplete()
-    {
-        DoAction();
-    }
 }

@@ -126,6 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowGameOver()
     {
+        Time.timeScale = 0;
         UIManager.Instance.GameOverScreen();
         Debug.Log("Game Over");
         //ChangeToMenu();
@@ -135,16 +136,42 @@ public class GameManager : MonoBehaviour
 
     #region Level Changing 
 
+    private IEnumerator UnloadPreviousScene()
+    {
+        /*AsyncOperation sceneUnload = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        while (!sceneUnload.isDone)
+        {
+            Debug.Log(sceneUnload.progress);
+            yield return null;
+        }
+        Debug.Log(sceneUnload.progress);
+        yield return null;*/
+        SceneManager.UnloadScene(SceneManager.GetActiveScene());
+        yield return null;
+        StartCoroutine(LoadLevel(1));
+    }
+
     public void ChangeToLevel()
     {
+        //GameManager.
         if(Time.timeScale==0) UnPauseGame();
-        StartCoroutine(LoadLevel(1));
+
+        StartCoroutine(UnloadPreviousScene());
+        //SceneManager.LoadScene(1);
+        //StartCoroutine(LoadLevel(1));
+        //LoadScene(1);
     }
 
     public void ChangeToMenu()
     {
         if (Time.timeScale == 0) UnPauseGame();
-        StartCoroutine(LoadLevel(0));
+        LoadScene(0);
+        //StartCoroutine(LoadLevel(0));
+    }
+
+    private void LoadScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 
     private IEnumerator LoadLevel(int level)
