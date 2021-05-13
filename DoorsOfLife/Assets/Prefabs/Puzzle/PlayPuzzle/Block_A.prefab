@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2191546692871138822}
   - component: {fileID: 2191546692871138823}
   - component: {fileID: 2191546692871138820}
+  - component: {fileID: 2988306338491874890}
   m_Layer: 6
   m_Name: Block_A
   m_TagString: Interactible
@@ -128,7 +129,6 @@ MonoBehaviour:
   multipleUse: 0
   isInteractible: 1
   typeInteraction: 3
-  promptCanvas: {fileID: 0}
   textInteract: Push
   moveDistanceMultiplier: 1
   timeToMove: 0.1
@@ -137,3 +137,24 @@ MonoBehaviour:
     m_Bits: 24640
   distanceRayTolerance: 0.25
   canPush: 1
+--- !u!50 &2988306338491874890
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191546692871138821}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

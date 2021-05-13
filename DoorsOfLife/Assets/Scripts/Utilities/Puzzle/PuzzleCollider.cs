@@ -17,8 +17,8 @@ public class PuzzleCollider : MonoBehaviour
         pusher = myFitObject.GetComponent<ObjectPusher>();
     }
 
-
-    private bool amIHappy = false;
+    [SerializeField][ShowOnly]
+    private bool isSet = false;
 
     public ObjectPusher ReturnFitObject()
     {
@@ -27,7 +27,7 @@ public class PuzzleCollider : MonoBehaviour
 
     public bool GetIsSet()
     {
-        return amIHappy;
+        return isSet;
     }
 
     public void SetMaster(PuzzleMasterBase master)
@@ -37,9 +37,9 @@ public class PuzzleCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject== myFitObject)
+        if (collision.gameObject == myFitObject)
         {
-            amIHappy = true;
+            isSet = true;
             myMaster.UpdateMaster();
         } 
     }
@@ -48,7 +48,7 @@ public class PuzzleCollider : MonoBehaviour
     {
         if (collision.gameObject == myFitObject)
         {
-            amIHappy = false;
+            isSet = false;
             myMaster.UpdateMaster();
         }
     }
