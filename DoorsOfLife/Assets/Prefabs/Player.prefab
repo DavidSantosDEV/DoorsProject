@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2a75c2531ba854fb3123fe4a55dc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 1
   meleeWidth: 0.45
   meleeRange: 0.55
   attackPoint: {fileID: 2985027686580726682}
@@ -572,7 +572,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   interactionData: {fileID: 11400000, guid: 1b2a5e957a316574abed9c3fc82fa33b, type: 2}
-  interactCanvas: {fileID: 9634055}
   imgPrompt: {fileID: 771620575}
   textPrompt: {fileID: 649939863}
 --- !u!114 &2985027686227906103
@@ -641,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34891bbfd89561c4aa05eefef4d6d7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 8
   invencibilityTime: 0.3
   currentHealth: 0
   lowStart: 2
@@ -690,7 +689,7 @@ MonoBehaviour:
   - {x: -0.17569923, y: 0.54587173, z: 0}
   m_ShapePathHash: -69664539
   m_Mesh: {fileID: 0}
-  m_InstanceId: 103326
+  m_InstanceId: 68944
 --- !u!1 &2985027686580726683
 GameObject:
   m_ObjectHideFlags: 0

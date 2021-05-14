@@ -6,32 +6,27 @@ using UnityEngine;
 public class IInteractibleBase : MonoBehaviour,IInteractible
 {
     [Header("Interactible Settings")]
-    public AudioSource interactionSound;
-    public float holdDuration;
-    public bool holdInteract;
-    public bool multipleUse;
-    public bool isInteractible=true;
-    public InteractionType typeInteraction;
-
-    //public Canvas promptCanvas;
-
-    //private Image promptImg;
-
-    public string textInteract="Interact";
+    [SerializeField]
+    protected AudioSource interactionSound;
+    [SerializeField]
+    protected bool multipleUse=true;
+    [SerializeField]
+    protected bool isInteractible=true;
+    [SerializeField]
+    protected InteractionType typeInteraction;
+    [SerializeField]
+    protected string interactionText = "Interact";
 
     public AudioSource InteractionSound => interactionSound;
-    public float HoldDuration => holdDuration;
-    public bool HoldInteract => holdInteract;
     public bool MultipleUse => multipleUse;
-    public bool IsInteractible => isInteractible;
-    public InteractionType TypeInteraction=>typeInteraction;
-
-    /*protected virtual void Start()
+    public bool IsInteractible
     {
-        if (!promptCanvas) promptCanvas = GetComponentInChildren<Canvas>();
-        if (promptCanvas) promptImg = GetComponentInChildren<Image>();
-        HidePrompt();
-    }*/
+        get => isInteractible;
+        set => isInteractible = value;
+    }
+    public InteractionType TypeInteraction=>typeInteraction;
+    public string InteractionText => interactionText;
+
 
     public virtual void OnInteract()
     {
@@ -48,8 +43,21 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     {
         Debug.Log("Interaction Stopped");
         PlayerController.Instance.StoppedInteracting();
+        isInteractible = multipleUse;
     }
 
+    /*[SerializeField]
+protected float holdDuration;
+[SerializeField]
+protected bool holdInteract;*/
+
+    /*public float HoldDuration => holdDuration;
+public bool HoldInteract => holdInteract;*/
+
+    #region Old Prompt code
+    //public Canvas promptCanvas;
+
+    //private Image promptImg;
     /*public virtual void ShowPrompt()
     {
         if (promptCanvas)
@@ -81,4 +89,5 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     {
         promptImg.sprite = spt;
     }*/
+    #endregion
 }

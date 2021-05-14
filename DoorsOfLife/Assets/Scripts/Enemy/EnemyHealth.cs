@@ -23,8 +23,8 @@ public class EnemyHealth : HealthComponent
     public override void TakeDamage(float dmgVal)
     {
         base.TakeDamage(dmgVal);
-        if (isDead) return;
-        PlayHitAnimation();
+        //if (isDead) return;
+        //PlayHitAnimation();
         //enemyParent.SetStunned();
     }
 

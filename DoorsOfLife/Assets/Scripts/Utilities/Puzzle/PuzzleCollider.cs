@@ -9,18 +9,18 @@ public class PuzzleCollider : MonoBehaviour
     [SerializeField]
     private GameObject myFitObject;
 
-    private ObjectPusher pusher;
+    private InteractPushObject pusher;
 
     private void Start()
     {
         if(myFitObject)
-        pusher = myFitObject.GetComponent<ObjectPusher>();
+        pusher = myFitObject.GetComponent<InteractPushObject>();
     }
 
     [SerializeField][ShowOnly]
     private bool isSet = false;
 
-    public ObjectPusher ReturnFitObject()
+    public InteractPushObject ReturnFitObject()
     {
         return pusher;
     }

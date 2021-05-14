@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3988468196082884318}
   - component: {fileID: 3988468196082884317}
   m_Layer: 13
-  m_Name: Knight
+  m_Name: StaticPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -8032995728034213270, guid: 152563eaffe00814a81264aff70e5e6c, type: 3}
-  m_Color: {r: 0, g: 0.8481636, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.8831036, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

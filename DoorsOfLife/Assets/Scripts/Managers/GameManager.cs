@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     [Header("Key related stuff")]
     public bool[] key = new bool[2];
 
+    private bool gamepaused=false;
+
+    public bool GameIsPaused => gamepaused;
+
     public static GameManager Instance { get; private set; } = null;
 
     // Start is called before the first frame update
@@ -113,6 +117,7 @@ public class GameManager : MonoBehaviour
     private void PauseGame()
     {
         Time.timeScale = 0;
+        gamepaused = true;
         UIManager.Instance.ShowPauseCanvas();
         PlayerController.Instance.EnableMenuControls();
     }
@@ -120,13 +125,20 @@ public class GameManager : MonoBehaviour
     private void UnPauseGame()
     {
         Time.timeScale = 1;
+        gamepaused = false;
         UIManager.Instance.HidePauseCanvas();
         PlayerController.Instance.EnableGameplayControls();
     }
 
-    public void ShowGameOver()
+    private void PauseGameNoCanvas()
     {
         Time.timeScale = 0;
+        gamepaused = true;
+    }
+
+    public void ShowGameOver()
+    {
+        PauseGameNoCanvas();
         UIManager.Instance.GameOverScreen();
         Debug.Log("Game Over");
         //ChangeToMenu();
@@ -136,46 +148,21 @@ public class GameManager : MonoBehaviour
 
     #region Level Changing 
 
-    private IEnumerator UnloadPreviousScene()
+    /*private IEnumerator UnloadPreviousScene(int sceneIndex)
     {
-        /*AsyncOperation sceneUnload = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-        while (!sceneUnload.isDone)
-        {
-            Debug.Log(sceneUnload.progress);
+        Scene unload = SceneManager.GetActiveScene();
+        AsyncOperation unloadprocess = SceneManager.UnloadSceneAsync(unload);
+        while(!unloadprocess.isDone){
+            Debug.Log(unloadprocess.progress);
             yield return null;
         }
-        Debug.Log(sceneUnload.progress);
-        yield return null;*/
-        SceneManager.UnloadScene(SceneManager.GetActiveScene());
         yield return null;
-        StartCoroutine(LoadLevel(1));
-    }
+        StartCoroutine(LoadScene(sceneIndex));
+    }*/
 
-    public void ChangeToLevel()
+    private IEnumerator LoadScene(int level)
     {
-        //GameManager.
-        if(Time.timeScale==0) UnPauseGame();
-
-        StartCoroutine(UnloadPreviousScene());
-        //SceneManager.LoadScene(1);
-        //StartCoroutine(LoadLevel(1));
-        //LoadScene(1);
-    }
-
-    public void ChangeToMenu()
-    {
-        if (Time.timeScale == 0) UnPauseGame();
-        LoadScene(0);
-        //StartCoroutine(LoadLevel(0));
-    }
-
-    private void LoadScene(int sceneIndex)
-    {
-        SceneManager.LoadScene(sceneIndex);
-    }
-
-    private IEnumerator LoadLevel(int level)
-    {
+        //Scene previousScene = SceneManager.GetActiveScene();
         AsyncOperation sceneLoading = SceneManager.LoadSceneAsync(level);
         while (!sceneLoading.isDone)
         {
@@ -184,7 +171,30 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("Scene Loaded");
         yield return null;
+        
     }
+
+    public void ChangeToLevel()
+    {
+        //GameManager.
+        if(Time.timeScale==0) UnPauseGame();
+        StartCoroutine(LoadScene(1));
+    }
+
+    public void ChangeToMenu()
+    {
+        if (Time.timeScale == 0) UnPauseGame();
+        
+        StartCoroutine(LoadScene(0));
+        //StartCoroutine(LoadLevel(0));
+    }
+
+    /*private void LoadScene(int sceneIndex)
+    {
+        StartCoroutine(UnloadPreviousSceneAndLoadNext(sceneIndex));
+    }*/
+
+    
 
     #endregion
 

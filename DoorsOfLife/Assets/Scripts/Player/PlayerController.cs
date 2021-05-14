@@ -332,7 +332,7 @@ public class PlayerController : MonoBehaviour
                 if (interactionData.IsEmpty())
                 {
                     interactionData.Interactible = interactible;
-                    ShowPrompt(interactible.textInteract);
+                    ShowPrompt(interactible.InteractionText);
                     Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
                 }
                 else
@@ -340,7 +340,7 @@ public class PlayerController : MonoBehaviour
                     if (!interactionData.IsSameInteractible(interactible))
                     {
                         interactionData.Interactible = interactible;
-                        ShowPrompt(interactible.textInteract);
+                        ShowPrompt(interactible.InteractionText);
                         Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
                     }
                     else
@@ -419,7 +419,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnIsDead()
     {
-        enabled = false;
+        EnableMenuControls();
     }
 
     public void ResetDeath()
@@ -456,7 +456,7 @@ public class PlayerController : MonoBehaviour
         currentActionMap = actionMapGameplay;
     }
 
-    public void EnableMenuControls() //finish after
+    public void EnableMenuControls() 
     {
         myInput.SwitchCurrentActionMap(actionMapMenu);
         myInput.actions.FindActionMap(currentActionMap).Disable();

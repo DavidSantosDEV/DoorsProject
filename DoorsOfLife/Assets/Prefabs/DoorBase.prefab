@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionSound: {fileID: 0}
-  holdDuration: 0
-  holdInteract: 0
-  multipleUse: 0
+  multipleUse: 1
   isInteractible: 1
   typeInteraction: 0
+  interactionText: Interact
+  IsLocked: 1
   myKey: 0
   doorIsClosed: The door needs a key
   doorOpens: used key

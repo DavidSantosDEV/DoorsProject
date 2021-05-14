@@ -29,13 +29,14 @@ public class PuzzleChessMaster : PuzzleMasterBase
     {
         foreach(PuzzleCollider child in myColliders)
         {
-            child.ReturnFitObject().canPush = false;
+            child.ReturnFitObject().IsInteractible = false;
         }
     }
 
     private void VictoryScenario()
     {
         GameManager.Instance.SetKey(DoorsAndNumbers.HouseDoor, true);
+        DisableMovementOfChilds();
     }
 
     public override void ResetPuzzle()

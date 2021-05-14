@@ -171,6 +171,7 @@ public class EnemyScript : MonoBehaviour
         //I am now using a Special package called A* (A-Star), much better at pathfinding than the one I was using before only downfall i can't make them roam in random positions the way I used to
 
         if (isStunned || isDead) return;
+        if (GameManager.Instance.GameIsPaused) return;
 
         if (returning) //I wanted this to be a simple courotine but unity doesnt let me put enabled=false on it
         {

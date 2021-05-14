@@ -13,6 +13,7 @@ public class HealthComponent : MonoBehaviour
 
 
     protected bool IframesOn=false;
+    [SerializeField][ShowOnly]
     protected bool isDead=false;
     //[SerializeField]//[ReadOnly] //This is just for show
     [ShowOnly][SerializeField]protected float currentHealth;
@@ -25,6 +26,7 @@ public class HealthComponent : MonoBehaviour
     public virtual void TakeDamage(float dmgVal)
     {
         if (isDead || IframesOn) return;
+        Debug.Log(gameObject + "Took damage: " + dmgVal);
         currentHealth = Mathf.Clamp(currentHealth - dmgVal, 0, MaxHealth);
         StartCoroutine(Invencible());
         if (currentHealth == 0)

@@ -12,8 +12,6 @@ public enum InteractionType
 public interface IInteractible
 {
     AudioSource InteractionSound { get; }
-    float HoldDuration { get; }
-    bool HoldInteract { get; }
     bool MultipleUse { get; }
     bool IsInteractible { get; }
     public InteractionType TypeInteraction { get; }
@@ -24,3 +22,5 @@ public interface IInteractible
 
     void OnStopInteraction();
 }
+//float HoldDuration { get; }
+//bool HoldInteract { get; }

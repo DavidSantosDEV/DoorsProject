@@ -135,9 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d075a98416f13449a132e618974f06b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 6
   invencibilityTime: 1
-  RecoverableHealth: 0
   currentHealth: 0
 --- !u!114 &8617100945276373390
 MonoBehaviour:
@@ -167,14 +166,14 @@ MonoBehaviour:
   findPlayerDistance: 3
   rangeToAttack: 1.4
   timeBetweenAttack: 1
-  vanishAfterDeathTime: 10
+  vanishAfterDeathTime: 2
   startPos: {fileID: 0}
   maxStartDistance: 10
   attackPoint: {fileID: 8617100946899029658}
   meleePointWidth: 1
   meleeAttackRange: 0.8
-  damage: 20
-  damageDifferentiation: 3
+  damage: 1
+  damageDifferentiation: 0.5
   enemyHitLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -274,7 +273,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 1.5
+  maxSpeed: 3
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
