@@ -23,8 +23,9 @@ public class PlayerMovement : MonoBehaviour
     //Components needed
     public Rigidbody2D myBody;
 
-
     private Vector2 movementDirection;
+
+    private PlayerController _parent;
     //private Vector2 movementCalculated;
 
     private void Start()
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         //myBody = GetComponent<Rigidbody2D>();
         myBody.interpolation = RigidbodyInterpolation2D.Interpolate;
         myBody.gravityScale = 0;
+        _parent = GetComponent<PlayerController>();
     }
 
     //Update movement data
@@ -41,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     public void ClearMovement()
     {
         movementDirection = Vector2.zero;
-        PlayerController.Instance.playerAnimation.UpdateMovementSpeed(0);
+        _parent.PlayerAnimationComponent.UpdateMovementSpeed(0);
     }
 
     public void UpdateMovementData(Vector2 movement)

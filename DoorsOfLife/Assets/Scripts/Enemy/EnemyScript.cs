@@ -194,7 +194,7 @@ public class EnemyScript : MonoBehaviour
             }
             else
             {
-                if (canAttack && Vector2.Distance(transform.position, PlayerController.Instance.GetPosition()) < rangeToAttack)
+                if (canAttack && Vector2.Distance(transform.position, GameManager.Instance.GetPlayer().GetPositionVector2()) < rangeToAttack)
                 {
                     Attack();
                 }
@@ -228,7 +228,7 @@ public class EnemyScript : MonoBehaviour
 
     protected void FindTarget()
     {
-        if (Vector2.Distance(transform.position,PlayerController.Instance.GetPosition()) < findPlayerDistance)
+        if (Vector2.Distance(transform.position, GameManager.Instance.GetPlayer().GetPositionVector2()) < findPlayerDistance)
         {
             isChasing = true;
             SetTargetPlayer();
@@ -237,7 +237,7 @@ public class EnemyScript : MonoBehaviour
 
     private void SetTargetPlayer()
     {
-        enemyPathSetter.target = PlayerController.Instance.transform;
+        enemyPathSetter.target = GameManager.Instance.GetPlayer().transform;
     }
 
     #region Movement
@@ -282,7 +282,7 @@ public class EnemyScript : MonoBehaviour
     {
         StopMovement();
         //state = EnemyState.Attacking;
-        directionForAttack = PlayerController.Instance.transform.position - transform.position;
+        directionForAttack = GameManager.Instance.GetPlayer().GetPositionVector3() - transform.position;
         if (Mathf.Abs(directionForAttack.x) > Mathf.Abs(directionForAttack.y))
         {
             if (directionForAttack.x > 0)

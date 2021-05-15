@@ -60,7 +60,8 @@ public class BossHeadBehaviour : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(myCol.bounds.center, myCol.bounds.size.x, attackLayerMask);
         if (hit)
         {
-            PlayerController.Instance.playerHealthComponent.TakeDamage(damage-Random.Range(0,damageDif));
+            GameManager.Instance.GetPlayer().PlayerHealthComponent.TakeDamage(damage-Random.Range(0,damageDif));
+            //PlayerController.Instance.playerHealthComponent.TakeDamage(damage-Random.Range(0,damageDif));
         }
     }
 

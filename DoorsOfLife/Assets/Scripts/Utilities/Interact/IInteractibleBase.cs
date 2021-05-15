@@ -31,7 +31,7 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public virtual void OnInteract()
     {
         Debug.Log("Interacted: " + gameObject.name);
-        PlayerController.Instance.IsInteracting(typeInteraction);
+        GameManager.Instance.GetPlayer().IsInteracting(typeInteraction);
     }
 
     public virtual void OnContinueInteract()
@@ -42,7 +42,7 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public virtual void OnStopInteraction()
     {
         Debug.Log("Interaction Stopped");
-        PlayerController.Instance.StoppedInteracting();
+        GameManager.Instance.GetPlayer().StoppedInteracting();
         isInteractible = multipleUse;
     }
 

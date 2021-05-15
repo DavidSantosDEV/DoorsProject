@@ -9,6 +9,9 @@ public class DoorInteractible : IInteractibleBase
     bool IsLocked = true;
 
     [SerializeField]
+    private bool usesKey = true;
+
+    [SerializeField]
     private DoorsAndNumbers myKey;
 
     [SerializeField]
@@ -49,9 +52,9 @@ public class DoorInteractible : IInteractibleBase
         Debug.Log("Nice cock bro");
         if (IsLocked)
         {
-            if (GameManager.Instance.GetKey(myKey))
+            if (GameManager.Instance.GetKey(myKey) && usesKey)
             {
-                OpenRout();
+                OpenDoor();
             }
             else
             {
@@ -61,16 +64,31 @@ public class DoorInteractible : IInteractibleBase
         }
         else
         {
-            OpenRout();
+            OpenDoor();
         }
     }
 
-    private void OpenRout()
+    private void OpenDoor()
     {
-        OpenDoor();
+        mySpriteRenderer.sprite = spriteOpen;
+        IsLocked = false;
         PlaySound(openSound);
         StartTyping(doorOpens);
     }
+
+    public void OpenDoorNoKey()
+    {
+        mySpriteRenderer.sprite = spriteOpen;
+        IsLocked = false;
+        PlaySound(openSound);
+        PlayerController player = GameManager.Instance.GetPlayer();
+        player.inCutscene = true;
+        player.interactionData.ResetData();
+        player.interactionData.Interactible = this;
+        //player.IsInteracting(typeInteraction);
+        StartTyping(doorOpens);
+    }
+
 
     public override void OnContinueInteract()
     {
@@ -90,20 +108,13 @@ public class DoorInteractible : IInteractibleBase
     {
         base.OnStopInteraction();
         UIManager.Instance.HideDialogueCase();
-        if (isOpen)
+        if (IsLocked==false/*isOpen*/)
         {
             Debug.Log("Am OPEN");
             isInteractible = false;
             Destroy(myCol); //Why would I need this collider anymore
         }
-        
-    }
-    bool isOpen = false;
-    private void OpenDoor()
-    {
-        mySpriteRenderer.sprite = spriteOpen;
-        isOpen = true;
-        //enabled = false;
+        GameManager.Instance.GetPlayer().inCutscene = false;
     }
 
     private void PlaySound(AudioClip clip) //ease of use stuff

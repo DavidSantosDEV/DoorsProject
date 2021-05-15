@@ -17,17 +17,18 @@ public class PlayerHealth : HealthComponent
     private float tDivisor=10;
 
 
-    PlayerAnimation _playerAnimation;
+    //private PlayerAnimation _playerAnimation;
+    private PlayerController _parent;
     protected override void Start()
     {
         base.Start();
-        _playerAnimation = GetComponent<PlayerAnimation>();
+        _parent = GameManager.Instance.GetPlayer();
     }
 
     public override void TakeDamage(float dmgVal)
     {
         base.TakeDamage(dmgVal);
-        _playerAnimation.PlayHitAnimation();
+        _parent.PlayerAnimationComponent.PlayHitAnimation();
         UIManager.Instance.UpdateHealth(currentHealth, MaxHealth);
         float t = dmgVal / MaxHealth * 0.8f;
         CameraShake.Instance.AddTrauma(t);
@@ -37,8 +38,8 @@ public class PlayerHealth : HealthComponent
     protected override void Die()
     {
         base.Die();
-        _playerAnimation.PlayDeathAnimation();
-        PlayerController.Instance.OnIsDead();
+        _parent.PlayerAnimationComponent.PlayDeathAnimation();
+        _parent.OnIsDead();
         GameManager.Instance.ShowGameOver();  
     }
 }

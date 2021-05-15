@@ -32,7 +32,7 @@ public class InteractPushObject : IInteractibleBase
     public override void OnInteract()
     {
         base.OnInteract();
-        Vector3 dir = PlayerController.Instance.ReturnFacingDir();//playerWeapon.ReturnAttackDirMove();
+        Vector3 dir = GameManager.Instance.GetPlayer().ReturnFacingDirection();//PlayerController.Instance.ReturnFacingDir();//playerWeapon.ReturnAttackDirMove();
         if (!(dir.x == dir.y || dir.x == -dir.y)) MoveObject(dir);
     }
 

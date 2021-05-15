@@ -10,13 +10,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController Instance { get; private set; } = null;
+    //public static PlayerController Instance { get; private set; } = null;
 
     //Other Components
-    public PlayerMovement playerMovement;
-    public PlayerWeapon playerWeapon;
-    public PlayerAnimation playerAnimation;
-    public PlayerHealth playerHealthComponent;
+    [SerializeField]
+    private PlayerMovement playerMovement;
+    [SerializeField]
+    private PlayerWeapon playerWeapon;
+    [SerializeField]
+    private PlayerAnimation playerAnimation;
+    [SerializeField]
+    private PlayerHealth playerHealthComponent;
+
+    public PlayerMovement PlayerMovementComponent => playerMovement;
+    public PlayerWeapon PlayerWeaponComponent => playerWeapon;
+    public PlayerAnimation PlayerAnimationComponent =>playerAnimation;
+    public PlayerHealth PlayerHealthComponent => playerHealthComponent;
+
 
     //Input
     [Header("Input Settings")]
@@ -45,23 +55,25 @@ public class PlayerController : MonoBehaviour
     private TextMeshProUGUI textPrompt=null;
 
     //Input components
+    private PlayerControls myPlayerControls;
+    private PlayerInput myInput;
+
+    public PlayerInput PlayerInputComponent
+    {
+        get => myInput;
+    }
+
+    public bool inCutscene=false;
 
     private void OnDestroy()
     {
         interactionData.ResetData();
-        Instance = null;
+        //Instance = null;
         interactCanvas = null;
     }
 
-    private PlayerControls myPlayerControls;
-    private PlayerInput myInput;
 
-    public PlayerInput GetMyInput()
-    {
-        return myInput;
-    }
-
-    private string currentControlScheme;
+    private string currentControlScheme; //Basically useless variable, delete when time available
 
     #region ActionMaps
     private string currentActionMap;
@@ -71,11 +83,17 @@ public class PlayerController : MonoBehaviour
     #endregion
 
 
-    public Vector2 GetPosition()
+    public Vector2 GetPositionVector2()
+    {
+        return transform.position;
+    }
+    public Vector3 GetPositionVector3()
     {
         return transform.position;
     }
 
+
+    #region debugFunctions
     private void DebugGameOver()
     {
         if(Debug.isDebugBuild)
@@ -99,6 +117,7 @@ public class PlayerController : MonoBehaviour
         PuzzleChessMaster pz = FindObjectOfType<PuzzleChessMaster>();
         if (pz) pz.debugCompletePuzzle();
     }
+    #endregion
 
     #region showingPrompt
 
@@ -115,36 +134,8 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    // Start is called before the first frame update
-    private void Awake()
+    private void OnEnable()
     {
-        /*
-        #region Singleton
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            DestroyImmediate(gameObject);
-        }
-
-        #endregion
-
-        #region Getting Components
-        playerMovement = GetComponent<PlayerMovement>();
-        playerWeapon = GetComponent<PlayerWeapon>();
-        playerAnimation = GetComponent<PlayerAnimation>();
-        playerHealthComponent = GetComponent<PlayerHealth>();
-
-        myPlayerControls = new PlayerControls();
-        myInput = GetComponent<PlayerInput>();
-
-        interactCanvas = GetComponentInChildren<Canvas>().gameObject;
-        #endregion
-
-        myInput.actions = myPlayerControls.asset;
-
         #region Debug
         myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
 
@@ -175,38 +166,12 @@ public class PlayerController : MonoBehaviour
 
         #endregion
 
-        myPlayerControls.Enable();
-
-
-        currentActionMap = actionMapGameplay; //Lets assume its always the gameplay starting
-
-        myInput.actions.FindActionMap(actionMapInteraction).Disable();
-        myInput.actions.FindActionMap(actionMapMenu).Disable();
-
-        Debug.Log(currentActionMap);
-        currentControlScheme = myInput.currentControlScheme;
-
-        HidePrompt();
-
-        //Other components
-        
-
-        */
+        myInput.controlsChangedEvent.AddListener(OnControlsChanged);
     }
 
-    private void Start()
+    // Start is called before the first frame update
+    private void Awake()
     {
-        #region Singleton
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            DestroyImmediate(gameObject);
-        }
-
-        #endregion
 
         #region Getting Components
         playerMovement = GetComponent<PlayerMovement>();
@@ -224,36 +189,6 @@ public class PlayerController : MonoBehaviour
 
         myInput.actions = myPlayerControls.asset;
 
-        #region Debug
-        myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
-
-        myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzle();
-
-        myPlayerControls.Gameplay.Debug3.started += cntx => DebugFunc3();
-        #endregion
-
-        #region Gameplay
-        myPlayerControls.Gameplay.Movement.performed += cntx => OnMovement(cntx.ReadValue<Vector2>());
-        myPlayerControls.Gameplay.Movement.canceled += cntx => onStopMovement();
-
-        myPlayerControls.Gameplay.Interact.started += cntx => OnInteract();
-
-        myPlayerControls.Gameplay.Attack.started += cntx => OnAttack();
-
-        myPlayerControls.Gameplay.Pause.started += cntx => GameManager.Instance.PauseToggle();
-        #endregion
-
-        #region Menu
-
-        myPlayerControls.Menu.UnPause.started += cntx => GameManager.Instance.PauseToggle();
-
-        #endregion
-
-        #region In Interaction
-        myPlayerControls.InInteraction.ContinueInteract.started += cntx => ContinueInteract();
-
-        #endregion
-
         myPlayerControls.Enable();
 
 
@@ -263,17 +198,15 @@ public class PlayerController : MonoBehaviour
         myInput.actions.FindActionMap(actionMapMenu).Disable();
 
         Debug.Log(currentActionMap);
-        currentControlScheme = myInput.currentControlScheme;
+        currentControlScheme = myInput.currentControlScheme; 
 
         HidePrompt();
 
         //Other components
+    }
 
-
-
-
-
-
+    private void Start()
+    {
         StartCoroutine(nameof(RoutineCheckInteractible));
     }
 
@@ -310,7 +243,10 @@ public class PlayerController : MonoBehaviour
     {
         while (enabled)
         {
-            CheckForInteractible();
+            if(!inCutscene && !GameManager.Instance.GameIsPaused)
+            {
+                CheckForInteractible();
+            }
             yield return new WaitForSeconds(1/speedInteractCheck);
         }
     }
@@ -361,7 +297,7 @@ public class PlayerController : MonoBehaviour
 
     //Events
 
-    public Vector2 ReturnFacingDir()
+    public Vector2 ReturnFacingDirection()
     {
         return lastMovementInput;
     }
@@ -369,6 +305,7 @@ public class PlayerController : MonoBehaviour
 #region Events
     private void OnInteract()
     {
+        Debug.Log("Interacted");
         if (!interactionData.IsEmpty())
         {
             interactionData.Interact();
@@ -431,7 +368,7 @@ public class PlayerController : MonoBehaviour
 
     
 #region UIRelated
-    public void OnControlsChanged()
+    public void OnControlsChanged(PlayerInput arg1)
     {
         if (currentControlScheme != myInput.currentControlScheme)
         {
@@ -439,8 +376,14 @@ public class PlayerController : MonoBehaviour
             currentControlScheme = myInput.currentControlScheme;
             Debug.Log(currentControlScheme);
 
-            if(UIManager.Instance!=null) UIManager.Instance.PromptsChange();
-            if (GamepadRumbler.Instance != null) GamepadRumbler.Instance.SetGamepad();
+            if (UIManager.Instance != null)
+            {
+                UIManager.Instance.PromptsChange();
+            }
+            if (GamepadRumbler.Instance != null) 
+            { 
+                GamepadRumbler.Instance.SetGamepad(); 
+            }
 
             //interactionData.ControlsChanged();
         }

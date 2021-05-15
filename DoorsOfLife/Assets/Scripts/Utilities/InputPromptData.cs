@@ -32,10 +32,11 @@ public class InputPromptData : ScriptableObject
 
     public Sprite GetButtonInteractSprite()
     {
+        PlayerController p = GameManager.Instance.GetPlayer();
         string var="";
-        if (PlayerController.Instance!=null)
+        if (/*GameManager.Instance.GetPlayer()*/p !=null)//PlayerController.Instance
         {
-            var = PlayerController.Instance.GetMyInput().devices[0].name;//myInput.devices[0].name;
+            var = GameManager.Instance.GetPlayer().PlayerInputComponent.devices[0].name;// PlayerController.Instance.GetMyInput().devices[0].name;//myInput.devices[0].name;
         }
         else if(PlayerMenuController.Instance!=null)
         {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    public static CameraFollow Instance { get; private set; } = null;
+
     [SerializeField]
     private Transform target = null;
     
@@ -15,11 +17,28 @@ public class CameraFollow : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+           Destroy(gameObject);
+        }
+    }
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
+
     private void Start()
     {
         if (!target)
         {
-            target = PlayerController.Instance.transform;
+            target = GameManager.Instance.GetPlayer().transform;//PlayerController.Instance.transform;
         }
 
         //CameraShake.Instance.SettupComponent(transform);

@@ -59,7 +59,6 @@ public class InteractDialogue : IInteractibleBase
         textNameDisplay.text = displaySpeakerName;
         StartTyping();
     }
-
     public override void OnContinueInteract()
     {
         base.OnContinueInteract();
@@ -135,11 +134,6 @@ public class InteractDialogue : IInteractibleBase
         }
     }
 
-    private void ShowButton()
-    {
-        //call ui manager
-    }
-
     private void ResetIndex()
     {
         Index = 0;
@@ -181,8 +175,6 @@ public class InteractDialogue : IInteractibleBase
             case CharacterReaction.Sad:
                 UIManager.Instance.SetAvatarDialogue(sadSprite);
                 break;
-
-
         }
     }
 }

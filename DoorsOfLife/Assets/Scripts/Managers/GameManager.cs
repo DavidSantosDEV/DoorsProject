@@ -13,9 +13,13 @@ public enum DoorsAndNumbers : int
 
 public class GameManager : MonoBehaviour
 {
-    public bool LockFPS=false;
-    [Range(30, 144)]
-    public int lockedFPS = 60;
+    [SerializeField]
+    private PlayerController player;
+
+    [SerializeField]
+    private bool LockFPS=false;
+    [SerializeField][Range(30, 144)]
+    private int lockedFPS = 60;
 
     public SoundBasics soundSet;
 
@@ -119,7 +123,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         gamepaused = true;
         UIManager.Instance.ShowPauseCanvas();
-        PlayerController.Instance.EnableMenuControls();
+        player.EnableMenuControls();
     }
 
     private void UnPauseGame()
@@ -127,7 +131,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         gamepaused = false;
         UIManager.Instance.HidePauseCanvas();
-        PlayerController.Instance.EnableGameplayControls();
+        player.EnableGameplayControls();
     }
 
     private void PauseGameNoCanvas()
@@ -219,5 +223,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("called");
         Debug.Log("Audio Value: "+slider.value);
         soundSet.SetVolumeMaster(slider.value);
+    }
+
+    //Player Getter
+
+    public PlayerController GetPlayer()
+    {
+        return player;
     }
 }

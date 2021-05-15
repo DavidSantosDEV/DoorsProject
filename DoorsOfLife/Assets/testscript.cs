@@ -11,5 +11,8 @@ public class testscript : MonoBehaviour
     {
         Destroy(deleteme);
         Destroy(gameObject);
+
+        Application.OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        GameManager.Instance.ChangeToMenu();
     }
 }

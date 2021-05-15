@@ -17,7 +17,7 @@ public class InteractPrompt : IInteractibleBase
     [SerializeField]
     private AudioSource myAudio;
 
-    bool canContinue=false;
+    //bool canContinue=false;
 
     
 
@@ -45,7 +45,7 @@ public class InteractPrompt : IInteractibleBase
     private void StartTyping() //I should have used a inheritance base...
     {
         textDisplay.text = "";
-        canContinue = false;
+        //canContinue = false;
         StartCoroutine(nameof(Type));
     }
 
@@ -56,7 +56,7 @@ public class InteractPrompt : IInteractibleBase
             textDisplay.text += letter;
             if (textDisplay.text == promptText)
             {
-                canContinue = true;
+                //canContinue = true;
                 UIManager.Instance.ShowContinueDialogueButton();
                 UIManager.Instance.ShowButtonsPrompt();
             }

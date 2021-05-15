@@ -46,15 +46,16 @@ public class EnemyBloob : EnemyScript
         Collider2D hit = Physics2D.OverlapBox(attackPoint.position, new Vector2(width, height), 0, enemyHitLayer);
         if (hit)
         {
-            PlayerController.Instance.playerHealthComponent.TakeDamage(damagetoGive);
+            GameManager.Instance.GetPlayer().PlayerHealthComponent.TakeDamage(damagetoGive);
+            //PlayerController.Instance.playerHealthComponent.TakeDamage(damagetoGive);
         }
     }
 
     protected override void Attack()
     {
         StopMovement();
-        //state = EnemyState.Attacking;
-        directionForAttack = PlayerController.Instance.transform.position - transform.position;
+        //state = EnemyState.Attacking; PlayerController.Instance.transform.position
+        directionForAttack = GameManager.Instance.GetPlayer().GetPositionVector3()  - transform.position;
         if (Mathf.Abs(directionForAttack.x) > Mathf.Abs(directionForAttack.y))
         {
             if (directionForAttack.x > 0)

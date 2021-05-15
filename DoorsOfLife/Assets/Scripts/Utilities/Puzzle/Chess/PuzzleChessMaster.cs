@@ -5,6 +5,11 @@ using UnityEngine;
 public class PuzzleChessMaster : PuzzleMasterBase
 {
     [SerializeField]
+    private float timeCam;
+    [SerializeField]
+    private DoorInteractible door;
+
+    [SerializeField]
     GameObject[] myMovables;
 
     private List<Vector2> positions = new List<Vector2>();
@@ -20,9 +25,9 @@ public class PuzzleChessMaster : PuzzleMasterBase
 
     protected override void DoAction()
     {
-        //DisableMovementOfChilds();
-        VictoryScenario();
-        base.DoAction();//Destroy component, no longer needed
+        GameManager.Instance.SetKey(DoorsAndNumbers.HouseDoor, true);
+        DisableMovementOfChilds();
+        StartCoroutine(UnlockDoorRoutine());
     }
 
     private void DisableMovementOfChilds()
@@ -33,10 +38,15 @@ public class PuzzleChessMaster : PuzzleMasterBase
         }
     }
 
-    private void VictoryScenario()
+    private IEnumerator UnlockDoorRoutine()
     {
-        GameManager.Instance.SetKey(DoorsAndNumbers.HouseDoor, true);
-        DisableMovementOfChilds();
+        CameraFollow.Instance.SetTarget(door.gameObject.transform);
+        GameManager.Instance.GetPlayer().IsInteracting(InteractionType.DialogInteraction);
+        yield return new WaitForSeconds(timeCam/2);
+        door.OpenDoorNoKey();
+        yield return new WaitForSeconds(timeCam / 2);
+        CameraFollow.Instance.SetTarget(GameManager.Instance.GetPlayer().transform);
+        base.DoAction();
     }
 
     public override void ResetPuzzle()
