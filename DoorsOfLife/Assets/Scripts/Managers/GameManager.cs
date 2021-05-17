@@ -119,9 +119,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void PauseGame()
+    private void PauseGame() //Find way to pause sounds
     {
         Time.timeScale = 0;
+        //soundSet.
         gamepaused = true;
         UIManager.Instance.ShowPauseCanvas();
         player.EnableMenuControls();
@@ -224,6 +225,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("called");
         Debug.Log("Audio Value: "+slider.value);
         soundSet.SetVolumeMaster(slider.value);
+    }
+
+    public void SetAudioSFX(Slider slider)
+    {
+        soundSet.SetVolumeSFX(slider.value);
+    }
+
+    public void SetAudioMusic(Slider slider)
+    {
+        soundSet.SetVolumeMusic(slider.value);
     }
 
     //Player Getter

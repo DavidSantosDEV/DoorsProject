@@ -230,6 +230,20 @@ public class UIManager : MonoBehaviour
         eventSystemMenu.enabled = true;
     }
 
+    [SerializeField]
+    private GameObject audioStuff=null;
+
+    public void ShowAudioStuff(GameObject button)
+    {
+        eventSystemMenu.SetSelectedGameObject(button);
+        audioStuff.SetActive(true);
+    }
+
+    public void HideAudioStuff(GameObject button)
+    {
+        eventSystemMenu.SetSelectedGameObject(button);
+        audioStuff.SetActive(false);
+    }
 
     //Game Over stuff
 
