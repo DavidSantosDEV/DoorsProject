@@ -49,7 +49,6 @@ public class DoorInteractible : IInteractibleBase
     public override void OnInteract()
     {
         base.OnInteract();
-        Debug.Log("Nice cock bro");
         if (IsLocked)
         {
             if (GameManager.Instance.GetKey(myKey) && usesKey)

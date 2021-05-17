@@ -303,14 +303,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""Back"",
-                    ""type"": ""Button"",
-                    ""id"": ""03d5b4b5-ed56-47d6-af32-37bf18146bd7"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -448,12 +440,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3533b9fc-9dba-4da1-b9f5-bd93c520eec8"",
+                    ""id"": ""89ea6ab4-2995-4b9b-a8fc-9719a8c8d1c2"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Back"",
+                    ""action"": ""UnPause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -643,7 +635,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Menu_MenuNavigation = m_Menu.FindAction("MenuNavigation", throwIfNotFound: true);
         m_Menu_Confirm = m_Menu.FindAction("Confirm", throwIfNotFound: true);
         m_Menu_UnPause = m_Menu.FindAction("UnPause", throwIfNotFound: true);
-        m_Menu_Back = m_Menu.FindAction("Back", throwIfNotFound: true);
         // InInteraction
         m_InInteraction = asset.FindActionMap("InInteraction", throwIfNotFound: true);
         m_InInteraction_ContinueInteract = m_InInteraction.FindAction("ContinueInteract", throwIfNotFound: true);
@@ -784,7 +775,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Menu_MenuNavigation;
     private readonly InputAction m_Menu_Confirm;
     private readonly InputAction m_Menu_UnPause;
-    private readonly InputAction m_Menu_Back;
     public struct MenuActions
     {
         private @PlayerControls m_Wrapper;
@@ -792,7 +782,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @MenuNavigation => m_Wrapper.m_Menu_MenuNavigation;
         public InputAction @Confirm => m_Wrapper.m_Menu_Confirm;
         public InputAction @UnPause => m_Wrapper.m_Menu_UnPause;
-        public InputAction @Back => m_Wrapper.m_Menu_Back;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -811,9 +800,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @UnPause.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnUnPause;
                 @UnPause.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnUnPause;
                 @UnPause.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnUnPause;
-                @Back.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnBack;
-                @Back.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnBack;
-                @Back.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnBack;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -827,9 +813,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @UnPause.started += instance.OnUnPause;
                 @UnPause.performed += instance.OnUnPause;
                 @UnPause.canceled += instance.OnUnPause;
-                @Back.started += instance.OnBack;
-                @Back.performed += instance.OnBack;
-                @Back.canceled += instance.OnBack;
             }
         }
     }
@@ -941,7 +924,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMenuNavigation(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
         void OnUnPause(InputAction.CallbackContext context);
-        void OnBack(InputAction.CallbackContext context);
     }
     public interface IInInteractionActions
     {

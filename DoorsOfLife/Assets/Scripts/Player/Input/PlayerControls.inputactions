@@ -290,14 +290,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
-                },
-                {
-                    "name": "Back",
-                    "type": "Button",
-                    "id": "03d5b4b5-ed56-47d6-af32-37bf18146bd7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -435,12 +427,12 @@
                 },
                 {
                     "name": "",
-                    "id": "3533b9fc-9dba-4da1-b9f5-bd93c520eec8",
+                    "id": "89ea6ab4-2995-4b9b-a8fc-9719a8c8d1c2",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Back",
+                    "action": "UnPause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

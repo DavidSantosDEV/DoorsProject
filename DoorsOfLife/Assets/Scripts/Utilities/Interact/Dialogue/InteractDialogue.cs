@@ -79,8 +79,11 @@ public class InteractDialogue : IInteractibleBase
     {
         if (SentencesAndEvents[Index].sound)
         {
-            myAudioSource.clip = SentencesAndEvents[Index].sound;
-            myAudioSource.Play();
+            if (myAudioSource)
+            {
+                myAudioSource.clip = SentencesAndEvents[Index].sound;
+                myAudioSource.Play();
+            } 
         }
         
         foreach (char letter in SentencesAndEvents[Index].Sentence.ToCharArray())//sentences[Index].ToCharArray())
@@ -122,7 +125,11 @@ public class InteractDialogue : IInteractibleBase
             else
             {
                 textDisplay.text = "";
-                myAudioSource.Stop();
+                if (myAudioSource)
+                {
+                    myAudioSource.Stop();
+                }
+                
                 OnStopInteraction();
                 //_endedDialogue = true;
             }
