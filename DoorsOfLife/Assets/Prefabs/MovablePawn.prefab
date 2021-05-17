@@ -157,13 +157,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionSound: {fileID: 0}
-  holdDuration: 0
-  holdInteract: 0
   multipleUse: 0
   isInteractible: 1
   typeInteraction: 3
-  promptCanvas: {fileID: 0}
-  textInteract: Push
+  interactionText: Push
   moveDistanceMultiplier: 1
   timeToMove: 0.1
   layersCheck:

@@ -103,13 +103,14 @@ MonoBehaviour:
   typeInteraction: 0
   interactionText: Interact
   IsLocked: 1
+  usesKey: 1
   myKey: 0
   doorIsClosed: The door needs a key
   doorOpens: used key
   spriteOpen: {fileID: 0}
   spriteClosed: {fileID: 0}
   typeSpeed: 20
-  openSound: {fileID: 0}
+  openSound: {fileID: 8300000, guid: d69899da7f03e124881051393cfff083, type: 3}
   closedSound: {fileID: 0}
 --- !u!61 &9137917657434565914
 BoxCollider2D:
@@ -146,9 +147,9 @@ AudioSource:
   m_GameObject: {fileID: 9137917657434565985}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7261885615270514614, guid: a56f9e8fb93c21148916a5d348a22ed6, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -158,9 +159,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 5
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -193,7 +194,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

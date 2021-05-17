@@ -376,6 +376,8 @@ public class PlayerController : MonoBehaviour
             currentControlScheme = myInput.currentControlScheme;
             Debug.Log(currentControlScheme);
 
+            imgPrompt.sprite = UIManager.Instance.getInteractSprite();
+
             if (UIManager.Instance != null)
             {
                 UIManager.Instance.PromptsChange();

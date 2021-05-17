@@ -108,13 +108,18 @@ public class DoorInteractible : IInteractibleBase
     {
         base.OnStopInteraction();
         UIManager.Instance.HideDialogueCase();
-        if (IsLocked==false/*isOpen*/)
+      
+        GameManager.Instance.GetPlayer().inCutscene = false;
+        if (IsLocked == false/*isOpen*/)
         {
             Debug.Log("Am OPEN");
             isInteractible = false;
-            Destroy(myCol); //Why would I need this collider anymore
+            Destroy(myCol);
+            Destroy(myAudioSource);
+            Destroy(this);
         }
-        GameManager.Instance.GetPlayer().inCutscene = false;
+
+
     }
 
     private void PlaySound(AudioClip clip) //ease of use stuff
