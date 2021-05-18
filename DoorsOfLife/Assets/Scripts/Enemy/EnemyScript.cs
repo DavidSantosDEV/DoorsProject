@@ -347,7 +347,8 @@ public class EnemyScript : MonoBehaviour
 
     public void LetMeDie() //Called by Animator
     {
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
+        //Destroy(gameObject);
     }
 
     #endregion

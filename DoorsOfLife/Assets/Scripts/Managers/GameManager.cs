@@ -214,7 +214,7 @@ public class GameManager : MonoBehaviour
 
 
     //AUDIO STUFF HERE
-
+    #region Audio
     private void SetAudioPrevious()
     {
         soundSet.RestorePreviousValues();
@@ -236,6 +236,23 @@ public class GameManager : MonoBehaviour
     {
         soundSet.SetVolumeMusic(slider.value);
     }
+    #endregion
+    [SerializeField]
+    TMPro.TMP_Dropdown DropBoxResolutions;
+    #region Graphics Settings
+    private void SettupResDrop()
+    {
+        Resolution[] resolutions = Screen.resolutions;
+        List<string> reso = new List<string>();
+        foreach(Resolution res in resolutions)
+        {
+            reso.Add(res.width +""+ res.height);
+        }
+        DropBoxResolutions.AddOptions(reso);
+    }
+    
+
+    #endregion
 
     //Player Getter
 

@@ -13,13 +13,9 @@ public class PlayerController : MonoBehaviour
     //public static PlayerController Instance { get; private set; } = null;
 
     //Other Components
-    [SerializeField]
     private PlayerMovement playerMovement;
-    [SerializeField]
     private PlayerWeapon playerWeapon;
-    [SerializeField]
     private PlayerAnimation playerAnimation;
-    [SerializeField]
     private PlayerHealth playerHealthComponent;
 
     public PlayerMovement PlayerMovementComponent => playerMovement;
@@ -413,5 +409,13 @@ public class PlayerController : MonoBehaviour
         myInput.SwitchCurrentActionMap(actionMapInteraction);
         myInput.actions.FindActionMap(currentActionMap).Disable();
         currentActionMap = actionMapInteraction;
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Vector3 startpos = transform.position + new Vector3(offsetXInteract, offsetYInteract);
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(startpos, lastMovementInput * interactReach);
     }
 }
