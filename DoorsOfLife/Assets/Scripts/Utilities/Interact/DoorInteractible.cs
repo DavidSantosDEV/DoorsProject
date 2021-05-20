@@ -107,7 +107,8 @@ public class DoorInteractible : IInteractibleBase
     {
         base.OnStopInteraction();
         UIManager.Instance.HideDialogueCase();
-      
+        isFinished = false;
+        SentencetoType = "";
         GameManager.Instance.GetPlayer().inCutscene = false;
         if (IsLocked == false/*isOpen*/)
         {
