@@ -303,6 +303,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""MouseClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""c19229b7-5e29-458d-a8d5-9d87350b3e95"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Point"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""133cfc51-3cb0-464a-b187-424aefae35a3"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -446,6 +462,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""UnPause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65b6885e-4b02-4af3-a3af-c14ceff1b680"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""MouseClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba9feda2-b14f-4da7-9da7-7c431c638bb6"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Point"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -635,6 +673,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Menu_MenuNavigation = m_Menu.FindAction("MenuNavigation", throwIfNotFound: true);
         m_Menu_Confirm = m_Menu.FindAction("Confirm", throwIfNotFound: true);
         m_Menu_UnPause = m_Menu.FindAction("UnPause", throwIfNotFound: true);
+        m_Menu_MouseClick = m_Menu.FindAction("MouseClick", throwIfNotFound: true);
+        m_Menu_Point = m_Menu.FindAction("Point", throwIfNotFound: true);
         // InInteraction
         m_InInteraction = asset.FindActionMap("InInteraction", throwIfNotFound: true);
         m_InInteraction_ContinueInteract = m_InInteraction.FindAction("ContinueInteract", throwIfNotFound: true);
@@ -775,6 +815,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Menu_MenuNavigation;
     private readonly InputAction m_Menu_Confirm;
     private readonly InputAction m_Menu_UnPause;
+    private readonly InputAction m_Menu_MouseClick;
+    private readonly InputAction m_Menu_Point;
     public struct MenuActions
     {
         private @PlayerControls m_Wrapper;
@@ -782,6 +824,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @MenuNavigation => m_Wrapper.m_Menu_MenuNavigation;
         public InputAction @Confirm => m_Wrapper.m_Menu_Confirm;
         public InputAction @UnPause => m_Wrapper.m_Menu_UnPause;
+        public InputAction @MouseClick => m_Wrapper.m_Menu_MouseClick;
+        public InputAction @Point => m_Wrapper.m_Menu_Point;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -800,6 +844,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @UnPause.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnUnPause;
                 @UnPause.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnUnPause;
                 @UnPause.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnUnPause;
+                @MouseClick.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnMouseClick;
+                @MouseClick.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnMouseClick;
+                @MouseClick.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnMouseClick;
+                @Point.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPoint;
+                @Point.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPoint;
+                @Point.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPoint;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -813,6 +863,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @UnPause.started += instance.OnUnPause;
                 @UnPause.performed += instance.OnUnPause;
                 @UnPause.canceled += instance.OnUnPause;
+                @MouseClick.started += instance.OnMouseClick;
+                @MouseClick.performed += instance.OnMouseClick;
+                @MouseClick.canceled += instance.OnMouseClick;
+                @Point.started += instance.OnPoint;
+                @Point.performed += instance.OnPoint;
+                @Point.canceled += instance.OnPoint;
             }
         }
     }
@@ -924,6 +980,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMenuNavigation(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
         void OnUnPause(InputAction.CallbackContext context);
+        void OnMouseClick(InputAction.CallbackContext context);
+        void OnPoint(InputAction.CallbackContext context);
     }
     public interface IInInteractionActions
     {

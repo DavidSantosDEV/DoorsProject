@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        Cursor.visible = false;
         if (Instance == null)
         {
             Instance = this;
@@ -53,7 +52,6 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-
     }
 
     void Start()
@@ -121,6 +119,8 @@ public class GameManager : MonoBehaviour
 
     private void PauseGame() //Find way to pause sounds
     {
+        Cursor.visible = true;
+
         Time.timeScale = 0;
         //soundSet.
         gamepaused = true;
@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
 
     private void UnPauseGame()
     {
+        Cursor.visible = false;
         Time.timeScale = 1;
         gamepaused = false;
         UIManager.Instance.HidePauseCanvas();

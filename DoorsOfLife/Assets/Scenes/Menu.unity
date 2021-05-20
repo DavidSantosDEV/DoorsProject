@@ -305,7 +305,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 1, g: 0.5415317, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 0.4526977, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -865,7 +865,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 1, g: 0.5415317, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 0.4526977, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1901,6 +1901,7 @@ MonoBehaviour:
   lockedFPS: 60
   soundSet: {fileID: 11400000, guid: 73f9d76347c177b438122ccb5b9710b8, type: 2}
   key: 
+  DropBoxResolutions: {fileID: 0}
 --- !u!4 &1156057261
 Transform:
   m_ObjectHideFlags: 0
@@ -2589,7 +2590,7 @@ PrefabInstance:
     - target: {fileID: 1660845778125761996, guid: 362d5060f0f51c143ac35f3a6e42d6c3, type: 3}
       propertyPath: m_PointAction
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -1157152918274067548, guid: 02a427c338ef7c346b033273bb7c2c50, type: 3}
     - target: {fileID: 1660845778125761996, guid: 362d5060f0f51c143ac35f3a6e42d6c3, type: 3}
       propertyPath: m_ActionsAsset
       value: 
@@ -2605,7 +2606,7 @@ PrefabInstance:
     - target: {fileID: 1660845778125761996, guid: 362d5060f0f51c143ac35f3a6e42d6c3, type: 3}
       propertyPath: m_LeftClickAction
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3672224170239958420, guid: 02a427c338ef7c346b033273bb7c2c50, type: 3}
     - target: {fileID: 1660845778125761996, guid: 362d5060f0f51c143ac35f3a6e42d6c3, type: 3}
       propertyPath: m_RightClickAction
       value: 
@@ -2695,7 +2696,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 1, g: 0.406206, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 0.4526977, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2828,7 +2829,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 1, g: 0.406206, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 0.4526977, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3222,8 +3223,12 @@ MonoBehaviour:
     m_ActionName: Gameplay/Debug3[/Keyboard/3]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 03d5b4b5-ed56-47d6-af32-37bf18146bd7
-    m_ActionName: Menu/Back[/DualShock4GamepadHID/buttonEast]
+    m_ActionId: c19229b7-5e29-458d-a8d5-9d87350b3e95
+    m_ActionName: Menu/MouseClick[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 133cfc51-3cb0-464a-b187-424aefae35a3
+    m_ActionName: Menu/Point[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Menu

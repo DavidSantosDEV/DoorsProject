@@ -70,6 +70,7 @@ public class InteractDialogue : IInteractibleBase
         base.OnStopInteraction();
         UIManager.Instance.HideDialogueCase();
         Index = 0;
+        canContinue = false;
     }
 
 

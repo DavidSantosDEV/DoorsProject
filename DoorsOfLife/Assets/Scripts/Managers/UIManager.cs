@@ -72,6 +72,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private EventSystem eventSystemMenu, eventSystemPrompt;
     
+    
+
     public static UIManager Instance { get; private set; } = null;
     private void Awake()
     {
@@ -90,7 +92,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-
+        
         //Hide stuff
         
         eventSystemMenu.enabled = isMainMenu;
@@ -101,7 +103,6 @@ public class UIManager : MonoBehaviour
         if (!isMainMenu)
         {
             //HideInteractButton();
-
             HidePauseCanvas();
         }
         
@@ -124,6 +125,46 @@ public class UIManager : MonoBehaviour
         imageButtonInteract.enabled = true;   
     
     }*/
+
+    private void Update() //I DO NOT LIKE THIS ONE BIT BUT UNITY FORCED MY HAND eventsystem.lastselectedgameobject is obsolete!
+    {
+        if (eventSystemMenu.currentSelectedGameObject != currentgObj)
+        {
+            lastSelectedGameObj = currentgObj;
+
+            currentgObj = eventSystemMenu.currentSelectedGameObject;
+        }
+    }
+
+    private GameObject currentgObj;
+    private GameObject lastSelectedGameObj;
+
+    public void SelectMenuStuff(bool cursor)
+    {
+        if (!cursor)
+        {
+            if (lastSelectedGameObj)
+            {
+                eventSystemMenu.SetSelectedGameObject(lastSelectedGameObj);
+            }
+            else
+            {
+                eventSystemMenu.SetSelectedGameObject(currentgObj);
+            }
+            
+        }
+        else
+        {
+
+            Cursor.visible = isMainMenu || GameManager.Instance.GameIsPaused;
+
+            GameObject obj =  eventSystemMenu.currentSelectedGameObject != null ? eventSystemMenu.currentSelectedGameObject :  eventSystemMenu.firstSelectedGameObject;
+
+            Selectable btn =(obj.GetComponent<Selectable>());
+            btn.OnDeselect(new BaseEventData(eventSystemMenu));
+            eventSystemMenu.SetSelectedGameObject(null);
+        }
+    }
 
     public void PromptsChange()
     {

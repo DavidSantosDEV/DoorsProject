@@ -33,10 +33,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 rawMovementInput;
     private Vector2 lastMovementInput;
 
-    //-----------------------------------
+    //----------------------------------- //[SerializeField]
+    //private float speedInteractCheck = 8; // 1/8 = 0.125 ms
     [Header("Player Interaction")]
-    [SerializeField]
-    private float speedInteractCheck = 8; // 1/8 = 0.125 ms
     [SerializeField]
     private float offsetXInteract = 0, offsetYInteract = 0;
     [SerializeField]
@@ -243,7 +242,7 @@ public class PlayerController : MonoBehaviour
             {
                 CheckForInteractible();
             }
-            yield return new WaitForSeconds(1/speedInteractCheck);
+            yield return new WaitForEndOfFrame();//WaitForSeconds(1/speedInteractCheck);
         }
     }
 
@@ -328,6 +327,7 @@ public class PlayerController : MonoBehaviour
     }
     public void OnMovement(Vector2 context)
     {
+        //interactionData.ResetData(); //Lazy way to clear value
         Vector2 tempValue = context;
         rawMovementInput = new Vector2(isXInverted ? -tempValue.x : tempValue.x,
             isYInverted ? -tempValue.y : tempValue.y);

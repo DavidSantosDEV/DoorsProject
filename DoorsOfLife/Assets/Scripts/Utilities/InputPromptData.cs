@@ -46,14 +46,22 @@ public class InputPromptData : ScriptableObject
         {
             case "DualShock4GamepadHID:/DualShock4GamepadHID": //PS        
             case "DualShock4GamepadHID":
+                UIManager.Instance.SelectMenuStuff(false);
                 return southButtonPlayStation;
 
             case "Keyboard":
             case "Keyboard:/Keyboard":
+                UIManager.Instance.SelectMenuStuff(true);
                 return KeyInteract;
 
             default:
+                UIManager.Instance.SelectMenuStuff(false);
                 return southButtonMicrosoft; //Not like I have a MS controller so here it is the lazy way
         }
+    }
+
+    public string CurrentDeviceName()
+    {
+        return GameManager.Instance.GetPlayer().PlayerInputComponent.devices[0].name;
     }
 }
