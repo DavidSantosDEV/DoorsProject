@@ -14,7 +14,7 @@ public class EnemyScript : MonoBehaviour
         get=>isDead;
     }
 
-    protected bool isStunned=false;
+    protected bool stunned=false;
 
     //[SerializeField]
     //protected EnemyState state=EnemyState.Roaming;
@@ -170,7 +170,7 @@ public class EnemyScript : MonoBehaviour
         //This happened due to the change in pathfinding, before I was using an altered version of Unity's pathfinding system adapted for 2d
         //I am now using a Special package called A* (A-Star), much better at pathfinding than the one I was using before only downfall i can't make them roam in random positions the way I used to
 
-        if (isStunned || isDead) return;
+        if (stunned || isDead) return;
         if (GameManager.Instance.GameIsPaused) return;
 
         if (returning) //I wanted this to be a simple courotine but unity doesnt let me put enabled=false on it
@@ -243,33 +243,46 @@ public class EnemyScript : MonoBehaviour
 
     #region Movement
 
-    protected void StopMovement()
+    public void StopMovement()
     {
-        enemyPathAI.isStopped = true;
+        if (isChasing)
+        {
+            enemyPathSetter.target = null;
+        }
+
+        enemyPathAI.canMove = false;
+        enemyPathAI.enabled = false;
+        enemyPathSetter.enabled = false;
     }
 
-    protected void BeginMovement()
+    public void BeginMovement()
     {
-        enemyPathAI.isStopped = false;
+        if (isChasing)
+        {
+            SetTargetPlayer();
+        }
+        enemyPathAI.canMove = true;
+        enemyPathAI.enabled = true;
+        enemyPathSetter.enabled = true;
     }
    
 
     public void SetStunned()
     {
-        StopMovement();
-        isStunned = true;
+        //StopMovement();
+        stunned = true;
     }
 
     public void ResetStunned()
     {
-        isStunned = false;
-        BeginMovement();
+        stunned = false;
+        //BeginMovement();
         //state = EnemyState.Chasing; //Lets use this one cause if the player is close it'll just change to Chasing quickly i guess
     }
 
     //Attacking code
 
-    public void ReturnToChasing()
+    public void ReturnToChasing() //TO DELETE AND THE SCRIPTS REFERENCING IT TOO
     {
         BeginMovement();
         //state = EnemyState.Chasing;
