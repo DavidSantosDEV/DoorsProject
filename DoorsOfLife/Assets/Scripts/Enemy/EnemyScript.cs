@@ -282,11 +282,11 @@ public class EnemyScript : MonoBehaviour
 
     //Attacking code
 
-    public void ReturnToChasing() //TO DELETE AND THE SCRIPTS REFERENCING IT TOO
+    /*public void ReturnToChasing() //TO DELETE AND THE SCRIPTS REFERENCING IT TOO
     {
         BeginMovement();
         //state = EnemyState.Chasing;
-    }
+    }*/
 
     #endregion
 

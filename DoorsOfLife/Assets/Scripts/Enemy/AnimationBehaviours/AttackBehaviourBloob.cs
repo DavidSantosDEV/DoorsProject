@@ -29,7 +29,7 @@ public class AttackBehaviourBloob : StateMachineBehaviour
         if (!parent.IsDead)
         {
             parent.SetVulnerable();
-            parent.ReturnToChasing();
+            //parent.ReturnToChasing();
         }  
     }
 }
