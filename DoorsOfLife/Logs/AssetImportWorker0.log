@@ -113,3 +113,25 @@ Received Import Request.
 Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Controller.controller using Guid(5003321567fb49d4fba008966eb14495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f363bfe469cac6c815e5fdb685497f8') in 0.030616 seconds
   Import took 0.039179 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001757 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.885 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3416 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.3 MB.
+System memory in use after: 149.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4032.
+Total: 2.954500 ms (FindLiveObjects: 0.597700 ms CreateObjectMapping: 0.184300 ms MarkObjects: 2.151200 ms  DeleteObjects: 0.018900 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
