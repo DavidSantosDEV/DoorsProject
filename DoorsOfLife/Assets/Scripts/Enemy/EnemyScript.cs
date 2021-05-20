@@ -199,8 +199,9 @@ public class EnemyScript : MonoBehaviour
                     Attack();
                 }
             }
-            enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
+            //enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
         }
+        enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
     }  
 
     protected void SetStateReturning()
