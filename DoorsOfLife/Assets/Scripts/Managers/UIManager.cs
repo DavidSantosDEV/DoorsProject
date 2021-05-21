@@ -261,6 +261,7 @@ public class UIManager : MonoBehaviour
 
     public void HidePauseCanvas()
     {
+        if(pauseMenuCanvas)
         pauseMenuCanvas.enabled = false;
         eventSystemMenu.enabled = false;
     }

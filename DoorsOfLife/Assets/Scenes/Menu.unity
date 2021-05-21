@@ -1901,6 +1901,7 @@ MonoBehaviour:
   lockedFPS: 60
   soundSet: {fileID: 11400000, guid: 73f9d76347c177b438122ccb5b9710b8, type: 2}
   key: 
+  GammaCorrection: 0
   DropBoxResolutions: {fileID: 0}
 --- !u!4 &1156057261
 Transform:
@@ -2618,6 +2619,10 @@ PrefabInstance:
     - target: {fileID: 1660845778125761996, guid: 362d5060f0f51c143ac35f3a6e42d6c3, type: 3}
       propertyPath: m_ScrollWheelAction
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660845778125761996, guid: 362d5060f0f51c143ac35f3a6e42d6c3, type: 3}
+      propertyPath: m_DeselectOnBackgroundClick
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1660845778125761996, guid: 362d5060f0f51c143ac35f3a6e42d6c3, type: 3}
       propertyPath: m_TrackedDevicePositionAction

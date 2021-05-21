@@ -234,7 +234,7 @@ public class PlayerController : MonoBehaviour
         playerAnimation.UpdateMovementAnimation(rawMovementInput);
     }
 
-    private IEnumerator RoutineCheckInteractible() //So this is in a couroutine so that its not as heavy
+    private IEnumerator RoutineCheckInteractible() //Plan was for this to be a coroutine, turns out it gave huge gameplay problems
     {
         while (enabled)
         {

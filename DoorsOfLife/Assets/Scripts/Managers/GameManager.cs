@@ -56,19 +56,23 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        GammaCorrection = RenderSettings.ambientLight.r;
         SetAudioPrevious();
     }
 
     private void OnSceneLoaded(Scene scene,LoadSceneMode mode)
     {
-
+        //Time.timeScale = 1;
     }
     //Frame counting
 
     float deltaTime = 0.0f; // <- DEBUG ONLY
 
+    [SerializeField]
+    private float GammaCorrection;
     private void Update()
     {
+        RenderSettings.ambientLight = new Color(GammaCorrection, GammaCorrection, GammaCorrection, 1.0f);
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
     }
     void OnGUI()
@@ -134,6 +138,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         gamepaused = false;
         UIManager.Instance.HidePauseCanvas();
+        if(player)
         player.EnableGameplayControls();
     }
 
@@ -155,20 +160,10 @@ public class GameManager : MonoBehaviour
 
     #region Level Changing 
 
-    /*private IEnumerator UnloadPreviousScene(int sceneIndex)
-    {
-        Scene unload = SceneManager.GetActiveScene();
-        AsyncOperation unloadprocess = SceneManager.UnloadSceneAsync(unload);
-        while(!unloadprocess.isDone){
-            Debug.Log(unloadprocess.progress);
-            yield return null;
-        }
-        yield return null;
-        StartCoroutine(LoadScene(sceneIndex));
-    }*/
 
     private IEnumerator LoadScene(int level)
     {
+        UnPauseGame();
         //Scene previousScene = SceneManager.GetActiveScene();
         AsyncOperation sceneLoading = SceneManager.LoadSceneAsync(level);
         while (!sceneLoading.isDone)
@@ -183,23 +178,14 @@ public class GameManager : MonoBehaviour
 
     public void ChangeToLevel()
     {
-        //GameManager.
-        if(Time.timeScale==0) UnPauseGame();
         StartCoroutine(LoadScene(1));
     }
 
     public void ChangeToMenu()
-    {
-        if (Time.timeScale == 0) UnPauseGame();
-        
+    {   
         StartCoroutine(LoadScene(0));
-        //StartCoroutine(LoadLevel(0));
     }
 
-    /*private void LoadScene(int sceneIndex)
-    {
-        StartCoroutine(UnloadPreviousSceneAndLoadNext(sceneIndex));
-    }*/
 
     
 

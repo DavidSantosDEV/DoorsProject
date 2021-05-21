@@ -62,15 +62,15 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_ActionsAsset: {fileID: -944628639613478452, guid: 02a427c338ef7c346b033273bb7c2c50, type: 3}
-  m_PointAction: {fileID: 0}
+  m_PointAction: {fileID: -1157152918274067548, guid: 02a427c338ef7c346b033273bb7c2c50, type: 3}
   m_MoveAction: {fileID: -5062553815090738667, guid: 02a427c338ef7c346b033273bb7c2c50, type: 3}
   m_SubmitAction: {fileID: 3591937079407043974, guid: 02a427c338ef7c346b033273bb7c2c50, type: 3}
   m_CancelAction: {fileID: 0}
-  m_LeftClickAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 3672224170239958420, guid: 02a427c338ef7c346b033273bb7c2c50, type: 3}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
   m_ScrollWheelAction: {fileID: 0}
   m_TrackedDevicePositionAction: {fileID: 0}
   m_TrackedDeviceOrientationAction: {fileID: 0}
-  m_DeselectOnBackgroundClick: 1
+  m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
