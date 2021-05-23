@@ -15,9 +15,11 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
     [SerializeField]
     private int maxHeartsRow = 10;
     [SerializeField]
-    Sprite heartEmpty;
+    private Sprite heartEmpty;
     [SerializeField]
-    Sprite heartFull;
+    private Sprite heartHalf;
+    [SerializeField]
+    private Sprite heartFull;
     List<Image> hearts = new List<Image>();
 
     [Header("Health Settings Base")]
@@ -72,7 +74,7 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
     }
 
 
-    public virtual void TakeDamage(int dmg)
+    public virtual void TakeDamage(int dmg) //Pass this to a float that you'll have to System.Math.Round(val,2);
     {
         if (isDead || isInvincible) return;
     
@@ -103,6 +105,10 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
             {
                 i.sprite = heartEmpty;
             }
+            /*else if(heartFill == 0.5f)
+            {
+                i.sprite = heartHalf;
+            }*/
             else
             {
                 i.sprite = heartFull;
