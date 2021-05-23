@@ -10,6 +10,9 @@ public class DarkForegroundBehaviour : MonoBehaviour
     [SerializeField]
     float Speed = 2;//5e-05f;
 
+    [SerializeField]
+    GameObject[] objectsToDeactivate;
+
     Color originalCol;
     //private float alphaValueDesired = 0;
 
@@ -21,8 +24,12 @@ public class DarkForegroundBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
-        StartCoroutine(nameof(InvisibleStart));
+        if (other.CompareTag("Player"))
+        {
+            ActivateObjects(true);
+            StartCoroutine(nameof(InvisibleStart));        
+        }
+        
     }
 
     IEnumerator InvisibleStart()
@@ -37,8 +44,21 @@ public class DarkForegroundBehaviour : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
-        StopCoroutine(nameof(InvisibleStart));
-        tile.color = originalCol;
+
+        if (collision.CompareTag("Player"))
+        {
+            ActivateObjects(false);
+            StopCoroutine(nameof(InvisibleStart));
+            tile.color = originalCol;
+        }
+        
+    }
+
+    private void ActivateObjects(bool val)
+    {
+        foreach(GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(val);
+        }
     }
 }

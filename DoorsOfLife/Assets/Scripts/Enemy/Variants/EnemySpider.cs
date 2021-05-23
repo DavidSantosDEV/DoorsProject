@@ -8,23 +8,15 @@ public class EnemySpider : EnemyScript
     [Header("Eye Light")]
     [SerializeField]
     private Light2D eyelight;
-    [SerializeField]
-    private float desiredeyeIntensityClosed=0;
-    private float originalIntensity;
 
     public void ShutEye()
     {
-        eyelight.intensity = desiredeyeIntensityClosed;
+        eyelight.enabled=false;
     }
 
     public void OpenEye()
     {
-        eyelight.intensity = originalIntensity;
-    }
-
-    private void Start()
-    {
-        originalIntensity = eyelight.intensity;
+        eyelight.enabled=true;
     }
 
     public override void MeleeDamage()

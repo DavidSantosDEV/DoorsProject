@@ -60,6 +60,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Debug4",
+                    "type": "Button",
+                    "id": "ea282169-bc8e-4be2-a0d6-4cfc11f8f4d4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Debug5",
+                    "type": "Button",
+                    "id": "35cf8cce-79f1-48a7-af45-410a60f778b4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -258,6 +274,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Debug3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91e8585d-08b9-4e35-b67f-d649eef1577b",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Debug4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ead79f7e-28ba-4e69-b06b-4671178df2db",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Debug4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2009fd90-ac6f-45bb-997d-858b56b9cefb",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Debug5",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

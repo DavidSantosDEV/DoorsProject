@@ -93,41 +93,10 @@ public class PlayerWeapon : MonoBehaviour
                 HealthComponent enemyHealth = hit.gameObject.GetComponent<HealthComponent>();
                 enemyHealth.TakeDamage(damageMultiplied);
             }
-            /*switch (hit.gameObject.tag)
+            else if (hit.gameObject.CompareTag("TestHeart"))
             {
-                case "Enemy":
-
-                    float damageMultiplied = damage;
-                    switch (attacknum)
-                    {
-                        case 0:
-                            damageMultiplied = damage;
-                            break;
-                        case 1:
-                            damageMultiplied = damage * 1.2f;
-                            break;
-                        case 2:
-                            damageMultiplied = damage * 1.3f;
-                            break;
-                    }
-                    HealthComponent enemyHealth = hit.gameObject.GetComponent<HealthComponent>();
-                    enemyHealth.TakeDamage(damageMultiplied);
-
-                    break;
-
-                case "ObjectMovable": //DELETE LATER
-                    ObjectPusher objMove = hit.GetComponent<ObjectPusher>();
-                    if (!objMove) return;
-                    Vector2 dir = new Vector2(Mathf.RoundToInt(currentAttackDirection.x), Mathf.RoundToInt(currentAttackDirection.y));
-                    if(!(dir.x==dir.y || dir.x == -dir.y))
-                    {
-                        objMove.MoveObject(dir);
-                    }
-                    break;
-                    
-
-            }*/
-            //CameraShake.Instance.Shake(0.01f, 0.2f);
+                hit.gameObject.GetComponent<HealthSystemHeartBase>().TakeDamage(Mathf.RoundToInt(damage));
+            }
         }
     }
 

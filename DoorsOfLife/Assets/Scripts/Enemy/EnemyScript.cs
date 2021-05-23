@@ -173,6 +173,8 @@ public class EnemyScript : MonoBehaviour
         if (stunned || isDead) return;
         if (GameManager.Instance.GameIsPaused) return;
 
+        enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
+
         if (returning) //I wanted this to be a simple courotine but unity doesnt let me put enabled=false on it
         {
             if (Vector2.Distance(transform.position, startPos.position) < 1)
@@ -199,9 +201,9 @@ public class EnemyScript : MonoBehaviour
                     Attack();
                 }
             }
-            //enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
+            
         }
-        enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
+        //enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
     }  
 
     protected void SetStateReturning()

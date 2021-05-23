@@ -112,6 +112,26 @@ public class PlayerController : MonoBehaviour
         PuzzleChessMaster pz = FindObjectOfType<PuzzleChessMaster>();
         if (pz) pz.debugCompletePuzzle();
     }
+
+    bool s = true;
+
+    private void DebugFunc4()
+    {
+        if (s)
+        {
+            GetComponentInParent<HealthSystemHeartBase>().TakeDamage(2);
+        }
+        else
+        {
+            GetComponentInParent<HealthSystemHeartBase>().Heal(1);
+        }
+        //s = !s;   
+    }
+
+    private void DebugFunc5()
+    {
+        GetComponentInParent<HealthSystemHeartBase>().UpgradeHealth(1);
+    }
     #endregion
 
     #region showingPrompt
@@ -137,6 +157,10 @@ public class PlayerController : MonoBehaviour
         myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzle();
 
         myPlayerControls.Gameplay.Debug3.started += cntx => DebugFunc3();
+
+        myPlayerControls.Gameplay.Debug4.started += cntx => DebugFunc4();
+
+        myPlayerControls.Gameplay.Debug5.started += cntx => DebugFunc5();
         #endregion
 
         #region Gameplay
@@ -300,9 +324,9 @@ public class PlayerController : MonoBehaviour
 #region Events
     private void OnInteract()
     {
-        Debug.Log("Interacted");
         if (!interactionData.IsEmpty())
         {
+            Debug.Log("Interacted");
             interactionData.Interact();
             HidePrompt();
         }

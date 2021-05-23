@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Enterprise; OS build 19041.450; Version 2004; 64bit' Language: 'en' Physical Memory: 16158 MB
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16330 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,482 +11,366 @@ C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/2202226/Documents/GitHub/DoorsProject/DoorsOfLife
+C:/Users/David/Documents/GitHub/DoorsProject/DoorsOfLife
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50605
-Successfully changed project path to: C:/Users/2202226/Documents/GitHub/DoorsProject/DoorsOfLife
-C:/Users/2202226/Documents/GitHub/DoorsProject/DoorsOfLife
+60088
+Successfully changed project path to: C:/Users/David/Documents/GitHub/DoorsProject/DoorsOfLife
+C:/Users/David/Documents/GitHub/DoorsProject/DoorsOfLife
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 71.63 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 65.10 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/2202226/Documents/GitHub/DoorsProject/DoorsOfLife/Assets
+[Subsystems] Discovering subsystems at path C:/Users/David/Documents/GitHub/DoorsProject/DoorsOfLife/Assets
 GfxDevice: creating device client; threaded=0
-[vulkan] LoadVulkanLibrary vulkan-1.dll[vulkan] Loaded instance function vkGetInstanceProcAddr
-[vulkan] Loaded instance function vkGetInstanceProcAddr
-[vulkan] Loaded instance function vkCreateInstance
-[vulkan] Loaded instance function vkEnumerateInstanceExtensionProperties
-[vulkan] Loaded instance function vkEnumerateInstanceLayerProperties
-[vulkan] Loaded instance function vkEnumerateInstanceVersion
-[Vulkan init] extensions: count=11
-[Vulkan init] extensions: name=VK_KHR_surface, enabled=1
-[Vulkan init] extensions: name=VK_KHR_win32_surface, enabled=1
-[Vulkan init] extensions: name=VK_KHR_get_physical_device_properties2, enabled=1
-[Vulkan init] extensions: name=VK_KHR_get_surface_capabilities2, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_memory_capabilities, enabled=0
-[Vulkan init] extensions: name=VK_KHR_device_group_creation, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_semaphore_capabilities, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_fence_capabilities, enabled=0
-[Vulkan init] extensions: name=VK_EXT_debug_report, enabled=1
-[Vulkan init] extensions: name=VK_EXT_debug_utils, enabled=0
-[Vulkan init] extensions: name=VK_EXT_swapchain_colorspace, enabled=1
-[vulkan] Loaded instance function vkDestroyInstance
-[vulkan] Loaded instance function vkGetPhysicalDeviceProperties
-[vulkan] Loaded instance function vkEnumeratePhysicalDevices
-Vulkan detection: 2
-[Vulkan init] extensions: count=11
-[Vulkan init] extensions: name=VK_KHR_surface, enabled=1
-[Vulkan init] extensions: name=VK_KHR_win32_surface, enabled=1
-[Vulkan init] extensions: name=VK_KHR_get_physical_device_properties2, enabled=1
-[Vulkan init] extensions: name=VK_KHR_get_surface_capabilities2, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_memory_capabilities, enabled=0
-[Vulkan init] extensions: name=VK_KHR_device_group_creation, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_semaphore_capabilities, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_fence_capabilities, enabled=0
-[Vulkan init] extensions: name=VK_EXT_debug_report, enabled=1
-[Vulkan init] extensions: name=VK_EXT_debug_utils, enabled=0
-[Vulkan init] extensions: name=VK_EXT_swapchain_colorspace, enabled=1
-[vulkan] Loaded instance function vkDestroyInstance
-[vulkan] Loaded instance function vkGetPhysicalDeviceProperties
-[vulkan] Loaded instance function vkEnumeratePhysicalDevices
-[vulkan] Loaded instance function vkGetDeviceProcAddr
-[vulkan] Loaded instance function vkGetPhysicalDeviceFeatures
-[vulkan] Loaded instance function vkGetPhysicalDeviceFormatProperties
-[vulkan] Loaded instance function vkGetPhysicalDeviceImageFormatProperties
-[vulkan] Loaded instance function vkGetPhysicalDeviceQueueFamilyProperties
-[vulkan] Loaded instance function vkGetPhysicalDeviceMemoryProperties
-[vulkan] Loaded instance function vkCreateDevice
-[vulkan] Loaded instance function vkEnumerateDeviceExtensionProperties
-[vulkan] Loaded instance function vkEnumerateDeviceLayerProperties
-[vulkan] Loaded instance function vkGetPhysicalDeviceSparseImageFormatProperties
-[vulkan] Loaded instance function vkDestroySurfaceKHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceSurfaceSupportKHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceSurfaceCapabilitiesKHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceSurfaceFormatsKHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceSurfacePresentModesKHR
-[vulkan] Loaded instance function vkCreateSwapchainKHR
-[vulkan] Loaded instance function vkDestroySwapchainKHR
-[vulkan] Loaded instance function vkGetSwapchainImagesKHR
-[vulkan] Loaded instance function vkAcquireNextImageKHR
-[vulkan] Loaded instance function vkQueuePresentKHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceDisplayPropertiesKHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceDisplayPlanePropertiesKHR
-[vulkan] Loaded instance function vkGetDisplayPlaneSupportedDisplaysKHR
-[vulkan] Loaded instance function vkGetDisplayModePropertiesKHR
-[vulkan] Loaded instance function vkCreateDisplayModeKHR
-[vulkan] Loaded instance function vkGetDisplayPlaneCapabilitiesKHR
-[vulkan] Loaded instance function vkCreateDisplayPlaneSurfaceKHR
-[vulkan] Loaded instance function vkCreateSharedSwapchainsKHR
-[vulkan] Loaded instance function vkCreateWin32SurfaceKHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceWin32PresentationSupportKHR
-[vulkan] Loaded instance function vkSetHdrMetadataEXT
-[vulkan] Loaded instance function vkGetPhysicalDeviceFeatures2KHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceProperties2KHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceFormatProperties2KHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceImageFormatProperties2KHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceQueueFamilyProperties2KHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceMemoryProperties2KHR
-[vulkan] Loaded instance function vkGetPhysicalDeviceSparseImageFormatProperties2KHR
-[Vulkan init] SelectPhysicalDevice requestedDeviceIndex=-1 xrDevice=0000000000000000
-[Vulkan init] Physical Device 0000014E69800E80 [0]: "Radeon RX 560X Series" deviceType=2 vendorID=1002 deviceID=67ff
-[Vulkan init] Selected physical device 0000014E69800E80
-[Vulkan init] Graphics queue count=1
-[Vulkan init] extensions: count=95
-[Vulkan init] extensions: name=VK_KHR_sampler_mirror_clamp_to_edge, enabled=1
-[Vulkan init] extensions: name=VK_KHR_shader_draw_parameters, enabled=0
-[Vulkan init] extensions: name=VK_KHR_swapchain, enabled=1
-[Vulkan init] extensions: name=VK_KHR_maintenance1, enabled=1
-[Vulkan init] extensions: name=VK_KHR_maintenance2, enabled=1
-[Vulkan init] extensions: name=VK_KHR_maintenance3, enabled=0
-[Vulkan init] extensions: name=VK_KHR_relaxed_block_layout, enabled=0
-[Vulkan init] extensions: name=VK_KHR_dedicated_allocation, enabled=1
-[Vulkan init] extensions: name=VK_KHR_descriptor_update_template, enabled=1
-[Vulkan init] extensions: name=VK_KHR_external_memory, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_memory_win32, enabled=0
-[Vulkan init] extensions: name=VK_KHR_device_group, enabled=0
-[Vulkan init] extensions: name=VK_AMD_calibrated_timestamps, enabled=0
-[Vulkan init] extensions: name=VK_KHR_bind_memory2, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_semaphore, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_semaphore_win32, enabled=0
-[Vulkan init] extensions: name=VK_AMD_rasterization_order, enabled=0
-[Vulkan init] extensions: name=VK_AMD_shader_ballot, enabled=0
-[Vulkan init] extensions: name=VK_AMD_shader_core_properties2, enabled=0
-[Vulkan init] extensions: name=VK_AMD_shader_trinary_minmax, enabled=0
-[Vulkan init] extensions: name=VK_AMD_shader_explicit_vertex_parameter, enabled=0
-[Vulkan init] extensions: name=VK_AMD_gcn_shader, enabled=0
-[Vulkan init] extensions: name=VK_AMD_draw_indirect_count, enabled=0
-[Vulkan init] extensions: name=VK_KHR_draw_indirect_count, enabled=0
-[Vulkan init] extensions: name=VK_AMD_shader_info, enabled=0
-[Vulkan init] extensions: name=VK_EXT_sampler_filter_minmax, enabled=0
-[Vulkan init] extensions: name=VK_AMD_shader_fragment_mask, enabled=0
-[Vulkan init] extensions: name=VK_EXT_hdr_metadata, enabled=1
-[Vulkan init] extensions: name=VK_AMD_wave_limits, enabled=0
-[Vulkan init] extensions: name=VK_AMD_texture_gather_bias_lod, enabled=0
-[Vulkan init] extensions: name=VK_AMD_mixed_attachment_samples, enabled=0
-[Vulkan init] extensions: name=VK_EXT_sample_locations, enabled=0
-[Vulkan init] extensions: name=VK_EXT_shader_subgroup_vote, enabled=0
-[Vulkan init] extensions: name=VK_KHR_16bit_storage, enabled=0
-[Vulkan init] extensions: name=VK_KHR_storage_buffer_storage_class, enabled=0
-[Vulkan init] extensions: name=VK_AMD_gpa_interface, enabled=0
-[Vulkan init] extensions: name=VK_KHR_depth_stencil_resolve, enabled=1
-[Vulkan init] extensions: name=VK_EXT_shader_subgroup_ballot, enabled=0
-[Vulkan init] extensions: name=VK_EXT_shader_stencil_export, enabled=0
-[Vulkan init] extensions: name=VK_EXT_shader_viewport_index_layer, enabled=1
-[Vulkan init] extensions: name=VK_KHR_get_memory_requirements2, enabled=1
-[Vulkan init] extensions: name=VK_KHR_image_format_list, enabled=1
-[Vulkan init] extensions: name=VK_KHR_swapchain_mutable_format, enabled=0
-[Vulkan init] extensions: name=VK_KHR_shader_float_controls, enabled=0
-[Vulkan init] extensions: name=VK_EXT_inline_uniform_block, enabled=0
-[Vulkan init] extensions: name=VK_KHR_shader_atomic_int64, enabled=0
-[Vulkan init] extensions: name=VK_EXT_pipeline_creation_cache_control, enabled=0
-[Vulkan init] extensions: name=VK_KHR_driver_properties, enabled=0
-[Vulkan init] extensions: name=VK_KHR_create_renderpass2, enabled=1
-[Vulkan init] extensions: name=VK_KHR_8bit_storage, enabled=0
-[Vulkan init] extensions: name=VK_KHR_multiview, enabled=1
-[Vulkan init] extensions: name=VK_KHR_shader_float16_int8, enabled=0
-[Vulkan init] extensions: name=VK_KHR_timeline_semaphore, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_fence, enabled=0
-[Vulkan init] extensions: name=VK_KHR_external_fence_win32, enabled=0
-[Vulkan init] extensions: name=VK_KHR_win32_keyed_mutex, enabled=0
-[Vulkan init] extensions: name=VK_EXT_global_priority, enabled=0
-[Vulkan init] extensions: name=VK_AMD_buffer_marker, enabled=0
-[Vulkan init] extensions: name=VK_AMD_shader_image_load_store_lod, enabled=0
-[Vulkan init] extensions: name=VK_EXT_external_memory_host, enabled=0
-[Vulkan init] extensions: name=VK_EXT_depth_clip_enable, enabled=0
-[Vulkan init] extensions: name=VK_EXT_depth_range_unrestricted, enabled=0
-[Vulkan init] extensions: name=VK_AMD_shader_core_properties, enabled=0
-[Vulkan init] extensions: name=VK_EXT_queue_family_foreign, enabled=0
-[Vulkan init] extensions: name=VK_EXT_descriptor_indexing, enabled=0
-[Vulkan init] extensions: name=VK_KHR_variable_pointers, enabled=0
-[Vulkan init] extensions: name=VK_EXT_vertex_attribute_divisor, enabled=0
-[Vulkan init] extensions: name=VK_AMD_pipeline_compiler_control, enabled=0
-[Vulkan init] extensions: name=VK_KHR_separate_depth_stencil_layouts, enabled=0
-[Vulkan init] extensions: name=VK_KHR_shader_clock, enabled=0
-[Vulkan init] extensions: name=VK_KHR_spirv_1_4, enabled=0
-[Vulkan init] extensions: name=VK_GOOGLE_hlsl_functionality1, enabled=0
-[Vulkan init] extensions: name=VK_GOOGLE_decorate_string, enabled=0
-[Vulkan init] extensions: name=VK_EXT_scalar_block_layout, enabled=0
-[Vulkan init] extensions: name=VK_AMD_memory_overallocation_behavior, enabled=0
-[Vulkan init] extensions: name=VK_EXT_transform_feedback, enabled=0
-[Vulkan init] extensions: name=VK_EXT_separate_stencil_usage, enabled=0
-[Vulkan init] extensions: name=VK_KHR_vulkan_memory_model, enabled=0
-[Vulkan init] extensions: name=VK_EXT_memory_priority, enabled=0
-[Vulkan init] extensions: name=VK_AMD_display_native_hdr, enabled=0
-[Vulkan init] extensions: name=VK_EXT_full_screen_exclusive, enabled=0
-[Vulkan init] extensions: name=VK_EXT_memory_budget, enabled=0
-[Vulkan init] extensions: name=VK_EXT_host_query_reset, enabled=0
-[Vulkan init] extensions: name=VK_EXT_shader_demote_to_helper_invocation, enabled=0
-[Vulkan init] extensions: name=VK_EXT_line_rasterization, enabled=0
-[Vulkan init] extensions: name=VK_KHR_uniform_buffer_standard_layout, enabled=0
-[Vulkan init] extensions: name=VK_KHR_shader_subgroup_extended_types, enabled=0
-[Vulkan init] extensions: name=VK_EXT_subgroup_size_control, enabled=0
-[Vulkan init] extensions: name=VK_KHR_imageless_framebuffer, enabled=0
-[Vulkan init] extensions: name=VK_EXT_pipeline_creation_feedback, enabled=0
-[Vulkan init] extensions: name=VK_EXT_calibrated_timestamps, enabled=0
-[Vulkan init] extensions: name=VK_KHR_pipeline_executable_properties, enabled=0
-[Vulkan init] extensions: name=VK_KHR_shader_non_semantic_info, enabled=0
-[Vulkan init] extensions: name=VK_EXT_tooling_info, enabled=0
-[Vulkan init] extensions: name=VK_EXT_texel_buffer_alignment, enabled=0
-[vulkan] Loaded device function vkDestroyDevice
-[vulkan] Loaded device function vkGetDeviceQueue
-[vulkan] Loaded device function vkQueueSubmit
-[vulkan] Loaded device function vkQueueWaitIdle
-[vulkan] Loaded device function vkDeviceWaitIdle
-[vulkan] Loaded device function vkAllocateMemory
-[vulkan] Loaded device function vkFreeMemory
-[vulkan] Loaded device function vkMapMemory
-[vulkan] Loaded device function vkUnmapMemory
-[vulkan] Loaded device function vkFlushMappedMemoryRanges
-[vulkan] Loaded device function vkInvalidateMappedMemoryRanges
-[vulkan] Loaded device function vkGetDeviceMemoryCommitment
-[vulkan] Loaded device function vkBindBufferMemory
-[vulkan] Loaded device function vkBindImageMemory
-[vulkan] Loaded device function vkGetBufferMemoryRequirements
-[vulkan] Loaded device function vkGetImageMemoryRequirements
-[vulkan] Loaded device function vkGetImageSparseMemoryRequirements
-[vulkan] Loaded device function vkQueueBindSparse
-[vulkan] Loaded device function vkCreateFence
-[vulkan] Loaded device function vkDestroyFence
-[vulkan] Loaded device function vkResetFences
-[vulkan] Loaded device function vkGetFenceStatus
-[vulkan] Loaded device function vkWaitForFences
-[vulkan] Loaded device function vkCreateSemaphore
-[vulkan] Loaded device function vkDestroySemaphore
-[vulkan] Loaded device function vkCreateEvent
-[vulkan] Loaded device function vkDestroyEvent
-[vulkan] Loaded device function vkGetEventStatus
-[vulkan] Loaded device function vkSetEvent
-[vulkan] Loaded device function vkResetEvent
-[vulkan] Loaded device function vkCreateQueryPool
-[vulkan] Loaded device function vkDestroyQueryPool
-[vulkan] Loaded device function vkGetQueryPoolResults
-[vulkan] Loaded device function vkCreateBuffer
-[vulkan] Loaded device function vkDestroyBuffer
-[vulkan] Loaded device function vkCreateBufferView
-[vulkan] Loaded device function vkDestroyBufferView
-[vulkan] Loaded device function vkCreateImage
-[vulkan] Loaded device function vkDestroyImage
-[vulkan] Loaded device function vkGetImageSubresourceLayout
-[vulkan] Loaded device function vkCreateImageView
-[vulkan] Loaded device function vkDestroyImageView
-[vulkan] Loaded device function vkCreateShaderModule
-[vulkan] Loaded device function vkDestroyShaderModule
-[vulkan] Loaded device function vkCreatePipelineCache
-[vulkan] Loaded device function vkDestroyPipelineCache
-[vulkan] Loaded device function vkGetPipelineCacheData
-[vulkan] Loaded device function vkMergePipelineCaches
-[vulkan] Loaded device function vkCreateGraphicsPipelines
-[vulkan] Loaded device function vkCreateComputePipelines
-[vulkan] Loaded device function vkDestroyPipeline
-[vulkan] Loaded device function vkCreatePipelineLayout
-[vulkan] Loaded device function vkDestroyPipelineLayout
-[vulkan] Loaded device function vkCreateSampler
-[vulkan] Loaded device function vkDestroySampler
-[vulkan] Loaded device function vkCreateDescriptorSetLayout
-[vulkan] Loaded device function vkDestroyDescriptorSetLayout
-[vulkan] Loaded device function vkCreateDescriptorPool
-[vulkan] Loaded device function vkDestroyDescriptorPool
-[vulkan] Loaded device function vkResetDescriptorPool
-[vulkan] Loaded device function vkAllocateDescriptorSets
-[vulkan] Loaded device function vkFreeDescriptorSets
-[vulkan] Loaded device function vkUpdateDescriptorSets
-[vulkan] Loaded device function vkCreateFramebuffer
-[vulkan] Loaded device function vkDestroyFramebuffer
-[vulkan] Loaded device function vkCreateRenderPass
-[vulkan] Loaded device function vkDestroyRenderPass
-[vulkan] Loaded device function vkGetRenderAreaGranularity
-[vulkan] Loaded device function vkCreateCommandPool
-[vulkan] Loaded device function vkDestroyCommandPool
-[vulkan] Loaded device function vkResetCommandPool
-[vulkan] Loaded device function vkAllocateCommandBuffers
-[vulkan] Loaded device function vkFreeCommandBuffers
-[vulkan] Loaded device function vkBeginCommandBuffer
-[vulkan] Loaded device function vkEndCommandBuffer
-[vulkan] Loaded device function vkResetCommandBuffer
-[vulkan] Loaded device function vkCmdBindPipeline
-[vulkan] Loaded device function vkCmdSetViewport
-[vulkan] Loaded device function vkCmdSetScissor
-[vulkan] Loaded device function vkCmdSetLineWidth
-[vulkan] Loaded device function vkCmdSetDepthBias
-[vulkan] Loaded device function vkCmdSetBlendConstants
-[vulkan] Loaded device function vkCmdSetDepthBounds
-[vulkan] Loaded device function vkCmdSetStencilCompareMask
-[vulkan] Loaded device function vkCmdSetStencilWriteMask
-[vulkan] Loaded device function vkCmdSetStencilReference
-[vulkan] Loaded device function vkCmdBindDescriptorSets
-[vulkan] Loaded device function vkCmdBindIndexBuffer
-[vulkan] Loaded device function vkCmdBindVertexBuffers
-[vulkan] Loaded device function vkCmdDraw
-[vulkan] Loaded device function vkCmdDrawIndexed
-[vulkan] Loaded device function vkCmdDrawIndirect
-[vulkan] Loaded device function vkCmdDrawIndexedIndirect
-[vulkan] Loaded device function vkCmdDispatch
-[vulkan] Loaded device function vkCmdDispatchIndirect
-[vulkan] Loaded device function vkCmdCopyBuffer
-[vulkan] Loaded device function vkCmdCopyImage
-[vulkan] Loaded device function vkCmdBlitImage
-[vulkan] Loaded device function vkCmdCopyBufferToImage
-[vulkan] Loaded device function vkCmdCopyImageToBuffer
-[vulkan] Loaded device function vkCmdUpdateBuffer
-[vulkan] Loaded device function vkCmdFillBuffer
-[vulkan] Loaded device function vkCmdClearColorImage
-[vulkan] Loaded device function vkCmdClearDepthStencilImage
-[vulkan] Loaded device function vkCmdClearAttachments
-[vulkan] Loaded device function vkCmdResolveImage
-[vulkan] Loaded device function vkCmdSetEvent
-[vulkan] Loaded device function vkCmdResetEvent
-[vulkan] Loaded device function vkCmdWaitEvents
-[vulkan] Loaded device function vkCmdPipelineBarrier
-[vulkan] Loaded device function vkCmdBeginQuery
-[vulkan] Loaded device function vkCmdEndQuery
-[vulkan] Loaded device function vkCmdResetQueryPool
-[vulkan] Loaded device function vkCmdWriteTimestamp
-[vulkan] Loaded device function vkCmdCopyQueryPoolResults
-[vulkan] Loaded device function vkCmdPushConstants
-[vulkan] Loaded device function vkCmdBeginRenderPass
-[vulkan] Loaded device function vkCmdNextSubpass
-[vulkan] Loaded device function vkCmdEndRenderPass
-[vulkan] Loaded device function vkCmdExecuteCommands
-[vulkan] Loaded device function vkGetImageMemoryRequirements2KHR
-[vulkan] Loaded device function vkGetBufferMemoryRequirements2KHR
-[vulkan] Loaded device function vkGetImageSparseMemoryRequirements2KHR
-[vulkan] Loaded device function vkCreateDescriptorUpdateTemplateKHR
-[vulkan] Loaded device function vkDestroyDescriptorUpdateTemplateKHR
-[vulkan] Loaded device function vkUpdateDescriptorSetWithTemplateKHR
-[vulkan] Loaded device function vkCmdBeginRenderPass2KHR
-[vulkan] Loaded device function vkCmdEndRenderPass2KHR
-[vulkan] Loaded device function vkCmdNextSubpass2KHR
-[vulkan] Loaded device function vkCreateRenderPass2KHR
-[vulkan] Failed to load device function vkDebugMarkerSetObjectTagEXT
-[vulkan] Loaded instance function vkDebugMarkerSetObjectTagEXT
-[vulkan] Failed to load device function vkDebugMarkerSetObjectNameEXT
-[vulkan] Loaded instance function vkDebugMarkerSetObjectNameEXT
-[vulkan] Failed to load device function vkCmdDebugMarkerBeginEXT
-[vulkan] Loaded instance function vkCmdDebugMarkerBeginEXT
-[vulkan] Failed to load device function vkCmdDebugMarkerEndEXT
-[vulkan] Loaded instance function vkCmdDebugMarkerEndEXT
-[vulkan] Failed to load device function vkCmdDebugMarkerInsertEXT
-[vulkan] Loaded instance function vkCmdDebugMarkerInsertEXT
-Vulkan API version 1.1.0 (1.2.133 supported by driver, 1.1.0 requested)
-Vulkan vendor=[ATI] id=[1002]
-Vulkan renderer=[Radeon RX 560X Series] id=[67ff]
-Vulkan device type 2
-Vulkan driverversion=[0x00800089] uint=[8388745]
-Vulkan PSO: cache data not found [path=C:/Users/2202226/AppData/Local/Temp/FroppleStudios/Doors of Life/vulkan_pso_cache.bin]
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.6647
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56448
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001235 seconds.
+Registered in 0.001795 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 69.44 ms, found 1 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 69.18 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.794 seconds
+- Completed reload, in  1.006 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001780 seconds.
+Registered in 0.001593 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 99.75 ms, found 1 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 66.09 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.491 seconds
+- Completed reload, in  0.945 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3574 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 170.3 MB.
-System memory in use after: 170.6 MB.
+Unloading 3575 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.9 MB.
+System memory in use after: 161.1 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4024.
-Total: 3.909100 ms (FindLiveObjects: 0.570700 ms CreateObjectMapping: 0.180700 ms MarkObjects: 3.085900 ms  DeleteObjects: 0.068900 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 4025.
+Total: 2.593900 ms (FindLiveObjects: 0.543200 ms CreateObjectMapping: 0.116300 ms MarkObjects: 1.874400 ms  DeleteObjects: 0.059300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/TestingScene.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/TestingScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7cda0aa6f3328063b528733f93a73f6') in 0.024109 seconds
-  Import took 0.031247 seconds .
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Controller.controller
+  artifactKey: Guid(5003321567fb49d4fba008966eb14495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Controller.controller using Guid(5003321567fb49d4fba008966eb14495) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59fee27eef40376925c503f04d1f8a5') in 0.037919 seconds
+  Import took 0.043627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.917783 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_WalkDown.anim
+  artifactKey: Guid(0059b86ae4e9d7a45a9d42dc1a081804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_WalkDown.anim using Guid(0059b86ae4e9d7a45a9d42dc1a081804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '794acb4ea7b8358b4bee01843b2ed514') in 0.007149 seconds
+  Import took 0.012772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.442393 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_WalkUp.anim
+  artifactKey: Guid(4180e0ccad5b20c41b1507dc3ff5c911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_WalkUp.anim using Guid(4180e0ccad5b20c41b1507dc3ff5c911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29b3b383fc5534378e58465593b53930') in 0.006003 seconds
+  Import took 0.011517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.537186 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Hit.anim
+  artifactKey: Guid(a45cc1f25a3eaad4cae112c1df5159b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Hit.anim using Guid(a45cc1f25a3eaad4cae112c1df5159b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47c94ef200cab84055c325c77fda16d7') in 0.006430 seconds
+  Import took 0.012145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.524648 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Idle.anim
+  artifactKey: Guid(2a9771328ea6fd147a8d7f0fdb87de36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Idle.anim using Guid(2a9771328ea6fd147a8d7f0fdb87de36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '206c1757da734c755c1e8c6e5163cdfd') in 0.006062 seconds
+  Import took 0.011773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.518658 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Vanish.anim
+  artifactKey: Guid(f7590c3ac27ac594ca613d4ae512f4a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Vanish.anim using Guid(f7590c3ac27ac594ca613d4ae512f4a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd7b9e31b8998450f317f123ed781144') in 0.007134 seconds
+  Import took 0.012503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.540484 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_WalkRight.anim
+  artifactKey: Guid(ee0aeb44ce13c994a942bf3446e81b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_WalkRight.anim using Guid(ee0aeb44ce13c994a942bf3446e81b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76fd385d6f679bfa331e5b6903a515fc') in 0.006105 seconds
+  Import took 0.011475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.188068 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Die.anim
+  artifactKey: Guid(6cf9a5f1f65fa9249914e3d799eb297a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Die.anim using Guid(6cf9a5f1f65fa9249914e3d799eb297a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824703f5d3988f6ef52f0f2bdd37545d') in 0.006423 seconds
+  Import took 0.012284 seconds .
 
 ========================================================================
 Received Prepare
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.22 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 2.11 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 91.7 MB.
-System memory in use after: 92.0 MB.
+System memory in use before: 81.7 MB.
+System memory in use after: 81.9 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 4024.
-Total: 3.706700 ms (FindLiveObjects: 0.476300 ms CreateObjectMapping: 0.248800 ms MarkObjects: 2.960600 ms  DeleteObjects: 0.019700 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 4025.
+Total: 3.427900 ms (FindLiveObjects: 0.372600 ms CreateObjectMapping: 0.097200 ms MarkObjects: 2.937900 ms  DeleteObjects: 0.019200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.906900 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_WalkLeft.anim
+  artifactKey: Guid(4522e37e7bdfa6b48b204fa6fc12f35c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_WalkLeft.anim using Guid(4522e37e7bdfa6b48b204fa6fc12f35c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ddca00868ea7488eddda6dc1621236') in 0.013799 seconds
+  Import took 0.019358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.654919 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Dead.anim
+  artifactKey: Guid(4dc1fbdb6277475409ac1854cf4712fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_Dead.anim using Guid(4dc1fbdb6277475409ac1854cf4712fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8be4a84b5356597942fb7c7c51957896') in 0.006369 seconds
+  Import took 0.011888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.246574 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackUp.anim
+  artifactKey: Guid(5f846a79f0d2a6e498ccd34f590b1902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackUp.anim using Guid(5f846a79f0d2a6e498ccd34f590b1902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b68fc564eb1a2148f5c99355751c3dad') in 0.006409 seconds
+  Import took 0.011968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackUp.anim
+  artifactKey: Guid(5f846a79f0d2a6e498ccd34f590b1902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackUp.anim using Guid(5f846a79f0d2a6e498ccd34f590b1902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b68fc564eb1a2148f5c99355751c3dad') in 0.003084 seconds
+  Import took 0.008030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.122648 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackRight.anim
+  artifactKey: Guid(1a88a48bc83f2f84fad147bab745b341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackRight.anim using Guid(1a88a48bc83f2f84fad147bab745b341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '176496af91af3b8dbd81a6199fecb15b') in 0.006031 seconds
+  Import took 0.011394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.024449 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackLeft.anim
+  artifactKey: Guid(c79dff4fab265a2478a84ecca3adda50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackLeft.anim using Guid(c79dff4fab265a2478a84ecca3adda50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30e113cebccc7177e290cbb67448a389') in 0.006364 seconds
+  Import took 0.011764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.077225 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackDown.anim
+  artifactKey: Guid(88f8b7001a8686c4498dcf11656e07d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackDown.anim using Guid(88f8b7001a8686c4498dcf11656e07d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2142a3a97a8d0f86b6ada89422beb1ec') in 0.005999 seconds
+  Import took 0.011722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000927 seconds.
+  path: Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackDown.anim
+  artifactKey: Guid(88f8b7001a8686c4498dcf11656e07d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy/Spider/Animated/DemonSpider_AttackDown.anim using Guid(88f8b7001a8686c4498dcf11656e07d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2142a3a97a8d0f86b6ada89422beb1ec') in 0.002669 seconds
+  Import took 0.007253 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001755 seconds.
+Registered in 0.001726 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.990 seconds
+- Completed reload, in  0.794 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3417 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.3 MB.
+System memory in use after: 149.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4029.
+Total: 2.356000 ms (FindLiveObjects: 0.319900 ms CreateObjectMapping: 0.089100 ms MarkObjects: 1.929300 ms  DeleteObjects: 0.016900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001710 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.830 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3417 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.4 MB.
+System memory in use after: 149.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4033.
+Total: 2.575700 ms (FindLiveObjects: 0.318500 ms CreateObjectMapping: 0.101600 ms MarkObjects: 2.130900 ms  DeleteObjects: 0.023800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001787 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.793 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3417 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.4 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4037.
+Total: 2.317500 ms (FindLiveObjects: 0.313900 ms CreateObjectMapping: 0.097400 ms MarkObjects: 1.889200 ms  DeleteObjects: 0.015600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001713 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.791 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3417 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.4 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4041.
+Total: 3.082800 ms (FindLiveObjects: 0.420300 ms CreateObjectMapping: 0.091300 ms MarkObjects: 2.547000 ms  DeleteObjects: 0.022600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001907 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.794 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3416 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 159.4 MB.
-System memory in use after: 159.7 MB.
+Unloading 3417 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.7 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4028.
-Total: 3.317900 ms (FindLiveObjects: 0.392700 ms CreateObjectMapping: 0.202200 ms MarkObjects: 2.704800 ms  DeleteObjects: 0.017000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001950 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.958 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3416 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 159.0 MB.
-System memory in use after: 159.2 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4032.
-Total: 3.074000 ms (FindLiveObjects: 0.421800 ms CreateObjectMapping: 0.218600 ms MarkObjects: 2.416600 ms  DeleteObjects: 0.016000 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4045.
+Total: 2.664500 ms (FindLiveObjects: 0.347200 ms CreateObjectMapping: 0.088300 ms MarkObjects: 2.206400 ms  DeleteObjects: 0.021100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001851 seconds.
+Registered in 0.001741 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.964 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3416 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 159.0 MB.
-System memory in use after: 159.3 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4036.
-Total: 2.965300 ms (FindLiveObjects: 0.328900 ms CreateObjectMapping: 0.123200 ms MarkObjects: 2.495200 ms  DeleteObjects: 0.016400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  graphicsApiMask: 4 -> 2359300
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001809 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.938 seconds
+- Completed reload, in  0.804 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3416 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 159.6 MB.
-System memory in use after: 159.8 MB.
+Unloading 3417 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.7 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4040.
-Total: 3.699100 ms (FindLiveObjects: 0.568600 ms CreateObjectMapping: 0.235100 ms MarkObjects: 2.875000 ms  DeleteObjects: 0.018400 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4049.
+Total: 2.570000 ms (FindLiveObjects: 0.352800 ms CreateObjectMapping: 0.084200 ms MarkObjects: 2.113700 ms  DeleteObjects: 0.018600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001787 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.799 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3417 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4053.
+Total: 2.283200 ms (FindLiveObjects: 0.287500 ms CreateObjectMapping: 0.096300 ms MarkObjects: 1.887300 ms  DeleteObjects: 0.011400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 954.442471 seconds.
+  path: Assets/Untitled.png
+  artifactKey: Guid(126066b068556c443b6d673f73fd667a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Untitled.png using Guid(126066b068556c443b6d673f73fd667a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc5ec18300b1f3f776c266655a41eb5c') in 0.093864 seconds
+  Import took 0.100967 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
