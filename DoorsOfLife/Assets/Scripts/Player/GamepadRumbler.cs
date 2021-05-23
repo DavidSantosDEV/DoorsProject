@@ -129,6 +129,11 @@ public class GamepadRumbler : MonoBehaviour
         }
     }
 
+    public void RumbleDamaged(int dmg, int currentHealth, float t)
+    {
+
+    }
+
     private void OnDestroy()
     {
         StopAllCoroutines();

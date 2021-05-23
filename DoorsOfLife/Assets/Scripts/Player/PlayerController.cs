@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
@@ -17,12 +18,14 @@ public class PlayerController : MonoBehaviour
     private PlayerWeapon playerWeapon;
     private PlayerAnimation playerAnimation;
     private PlayerHealth playerHealthComponent;
+    private PlayerHearts playerHeartsComponent;
 
-    public PlayerMovement PlayerMovementComponent => playerMovement;
-    public PlayerWeapon PlayerWeaponComponent => playerWeapon;
+
+    public PlayerMovement PlayerMovementComponent => playerMovement; // <<--
+    public PlayerWeapon PlayerWeaponComponent => playerWeapon; //<<--
     public PlayerAnimation PlayerAnimationComponent =>playerAnimation;
     public PlayerHealth PlayerHealthComponent => playerHealthComponent;
-
+    public PlayerHearts PlayerHeartsComponent => playerHeartsComponent;
 
     //Input
     [Header("Input Settings")]
@@ -180,12 +183,24 @@ public class PlayerController : MonoBehaviour
 
         #endregion
 
+        #region Health Component
+        playerHeartsComponent.OnDamageTaken += OnDamageTaken;
+        playerHeartsComponent.OnDeath += OnIsDead;
+
+
+        #endregion
         #region In Interaction
         myPlayerControls.InInteraction.ContinueInteract.started += cntx => ContinueInteract();
 
         #endregion
 
         myInput.controlsChangedEvent.AddListener(OnControlsChanged);
+    }
+
+
+    void OnDamageTaken()
+    {
+        playerAnimation.PlayHitAnimation();
     }
 
     // Start is called before the first frame update
@@ -197,6 +212,7 @@ public class PlayerController : MonoBehaviour
         playerWeapon = GetComponent<PlayerWeapon>();
         playerAnimation = GetComponent<PlayerAnimation>();
         playerHealthComponent = GetComponent<PlayerHealth>();
+        playerHeartsComponent = FindObjectOfType<PlayerHearts>();
 
         myPlayerControls = new PlayerControls();
         myInput = GetComponent<PlayerInput>();
@@ -376,6 +392,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnIsDead()
     {
+        playerAnimation.PlayDeathAnimation();
         EnableMenuControls();
     }
 

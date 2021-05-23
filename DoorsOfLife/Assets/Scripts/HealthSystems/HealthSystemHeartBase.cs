@@ -5,25 +5,36 @@ using UnityEngine;
 
 public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO THE CONTAINERS AND THEN GO AHEAD AND ADD THEM, WITH A MAX HEARTS PER LINE
 {
-    [Header("Heart Settings")]
+    [Header("Heart Image Settings")]
     [SerializeField]
-    private GameObject HeartContainer;
+    private VerticalLayoutGroup mainContainer;
     [SerializeField]
     private GameObject prefabHeart=null;
+    [SerializeField]
+    private GameObject heartContainerPrefab;
+    [SerializeField]
+    private int maxHeartsRow = 10;
     [SerializeField]
     Sprite heartEmpty;
     [SerializeField]
     Sprite heartFull;
     List<Image> hearts = new List<Image>();
 
-    
     [Header("Health Settings Base")]
-    [SerializeField][Range(0,20)]
-    private int maxHealth=10;
+    [SerializeField][Range(0,40)]
+    protected int maxHealth=10;
     [SerializeField][ShowOnly]
-    private int health;
+    protected int health;
     [SerializeField][ShowOnly]
-    private bool isDead=false;
+    protected bool isDead=false;
+    [SerializeField][ShowOnly]
+    protected bool isInvincible=false;
+
+
+    //Aux variables
+    private List<GameObject> heartContainers = new List<GameObject>();
+    private int rowIndex = 0;
+    private int lineIndex = 0;
 
     private void Awake()
     {
@@ -34,17 +45,36 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
     private void CreateHearts(int val)
     {
         Debug.Log("Working: ");
-        for(int i=0; i<val; i++)
+        
+        if (rowIndex == 0)
         {
-            GameObject h = Instantiate(prefabHeart, HeartContainer.transform);
+            heartContainers.Add(ContainerCreator());
+        }   
+        for (int i = 0; i < val; i++)
+        {
+            GameObject h = Instantiate(prefabHeart, heartContainers[rowIndex].transform);
             hearts.Add(h.GetComponent<Image>());
+            lineIndex++;
+            if (lineIndex == maxHeartsRow)
+            {
+                rowIndex++;
+                mainContainer.spacing = 0.02f * (rowIndex + 1);
+                heartContainers.Add(ContainerCreator());
+                lineIndex = 0;
+            }
         }
+    }
+
+    private GameObject ContainerCreator()
+    {
+        GameObject container = Instantiate(heartContainerPrefab, mainContainer.gameObject.transform);
+        return container;
     }
 
 
     public virtual void TakeDamage(int dmg)
     {
-        if (isDead) return;
+        if (isDead || isInvincible) return;
     
         health = Mathf.Clamp(health - dmg,0,maxHealth);
         UpdateHearts();
@@ -90,9 +120,23 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
         UpdateHearts();
     }
 
+    public void InvicibilitySet(bool set)
+    {
+        isInvincible = set;
+    }
+
     protected virtual void Die()
     {
-        HeartContainer.SetActive(false);
+        mainContainer.gameObject.SetActive(false);
     }
 
 }
+/*private void CreateHearts(int val)
+{
+    Debug.Log("Working: ");
+    for(int i=0; i<val; i++)
+    {
+        GameObject h = Instantiate(prefabHeart, HeartContainer.gameObject.transform);
+        hearts.Add(h.GetComponent<Image>());
+    }
+}*/
