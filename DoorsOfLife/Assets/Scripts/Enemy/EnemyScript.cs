@@ -27,7 +27,9 @@ public class EnemyScript : MonoBehaviour
 
     protected EnemySoundManager enemySound;
     protected EnemyAnimator enemyAnimation;
-    protected EnemyHealth enemyHealth;
+    protected EnemyHearts enemyHearts;
+
+    //protected EnemyHealth enemyHealth;
     //protected Rigidbody2D myRigidbody;
 
     [Header("Enemy Settings")]
@@ -138,9 +140,10 @@ public class EnemyScript : MonoBehaviour
 
         enemyAnimation = GetComponent<EnemyAnimator>();
 
-        enemyHealth = GetComponent<EnemyHealth>();
-
-        enemyHealth.SettupComponent(this, enemyAnimation);
+        //enemyHealth = GetComponent<EnemyHealth>();
+        enemyHearts = GetComponent<EnemyHearts>();
+        enemyHearts.SettupComponent(this, enemyAnimation);
+        //enemyHealth.SettupComponent(this, enemyAnimation);
         
 
         startPos.position = transform.position;

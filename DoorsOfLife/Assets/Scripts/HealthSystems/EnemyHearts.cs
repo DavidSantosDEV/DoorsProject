@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHearts : HealthSystemHeartBase
+public class EnemyHearts : HeartSystemBase
 {
     EnemyScript _parent;
     EnemyAnimator _animator;
@@ -13,7 +13,7 @@ public class EnemyHearts : HealthSystemHeartBase
         _animator = parentAnimator;
     }
 
-    public override void TakeDamage(int dmg)
+    public override void TakeDamage(float dmg)
     {
         base.TakeDamage(dmg);
         if (isDead || isInvincible) return;

@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO THE CONTAINERS AND THEN GO AHEAD AND ADD THEM, WITH A MAX HEARTS PER LINE
+public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO THE CONTAINERS AND THEN GO AHEAD AND ADD THEM, WITH A MAX HEARTS PER LINE
 {
     [Header("Heart Image Settings")]
     [SerializeField]
@@ -15,23 +16,34 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
     [SerializeField]
     private int maxHeartsRow = 10;
     [SerializeField]
-    private Sprite heartEmpty;
+    Sprite heartEmpty;
     [SerializeField]
-    private Sprite heartHalf;
+    Sprite heartHalf;
     [SerializeField]
-    private Sprite heartFull;
+    Sprite heartFull;
     List<Image> hearts = new List<Image>();
 
     [Header("Health Settings Base")]
     [SerializeField][Range(0,40)]
     protected int maxHealth=10;
     [SerializeField][ShowOnly]
-    protected int health;
-    [SerializeField][ShowOnly]
     protected bool isDead=false;
     [SerializeField][ShowOnly]
     protected bool isInvincible=false;
 
+    private float _health;
+
+    protected float health
+    {
+        get
+        {
+            return _health;
+        }
+        set
+        {
+            _health = Mathf.Round(value * 2) / 2;
+        }
+    }
 
     //Aux variables
     private List<GameObject> heartContainers = new List<GameObject>();
@@ -40,7 +52,7 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
 
     private void Awake()
     {
-        health = maxHealth;
+        _health = maxHealth;
         CreateHearts(maxHealth);
     }
 
@@ -74,21 +86,21 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
     }
 
 
-    public virtual void TakeDamage(int dmg) //Pass this to a float that you'll have to System.Math.Round(val,2);
+    public virtual void TakeDamage(float dmg)
     {
         if (isDead || isInvincible) return;
     
         health = Mathf.Clamp(health - dmg,0,maxHealth);
         UpdateHearts();
-        if (health <= 0)
+        if (_health <= 0)
         {
             Die();
         }
     }
 
-    public virtual void Heal(int ammount)
+    public virtual void Heal(float ammount)
     {
-        if (health >= maxHealth)
+        if (_health >= maxHealth)
         {
             return;
         }
@@ -98,17 +110,17 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
 
     protected void UpdateHearts()
     {
-        int heartFill = health;
+        float heartFill = _health;
         foreach (Image i in hearts)
         {
             if (heartFill <= 0)
             {
                 i.sprite = heartEmpty;
             }
-            /*else if(heartFill == 0.5f)
+            else if(heartFill == 0.5f)
             {
                 i.sprite = heartHalf;
-            }*/
+            }
             else
             {
                 i.sprite = heartFull;
@@ -121,7 +133,7 @@ public class HealthSystemHeartBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER
     public void UpgradeHealth(int val)
     {
         maxHealth+=val;
-        health = maxHealth;
+        _health = maxHealth;
         CreateHearts(val);
         UpdateHearts();
     }

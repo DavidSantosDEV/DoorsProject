@@ -322,6 +322,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Debug5"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c10e4cd4-4c0b-4a8a-8177-ca11cc1457b7"",
+                    ""path"": ""<Keyboard>/numpad7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
