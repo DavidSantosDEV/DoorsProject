@@ -17,14 +17,14 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement playerMovement;
     private PlayerWeapon playerWeapon;
     private PlayerAnimation playerAnimation;
-    private PlayerHealth playerHealthComponent;
+    //private PlayerHealth playerHealthComponent;
     private PlayerHearts playerHeartsComponent;
 
 
     public PlayerMovement PlayerMovementComponent => playerMovement; // <<--
     public PlayerWeapon PlayerWeaponComponent => playerWeapon; //<<--
     public PlayerAnimation PlayerAnimationComponent =>playerAnimation;
-    public PlayerHealth PlayerHealthComponent => playerHealthComponent;
+    //public PlayerHealth PlayerHealthComponent => playerHealthComponent;
     public PlayerHearts PlayerHeartsComponent => playerHeartsComponent;
 
     //Input
@@ -122,18 +122,18 @@ public class PlayerController : MonoBehaviour
     {
         if (s)
         {
-            GetComponentInParent<HealthSystemHeartBase>().TakeDamage(2);
+            GetComponentInParent<HeartSystemBase>().TakeDamage(1.5f);
         }
         else
         {
-            GetComponentInParent<HealthSystemHeartBase>().Heal(1);
+            GetComponentInParent<HeartSystemBase>().Heal(1);
         }
         //s = !s;   
     }
 
     private void DebugFunc5()
     {
-        GetComponentInParent<HealthSystemHeartBase>().UpgradeHealth(1);
+        GetComponentInParent<HeartSystemBase>().UpgradeHealth(1);
     }
     #endregion
 
@@ -184,8 +184,12 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region Health Component
-        playerHeartsComponent.OnDamageTaken += OnDamageTaken;
-        playerHeartsComponent.OnDeath += OnIsDead;
+        if (playerHeartsComponent)
+        {
+            playerHeartsComponent.OnDamageTaken += OnDamageTaken;
+            playerHeartsComponent.OnDeath += OnIsDead;
+        }
+        
 
 
         #endregion
@@ -211,8 +215,7 @@ public class PlayerController : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         playerWeapon = GetComponent<PlayerWeapon>();
         playerAnimation = GetComponent<PlayerAnimation>();
-        playerHealthComponent = GetComponent<PlayerHealth>();
-        playerHeartsComponent = FindObjectOfType<PlayerHearts>();
+        playerHeartsComponent = GetComponent<PlayerHearts>();
 
         myPlayerControls = new PlayerControls();
         myInput = GetComponent<PlayerInput>();

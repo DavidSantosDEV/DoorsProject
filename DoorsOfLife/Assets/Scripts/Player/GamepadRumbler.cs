@@ -129,7 +129,7 @@ public class GamepadRumbler : MonoBehaviour
         }
     }
 
-    public void RumbleDamaged(int dmg, int currentHealth, float t)
+    public void RumbleDamaged(float dmg, float currentHealth, float t)
     {
 
     }

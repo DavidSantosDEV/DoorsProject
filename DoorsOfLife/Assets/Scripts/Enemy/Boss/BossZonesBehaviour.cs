@@ -23,7 +23,7 @@ public class BossZonesBehaviour : MonoBehaviour
         //Collider2D hit = Physics2D.OverlapBox(pos + myCol.offset, myCol.size, 0, LayerMask.GetMask("Player"));
         if(Physics2D.OverlapBox(pos + myCol.offset, myCol.size, 0, LayerMask.GetMask("Player")))
         {
-            GameManager.Instance.GetPlayer().PlayerHealthComponent.TakeDamage(calculated);
+            GameManager.Instance.GetPlayer().PlayerHeartsComponent.TakeDamage(calculated);
             //PlayerController.Instance.playerHealthComponent.TakeDamage(calculated);
             //GamepadRumbler.Instance.RumbleLinear(3, 4, 6, 5, .2f);
             CameraShake.Instance.AddTrauma(.6f);

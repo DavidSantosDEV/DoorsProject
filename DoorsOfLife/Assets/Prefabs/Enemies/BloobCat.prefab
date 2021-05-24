@@ -183,9 +183,9 @@ GameObject:
   - component: {fileID: 44707756433989669}
   - component: {fileID: 44707756433989668}
   - component: {fileID: 44707756433989667}
-  - component: {fileID: 44707756433989666}
   - component: {fileID: 44707756433989670}
   - component: {fileID: 4398091644618998041}
+  - component: {fileID: 5781715066155602882}
   m_Layer: 7
   m_Name: EnemyInside
   m_TagString: Enemy
@@ -295,22 +295,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &44707756433989666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44707756433989663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d075a98416f13449a132e618974f06b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 100
-  invencibilityTime: 1
-  RecoverableHealth: 0
-  currentHealth: 0
 --- !u!114 &44707756433989670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +335,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   extraRange: 3.01
+--- !u!114 &5781715066155602882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44707756433989663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9949db1640433a74381b4e0645a3a47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainContainer: {fileID: 0}
+  prefabHeart: {fileID: 2751011981204235093, guid: aa20d199aa25df74fb1995fcc40fc414, type: 3}
+  heartContainerPrefab: {fileID: 2698553206333151610, guid: 8b73996480e2ee24984be0a22132c083, type: 3}
+  maxHeartsRow: 10
+  heartEmpty: {fileID: 8124259339964715380, guid: 083f58d0c3f2a3e4bbfc6a2757c7817c, type: 3}
+  heartHalf: {fileID: 0}
+  heartFull: {fileID: 4432793351920879750, guid: 083f58d0c3f2a3e4bbfc6a2757c7817c, type: 3}
+  maxHealth: 10
+  isDead: 0
+  isInvincible: 0
 --- !u!1 &44707756980774705
 GameObject:
   m_ObjectHideFlags: 0

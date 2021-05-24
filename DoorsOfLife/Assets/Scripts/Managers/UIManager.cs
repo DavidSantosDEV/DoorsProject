@@ -23,10 +23,6 @@ public class UIManager : MonoBehaviour
     [Header("Device Display Settings")]
     public InputPromptData deviceInputPromptData;
 
-    [Header("Health Related Stuff")]
-    [SerializeField]
-    private Image healthBar=null;
-
     [Header("General")]
     [SerializeField]
     GameObject dialoguecase;
@@ -106,14 +102,6 @@ public class UIManager : MonoBehaviour
             HidePauseCanvas();
         }
         
-    }
-
-
-
-    public void UpdateHealth(float health, float maxHealth)
-    {
-        if (healthBar)
-        healthBar.fillAmount = health / maxHealth;
     }
 
     //Show Buttons

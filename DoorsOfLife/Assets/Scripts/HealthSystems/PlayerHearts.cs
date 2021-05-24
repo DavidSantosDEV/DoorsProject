@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHearts : HealthSystemHeartBase
+public class PlayerHearts : HeartSystemBase
 {
     public event Action OnHealed;
     public event Action OnDamageTaken;
@@ -11,7 +11,7 @@ public class PlayerHearts : HealthSystemHeartBase
 
     
 
-    public override void TakeDamage(int dmg)
+    public override void TakeDamage(float dmg)
     {
         base.TakeDamage(dmg);
         if (OnDamageTaken!=null)
@@ -25,7 +25,7 @@ public class PlayerHearts : HealthSystemHeartBase
         }
     }
 
-    public override void Heal(int ammount)
+    public override void Heal(float ammount)
     {
         base.Heal(ammount);
         if (OnHealed != null)
@@ -36,7 +36,7 @@ public class PlayerHearts : HealthSystemHeartBase
 
     protected override void Die()
     {
-        base.Die();
+        //base.Die(); I don't want his hearts gone
         
         if (OnDeath!=null)
         {

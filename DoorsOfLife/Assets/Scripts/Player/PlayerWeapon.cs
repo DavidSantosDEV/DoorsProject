@@ -90,12 +90,8 @@ public class PlayerWeapon : MonoBehaviour
                         damageMultiplied = damage * 1.3f;
                         break;
                 }
-                HealthComponent enemyHealth = hit.gameObject.GetComponent<HealthComponent>();
+                HeartSystemBase enemyHealth = hit.gameObject.GetComponent<HeartSystemBase>();
                 enemyHealth.TakeDamage(damageMultiplied);
-            }
-            else if (hit.gameObject.CompareTag("TestHeart"))
-            {
-                hit.gameObject.GetComponent<HealthSystemHeartBase>().TakeDamage(Mathf.RoundToInt(damage));
             }
         }
     }

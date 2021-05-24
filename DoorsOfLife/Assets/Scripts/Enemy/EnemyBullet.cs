@@ -56,7 +56,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            GameManager.Instance.GetPlayer().PlayerHealthComponent.TakeDamage(damageToGive);
+            GameManager.Instance.GetPlayer().PlayerHeartsComponent.TakeDamage(damageToGive);
             //PlayerController.Instance.playerHealthComponent.TakeDamage(damageToGive);
         }
         DestroySelf();

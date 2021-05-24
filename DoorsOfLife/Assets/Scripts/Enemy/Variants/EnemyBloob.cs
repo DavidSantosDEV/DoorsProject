@@ -46,7 +46,7 @@ public class EnemyBloob : EnemyScript
         Collider2D hit = Physics2D.OverlapBox(attackPoint.position, new Vector2(width, height), 0, enemyHitLayer);
         if (hit)
         {
-            GameManager.Instance.GetPlayer().PlayerHealthComponent.TakeDamage(damagetoGive);
+            GameManager.Instance.GetPlayer().PlayerHeartsComponent.TakeDamage(damagetoGive);
             //PlayerController.Instance.playerHealthComponent.TakeDamage(damagetoGive);
         }
     }
@@ -97,12 +97,12 @@ public class EnemyBloob : EnemyScript
 
     public void SetInvincible()
     {
-        enemyHealth.InvicibilitySet(true);
+        enemyHearts.InvicibilitySet(true);
     }
 
     public void SetVulnerable()
     {
-        enemyHealth.InvicibilitySet(false);
+        enemyHearts.InvicibilitySet(false);
     }
 
     public void SetSortingUp()
