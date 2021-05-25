@@ -67,9 +67,9 @@ TagManager:
   - name: ForeGround
     uniqueID: 1950792561
     locked: 0
-  - name: Darkness
-    uniqueID: 128419897
-    locked: 0
   - name: PlayerUI
     uniqueID: 3977714529
+    locked: 0
+  - name: Darkness
+    uniqueID: 128419897
     locked: 0
