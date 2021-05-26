@@ -6,9 +6,17 @@ using UnityEngine;
 [System.Serializable]
 public class StringListProgression //I considered a struct but then I couldnt do the initialization 
 {
-    public bool showImage=true;
-    public bool showName=true;
-    public string[] dialogue;
+    [SerializeField]
+    private bool showImage=true;
+    [SerializeField]
+    private bool showName=true;
+    [SerializeField]
+    private string[] dialogue;
+
+    public bool ShowImage => showImage;
+    public bool ShowName => showName;
+
+    public string[] Dialogue => dialogue;
 }
 
 public class DollNPC : IInteractibleBase
@@ -71,13 +79,8 @@ public class DollNPC : IInteractibleBase
 
     public override void OnInteract()
     {
-        /*switch (progressionLevel)
-        {
-            case 0:
-
-                break;
-        }*/
         base.OnInteract();
+
     }
 
 
