@@ -194,7 +194,10 @@ public class DollNPC : IInteractibleBase
 
     private void CheckForEvent()
     {
-
+        if (levelAndStrings[progressionLevel].AudioEventsDialogue[Index].DialogueEvent != null)
+        {
+            levelAndStrings[progressionLevel].AudioEventsDialogue[Index].DialogueEvent.OnActivateEvent();
+        }
         /*if (SentencesAndEvents[Index].SentenceEvent != null)
         {
             SentencesAndEvents[Index].SentenceEvent.OnActivateEvent();
