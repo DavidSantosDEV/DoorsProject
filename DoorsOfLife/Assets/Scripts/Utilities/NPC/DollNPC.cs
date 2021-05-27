@@ -55,8 +55,8 @@ public class DollNPC : IInteractibleBase
     private TextMeshProUGUI textNameDisplay = null;
 
     [SerializeField]
-    [Range(0, 0.2f)]
-    private float textTypeSpeed = 0.2f;
+    [Range(0, 50f)]
+    private float textTypeSpeed = 50;
 
     [Header("Dialogue Settings")]
     [SerializeField]
@@ -69,7 +69,7 @@ public class DollNPC : IInteractibleBase
     //DialogAndEvent[] SentencesAndEvents;
 
     [Header("NPC Settings")]
-    [SerializeField][ShowOnly]
+    [SerializeField]
     private int progressionLevel=0;
     [SerializeField]
     private string nameSet = "Doll";
@@ -85,7 +85,7 @@ public class DollNPC : IInteractibleBase
         get => progressionLevel;
         set
         {
-            if (value >= 0 && !(levelAndStrings.Length<value))
+            if (value >= 0 && (value < levelAndStrings.Length))
             {
                 progressionLevel = value;
             }
@@ -93,6 +93,7 @@ public class DollNPC : IInteractibleBase
             {
                 progressionLevel = 0;
             }
+            Index = 0;
         }
     }
 
@@ -108,31 +109,46 @@ public class DollNPC : IInteractibleBase
     public override void OnInteract()
     {
         base.OnInteract();
+        Debug.Log("NPC Start");
 
+        UIManager.Instance.SetAvatarDialogue(displayAvatar);
+        UIManager.Instance.ShowDialogueCase(false, false);
+        //if (showName)
+          //  textNameDisplay.text = displaySpeakerName;
+        StartTyping();
     }
 
     public override void OnContinueInteract()
     {
         base.OnContinueInteract();
-
+        NextSentence();
     }
 
     public override void OnStopInteraction()
     {
         base.OnStopInteraction();
+        UIManager.Instance.HideDialogueCase();
+        Index = 0;
+        canContinue = false;
     }
 
     private void NextSentence()
     {
-        
         if (canContinue)
         {
             if (Index < levelAndStrings[progressionLevel].AudioEventsDialogue[Index].Dialogue.Length - 1)//sentences.Length - 1)
             {
-                Index++;
                 textDisplay.text = "";
-                StartTyping();
-                UIManager.Instance.HideContinueDialogueButton();
+                Index++;
+                if (levelAndStrings[progressionLevel].AudioEventsDialogue.Length < Index)
+                {
+                    StartTyping();
+                    UIManager.Instance.HideContinueDialogueButton();
+                }
+                else
+                {
+                    OnStopInteraction();
+                }
             }
             else
             {
@@ -154,7 +170,11 @@ public class DollNPC : IInteractibleBase
 
     private void DisplayFullText()
     {
-
+        StopCoroutine(nameof(Type));
+        Debug.Log("Level: "+progressionLevel + "Index: " + Index);
+        textDisplay.text = levelAndStrings[progressionLevel].AudioEventsDialogue[Index].Dialogue;//SentencesAndEvents[Index].Sentence; //sentences[Index];
+        CheckForEvent();
+        canContinue = true;
     }
     private void StartTyping()
     {
@@ -169,6 +189,7 @@ public class DollNPC : IInteractibleBase
 
     private IEnumerator Type()
     {
+        Debug.Log("Level: " + progressionLevel + "Index: " + Index);
         if (levelAndStrings[progressionLevel].AudioEventsDialogue[Index].Audio)
         {
             if (myAudioSource)
@@ -194,7 +215,10 @@ public class DollNPC : IInteractibleBase
 
     private void CheckForEvent()
     {
-
+        if (levelAndStrings[progressionLevel].AudioEventsDialogue[Index].DialogueEvent != null)
+        {
+            levelAndStrings[progressionLevel].AudioEventsDialogue[Index].DialogueEvent.OnActivateEvent();
+        }
         /*if (SentencesAndEvents[Index].SentenceEvent != null)
         {
             SentencesAndEvents[Index].SentenceEvent.OnActivateEvent();
