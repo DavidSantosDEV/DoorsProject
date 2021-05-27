@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
 
     private void DebugFunc5()
     {
-        GetComponentInParent<HeartSystemBase>().UpgradeHealth(1);
+        FindObjectOfType<DollNPC>().ProgressionNPC++;
     }
     #endregion
 
