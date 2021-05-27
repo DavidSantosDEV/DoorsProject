@@ -4,6 +4,26 @@ using UnityEngine;
 
 public class PuzzleChessMaster : PuzzleMasterBase
 {
+    [Header("Moving pieces")]
+    [SerializeField]
+    private int maxMovesBeforeWarning = 5;
+    [SerializeField]
+    private string dialogue;
+
+    private int currentMoveAmmount;
+    private bool hasClue = false;
+
+    public bool HasClue
+    {
+        private get => hasClue;
+        set
+        {
+            hasClue = value;
+        }
+    }
+
+
+    [Space]
     [SerializeField]
     private float timeCam;
     [SerializeField]
@@ -61,6 +81,30 @@ public class PuzzleChessMaster : PuzzleMasterBase
         for(int i = 0; i < positions.Count; i++)
         {
             myMovables[i].transform.position = positions[i];
+        }
+    }
+
+    private int timesWarned = 0;
+
+    public void OnPieceMove()
+    {
+        if (hasClue==false)
+        {
+            currentMoveAmmount++;
+            if (currentMoveAmmount == maxMovesBeforeWarning)
+            {
+                //Do Dialogue
+                currentMoveAmmount = 0;
+                switch (timesWarned)
+                {
+                    default:
+                    case 0:
+
+                        break;
+                    
+
+                }
+            }
         }
     }
 }

@@ -6,57 +6,59 @@ public class Frog : MonoBehaviour
 {
     [SerializeField]
     private float timeBetweenJump = 5;
-    [SerializeField]
-    private float rangeToleranceJumpTime = 2;
 
     [SerializeField]
     private float JumpForce=300;
 
-    private float aux,prev;
-
     bool canJump = true;
-
-    private Animator animator;
-
+    bool isAlert = false;
+    
     private int jumpAnim;
 
-    private void Jump()
+    private Animator animator;
+    private Rigidbody2D mybody;
+
+    private void JumpRandom()
     {
-        if (!canJump) return;
-        canJump = false;
-        if(Random.Range(0,100) > 50)
+        if (canJump && !isAlert)
         {
-            aux = JumpForce;
+            animator.SetTrigger(jumpAnim);
+            Vector2 vol = (Random.rotationUniform * Vector2.up) * JumpForce;//new Vector2(Random.1value, Random.value);
+            mybody.velocity = vol;//new Vector2(aux, 0);
+            CheckFlip(vol.x);
+        }
+        
+    }
+
+    private void CheckFlip(float x)
+    {
+        if (x > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 0);
         }
         else
         {
-            aux = -JumpForce;
+            transform.eulerAngles = new Vector2(0, 180);
         }
-        if (aux!=prev)
-        {
-            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y+ 180, 0);
-        }
-        prev = aux;
-        StartCoroutine(nameof(RoutineOfJump));
-        //mybody.AddForce(new Vector2(aux, 0));
     }
 
-    private IEnumerator RoutineOfJump()
+    private void JumpDir(Vector2 direction)
     {
-        animator.SetTrigger(jumpAnim);
-        mybody.velocity = new Vector2(aux, 0);
-        yield return new WaitForSeconds(1/1.5f);
+        if (canJump)
+        {
+            animator.SetTrigger(jumpAnim);
+            mybody.velocity = direction;
+            CheckFlip(direction.x);
+        }
+    }
+
+    public void StopMovement()
+    {
         canJump = true;
         mybody.velocity = Vector2.zero;
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, transform.right * 2);
-    }
-
-    private Rigidbody2D mybody;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -66,8 +68,32 @@ public class Frog : MonoBehaviour
 
         jumpAnim = Animator.StringToHash("Jump");
 
-        InvokeRepeating(nameof(Jump), 1, 1); 
+        InvokeRepeating(nameof(JumpRandom), timeBetweenJump, timeBetweenJump); 
     }
 
+    private void ResetState()
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            //canJump = !isAlert;
+            isAlert = true;      
+            JumpDir((transform.position - collision.transform.position).normalized);
+        }
+        
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            isAlert = false;
+        }
+    }
 
 }

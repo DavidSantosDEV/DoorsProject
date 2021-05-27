@@ -37,7 +37,7 @@ public class InteractPushObject : IInteractibleBase
     }
 
 
-    public void MoveObject(Vector3 direction)
+    public virtual void MoveObject(Vector3 direction)
     {
         if (isMoving || !canPush) return;
         direction *= moveDistanceMultiplier;
