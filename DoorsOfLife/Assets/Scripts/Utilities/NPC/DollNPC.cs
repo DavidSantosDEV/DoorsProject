@@ -99,9 +99,13 @@ public class DollNPC : IInteractibleBase
 
     private void Awake()
     {
-        isInteractible = true; //Needs to start interactible;
-        myAudioSource = GetComponent<AudioSource>();
+        isInteractible = levelAndStrings.Length>0; //Needs to start interactible;
+        
+        myAudioSource = GetComponent<AudioSource>();   
+    }
 
+    private void Start()
+    {
         textDisplay = UIManager.Instance.GetDialogueText();
         textNameDisplay = UIManager.Instance.GetDialogueSpeakerNameText();
     }
