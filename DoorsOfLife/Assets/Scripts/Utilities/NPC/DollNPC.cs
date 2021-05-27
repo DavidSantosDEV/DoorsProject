@@ -140,7 +140,7 @@ public class DollNPC : IInteractibleBase
             {
                 textDisplay.text = "";
                 Index++;
-                if (levelAndStrings[progressionLevel].AudioEventsDialogue.Length < Index)
+                if (levelAndStrings[progressionLevel].AudioEventsDialogue.Length > Index)
                 {
                     StartTyping();
                     UIManager.Instance.HideContinueDialogueButton();
