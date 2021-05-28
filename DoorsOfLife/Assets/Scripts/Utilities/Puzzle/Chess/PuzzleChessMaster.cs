@@ -13,15 +13,12 @@ public class PuzzleChessMaster : PuzzleMasterBase
     private int currentMoveAmmount;
     private bool hasClue = false;
 
-    public bool HasClue
+    public void SetHasClue(bool val)
     {
-        private get => hasClue;
-        set
-        {
-            hasClue = value;
-        }
+        hasClue = val;
     }
 
+    private InteractDialogue myDiagInteract;
 
     [Space]
     [SerializeField]
@@ -37,6 +34,9 @@ public class PuzzleChessMaster : PuzzleMasterBase
     protected override void Start()
     {
         base.Start();
+
+        myDiagInteract = GetComponent<InteractDialogue>();
+
         for (int i = 0; i < myMovables.Length; i++)
         {
             positions.Add(myMovables[i].transform.position);
@@ -88,22 +88,29 @@ public class PuzzleChessMaster : PuzzleMasterBase
 
     public void OnPieceMove()
     {
+        Debug.Log("Moved");
         if (hasClue==false)
         {
             currentMoveAmmount++;
             if (currentMoveAmmount == maxMovesBeforeWarning)
             {
+                Debug.Log("Moved it too many times");
                 //Do Dialogue
                 currentMoveAmmount = 0;
-                switch (timesWarned)
-                {
-                    default:
-                    case 0:
 
-                        break;
-                    
+                GameManager.Instance.GetPlayer().inCutscene = true;
+                GameManager.Instance.GetPlayer().interactionData.ResetData();
+                GameManager.Instance.GetPlayer().interactionData.Interactible = myDiagInteract;
+                GameManager.Instance.GetPlayer().interactionData.Interact();
+                //switch (timesWarned)
+                //{
+                //  default:
+                //case 0:
 
-                }
+                //  break;
+
+
+                //}
             }
         }
     }

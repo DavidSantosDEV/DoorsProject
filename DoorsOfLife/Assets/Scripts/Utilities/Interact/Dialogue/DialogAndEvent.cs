@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public enum CharacterReaction
@@ -17,7 +18,7 @@ public enum CharacterReaction
 public class DialogAndEvent
 {
     public string Sentence;
-    public DialogEventBase SentenceEvent = null;
+    public UnityEvent SentenceEvent = null;
     public CharacterReaction reaction;
     public AudioClip sound;
 }

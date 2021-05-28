@@ -71,6 +71,10 @@ public class InteractDialogue : IInteractibleBase
         UIManager.Instance.HideDialogueCase();
         Index = 0;
         canContinue = false;
+        if(GameManager.Instance.GetPlayer().inCutscene == true)
+        {
+            GameManager.Instance.GetPlayer().inCutscene =false;
+        }
     }
 
 
@@ -159,7 +163,7 @@ public class InteractDialogue : IInteractibleBase
     {
         if (SentencesAndEvents[Index].SentenceEvent != null)
         {
-            SentencesAndEvents[Index].SentenceEvent.OnActivateEvent();
+            SentencesAndEvents[Index].SentenceEvent.Invoke();//OnActivateEvent();
         }
     }
 

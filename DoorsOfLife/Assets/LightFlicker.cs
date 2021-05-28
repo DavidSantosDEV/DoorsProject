@@ -12,7 +12,7 @@ public class LightFlicker : MonoBehaviour
     Light2D myLight;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         myLight = GetComponent<Light2D>();
     }

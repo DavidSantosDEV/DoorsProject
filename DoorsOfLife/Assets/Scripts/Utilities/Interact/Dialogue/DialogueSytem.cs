@@ -22,13 +22,13 @@ public class DialogueSytem : MonoBehaviour
 
     //private bool _endedDialogue=false; //Use this later so you can repeat a line, just like fromsoftware games
 
-    private InteractDialogue _dialogueInteractor;
+    //private InteractDialogue _dialogueInteractor;
 
-    public InteractDialogue DialogueInteractor
+    /*public InteractDialogue DialogueInteractor
     {
         get => _dialogueInteractor;
         set => _dialogueInteractor = value;
-    }
+    }*/
 
     private bool canContinue=false;
     private int Index;
@@ -55,6 +55,7 @@ public class DialogueSytem : MonoBehaviour
     {
         textDisplay.text = "";
         StartCoroutine(nameof(Type));
+        GameManager.Instance.GetPlayer().IsInteracting(InteractionType.DialogInteraction);
     }
 
     public void NextSentence()
@@ -70,7 +71,8 @@ public class DialogueSytem : MonoBehaviour
             else
             {
                 textDisplay.text = "";
-                _dialogueInteractor.OnStopInteraction();
+                GameManager.Instance.GetPlayer().StoppedInteracting();
+                //_dialogueInteractor.OnStopInteraction();
                 //_endedDialogue = true;
             }
         }

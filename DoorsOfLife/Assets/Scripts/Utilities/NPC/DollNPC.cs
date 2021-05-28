@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Events;
 using UnityEngine;
 
 /*
@@ -21,12 +22,12 @@ public class AudioEventsAndDialogue
     [SerializeField]
     private string dialogue;
     [SerializeField]
-    private DialogEventBase diagEvent;
+    private UnityEvent diagEvent;
     [SerializeField]
     private AudioClip audio;
 
     public string Dialogue => dialogue;
-    public DialogEventBase DialogueEvent => diagEvent;
+    public UnityEvent DialogueEvent => diagEvent;
     public AudioClip Audio => audio;
 }
 
@@ -221,12 +222,13 @@ public class DollNPC : IInteractibleBase
     {
         if (levelAndStrings[progressionLevel].AudioEventsDialogue[Index].DialogueEvent != null)
         {
-            levelAndStrings[progressionLevel].AudioEventsDialogue[Index].DialogueEvent.OnActivateEvent();
+            levelAndStrings[progressionLevel].AudioEventsDialogue[Index].DialogueEvent.Invoke();
         }
-        /*if (SentencesAndEvents[Index].SentenceEvent != null)
-        {
-            SentencesAndEvents[Index].SentenceEvent.OnActivateEvent();
-        }*/
+    }
+
+    public void SetNameToCorrect()
+    {
+        displaySpeakerName = nameSet;
     }
 
 }
