@@ -40,12 +40,8 @@ public class EnemyAnimator : MonoBehaviour
 
     public void UpdateMovementAnimation(Vector2 movement)
     {
-        if(movement != Vector2.zero)
-        {
-            myAnimator.SetFloat(movementHorizontalID, movement.x);
-            myAnimator.SetFloat(movementVerticalID, movement.y);
-        }
-
+        myAnimator.SetFloat(movementHorizontalID, movement.x);
+        myAnimator.SetFloat(movementVerticalID, movement.y);
         myAnimator.SetFloat(movementSpeedID, movement.magnitude);
     }
 

@@ -186,6 +186,7 @@ public class EnemyScript : MonoBehaviour
                 enemyPathAI.enabled = false;
                 enemyPathSetter.target = null;
                 returning = false;
+                enemyAnimation.UpdateMovementAnimation(Vector3.zero);
                 enabled = isVisible;
             }
         }
@@ -199,9 +200,16 @@ public class EnemyScript : MonoBehaviour
             }
             else
             {
-                if (canAttack && Vector2.Distance(transform.position, GameManager.Instance.GetPlayer().GetPositionVector2()) < rangeToAttack)
+                if (PathUtilities.IsPathPossible(AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node, AstarPath.active.GetNearest(GameManager.Instance.GetPlayer().GetPositionVector3(), NNConstraint.Default).node))
                 {
-                    Attack();
+                    if (canAttack && Vector2.Distance(transform.position, GameManager.Instance.GetPlayer().GetPositionVector2()) < rangeToAttack)
+                    {
+                        Attack();
+                    }
+                }
+                else
+                {
+                    SetStateReturning();
                 }
             }
             
