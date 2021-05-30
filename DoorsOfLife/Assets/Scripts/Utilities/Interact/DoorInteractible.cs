@@ -21,8 +21,8 @@ public class DoorInteractible : IInteractibleBase
     [SerializeField]
     private Sprite spriteOpen, spriteClosed;
 
-    [SerializeField][Range(1,float.MaxValue)]
-    private float typeSpeed=20;
+    //[SerializeField][Range(1,float.MaxValue)]
+    private float typeSpeed;
 
     [SerializeField]
     AudioClip openSound, closedSound;
@@ -37,6 +37,8 @@ public class DoorInteractible : IInteractibleBase
 
     private void Start()
     {
+        typeSpeed = GameManager.Instance.TextSpeed;
+
         myCol = GetComponent<Collider2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAudioSource = GetComponent<AudioSource>();

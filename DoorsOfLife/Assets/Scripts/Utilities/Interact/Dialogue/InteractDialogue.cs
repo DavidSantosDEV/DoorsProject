@@ -11,9 +11,7 @@ public class InteractDialogue : IInteractibleBase
     private TextMeshProUGUI textDisplay = null;
     private TextMeshProUGUI textNameDisplay = null;
 
-    [SerializeField]
-    [Range(0, 0.2f)]
-    private float textTypeTime = 0.2f;
+    private float textTypeSpeed;
 
     [Header("Dialogue Settings")]
     [SerializeField]
@@ -41,6 +39,7 @@ public class InteractDialogue : IInteractibleBase
 
     private void Start()
     {
+        textTypeSpeed = GameManager.Instance.TextSpeed;
         myAudioSource = GetComponent<AudioSource>();
         typeInteraction = InteractionType.DialogInteraction;
         textDisplay = UIManager.Instance.GetDialogueText();
@@ -101,7 +100,7 @@ public class InteractDialogue : IInteractibleBase
                 canContinue = true;
                 UIManager.Instance.ShowContinueDialogueButton();
             }
-            yield return new WaitForSeconds(textTypeTime);
+            yield return new WaitForSeconds(1/textTypeSpeed);
         }
     }
 

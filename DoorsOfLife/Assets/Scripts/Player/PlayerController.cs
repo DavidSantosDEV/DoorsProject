@@ -167,12 +167,12 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region Gameplay
-        myPlayerControls.Gameplay.Movement.performed += cntx => OnMovement(cntx.ReadValue<Vector2>());
-        myPlayerControls.Gameplay.Movement.canceled += cntx => onStopMovement();
+        myPlayerControls.Gameplay.Movement.performed += OnMovement;
+        myPlayerControls.Gameplay.Movement.canceled += onStopMovement;
 
-        myPlayerControls.Gameplay.Interact.started += cntx => OnInteract();
+        myPlayerControls.Gameplay.Interact.started += OnInteract;
 
-        myPlayerControls.Gameplay.Attack.started += cntx => OnAttack();
+        myPlayerControls.Gameplay.Attack.started += OnAttack;
 
         myPlayerControls.Gameplay.Pause.started += cntx => GameManager.Instance.PauseToggle();
         #endregion
@@ -194,7 +194,7 @@ public class PlayerController : MonoBehaviour
 
         #endregion
         #region In Interaction
-        myPlayerControls.InInteraction.ContinueInteract.started += cntx => ContinueInteract();
+        myPlayerControls.InInteraction.ContinueInteract.started += ContinueInteract;
 
         #endregion
 
@@ -210,7 +210,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-
         #region Getting Components
         playerMovement = GetComponent<PlayerMovement>();
         playerWeapon = GetComponent<PlayerWeapon>();
@@ -221,8 +220,6 @@ public class PlayerController : MonoBehaviour
         myInput = GetComponent<PlayerInput>();
 
         interactCanvas = GetComponentInChildren<Canvas>().gameObject;
-
-        Debug.Log(interactCanvas);
         #endregion
 
         myInput.actions = myPlayerControls.asset;
@@ -239,20 +236,11 @@ public class PlayerController : MonoBehaviour
         currentControlScheme = myInput.currentControlScheme; 
 
         HidePrompt();
-
-        //Other components
     }
 
     private void Start()
     {
         StartCoroutine(nameof(RoutineCheckInteractible));
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        UpdateMovement();
-        UpdateLastMovement();
     }
 
     private void UpdateLastMovement()
@@ -275,6 +263,8 @@ public class PlayerController : MonoBehaviour
         playerMovement.UpdateMovementData(rawMovementInput);
 
         playerAnimation.UpdateMovementAnimation(rawMovementInput);
+
+        UpdateLastMovement();
     }
 
     private IEnumerator RoutineCheckInteractible() //Plan was for this to be a coroutine, turns out it gave huge gameplay problems
@@ -341,7 +331,7 @@ public class PlayerController : MonoBehaviour
     }
 
 #region Events
-    private void OnInteract()
+    private void OnInteract(InputAction.CallbackContext context)
     {
         if (!interactionData.IsEmpty())
         {
@@ -368,27 +358,28 @@ public class PlayerController : MonoBehaviour
         interactionData.ResetData();
         EnableGameplayControls();
     }
-    public void OnMovement(Vector2 context)
+    public void OnMovement(InputAction.CallbackContext cont)
     {
-        //interactionData.ResetData(); //Lazy way to clear value
-        Vector2 tempValue = context;
-        rawMovementInput = new Vector2(isXInverted ? -tempValue.x : tempValue.x,
-            isYInverted ? -tempValue.y : tempValue.y);
+        Vector2 context = cont.ReadValue<Vector2>();
+        rawMovementInput = new Vector2(isXInverted ? -context.x : context.x,
+            isYInverted ? -context.y : context.y);
+        UpdateMovement();
     }
 
-    private void onStopMovement()
+    private void onStopMovement(InputAction.CallbackContext context)
     {
         rawMovementInput = Vector2.zero;
+        UpdateMovement();
     }
 
-    private void OnAttack()
+    private void OnAttack(InputAction.CallbackContext context)
     {
         playerWeapon.PlayerAttack(lastMovementInput);
         playerAnimation.PlayAttackAnimation();
     }
 
 
-    private void ContinueInteract()
+    private void ContinueInteract(InputAction.CallbackContext context)
     {
         interactionData.ContinueInteract();
     }

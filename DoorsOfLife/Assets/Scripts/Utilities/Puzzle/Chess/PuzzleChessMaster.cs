@@ -84,7 +84,7 @@ public class PuzzleChessMaster : PuzzleMasterBase
         }
     }
 
-    private int timesWarned = 0;
+    //private int timesWarned = 0;
 
     public void OnPieceMove()
     {

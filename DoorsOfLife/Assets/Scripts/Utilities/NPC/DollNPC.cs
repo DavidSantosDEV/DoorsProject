@@ -55,9 +55,8 @@ public class DollNPC : IInteractibleBase
     private TextMeshProUGUI textDisplay = null;
     private TextMeshProUGUI textNameDisplay = null;
 
-    [SerializeField]
-    [Range(0, 50f)]
-    private float textTypeSpeed = 50;
+
+    private float textTypeSpeed;
 
     [Header("Dialogue Settings")]
     [SerializeField]
@@ -107,6 +106,7 @@ public class DollNPC : IInteractibleBase
 
     private void Start()
     {
+        textTypeSpeed = GameManager.Instance.TextSpeed;
         textDisplay = UIManager.Instance.GetDialogueText();
         textNameDisplay = UIManager.Instance.GetDialogueSpeakerNameText();
     }

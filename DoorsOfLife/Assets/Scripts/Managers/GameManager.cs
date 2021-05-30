@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
 
     public SoundBasics soundSet;
 
+
+    private int textSpeed=40;
+    public int TextSpeed => textSpeed;
+
     [Header("Key related stuff")]
     public bool[] key = new bool[2];
 

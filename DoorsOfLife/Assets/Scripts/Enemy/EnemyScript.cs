@@ -200,7 +200,7 @@ public class EnemyScript : MonoBehaviour
             }
             else
             {
-                if (PathUtilities.IsPathPossible(AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node, AstarPath.active.GetNearest(GameManager.Instance.GetPlayer().GetPositionVector3(), NNConstraint.Default).node))
+                if (PathUtilities.IsPathPossible(AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node, AstarPath.active.GetNearest(GameManager.Instance.GetPlayer().GetPositionVector3(), NNConstraint.Default).node)) //<- Mombo jumbo for "If you can reach the player
                 {
                     if (canAttack && Vector2.Distance(transform.position, GameManager.Instance.GetPlayer().GetPositionVector2()) < rangeToAttack)
                     {
