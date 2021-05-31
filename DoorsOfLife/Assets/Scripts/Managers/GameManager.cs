@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     public SoundBasics soundSet;
 
-
+    [SerializeField]
     private int textSpeed=40;
     public int TextSpeed => textSpeed;
 

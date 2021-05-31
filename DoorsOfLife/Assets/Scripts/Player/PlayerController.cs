@@ -297,7 +297,7 @@ public class PlayerController : MonoBehaviour
                 {
                     interactionData.Interactible = interactible;
                     ShowPrompt(interactible.InteractionText);
-                    Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
+                    Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green);
                 }
                 else
                 {
@@ -305,11 +305,11 @@ public class PlayerController : MonoBehaviour
                     {
                         interactionData.Interactible = interactible;
                         ShowPrompt(interactible.InteractionText);
-                        Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
+                        Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green);
                     }
                     else
                     {
-                        Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green, 0.2f);
+                        Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green);
                         return;
                     }
                 }
@@ -317,7 +317,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.red, 0.2f);
+            Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.red);
             HidePrompt();
             interactionData.ResetData();
         }
@@ -388,11 +388,6 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimation.PlayDeathAnimation();
         EnableMenuControls();
-    }
-
-    public void ResetDeath()
-    {
-
     }
 
     #endregion
