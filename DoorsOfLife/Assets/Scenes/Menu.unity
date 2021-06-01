@@ -635,7 +635,6 @@ MonoBehaviour:
   deviceInputPromptData: {fileID: 11400000, guid: 32b2c03b8c901644c8ca50fa47d5f7ad, type: 2}
   dialoguecase: {fileID: 0}
   dialogueStuff: {fileID: 0}
-  promptStuff: {fileID: 0}
   DialogueTextDisplay: {fileID: 0}
   dialogueNameText: {fileID: 0}
   dialogueNameImg: {fileID: 0}
@@ -651,7 +650,6 @@ MonoBehaviour:
   musicAudioSlider: {fileID: 1770491376}
   dialogueAudioSlider: {fileID: 0}
   eventSystemMenu: {fileID: 234840054}
-  eventSystemPrompt: {fileID: 0}
   audioStuff: {fileID: 1551680907}
 --- !u!4 &437101684
 Transform:
@@ -1900,6 +1898,7 @@ MonoBehaviour:
   LockFPS: 0
   lockedFPS: 60
   soundSet: {fileID: 11400000, guid: 73f9d76347c177b438122ccb5b9710b8, type: 2}
+  textSpeed: 40
   key: 
   GammaCorrection: 0
   DropBoxResolutions: {fileID: 0}
@@ -4132,7 +4131,6 @@ GameObject:
   - component: {fileID: 2128129078}
   - component: {fileID: 2128129077}
   - component: {fileID: 2128129080}
-  - component: {fileID: 2128129081}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4237,15 +4235,3 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &2128129081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128129076}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a67db21aefecbc45be95f619aa81744, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

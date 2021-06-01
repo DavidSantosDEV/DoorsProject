@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.InputSystem;
+using System.Linq;  
+//using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-
-    //
     [SerializeField]
     private bool isMainMenu=false;
 
@@ -28,8 +27,6 @@ public class UIManager : MonoBehaviour
     GameObject dialoguecase;
     [SerializeField]
     GameObject dialogueStuff;
-    [SerializeField]
-    GameObject promptStuff;
 
     [Header("DialogueSystem")]
     [SerializeField]
@@ -65,8 +62,13 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Slider dialogueAudioSlider;
 
+    [Header("Visual Settings")]
     [SerializeField]
-    private EventSystem eventSystemMenu, eventSystemPrompt;
+    private TMP_Dropdown resolutionsDrop;
+
+
+    [SerializeField]
+    private EventSystem eventSystemMenu;
     
     
 
@@ -81,19 +83,30 @@ public class UIManager : MonoBehaviour
         {
             DestroyImmediate(gameObject);
         }
-        //eventSystemMenu = UnityEngine.EventSystems.EventSystem.current;
+
+        //PRAISE THE LINQ!! \(*3*)/
+
+        resolutionsDrop.ClearOptions();
+
+        Resolution[] resolutions = Screen.resolutions;
+        
+        List<string> options = new List<string>();
+        Screen.resolutions.ToList().ForEach(res => options.Add(res.ToString()));
+        
+        resolutionsDrop.AddOptions(options);
+
+        resolutionsDrop.value = Screen.resolutions.ToList().IndexOf(Screen.currentResolution);
+
     }
 
     
 
     void Start()
     {
-        
+        Debug.Log(Screen.currentResolution);
         //Hide stuff
         
         eventSystemMenu.enabled = isMainMenu;
-        if(eventSystemPrompt)
-        eventSystemPrompt.enabled = false;
         PromptsChange();
         HideDialogueCase();
         if (!isMainMenu)
@@ -186,7 +199,6 @@ public class UIManager : MonoBehaviour
     {
         dialoguecase.SetActive(true);
         dialogueStuff.SetActive(true);
-        promptStuff.SetActive(false);
         dialogueAvatarImage.enabled = showImage;
         avatarcaseImg.enabled = showImage;
         dialogueNameText.enabled = showName;
@@ -220,16 +232,14 @@ public class UIManager : MonoBehaviour
     {
         dialoguecase.SetActive(true);
         dialogueStuff.SetActive(false);
-        promptStuff.SetActive(true);
 
-        eventSystemPrompt.enabled = true;
 
         eventSystemMenu.SetSelectedGameObject(promptSelectedButton);
     }
 
     public void HidePromptCase()
     {
-        eventSystemPrompt.enabled = false;
+
         dialoguecase.SetActive(false);
     }
 
