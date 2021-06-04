@@ -214,9 +214,9 @@ MonoBehaviour:
   heartContainerPrefab: {fileID: 2698553206333151610, guid: 8b73996480e2ee24984be0a22132c083, type: 3}
   maxHeartsRow: 10
   heartEmpty: {fileID: 8124259339964715380, guid: 083f58d0c3f2a3e4bbfc6a2757c7817c, type: 3}
+  heartHalf: {fileID: 0}
   heartFull: {fileID: 4432793351920879750, guid: 083f58d0c3f2a3e4bbfc6a2757c7817c, type: 3}
   maxHealth: 6
-  health: 0
   isDead: 0
   isInvincible: 0
 --- !u!114 &8617100945276373390
@@ -274,6 +274,8 @@ GameObject:
   - component: {fileID: 772737161}
   - component: {fileID: 772737162}
   - component: {fileID: 3185948590550210047}
+  - component: {fileID: 7940887330664600766}
+  - component: {fileID: 6558901593959099832}
   m_Layer: 7
   m_Name: EnemySpider
   m_TagString: EnemyFeet
@@ -497,6 +499,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &7940887330664600766
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8617100946218732395}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 386.43
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &6558901593959099832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8617100946218732395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fe85507f46b6841916619ae7395e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8617100946899029657
 GameObject:
   m_ObjectHideFlags: 0

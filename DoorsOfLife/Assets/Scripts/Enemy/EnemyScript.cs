@@ -129,6 +129,8 @@ public class EnemyScript : MonoBehaviour
     }
     #endregion
 
+    private Rigidbody2D body;
+
     void Awake()
     {
         enemyPathSetter = GetComponentInParent<AIDestinationSetter>();
@@ -147,6 +149,8 @@ public class EnemyScript : MonoBehaviour
         
 
         startPos.position = transform.position;
+
+        body = GetComponentInParent<Rigidbody2D>();
 
         isVisible = GetComponent<Renderer>().isVisible;
         Debug.Log(isVisible);
@@ -362,6 +366,7 @@ public class EnemyScript : MonoBehaviour
     {
         isDead = true;
         enemyPathAI.enabled = false;
+        body.bodyType = RigidbodyType2D.Static;
         //state = EnemyState.Inactive;
         StopMovement();
         Invoke(nameof(OnSelfDestruction), vanishAfterDeathTime);

@@ -62,6 +62,18 @@ public class GameManager : MonoBehaviour
     {
         GammaCorrection = RenderSettings.ambientLight.r;
         SetAudioPrevious();
+
+        SetCollisionEnemies();
+    }
+
+    private void SetCollisionEnemies()
+    {
+        Collider2D playerCollider = player.gameObject.GetComponentInParent<Collider2D>();
+        GameObject[] Enemies = GameObject.FindGameObjectsWithTag("EnemyFeet");
+        foreach(GameObject en in Enemies)
+        {
+            Physics2D.IgnoreCollision(en.GetComponent<Collider2D>(), playerCollider,true);
+        }
     }
 
     private void OnSceneLoaded(Scene scene,LoadSceneMode mode)

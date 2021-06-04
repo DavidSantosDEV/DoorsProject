@@ -145,6 +145,7 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
 
     protected virtual void Die()
     {
+        isDead = true;
         mainContainer.gameObject.SetActive(false);
     }
 
