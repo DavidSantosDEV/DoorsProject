@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PuzzleCollider : MonoBehaviour
 {
-    private PuzzleMasterBase myMaster;
+    protected PuzzleMasterBase myMaster;
 
     [SerializeField]
-    private GameObject myFitObject;
+    protected GameObject myFitObject;
 
-    private InteractPushObject pusher;
+    protected InteractPushObject pusher;
 
-    private void Start()
+    private void Awake()
     {
         if(myFitObject)
         pusher = myFitObject.GetComponent<InteractPushObject>();
@@ -37,19 +37,29 @@ public class PuzzleCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        TriggerCheck(collision);
+    }
+
+    protected virtual void TriggerCheck(Collider2D collision)
+    {
         if (collision.gameObject == myFitObject)
         {
             isSet = true;
             myMaster.UpdateMaster();
-        } 
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    protected virtual void TriggerExitCheck(Collider2D collision)
     {
         if (collision.gameObject == myFitObject)
         {
             isSet = false;
             myMaster.UpdateMaster();
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        TriggerExitCheck(collision);
     }
 }

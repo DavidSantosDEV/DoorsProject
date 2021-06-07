@@ -27,7 +27,7 @@ public class ObjectPusher : MonoBehaviour
         raySize = ((GetComponent<Collider2D>().bounds.size.x*1.5f) * moveDistanceMultiplier) - distanceRayTolerance;
     }
 
-    public void MoveObject(Vector3 direction)
+    public virtual void MoveObject(Vector3 direction)
     {
         if (isMoving || !canPush) return;
         direction*= moveDistanceMultiplier;
