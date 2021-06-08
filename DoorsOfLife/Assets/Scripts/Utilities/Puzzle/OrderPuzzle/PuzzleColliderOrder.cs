@@ -20,8 +20,13 @@ public class PuzzleColliderOrder : PuzzleCollider
 
     private void Start()
     {
-        Vector3 pos= myFitObject.transform.position;
-        Debug.Log((transform.position - pos).normalized); //FORMULA FOR DIRECTION
+        if (myFitObject)
+        {
+            Vector3 pos = myFitObject.transform.position;
+            Debug.Log((transform.position - pos).normalized); //FORMULA FOR DIRECTION
+        }
+        
+        
     }
 
     protected override void TriggerCheck(Collider2D collision)

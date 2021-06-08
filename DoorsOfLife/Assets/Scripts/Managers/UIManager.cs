@@ -86,16 +86,21 @@ public class UIManager : MonoBehaviour
 
         //PRAISE THE LINQ!! \(*3*)/
 
+        if(resolutionsDrop)
         resolutionsDrop.ClearOptions();
 
         Resolution[] resolutions = Screen.resolutions;
         
         List<string> options = new List<string>();
         Screen.resolutions.ToList().ForEach(res => options.Add(res.ToString()));
-        
-        resolutionsDrop.AddOptions(options);
 
-        resolutionsDrop.value = Screen.resolutions.ToList().IndexOf(Screen.currentResolution);
+        if (resolutionsDrop)
+        {
+            resolutionsDrop.AddOptions(options);
+
+            resolutionsDrop.value = Screen.resolutions.ToList().IndexOf(Screen.currentResolution);
+        }
+       
 
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 using UnityEngine.Audio;
 using UnityEngine;
 
@@ -13,6 +14,10 @@ public enum DoorsAndNumbers : int
 
 public class GameManager : MonoBehaviour
 {
+    public event Action OnEnemiesPause;
+    public event Action GameUnPaused;
+
+
     [SerializeField]
     private PlayerController player;
 
@@ -63,7 +68,7 @@ public class GameManager : MonoBehaviour
         GammaCorrection = RenderSettings.ambientLight.r;
         SetAudioPrevious();
 
-        SetCollisionEnemies();
+        //SetCollisionEnemies();
     }
 
     private void SetCollisionEnemies()
@@ -139,8 +144,8 @@ public class GameManager : MonoBehaviour
 
     private void PauseGame() //Find way to pause sounds
     {
+        OnEnemiesPause.Invoke();
         Cursor.visible = true;
-
         Time.timeScale = 0;
         //soundSet.
         gamepaused = true;
@@ -150,6 +155,11 @@ public class GameManager : MonoBehaviour
 
     private void UnPauseGame()
     {
+        if (GameUnPaused!=null)
+        {
+            GameUnPaused.Invoke();
+        }
+        
         Cursor.visible = false;
         Time.timeScale = 1;
         gamepaused = false;
@@ -160,8 +170,14 @@ public class GameManager : MonoBehaviour
 
     private void PauseGameNoCanvas()
     {
+        OnEnemiesPause.Invoke();
         Time.timeScale = 0;
         gamepaused = true;
+    }
+
+    public void StopEnemies()
+    {
+        OnEnemiesPause.Invoke();
     }
 
     public void ShowGameOver()

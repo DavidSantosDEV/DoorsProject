@@ -21,7 +21,7 @@ public class PlayerHearts : HeartSystemBase
             CameraShake.Instance.AddTrauma(t);
             GamepadRumbler.Instance.RumbleDamaged(dmg, health,t);
             //GamepadRumbler.Instance.RumbleLinear(lowStart, lowEnd, highStart, highEnd, t / tDivisor);
-            OnDamageTaken();
+            OnDamageTaken.Invoke();
         }
     }
 
@@ -30,7 +30,7 @@ public class PlayerHearts : HeartSystemBase
         base.Heal(ammount);
         if (OnHealed != null)
         {
-            OnHealed();
+            OnHealed.Invoke();
         }
     }
 
@@ -40,12 +40,13 @@ public class PlayerHearts : HeartSystemBase
         
         if (OnDeath!=null)
         {
-            GameManager.Instance.ShowGameOver();
-            OnDeath();// <-Crucial;
+            //GameManager.Instance.ShowGameOver();
+            OnDeath.Invoke();// <-Crucial;
         }
         else
         {
-            throw new NotImplementedException();
+            GameManager.Instance.ShowGameOver();
+            //throw new NotImplementedException();
         }
     }
 }

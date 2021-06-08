@@ -17,8 +17,9 @@ public class EnemyBloob : EnemyScript
     private float width = 1;
     private float height = 1;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         sGroup =GetComponentInParent<SortingGroup>();
         sortOriginal = sGroup.sortingOrder;
     }

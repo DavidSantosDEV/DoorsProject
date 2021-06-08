@@ -170,8 +170,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 402ac82ecaddf7b4f9dcc32221eb14b9, type: 2}
+  m_sharedMaterial: {fileID: 1284994141146922198, guid: 402ac82ecaddf7b4f9dcc32221eb14b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.15
+  m_fontSizeBase: 0.15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2985027686227906108}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
   m_Name: 
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 000000001327965ffbc2a244139923a4a791d171598d6f8f71bb46743988a707611b17ed
+  m_ApplyToSortingLayers: 000000001327965ffbc2a244139923a4a791d171598d6f8f71bb4674611b17ed3988a707
   m_ShapePath:
   - {x: -0.21386147, y: -0.057396412, z: 0}
   - {x: -0.067632675, y: -0.7699561, z: 0}
@@ -653,7 +653,7 @@ MonoBehaviour:
   - {x: -0.17569923, y: 0.54587173, z: 0}
   m_ShapePathHash: -69664539
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42744
+  m_InstanceId: -1804
 --- !u!114 &5628576333522249011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,13 +667,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainContainer: {fileID: 0}
-  prefabHeart: {fileID: 2751011981204235093, guid: aa20d199aa25df74fb1995fcc40fc414, type: 3}
-  heartContainerPrefab: {fileID: 2698553206333151610, guid: 8b73996480e2ee24984be0a22132c083, type: 3}
+  prefabHeart: {fileID: 1285738761184767556, guid: a453776d84a307649a1b37ab3f340f9d, type: 3}
+  heartContainerPrefab: {fileID: 909933595803766247, guid: 554f8c7d977c0354e922772cd3b45841, type: 3}
   maxHeartsRow: 10
   heartEmpty: {fileID: 8124259339964715380, guid: 083f58d0c3f2a3e4bbfc6a2757c7817c, type: 3}
-  heartHalf: {fileID: 0}
+  heartHalf: {fileID: 5642012044021194823, guid: 083f58d0c3f2a3e4bbfc6a2757c7817c, type: 3}
   heartFull: {fileID: 4432793351920879750, guid: 083f58d0c3f2a3e4bbfc6a2757c7817c, type: 3}
-  maxHealth: 10
+  maxHealth: 3
   isDead: 0
   isInvincible: 0
 --- !u!1 &2985027686580726683

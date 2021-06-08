@@ -20,11 +20,14 @@ public class EnemyAnimator : MonoBehaviour
     private int attackDirectionHorizontalID;
     private int attackDirectionVerticalID;
 
+    private void Awake()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        myAnimator = GetComponent<Animator>();
-
         movementHorizontalID = Animator.StringToHash("Horizontal");
         movementVerticalID = Animator.StringToHash("Vertical");
         movementSpeedID = Animator.StringToHash("Speed");

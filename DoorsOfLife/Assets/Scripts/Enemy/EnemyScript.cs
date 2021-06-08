@@ -16,10 +16,6 @@ public class EnemyScript : MonoBehaviour
 
     protected bool stunned=false;
 
-    //[SerializeField]
-    //protected EnemyState state=EnemyState.Roaming;
-
-    //protected Vector2 startPosition;
     protected Vector2 directionForAttack;
 
     private AIDestinationSetter enemyPathSetter;
@@ -28,6 +24,8 @@ public class EnemyScript : MonoBehaviour
     protected EnemySoundManager enemySound;
     protected EnemyAnimator enemyAnimation;
     protected EnemyHearts enemyHearts;
+
+    protected Rigidbody2D enemyBody;
 
     //protected EnemyHealth enemyHealth;
     //protected Rigidbody2D myRigidbody;
@@ -47,8 +45,10 @@ public class EnemyScript : MonoBehaviour
 
     protected bool canAttack = true;
 
-
-    [SerializeField] Transform startPos;
+    [SerializeField]
+    private Transform parentPosOrganizer;
+    //Starting position
+    private Transform startPos;
 
     [SerializeField]
     float maxStartDistance=5;
@@ -129,10 +129,20 @@ public class EnemyScript : MonoBehaviour
     }
     #endregion
 
-    private Rigidbody2D body;
 
     void Awake()
     {
+        GameObject stpos = new GameObject("Startpos_"+gameObject.name);
+        stpos.transform.position = transform.position;    
+        startPos = stpos.transform;
+        if (parentPosOrganizer != null)
+        {
+            stpos.transform.parent = parentPosOrganizer;
+        }
+        stpos.isStatic = true;
+        //Instantiate(prefab, transform.position, transform.rotation);
+
+
         enemyPathSetter = GetComponentInParent<AIDestinationSetter>();
         enemyPathAI = GetComponentInParent<AIPath>();
 
@@ -150,13 +160,19 @@ public class EnemyScript : MonoBehaviour
 
         startPos.position = transform.position;
 
-        body = GetComponentInParent<Rigidbody2D>();
+        enemyBody = GetComponentInParent<Rigidbody2D>();
 
         isVisible = GetComponent<Renderer>().isVisible;
         Debug.Log(isVisible);
         enabled = isVisible;
         enemyPathAI.enabled = isVisible;
         enemyPathSetter.enabled = isVisible;
+    }
+
+    protected virtual void Start()
+    {
+        GameManager.Instance.OnEnemiesPause += OnGamePause;
+        GameManager.Instance.GameUnPaused += OnGameUnPause;
     }
 
     protected virtual void OnDrawGizmos()
@@ -178,13 +194,14 @@ public class EnemyScript : MonoBehaviour
         //I am now using a Special package called A* (A-Star), much better at pathfinding than the one I was using before only downfall i can't make them roam in random positions the way I used to
 
         if (stunned || isDead) return;
-        if (GameManager.Instance.GameIsPaused) return;
+        //if (GameManager.Instance.GameIsPaused) return;
 
         enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
 
         if (returning) //I wanted this to be a simple courotine but unity doesnt let me put enabled=false on it
         {
-            if (Vector2.Distance(transform.position, startPos.position) < 1)
+            FindTarget();
+            if (!isChasing && Vector2.Distance(transform.position, startPos.position) < 1)
             {
                 Debug.Log("I am Home");
                 enemyPathAI.enabled = false;
@@ -197,7 +214,6 @@ public class EnemyScript : MonoBehaviour
         else
         {
             FarFromStart();
-
             if (!isChasing)
             {
                 FindTarget();
@@ -219,7 +235,17 @@ public class EnemyScript : MonoBehaviour
             
         }
         //enemyAnimation.UpdateMovementAnimation(enemyPathAI.velocity);
-    }  
+    }
+
+    private void OnGamePause()
+    {
+        enabled = false;
+    }
+
+    private void OnGameUnPause()
+    {
+        enabled = true;
+    }
 
     protected void SetStateReturning()
     {
@@ -248,6 +274,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, GameManager.Instance.GetPlayer().GetPositionVector2()) < findPlayerDistance)
         {
+            returning = false;
             isChasing = true;
             SetTargetPlayer();
         }
@@ -366,7 +393,7 @@ public class EnemyScript : MonoBehaviour
     {
         isDead = true;
         enemyPathAI.enabled = false;
-        body.bodyType = RigidbodyType2D.Static;
+        enemyBody.bodyType = RigidbodyType2D.Static;
         //state = EnemyState.Inactive;
         StopMovement();
         Invoke(nameof(OnSelfDestruction), vanishAfterDeathTime);
