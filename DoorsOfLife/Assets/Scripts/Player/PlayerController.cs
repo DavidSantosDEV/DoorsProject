@@ -374,7 +374,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnAttack(InputAction.CallbackContext context)
     {
-        playerWeapon.PlayerAttack(lastMovementInput);
+        playerWeapon.PlayerAttack(lastMovementInput.normalized);
         playerAnimation.PlayAttackAnimation();
     }
 

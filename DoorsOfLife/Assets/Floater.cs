@@ -5,38 +5,25 @@ using UnityEngine;
 public class Floater : MonoBehaviour
 {
     [SerializeField]
-    private float upAmmount=2;
+    private float amplitude = 0.5f;
     [SerializeField]
-    private float val;
-    [SerializeField]
-    private float speed=1;
-    // Start is called before the first frame update
+    private float frequency = 1f;
 
-    Vector2 originalPos;
-    Vector2 target;
+    Vector3 posOffset = new Vector3();
+    Vector3 tempPos = new Vector3();
 
-    bool flag=false;
-
-    private void Awake()
+    // Use this for initialization
+    void Awake()
     {
-        originalPos = transform.position;
-        
+        posOffset = transform.position;
     }
 
-
-    private void FixedUpdate()
+    void Update()
     {
-        target = new Vector2(originalPos.x, originalPos.y + upAmmount);
-        if (flag)
-        {
-            transform.position = Vector2.Lerp(transform.position, target, Time.deltaTime*speed);
-            flag = Vector2.Distance(transform.position, target)>val;
-        }
-        else
-        {
-            transform.position = Vector2.Lerp(transform.position, originalPos, Time.deltaTime*speed);
-            flag = Vector2.Distance(transform.position, originalPos) < val;
-        }
+        tempPos = posOffset;
+        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+
+        transform.position = tempPos;
     }
 
     private void OnBecameInvisible()
