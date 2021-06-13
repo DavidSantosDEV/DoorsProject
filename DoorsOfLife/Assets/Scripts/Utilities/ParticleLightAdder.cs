@@ -32,13 +32,14 @@ public class ParticleLightAdder : MonoBehaviour
     {
         m_ParticleSystem = GetComponent<ParticleSystem>();
         m_Particles = new ParticleSystem.Particle[m_ParticleSystem.main.maxParticles];
-        InstantiateParticles();
+        InstantiateParticles(m_ParticleSystem.GetParticles(m_Particles));
+        //InstantiateParticles(m_ParticleSystem.main.maxParticles); //Using the max particles is a mistake, Unity may say its max x but it would just instantiate a bunch with no use
     }
 
 
-    private void InstantiateParticles()
+    private void InstantiateParticles(int count)
     {
-        for (int i=0;i< m_ParticleSystem.main.maxParticles; i++)
+        for (int i=0;i< count; i++)
         {
             GameObject newObject = Instantiate(prefabLight.gameObject, transform);
             Light2D newLight = newObject.GetComponent<Light2D>();
@@ -49,17 +50,25 @@ public class ParticleLightAdder : MonoBehaviour
     void LateUpdate()
     {
         int count = m_ParticleSystem.GetParticles(m_Particles);
-        bool worldSpace = (m_ParticleSystem.main.simulationSpace == ParticleSystemSimulationSpace.World);
+        //bool worldSpace = ();
+
+        //if (count > LightsAndComponents.Count) InstantiateParticles(count - LightsAndComponents.Count);
+
         for (int i = 0; i < LightsAndComponents.Count; i++)
         {
             if (i < count)
             {
-                if (worldSpace)
+                if (m_ParticleSystem.main.simulationSpace == ParticleSystemSimulationSpace.World)
+                {
                     LightsAndComponents[i].obj.transform.position = m_Particles[i].position;
+                }
                 else
+                {
                     LightsAndComponents[i].obj.transform.localPosition = m_Particles[i].position;
+                }   
                 LightsAndComponents[i].obj.SetActive(true);
                 LightsAndComponents[i].component.intensity =lightmultiplier * Mathf.Clamp(m_Particles[i].GetCurrentSize(m_ParticleSystem), 0, 1);
+                LightsAndComponents[i].component.color = m_Particles[i].GetCurrentColor(m_ParticleSystem);
             }
             else
             {

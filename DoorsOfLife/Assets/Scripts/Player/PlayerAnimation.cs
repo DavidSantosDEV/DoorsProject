@@ -37,8 +37,8 @@ public class PlayerAnimation : MonoBehaviour
     {
         if(movement != Vector2.zero)
         {
-            playerAnimator.SetFloat(playerMovementHorizontalID, movement.x);//Horizontal);
-            playerAnimator.SetFloat(playerMovementVerticalID, movement.y);// Vertical);
+            playerAnimator.SetFloat(playerMovementHorizontalID, movement.normalized.x);//Horizontal);
+            playerAnimator.SetFloat(playerMovementVerticalID, movement.normalized.y);// Vertical);
         }
         playerAnimator.SetFloat(playerSpeedAnimationID, movement.magnitude);//Speed);
     }
