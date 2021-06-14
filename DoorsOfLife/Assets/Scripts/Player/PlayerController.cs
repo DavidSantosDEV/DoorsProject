@@ -133,7 +133,8 @@ public class PlayerController : MonoBehaviour
 
     private void DebugFunc5()
     {
-        FindObjectOfType<DollNPC>().ProgressionNPC++;
+        UIManager.Instance.UpgradeMenuHeart();
+        //FindObjectOfType<DollNPC>().ProgressionNPC++;
     }
     #endregion
 

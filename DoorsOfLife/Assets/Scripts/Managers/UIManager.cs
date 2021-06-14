@@ -7,6 +7,12 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 
+public enum CharacterReactions{
+    Happy,
+    Sweat,
+    Normal,
+}
+
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
@@ -14,6 +20,13 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private Canvas pauseMenuCanvas;
+    [SerializeField]
+    private Image heartPauseImage;
+    [SerializeField]
+    private Sprite[] imagesHeartFill;
+
+    [SerializeField]
+    private GameObject textShard;
 
     [Header("Button Prompts")]
     [SerializeField]
@@ -131,6 +144,24 @@ public class UIManager : MonoBehaviour
         imageButtonInteract.enabled = true;   
     
     }*/
+    private int progressionHeart = 0;
+    public void UpgradeMenuHeart()
+    {
+        progressionHeart++;
+        if (progressionHeart <= imagesHeartFill.Length - 1)
+        {
+            heartPauseImage.sprite = imagesHeartFill[progressionHeart];
+            StartCoroutine(flashNewShard());
+        }
+    }
+
+    private IEnumerator flashNewShard()
+    {
+        textShard.SetActive(true);
+        yield return new WaitForSeconds(2);
+        textShard.SetActive(false);
+
+    }
 
     private void Update() //I DO NOT LIKE THIS ONE BIT BUT UNITY FORCED MY HAND eventsystem.lastselectedgameobject is obsolete!
     {

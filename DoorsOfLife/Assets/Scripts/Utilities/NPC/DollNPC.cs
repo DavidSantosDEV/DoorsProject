@@ -117,9 +117,9 @@ public class DollNPC : IInteractibleBase
         Debug.Log("NPC Start");
 
         UIManager.Instance.SetAvatarDialogue(displayAvatar);
-        UIManager.Instance.ShowDialogueCase(false, false);
-        //if (showName)
-          //  textNameDisplay.text = displaySpeakerName;
+        UIManager.Instance.ShowDialogueCase(levelAndStrings[progressionLevel].ShowImage, levelAndStrings[progressionLevel].ShowName);
+
+        textNameDisplay.text = displaySpeakerName;
         StartTyping();
     }
 
