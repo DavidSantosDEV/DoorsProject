@@ -144,7 +144,9 @@ public class GameManager : MonoBehaviour
 
     private void PauseGame() //Find way to pause sounds
     {
+        if(OnEnemiesPause!=null)
         OnEnemiesPause.Invoke();
+        
         Cursor.visible = true;
         Time.timeScale = 0;
         //soundSet.
@@ -197,6 +199,7 @@ public class GameManager : MonoBehaviour
     {
         UnPauseGame();
         //Scene previousScene = SceneManager.GetActiveScene();
+        UIManager.Instance.ShowLoadingScreen();
         AsyncOperation sceneLoading = SceneManager.LoadSceneAsync(level);
         while (!sceneLoading.isDone)
         {
@@ -204,6 +207,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         Debug.Log("Scene Loaded");
+        UIManager.Instance.HideLoadingScreen();
         yield return null;
         
     }

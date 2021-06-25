@@ -1,43 +1,75 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
-
-/*[System.Serializable]
-public struct ObjectAndOrder
-{
-    [SerializeField]
-    private GameObject objectFit;
-    [SerializeField]
-    private int order;
-    public GameObject ObjectFit => objectFit;
-    public int Order => order;
-}*/
-
 
 
 public class PuzzleMasterOrder : MonoBehaviour
 {
     [SerializeField]
-    private PuzzleColliderOrder[] colliderOrd;
+    List<PuzzleColliderOrder> collidersAndOrder = new List<PuzzleColliderOrder>();
 
+    public static UnityEventBase puzzleComplete;
 
-    private int _index = 0;
+    private int currentIndex=0;
 
-    public bool UpdateMaster(PuzzleColliderOrder pz)
+    private void Start()
     {
-        if(colliderOrd[_index] == pz)
+        List<PuzzleColliderOrder> toRemove = new List<PuzzleColliderOrder>();
+        foreach(PuzzleColliderOrder pzCol in collidersAndOrder)
         {
-            _index++;
-            return true;
+            if (pzCol)
+            {
+                pzCol.SettupMaster(this);
+            }
+            else
+            {
+                toRemove.Add(pzCol);
+            }
+        }
+
+        foreach(PuzzleColliderOrder pz in toRemove)
+        {
+            collidersAndOrder.Remove(pz);
+        }
+    }
+
+    public void UpdateMaster(PuzzleColliderOrder ColliderUpdated)
+    {
+        if (collidersAndOrder[currentIndex] == ColliderUpdated)
+        {
+            currentIndex++;
+            if(currentIndex == collidersAndOrder.Count)
+            {
+                PuzzleComplete();
+            }
         }
         else
         {
-            _index = 0;
-            return false;
-            //foreach(PuzzleColliderOrder p in colliderOrd)
-            //{
-            //    pz.ResetPositions();
-            //}
+            ResetPuzzle();
         }
+    }
+
+    private void ResetPuzzle()
+    {
+        currentIndex = 0;
+        foreach(PuzzleColliderOrder pzCol in collidersAndOrder)
+        {
+            pzCol.ResetPosition();
+        }
+    }
+
+    private void PuzzleComplete()
+    {
+        //ResetPuzzle();
+        //Debug.Log("yeah");
+
+    }
+
+    public void DebugFunc()
+    {
+        if(Debug.isDebugBuild)
+        ResetPuzzle();
     }
 }

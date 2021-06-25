@@ -50,44 +50,8 @@ public class PlayerMovement : MonoBehaviour
     {
         movementDirection = movement;
     }
-
-    /*private void Update()
-    {
-        if (isDodging)
-        {
-            curRollTime -= rollTime * rollTimeDropMultiplier*Time.deltaTime;
-            if (curRollTime < dropMinCheck)
-            {
-                isDodging = false;
-                curRollTime = rollTime;
-            }
-        }
-        //if (movementCalculated != Vector2.zero) lastmovementInput = movementCalculated;
-        //Debug.Log(lastmovementInput);
-    }*/
-
     private void FixedUpdate()
     {
-        /*if (isDodging)
-        {   
-            myBody.velocity = currentDodgedirection * rollTime;
-        }
-        else
-        {*/
-        MovePlayer();
-        //}
+        myBody.velocity = movementDirection * movementSpeed;
     }
-
-    private void MovePlayer()
-    {
-        Vector2 move= movementDirection * movementSpeed;
-        myBody.velocity = move;
-    }
-
-    /*public void Dodge()
-    {
-        if (isDodging) return;
-        currentDodgedirection = movementDirection.normalized * dodgeAmmount;
-        isDodging = true;
-    }*/
 }

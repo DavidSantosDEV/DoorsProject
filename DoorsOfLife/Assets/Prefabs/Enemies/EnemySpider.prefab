@@ -72,6 +72,96 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &5566318726429830438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4293465120406972318}
+  m_Layer: 0
+  m_Name: BonkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4293465120406972318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566318726429830438}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.37, y: 0.67, z: -1.2000314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8617100945276373384}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6356652352983623665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4978798842178911369}
+  m_Layer: 0
+  m_Name: BonkPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4978798842178911369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6356652352983623665}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.71, y: 0.69, z: -1.2000314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8617100945276373384}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7865877446002036629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6938815863549393436}
+  m_Layer: 0
+  m_Name: BonkPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6938815863549393436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865877446002036629}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.09, y: -0.16, z: -1.2000314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8617100945276373384}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8617100945276373431
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +198,9 @@ Transform:
   - {fileID: 8617100946899029658}
   - {fileID: 6699918243924844170}
   - {fileID: 2597557618284793269}
+  - {fileID: 4293465120406972318}
+  - {fileID: 4978798842178911369}
+  - {fileID: 6938815863549393436}
   m_Father: {fileID: 8617100946218732399}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -219,6 +312,11 @@ MonoBehaviour:
   maxHealth: 6
   isDead: 0
   isInvincible: 0
+  bonkPoint:
+  - {fileID: 4293465120406972318}
+  - {fileID: 4978798842178911369}
+  - {fileID: 6938815863549393436}
+  prefabBonk: {fileID: 5962680511273925654, guid: 16c365101d342e34097995b28c3dd1b1, type: 3}
 --- !u!114 &8617100945276373390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +346,7 @@ MonoBehaviour:
   rangeToAttack: 1.4
   timeBetweenAttack: 1
   vanishAfterDeathTime: 2
-  startPos: {fileID: 0}
+  parentPosOrganizer: {fileID: 0}
   maxStartDistance: 10
   attackPoint: {fileID: 8617100946899029658}
   meleePointWidth: 1
@@ -275,7 +373,6 @@ GameObject:
   - component: {fileID: 772737162}
   - component: {fileID: 3185948590550210047}
   - component: {fileID: 7940887330664600766}
-  - component: {fileID: 6558901593959099832}
   m_Layer: 7
   m_Name: EnemySpider
   m_TagString: EnemyFeet
@@ -520,18 +617,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6558901593959099832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8617100946218732395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61fe85507f46b6841916619ae7395e85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8617100946899029657
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class PuzzleMasterBase : MonoBehaviour
         }
     }
 
-    public void UpdateMaster()
+    public virtual void UpdateMaster()
     {
         foreach(PuzzleCollider Pchild in myColliders)
         {

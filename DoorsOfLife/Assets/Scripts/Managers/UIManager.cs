@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using System.Linq;  
-//using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
@@ -26,7 +25,14 @@ public class UIManager : MonoBehaviour
     private Sprite[] imagesHeartFill;
 
     [SerializeField]
+    private GameObject creditsObject;
+    [Space]
+    [SerializeField]
     private GameObject textShard;
+
+    [Header("Loading Screen")]
+    [SerializeField]
+    private GameObject loadingScreen;
 
     [Header("Button Prompts")]
     [SerializeField]
@@ -117,7 +123,33 @@ public class UIManager : MonoBehaviour
 
     }
 
-    
+    public void ShowLoadingScreen()
+    {
+        if(loadingScreen)
+        loadingScreen.SetActive(true);
+    }
+
+    public void HideLoadingScreen()
+    {
+        if(loadingScreen)
+        loadingScreen.SetActive(false);
+    }
+
+    public void ShowCredits(GameObject button)
+    {
+        if (audioStuff.activeSelf)
+        {
+            audioStuff.SetActive(false);
+        }
+        eventSystemMenu.SetSelectedGameObject(button);
+        creditsObject.SetActive(true);
+    }
+
+    public void HideCredits(GameObject button)
+    {
+        eventSystemMenu.SetSelectedGameObject(button);
+        creditsObject.SetActive(false);
+    }
 
     void Start()
     {
@@ -135,15 +167,7 @@ public class UIManager : MonoBehaviour
         
     }
 
-    //Show Buttons
 
-    /*public void ShowInteractButton()
-    {
-        //imageButtonInteract.sprite = deviceInputPromptData.GetButtonInteractSprite();
-        //Debug.Log(PlayerController.Instance.myInput.devices[0].name);
-        imageButtonInteract.enabled = true;   
-    
-    }*/
     private int progressionHeart = 0;
     public void UpgradeMenuHeart()
     {
@@ -311,6 +335,10 @@ public class UIManager : MonoBehaviour
 
     public void ShowAudioStuff(GameObject button)
     {
+        if (creditsObject.activeSelf)
+        {
+            creditsObject.SetActive(false);
+        }
         eventSystemMenu.SetSelectedGameObject(button);
         audioStuff.SetActive(true);
     }

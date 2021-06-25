@@ -36,8 +36,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 rawMovementInput;
     private Vector2 lastMovementInput;
 
-    //----------------------------------- //[SerializeField]
-    //private float speedInteractCheck = 8; // 1/8 = 0.125 ms
     [Header("Player Interaction")]
     [SerializeField]
     private float offsetXInteract = 0, offsetYInteract = 0;
@@ -101,12 +99,14 @@ public class PlayerController : MonoBehaviour
     private void debugCompletePuzzle()
     {
         if (!Debug.isDebugBuild) return;
-        PuzzlePlayMaster pz=
+        /*PuzzlePlayMaster pz=
         FindObjectOfType<PuzzlePlayMaster>();
         if (pz)
         {
             pz.debugCompletePuzzle();
-        }
+        }*/
+
+        FindObjectOfType<PuzzleMasterOrder>().DebugFunc();
     }
 
     private void DebugFunc3()
@@ -202,10 +202,17 @@ public class PlayerController : MonoBehaviour
         myInput.controlsChangedEvent.AddListener(OnControlsChanged);
     }
 
-
     void OnDamageTaken()
     {
         playerAnimation.PlayHitAnimation();
+    }
+
+    private void Update()
+    {
+        if (!inCutscene && !GameManager.Instance.GameIsPaused)
+        {
+            CheckForInteractible();
+        }
     }
 
     // Start is called before the first frame update
@@ -227,21 +234,23 @@ public class PlayerController : MonoBehaviour
 
         myPlayerControls.Enable();
 
-
+        //EnableGameplayControls();
         currentActionMap = actionMapGameplay; //Lets assume its always the gameplay starting
 
         myInput.actions.FindActionMap(actionMapInteraction).Disable();
         myInput.actions.FindActionMap(actionMapMenu).Disable();
 
         Debug.Log(currentActionMap);
-        currentControlScheme = myInput.currentControlScheme; 
+        currentControlScheme = myInput.currentControlScheme;
+        
 
         HidePrompt();
     }
 
     private void Start()
     {
-        StartCoroutine(nameof(RoutineCheckInteractible));
+        //StartCoroutine(nameof(RoutineCheckInteractible));
+        //StartCoroutine(MoveCutScene());
     }
 
     private void UpdateLastMovement()
@@ -261,26 +270,13 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateMovement()
     {
-        playerMovement.UpdateMovementData(rawMovementInput);
+        playerMovement.UpdateMovementData(rawMovementInput.normalized);
 
         playerAnimation.UpdateMovementAnimation(rawMovementInput);
 
         UpdateLastMovement();
     }
 
-    private IEnumerator RoutineCheckInteractible() //Plan was for this to be a coroutine, turns out it gave huge gameplay problems
-    {
-        while (enabled)
-        {
-            if(!inCutscene && !GameManager.Instance.GameIsPaused)
-            {
-                CheckForInteractible();
-            }
-            yield return new WaitForEndOfFrame();//WaitForSeconds(1/speedInteractCheck);
-        }
-    }
-
-    //IInteractibleBase interactible; 
     private void CheckForInteractible()
     {
         Vector3 startpos = transform.position + new Vector3(offsetXInteract, offsetYInteract);
@@ -424,7 +420,17 @@ public class PlayerController : MonoBehaviour
     public void EnableGameplayControls()
     {
         myInput.SwitchCurrentActionMap(actionMapGameplay);
-        myInput.actions.FindActionMap(currentActionMap).Disable();
+        if (currentActionMap != "")
+        {
+            try
+            {
+                myInput.actions.FindActionMap(currentActionMap).Disable();
+            }
+            catch (Exception ex)
+            {
+                Debug.Log(ex);
+            }
+        }
         currentActionMap = actionMapGameplay;
     }
 

@@ -7,6 +7,10 @@ public class EnemyHearts : HeartSystemBase
     EnemyScript _parent;
     EnemyAnimator _animator;
 
+    [SerializeField]
+    private Transform[] bonkPoint;
+    [SerializeField]
+    private GameObject prefabBonk;
     public void SettupComponent(EnemyScript enemy, EnemyAnimator parentAnimator)
     {
         _parent = enemy;
@@ -16,7 +20,9 @@ public class EnemyHearts : HeartSystemBase
     public override void TakeDamage(float dmg)
     {
         base.TakeDamage(dmg);
+        
         if (isDead || isInvincible) return;
+        SpawnRandomBonk();
         _animator.PlayHitAnimation();
         _parent.SetStunned();
     }
@@ -28,4 +34,16 @@ public class EnemyHearts : HeartSystemBase
         _parent.OnEnemyDied();
     }
 
+
+    private void SpawnRandomBonk()
+    {
+        if (prefabBonk)
+        {
+            if (bonkPoint.Length > 0)
+            {
+                int chosen = Random.Range(0, (bonkPoint.Length));
+                Instantiate(prefabBonk, bonkPoint[chosen].position, bonkPoint[chosen].rotation);
+            }
+        }
+    }
 }

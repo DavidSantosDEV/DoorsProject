@@ -2,65 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class PuzzleColliderOrder : PuzzleCollider
+public class PuzzleColliderOrder : MonoBehaviour
 {
-    PuzzleMasterOrder _master;
-
-    [System.Serializable]
-    struct CollidersAndOrder
-    {
-        public PuzzleColliderOrder PzCol;
-        public bool push;
-    }
-
     [SerializeField]
-    CollidersAndOrder[] brothers;
+    private InteractPushObject myFitObject;
+
+    private Vector2 directionReturn;
+
+    private bool isSet;
+
+    private PuzzleMasterOrder myMaster;
 
     private void Start()
     {
-        if (myFitObject)
-        {
-            Vector3 pos = myFitObject.transform.position;
-            Debug.Log((transform.position - pos).normalized); //FORMULA FOR DIRECTION
-        }
-        
-        
+        directionReturn = -(transform.position - myFitObject.transform.position).normalized;
+        Debug.Log(directionReturn);
     }
 
-    protected override void TriggerCheck(Collider2D collision)
+    public void SettupMaster(PuzzleMasterOrder master)
     {
-        if (!_master.UpdateMaster(this))
-        {
-            ResetPositions();
-        }
-        else
-        {
-            pusher.IsInteractible = false;
-        }
-        //base.TriggerCheck(collision);
+        myMaster = master;
     }
 
-    protected override void TriggerExitCheck(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isSet) return;
 
-        //base.TriggerExitCheck(collision);
-    }
-
-    private void ResetPositions()
-    {
-        foreach(CollidersAndOrder cl in brothers)
+        if (collision.gameObject == myFitObject.gameObject)
         {
-            if (cl.push)
-            {
-                cl.PzCol.ResetObject();
-            }
+            isSet = true;
+            myFitObject.IsInteractible = false;
+            myMaster.UpdateMaster(this);
         }
     }
 
-    public void ResetObject()
+    public void ResetPosition()
     {
-        pusher.IsInteractible = true;
+        isSet = false;
+        myFitObject.IsInteractible = true;
+        myFitObject.MoveObject(directionReturn);
     }
+
 }

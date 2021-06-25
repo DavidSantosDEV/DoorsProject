@@ -32,14 +32,19 @@ public class InteractPushObject : IInteractibleBase
     public override void OnInteract()
     {
         base.OnInteract();
-        Vector3 dir = GameManager.Instance.GetPlayer().ReturnFacingDirection();//PlayerController.Instance.ReturnFacingDir();//playerWeapon.ReturnAttackDirMove();
+        Vector3 dir = GameManager.Instance.GetPlayer().ReturnFacingDirection();
         if (!(dir.x == dir.y || dir.x == -dir.y)) MoveObject(dir);
     }
 
-
+    private List<Vector2> moveLine= new List<Vector2>();
     public virtual void MoveObject(Vector3 direction)
     {
-        if (isMoving || !canPush) return;
+        if (isMoving)
+        {
+            moveLine.Add(direction * moveDistanceMultiplier);
+            return;
+        }
+        if (!canPush) return;
         direction *= moveDistanceMultiplier;
         if (CheckCollision(direction)) return;
         StartCoroutine(Move(direction));
@@ -80,6 +85,13 @@ public class InteractPushObject : IInteractibleBase
 
         isMoving = false;
         isInteractible = true;
+
+        if (moveLine.Count > 0)
+        {
+            Vector2 moveVal = moveLine[0];
+            moveLine.Remove(moveVal);
+            StartCoroutine(Move(moveVal));
+        }
     }
     
 }
