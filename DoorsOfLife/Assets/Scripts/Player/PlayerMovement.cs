@@ -46,8 +46,22 @@ public class PlayerMovement : MonoBehaviour
         _parent.PlayerAnimationComponent.UpdateMovementSpeed(0);
     }
 
+    //private bool canMove = true;
+
+    /*public void DisableMovement()
+    {
+        ClearMovement();
+        canMove = false;
+    }*/
+
+    /*public void EnableMovement()
+    {
+        canMove = true;
+    }*/
+
     public void UpdateMovementData(Vector2 movement)
     {
+        //if(canMove)
         movementDirection = movement;
     }
     private void FixedUpdate()

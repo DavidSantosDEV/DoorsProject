@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private PlayerController player;
+    [SerializeField]
+    private GameObject playerPrefab;
 
     [SerializeField]
     private bool LockFPS=false;
@@ -47,6 +49,8 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -58,14 +62,9 @@ public class GameManager : MonoBehaviour
             Application.targetFrameRate = lockedFPS;
         }
     }
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
 
     void Start()
     {
-        GammaCorrection = RenderSettings.ambientLight.r;
         SetAudioPrevious();
 
         //SetCollisionEnemies();
@@ -81,19 +80,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void OnSceneLoaded(Scene scene,LoadSceneMode mode)
-    {
-        //Time.timeScale = 1;
-    }
+
+
     //Frame counting
 
     float deltaTime = 0.0f; // <- DEBUG ONLY
 
-    [SerializeField]
-    private float GammaCorrection;
+
     private void Update()
     {
-        RenderSettings.ambientLight = new Color(GammaCorrection, GammaCorrection, GammaCorrection, 1.0f);
+
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
     }
     void OnGUI()
@@ -185,7 +181,7 @@ public class GameManager : MonoBehaviour
     public void ShowGameOver()
     {
         PauseGameNoCanvas();
-        UIManager.Instance.GameOverScreen();
+        UIManager.Instance.ShowGameOver();
         Debug.Log("Game Over");
         //ChangeToMenu();
     }
@@ -197,9 +193,10 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator LoadScene(int level)
     {
+        isOpeningLevel = true;
         UnPauseGame();
-        //Scene previousScene = SceneManager.GetActiveScene();
         UIManager.Instance.ShowLoadingScreen();
+
         AsyncOperation sceneLoading = SceneManager.LoadSceneAsync(level);
         while (!sceneLoading.isDone)
         {
@@ -207,23 +204,51 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         Debug.Log("Scene Loaded");
+
         UIManager.Instance.HideLoadingScreen();
         yield return null;
-        
+
+        isOpeningLevel = false;
     }
 
-    public void ChangeToLevel()
+    bool isOpeningLevel=false;
+    public void Openlevel(int level)
     {
-        StartCoroutine(LoadScene(1));
+        if (isOpeningLevel==false)
+        {
+            StartCoroutine(LoadScene(level));
+        }
     }
 
-    public void ChangeToMenu()
-    {   
-        StartCoroutine(LoadScene(0));
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            //Menu
+            UIManager.Instance.ShowMenuStuff();
+            UIManager.Instance.HidePauseCanvas();
+            UIManager.Instance.HideGameOver();
+            UIManager.Instance.HideGameplayStuff();
+        }
+        else
+        {
+            //Game
+            UIManager.Instance.HideMenuStuff();
+            UIManager.Instance.ShowGameplayStuff();
+
+            if (player == null)
+            {
+                player = FindObjectOfType<PlayerController>();
+                if (!player)
+                {
+                    player = Instantiate(playerPrefab).GetComponent<PlayerController>();
+                }
+                DontDestroyOnLoad(player.gameObject.transform.parent);
+            }
+            
+        }
     }
-
-
-    
 
     #endregion
 
@@ -245,7 +270,6 @@ public class GameManager : MonoBehaviour
 
     public void SetAudioMaster(Slider slider)
     {
-        Debug.Log("called");
         Debug.Log("Audio Value: "+slider.value);
         soundSet.SetVolumeMaster(slider.value);
     }

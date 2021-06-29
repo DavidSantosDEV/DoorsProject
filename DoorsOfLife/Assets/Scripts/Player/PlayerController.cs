@@ -199,7 +199,7 @@ public class PlayerController : MonoBehaviour
 
         #endregion
 
-        myInput.controlsChangedEvent.AddListener(OnControlsChanged);
+        //myInput.controlsChangedEvent.AddListener(OnControlsChanged);
     }
 
     void OnDamageTaken()
@@ -247,12 +247,6 @@ public class PlayerController : MonoBehaviour
         HidePrompt();
     }
 
-    private void Start()
-    {
-        //StartCoroutine(nameof(RoutineCheckInteractible));
-        //StartCoroutine(MoveCutScene());
-    }
-
     private void UpdateLastMovement()
     {
         if (rawMovementInput.normalized != Vector2.zero)
@@ -268,13 +262,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool canMove = true;
+    public void StopMovement()
+    {
+        rawMovementInput = Vector2.zero;
+        UpdateMovement();
+        canMove = false;
+    }
+
+    public void EnableMovement()
+    {
+        canMove = true;
+    }
+
     private void UpdateMovement()
     {
-        playerMovement.UpdateMovementData(rawMovementInput.normalized);
+        if (canMove)
+        {
+            playerMovement.UpdateMovementData(rawMovementInput.normalized);
 
-        playerAnimation.UpdateMovementAnimation(rawMovementInput);
+            playerAnimation.UpdateMovementAnimation(rawMovementInput);
 
-        UpdateLastMovement();
+            UpdateLastMovement();
+        }
+
     }
 
     private void CheckForInteractible()
@@ -369,10 +380,16 @@ public class PlayerController : MonoBehaviour
         UpdateMovement();
     }
 
+    public bool canAttack = true;
+
     private void OnAttack(InputAction.CallbackContext context)
     {
-        playerWeapon.PlayerAttack(lastMovementInput.normalized);
-        playerAnimation.PlayAttackAnimation();
+        if (canAttack)
+        {
+            playerWeapon.PlayerAttack(lastMovementInput.normalized);
+            playerAnimation.PlayAttackAnimation();
+            canAttack = false;
+        }
     }
 
 
@@ -391,7 +408,7 @@ public class PlayerController : MonoBehaviour
 
     
 #region UIRelated
-    public void OnControlsChanged(PlayerInput arg1)
+    /*public void OnControlsChanged(PlayerInput arg1)
     {
         if (currentControlScheme != myInput.currentControlScheme)
         {
@@ -412,7 +429,7 @@ public class PlayerController : MonoBehaviour
 
             //interactionData.ControlsChanged();
         }
-    }
+    }*/
 
     #endregion
     //Switching Control types

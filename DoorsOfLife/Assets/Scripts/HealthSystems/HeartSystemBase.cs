@@ -8,20 +8,21 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
 {
     [Header("Heart Image Settings")]
     [SerializeField]
-    private VerticalLayoutGroup mainContainer;
+    protected VerticalLayoutGroup mainContainer;
     [SerializeField]
-    private GameObject prefabHeart=null;
+    protected GameObject prefabHeart=null;
     [SerializeField]
-    private GameObject heartContainerPrefab;
+    protected GameObject heartContainerPrefab;
     [SerializeField]
-    private int maxHeartsRow = 10;
+    protected int maxHeartsRow = 10;
     [SerializeField]
-    Sprite heartEmpty;
+    protected Sprite heartEmpty;
     [SerializeField]
-    Sprite heartHalf;
+    protected Sprite heartHalf;
     [SerializeField]
-    Sprite heartFull;
-    List<Image> hearts = new List<Image>();
+    protected Sprite heartFull;
+
+    protected List<Image> hearts = new List<Image>();
 
     [Header("Health Settings Base")]
     [SerializeField][Range(0,40)]
@@ -50,7 +51,7 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
     private int rowIndex = 0;
     private int lineIndex = 0;
 
-    private void Awake()
+    protected virtual void Start()
     {
         _health = maxHealth;
         CreateHearts(maxHealth);

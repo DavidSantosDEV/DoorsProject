@@ -9,7 +9,14 @@ public class PlayerHearts : HeartSystemBase
     public event Action OnDamageTaken;
     public event Action OnDeath;
 
-    
+    protected override void Start()
+    {
+        if (mainContainer == null)
+        {
+            mainContainer = UIManager.Instance.GetHeartContainerPlayer();
+        }
+        base.Start();
+    }
 
     public override void TakeDamage(float dmg)
     {

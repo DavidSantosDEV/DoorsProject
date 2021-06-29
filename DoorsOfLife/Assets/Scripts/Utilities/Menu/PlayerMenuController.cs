@@ -16,7 +16,7 @@ public class PlayerMenuController : MonoBehaviour
 
     private string currentControlScheme;
 
-    // Start is called before the first frame update
+
     private void Awake()
     {
         if (Instance == null)

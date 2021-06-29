@@ -58,7 +58,6 @@ public class InteractPrompt : IInteractibleBase
             {
                 //canContinue = true;
                 UIManager.Instance.ShowContinueDialogueButton();
-                UIManager.Instance.ShowButtonsPrompt();
             }
             yield return new WaitForSeconds(1/typeSpeed);
         }

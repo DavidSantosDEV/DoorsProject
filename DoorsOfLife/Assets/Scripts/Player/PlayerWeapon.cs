@@ -25,8 +25,8 @@ public class PlayerWeapon : MonoBehaviour
     private float meleeRange = 1;
     /*[SerializeField][Range(1,2)]
     private float damageMultiplier=1.1f;*/
-    private AttackState currentAttackState=AttackState.Idle;
-    private ushort currentAttackChain = 0;
+    //private AttackState currentAttackState=AttackState.Idle;
+    //private ushort currentAttackChain = 0;
     [SerializeField]
     private Transform attackPoint;
     [SerializeField]
@@ -41,10 +41,10 @@ public class PlayerWeapon : MonoBehaviour
     }
 
     //Melee -----------------------------------------------------------
-    public void ChangeAttackState(AttackState state)
+    /*public void ChangeAttackState(AttackState state)
     {
         currentAttackState = state;
-    }
+    }*/
 
     public void PlayerAttack(Vector2 AttackDirection)
     {
@@ -53,45 +53,32 @@ public class PlayerWeapon : MonoBehaviour
 
         //Debug.Log(attackPoint.localPosition);
 
-        switch (currentAttackState)
-        {
-            case AttackState.Idle:
-                ResetAttack();
-                doAttack(currentAttackChain);
-                break;
-            case AttackState.WaitFollow:
-                currentAttackChain++;
-                doAttack(currentAttackChain);
-                break;
-        }
+        //switch (currentAttackState)
+        //{
+          //  case AttackState.Idle:
+            //    ResetAttack();
+              //  doAttack(currentAttackChain);
+                //break;
+            //case AttackState.WaitFollow:
+              //  currentAttackChain++;
+                //doAttack(currentAttackChain);
+                //break;
+        
     }
 
-    private void ResetAttack()
+    /*private void ResetAttack()
     {
         currentAttackChain = 0;
-    }
+    }*/
 
-    private void doAttack(ushort attacknum)
+    private void doAttack()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, meleeWidth, weaponHitLayers);
         foreach(Collider2D hit in hits)
         {
             if (hit.gameObject.CompareTag("Enemy")){
-                float damageMultiplied = damage;
-                switch (attacknum)
-                {
-                    case 0:
-                        damageMultiplied = damage;
-                        break;
-                    case 1:
-                        damageMultiplied = damage * 1.2f;
-                        break;
-                    case 2:
-                        damageMultiplied = damage * 1.3f;
-                        break;
-                }
                 HeartSystemBase enemyHealth = hit.gameObject.GetComponent<HeartSystemBase>();
-                enemyHealth.TakeDamage(damageMultiplied);
+                enemyHealth.TakeDamage(damage);
             }
         }
     }

@@ -1,37 +1,31 @@
 fileFormatVersion: 2
-guid: 70adef5fa7bd0f1409bbdcd43500f130
+guid: 492b8dc4d351dee43bb02ca5dfece98e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 319473196610917759
-    second: Player_AttackDown_0
+      213: 2202098911147331178
+    second: Attack_SideLeft_0
   - first:
-      213: 7783274222889846387
-    second: Player_AttackDown_1
+      213: -4880257264968399496
+    second: Attack_SideLeft_1
   - first:
-      213: -8666490986085697079
-    second: Player_AttackDown_2
+      213: 8162615540786186428
+    second: Attack_SideLeft_2
   - first:
-      213: 3827962070526383613
-    second: Player_AttackDown_3
+      213: -8470259080287416235
+    second: Attack_SideLeft_3
   - first:
-      213: -7121534763609132011
-    second: Player_AttackDown_4
+      213: 3786950762607634002
+    second: Attack_SideLeft_4
   - first:
-      213: 3736312559677629968
-    second: Player_AttackDown_5
+      213: -3997409999272563741
+    second: Attack_SideLeft_5
   - first:
-      213: 3636236504167031394
-    second: Player_AttackDown_6
+      213: -3286050425880585737
+    second: Attack_SideLeft_6
   - first:
-      213: -1291251205068206473
-    second: Player_AttackDown_7
-  - first:
-      213: 692881643721609302
-    second: Player_AttackDown_8
-  - first:
-      213: 1310555597464313813
-    second: Player_AttackDown_9
+      213: 1927191909330698199
+    second: Attack_SideLeft_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,196 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_AttackDown_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 384
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f75904ffd2ffe6400800000000000000
-      internalID: 319473196610917759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 384
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 376cdcc0baeb30c60800000000000000
-      internalID: 7783274222889846387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_2
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 384
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c9bc3d7d507ab780800000000000000
-      internalID: -8666490986085697079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df5d463c837af1530800000000000000
-      internalID: 3827962070526383613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5147b7f2dd93b2d90800000000000000
-      internalID: -7121534763609132011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0166a692a7c0ad330800000000000000
-      internalID: 3736312559677629968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2622f2eb5d1867230800000000000000
-      internalID: 3636236504167031394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_7
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77e4d1ecedd841ee0800000000000000
-      internalID: -1291251205068206473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 128
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6505a651f2c9d9900800000000000000
-      internalID: 692881643721609302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_AttackDown_9
+      name: Attack_SideLeft_0
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +123,161 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.7}
+      pivot: {x: 0.5, y: 0.67}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5df924d4f57003210800000000000000
-      internalID: 1310555597464313813
+      spriteID: a6e063fda4d6f8e10800000000000000
+      internalID: 2202098911147331178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_SideLeft_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8750a0dcfd7d54cb0800000000000000
+      internalID: -4880257264968399496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_SideLeft_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8c4a2469f674170800000000000000
+      internalID: 8162615540786186428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_SideLeft_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55011fb6e38937a80800000000000000
+      internalID: -8470259080287416235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_SideLeft_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2566f1b87a3fd8430800000000000000
+      internalID: 3786950762607634002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_SideLeft_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eba3cbe8c85688c0800000000000000
+      internalID: -3997409999272563741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_SideLeft_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9dd534c8a9562d0800000000000000
+      internalID: -3286050425880585737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_SideLeft_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfb9a1b4d2ceba10800000000000000
+      internalID: 1927191909330698199
       vertices: []
       indices: 
       edges: []

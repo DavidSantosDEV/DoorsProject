@@ -15,24 +15,32 @@ public enum CharacterReactions{
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private bool isMainMenu=false;
-
+    private GameObject parentUIObject;
     [SerializeField]
-    private Canvas pauseMenuCanvas;
+    private GameObject MainMenuCanvas;
+    [SerializeField]
+    private GameObject GameplayCanvas;
+    [SerializeField]
+    private GameObject PauseCanvas;
+    [SerializeField]
+    private GameObject LoadingCanvas;
+    [SerializeField]
+    private GameObject GameOverCanvas;
+
+
+    [Header("Main Menu Stuff")]
+    [SerializeField]
+    private EventSystem eventSystemMenu;
+    [SerializeField]
+    private GameObject creditsObject;
+
+    [Header("Pause Menu")]
     [SerializeField]
     private Image heartPauseImage;
     [SerializeField]
     private Sprite[] imagesHeartFill;
 
-    [SerializeField]
-    private GameObject creditsObject;
-    [Space]
-    [SerializeField]
-    private GameObject textShard;
 
-    [Header("Loading Screen")]
-    [SerializeField]
-    private GameObject loadingScreen;
 
     [Header("Button Prompts")]
     [SerializeField]
@@ -41,13 +49,15 @@ public class UIManager : MonoBehaviour
     [Header("Device Display Settings")]
     public InputPromptData deviceInputPromptData;
 
-    [Header("General")]
+    [Header("Gameplay")]
     [SerializeField]
-    GameObject dialoguecase;
+    private VerticalLayoutGroup heartContainer;
     [SerializeField]
-    GameObject dialogueStuff;
+    private GameObject textShard;
 
     [Header("DialogueSystem")]
+    [SerializeField]
+    GameObject dialoguecase;
     [SerializeField]
     private TextMeshProUGUI DialogueTextDisplay;
     [SerializeField]
@@ -59,17 +69,10 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image dialogueButtonPromptImage=null;
 
-    [Header("Prompt System")]
-    [SerializeField]
-    private GameObject promptSelectedButton;
-    [SerializeField]
-    private TextMeshProUGUI promptTextDisplay;
-
     [Header("Game Over screen")]
     [SerializeField]
-    private GameObject gameOverCase;
-    [SerializeField]
     private GameObject firstSelectedDeathButton;
+
 
     [Header("Audio Sliders")]
     [SerializeField]
@@ -86,24 +89,18 @@ public class UIManager : MonoBehaviour
     private TMP_Dropdown resolutionsDrop;
 
 
-    [SerializeField]
-    private EventSystem eventSystemMenu;
-    
-    
-
     public static UIManager Instance { get; private set; } = null;
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            CustomSettup();
         }
         else
         {
-            DestroyImmediate(gameObject);
+            Destroy(gameObject);
         }
-
-        //PRAISE THE LINQ!! \(*3*)/
 
         if(resolutionsDrop)
         resolutionsDrop.ClearOptions();
@@ -118,23 +115,56 @@ public class UIManager : MonoBehaviour
             resolutionsDrop.AddOptions(options);
 
             resolutionsDrop.value = Screen.resolutions.ToList().IndexOf(Screen.currentResolution);
-        }
-       
-
+        }      
+    }
+    private void CustomSettup()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(parentUIObject);
     }
 
+    //Menu Stuff
+
+    public void ShowMenuStuff()
+    {
+        MainMenuCanvas.SetActive(true);
+    }
+
+    public void HideMenuStuff()
+    {
+        MainMenuCanvas.SetActive(false);
+    }
+
+    //Gameplay Stuff
+
+    public VerticalLayoutGroup GetHeartContainerPlayer()
+    {
+        return heartContainer;
+    }
+
+    public void ShowGameplayStuff()
+    {
+        GameplayCanvas.SetActive(true);
+    }
+
+    public void HideGameplayStuff()
+    {
+        GameplayCanvas.SetActive(false);
+    }
+
+    //Loading Screen
     public void ShowLoadingScreen()
     {
-        if(loadingScreen)
-        loadingScreen.SetActive(true);
+        LoadingCanvas.SetActive(true);
     }
 
     public void HideLoadingScreen()
     {
-        if(loadingScreen)
-        loadingScreen.SetActive(false);
+        LoadingCanvas.SetActive(false);
     }
+    //-----
 
+    //Credits
     public void ShowCredits(GameObject button)
     {
         if (audioStuff.activeSelf)
@@ -150,22 +180,7 @@ public class UIManager : MonoBehaviour
         eventSystemMenu.SetSelectedGameObject(button);
         creditsObject.SetActive(false);
     }
-
-    void Start()
-    {
-        Debug.Log(Screen.currentResolution);
-        //Hide stuff
-        
-        eventSystemMenu.enabled = isMainMenu;
-        PromptsChange();
-        HideDialogueCase();
-        if (!isMainMenu)
-        {
-            //HideInteractButton();
-            HidePauseCanvas();
-        }
-        
-    }
+    //-----------
 
 
     private int progressionHeart = 0;
@@ -217,13 +232,16 @@ public class UIManager : MonoBehaviour
         else
         {
 
-            Cursor.visible = isMainMenu || GameManager.Instance.GameIsPaused;
+            Cursor.visible = GameManager.Instance.GameIsPaused;
 
             GameObject obj =  eventSystemMenu.currentSelectedGameObject != null ? eventSystemMenu.currentSelectedGameObject :  eventSystemMenu.firstSelectedGameObject;
+            if (obj)
+            {
+                Selectable btn = (obj.GetComponent<Selectable>());
+                btn?.OnDeselect(new BaseEventData(eventSystemMenu));
+                eventSystemMenu.SetSelectedGameObject(null);
+            }
 
-            Selectable btn =(obj.GetComponent<Selectable>());
-            btn.OnDeselect(new BaseEventData(eventSystemMenu));
-            eventSystemMenu.SetSelectedGameObject(null);
         }
     }
 
@@ -239,10 +257,6 @@ public class UIManager : MonoBehaviour
     {
         return deviceInputPromptData.GetButtonInteractSprite();
     }
-    /*public void HideInteractButton()
-    {
-        imageButtonInteract.enabled = false;
-    }*/
 
     //Dialogue
     public TextMeshProUGUI GetDialogueText()
@@ -258,7 +272,6 @@ public class UIManager : MonoBehaviour
     public void ShowDialogueCase(bool showImage,bool showName)
     {
         dialoguecase.SetActive(true);
-        dialogueStuff.SetActive(true);
         dialogueAvatarImage.enabled = showImage;
         avatarcaseImg.enabled = showImage;
         dialogueNameText.enabled = showName;
@@ -282,52 +295,20 @@ public class UIManager : MonoBehaviour
 
     public void SetAvatarDialogue(Sprite Avatar)
     {
-        dialogueAvatarImage.sprite =Avatar;
+        dialogueAvatarImage.sprite = Avatar;
         dialogueAvatarImage.preserveAspect = true;
     }
-
-    //Prompt stuff
-
-    public void ShowPromptCase()
-    {
-        dialoguecase.SetActive(true);
-        dialogueStuff.SetActive(false);
-
-
-        eventSystemMenu.SetSelectedGameObject(promptSelectedButton);
-    }
-
-    public void HidePromptCase()
-    {
-
-        dialoguecase.SetActive(false);
-    }
-
-    public void ShowButtonsPrompt()
-    {
-
-    }
-
-    public TextMeshProUGUI GetPromptText()
-    {
-        return promptTextDisplay;
-    }
-
-    //------------------------
 
     //Pause menu stuff
 
     public void HidePauseCanvas()
     {
-        if(pauseMenuCanvas)
-        pauseMenuCanvas.enabled = false;
-        eventSystemMenu.enabled = false;
+        PauseCanvas.SetActive(false);
     }
 
     public void ShowPauseCanvas()
     {
-        pauseMenuCanvas.enabled = true;
-        eventSystemMenu.enabled = true;
+        PauseCanvas.SetActive(true);
     }
 
     [SerializeField]
@@ -351,11 +332,16 @@ public class UIManager : MonoBehaviour
 
     //Game Over stuff
 
-    public void GameOverScreen()
+    public void ShowGameOver()
     {
-        gameOverCase.SetActive(true);
+        GameOverCanvas.SetActive(true);
         eventSystemMenu.SetSelectedGameObject(firstSelectedDeathButton);
-        eventSystemMenu.enabled = true;
+        //eventSystemMenu.enabled = true;
+    }
+
+    public void HideGameOver()
+    {
+        GameOverCanvas.SetActive(false);
     }
 
 
