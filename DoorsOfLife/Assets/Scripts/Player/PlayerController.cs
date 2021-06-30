@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using Cinemachine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
         return transform.position;
     }
 
-
+    
     #region debugFunctions
     private void DebugGameOver()
     {
@@ -131,9 +132,13 @@ public class PlayerController : MonoBehaviour
         //s = !s;   
     }
 
+    [SerializeField]
+    private Transform debugee;
+
     private void DebugFunc5()
     {
-        UIManager.Instance.UpgradeMenuHeart();
+        FindObjectOfType<CinemachineVirtualCamera>().Follow = debugee;
+        //UIManager.Instance.UpgradeMenuHeart();
         //FindObjectOfType<DollNPC>().ProgressionNPC++;
     }
     #endregion
@@ -209,10 +214,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (!inCutscene && !GameManager.Instance.GameIsPaused)
+        if (GameManager.Instance) //TEMPORARY
         {
-            CheckForInteractible();
+            if (!inCutscene && !(GameManager.Instance.GameIsPaused))
+            {
+                CheckForInteractible();
+            }
         }
+        else
+        {
+            if (!inCutscene)
+            {
+                CheckForInteractible();
+            }
+        }
+
     }
 
     // Start is called before the first frame update

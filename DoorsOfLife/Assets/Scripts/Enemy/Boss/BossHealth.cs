@@ -11,7 +11,7 @@ public class BossHealth : HeartSystemBase
     float healthdivSecondPhase;
     bool FlagHalfHealth = false;
 
-    private void Start()
+    protected override void Start()
     {
         parent = GetComponent<BossBehaviour>();
     }

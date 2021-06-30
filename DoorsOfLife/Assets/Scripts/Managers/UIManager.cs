@@ -76,6 +76,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Audio Sliders")]
     [SerializeField]
+    private GameObject audioStuff = null;
+    [SerializeField]
     private Slider masterAudioSlider;
     [SerializeField]
     private Slider sfxAudioSlider;
@@ -311,8 +313,6 @@ public class UIManager : MonoBehaviour
         PauseCanvas.SetActive(true);
     }
 
-    [SerializeField]
-    private GameObject audioStuff=null;
 
     public void ShowAudioStuff(GameObject button)
     {
