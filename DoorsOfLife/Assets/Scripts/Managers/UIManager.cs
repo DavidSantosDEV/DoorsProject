@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using System.Linq;  
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -30,7 +31,11 @@ public class UIManager : MonoBehaviour
 
     [Header("Main Menu Stuff")]
     [SerializeField]
-    private EventSystem eventSystemMenu;
+    private GameObject firstButtonMenu;
+    [SerializeField]
+    private GameObject firstButtonGameplay;
+    [SerializeField]
+    private EventSystem eventSystemUI;
     [SerializeField]
     private GameObject creditsObject;
 
@@ -122,8 +127,36 @@ public class UIManager : MonoBehaviour
     private void CustomSettup()
     {
         DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(eventSystemUI.gameObject);
         DontDestroyOnLoad(parentUIObject);
     }
+
+    public void FindNewEventSystem()
+    {
+        eventSystemUI = FindObjectOfType<EventSystem>(); //Okay let me go into detail how utterly retarded unity can be, I have to create a new event system for EVERY scene i have in game.
+        //                                                  Why you ask?? Well simple unity does not recognize that this event system works everytime a scene is changed, so, great, I have to do this retarded mess
+    }
+
+    //Settup changes between Gameplay etc
+
+    public void SettupGameplay()
+    {
+        //eventSystemUI.firstSelectedGameObject = firstButtonGameplay;
+        SelectButton(firstButtonGameplay);
+        //eventSystemUI.SetSelectedGameObject(firstButtonGameplay);
+        eventSystemUI.enabled = false;
+    }
+
+    public void SettupMenu()
+    {
+        //eventSystemUI.firstSelectedGameObject = firstButtonMenu;
+        SelectButton(firstButtonMenu);
+        //eventSystemUI.SetSelectedGameObject(firstButtonMenu);
+        eventSystemUI.enabled = true;
+    }
+
+    //
+
 
     //Menu Stuff
 
@@ -173,13 +206,13 @@ public class UIManager : MonoBehaviour
         {
             audioStuff.SetActive(false);
         }
-        eventSystemMenu.SetSelectedGameObject(button);
+        eventSystemUI.SetSelectedGameObject(button);
         creditsObject.SetActive(true);
     }
 
     public void HideCredits(GameObject button)
     {
-        eventSystemMenu.SetSelectedGameObject(button);
+        eventSystemUI.SetSelectedGameObject(button);
         creditsObject.SetActive(false);
     }
     //-----------
@@ -206,11 +239,11 @@ public class UIManager : MonoBehaviour
 
     private void Update() //I DO NOT LIKE THIS ONE BIT BUT UNITY FORCED MY HAND eventsystem.lastselectedgameobject is obsolete!
     {
-        if (eventSystemMenu.currentSelectedGameObject != currentgObj)
+        if (eventSystemUI.currentSelectedGameObject != currentgObj)
         {
             lastSelectedGameObj = currentgObj;
 
-            currentgObj = eventSystemMenu.currentSelectedGameObject;
+            currentgObj = eventSystemUI.currentSelectedGameObject;
         }
     }
 
@@ -223,28 +256,65 @@ public class UIManager : MonoBehaviour
         {
             if (lastSelectedGameObj)
             {
-                eventSystemMenu.SetSelectedGameObject(lastSelectedGameObj);
+                eventSystemUI.SetSelectedGameObject(lastSelectedGameObj);
             }
             else
             {
-                eventSystemMenu.SetSelectedGameObject(currentgObj);
+                if (currentgObj == null)
+                {
+                    if (GameManager.Instance)
+                    {
+                        if (GameManager.Instance.GetCurrentScene() == 0)
+                        {
+                            SelectButton(firstButtonMenu);
+                            //eventSystemUI.SetSelectedGameObject(firstButtonMenu);
+                        }
+                        else
+                        {
+                            SelectButton(firstButtonGameplay);
+                            //eventSystemUI.SetSelectedGameObject(firstButtonGameplay);
+                        }
+                    }
+                    else
+                    {
+                        SelectButton(firstButtonMenu);
+                        //eventSystemUI.SetSelectedGameObject(firstButtonMenu);
+                    }
+                }
+                else
+                {
+                    SelectButton(currentgObj);
+                    //eventSystemUI.SetSelectedGameObject(currentgObj);
+                }
             }
             
         }
         else
         {
 
-            Cursor.visible = GameManager.Instance.GameIsPaused;
+            Cursor.visible = GameManager.Instance.GameIsPaused || (GameManager.Instance.GetCurrentScene() == 0);
 
-            GameObject obj =  eventSystemMenu.currentSelectedGameObject != null ? eventSystemMenu.currentSelectedGameObject :  eventSystemMenu.firstSelectedGameObject;
+            GameObject obj =  eventSystemUI.currentSelectedGameObject != null ? eventSystemUI.currentSelectedGameObject :  eventSystemUI.firstSelectedGameObject;
             if (obj)
             {
                 Selectable btn = (obj.GetComponent<Selectable>());
-                btn?.OnDeselect(new BaseEventData(eventSystemMenu));
-                eventSystemMenu.SetSelectedGameObject(null);
+                btn?.OnDeselect(new BaseEventData(eventSystemUI));
+                eventSystemUI.SetSelectedGameObject(null);
             }
 
         }
+    }
+
+    private void SelectButton(GameObject button)
+    {
+        StartCoroutine(SelectionRoutine(button));
+    }
+
+    private IEnumerator SelectionRoutine(GameObject obj)
+    {
+        eventSystemUI.SetSelectedGameObject(null);
+        yield return null;
+        eventSystemUI.SetSelectedGameObject(obj);
     }
 
     public void PromptsChange()
@@ -306,11 +376,15 @@ public class UIManager : MonoBehaviour
     public void HidePauseCanvas()
     {
         PauseCanvas.SetActive(false);
+        eventSystemUI.enabled = false;
+
     }
 
     public void ShowPauseCanvas()
     {
         PauseCanvas.SetActive(true);
+        eventSystemUI.SetSelectedGameObject(firstButtonGameplay);
+        eventSystemUI.enabled = true;
     }
 
 
@@ -320,13 +394,13 @@ public class UIManager : MonoBehaviour
         {
             creditsObject.SetActive(false);
         }
-        eventSystemMenu.SetSelectedGameObject(button);
+        eventSystemUI.SetSelectedGameObject(button);
         audioStuff.SetActive(true);
     }
 
     public void HideAudioStuff(GameObject button)
     {
-        eventSystemMenu.SetSelectedGameObject(button);
+        eventSystemUI.SetSelectedGameObject(button);
         audioStuff.SetActive(false);
     }
 
@@ -335,7 +409,7 @@ public class UIManager : MonoBehaviour
     public void ShowGameOver()
     {
         GameOverCanvas.SetActive(true);
-        eventSystemMenu.SetSelectedGameObject(firstSelectedDeathButton);
+        eventSystemUI.SetSelectedGameObject(firstSelectedDeathButton);
         //eventSystemMenu.enabled = true;
     }
 

@@ -190,9 +190,16 @@ public class GameManager : MonoBehaviour
 
     #region Level Changing 
 
+    int previousScene = 0;
+
+    public int GetCurrentScene()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
+    }
 
     private IEnumerator LoadScene(int level)
     {
+        previousScene = GetCurrentScene();
         isOpeningLevel = true;
         UnPauseGame();
         UIManager.Instance.ShowLoadingScreen();
@@ -208,7 +215,7 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.HideLoadingScreen();
         yield return null;
 
-        isOpeningLevel = false;
+        isOpeningLevel = false;   
     }
 
     bool isOpeningLevel=false;
@@ -222,18 +229,24 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        UIManager.Instance.FindNewEventSystem();
         Debug.Log(SceneManager.GetActiveScene().buildIndex);
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             //Menu
-            UIManager.Instance.ShowMenuStuff();
-            UIManager.Instance.HidePauseCanvas();
-            UIManager.Instance.HideGameOver();
-            UIManager.Instance.HideGameplayStuff();
+            if (previousScene != 0)
+            {
+                UIManager.Instance.SettupMenu();
+                UIManager.Instance.ShowMenuStuff();
+                UIManager.Instance.HidePauseCanvas();
+                UIManager.Instance.HideGameOver();
+                UIManager.Instance.HideGameplayStuff();
+            }      
         }
         else
         {
             //Game
+            UIManager.Instance.SettupGameplay();
             UIManager.Instance.HideMenuStuff();
             UIManager.Instance.ShowGameplayStuff();
 
