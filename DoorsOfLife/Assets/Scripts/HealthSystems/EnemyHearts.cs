@@ -42,7 +42,17 @@ public class EnemyHearts : HeartSystemBase
             if (bonkPoint.Length > 0)
             {
                 int chosen = Random.Range(0, (bonkPoint.Length));
-                Instantiate(prefabBonk, bonkPoint[chosen].position, bonkPoint[chosen].rotation);
+                GameObject bonk = PoolManager.Instance?.SpawnObject(prefabBonk);
+                if (bonk)
+                {
+                    bonk.transform.position = bonkPoint[chosen].position;
+                    bonk.transform.rotation = bonkPoint[chosen].rotation;
+                }
+                else
+                {
+                    Instantiate(prefabBonk, bonkPoint[chosen].position, bonkPoint[chosen].rotation);
+                }
+                
             }
         }
     }

@@ -244,6 +244,7 @@ public class UIManager : MonoBehaviour
             lastSelectedGameObj = currentgObj;
 
             currentgObj = eventSystemUI.currentSelectedGameObject;
+            Debug.Log(currentgObj);
         }
     }
 

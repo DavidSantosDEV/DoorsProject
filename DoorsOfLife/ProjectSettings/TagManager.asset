@@ -55,7 +55,7 @@ TagManager:
   - name: Background
     uniqueID: 1151517435
     locked: 0
-  - name: BackgroundCeiling
+  - name: BackgroundWall
     uniqueID: 2753796371
     locked: 0
   - name: Middle
@@ -69,6 +69,9 @@ TagManager:
     locked: 0
   - name: PlayerUI
     uniqueID: 3977714529
+    locked: 0
+  - name: CeilingWall
+    uniqueID: 1613684001
     locked: 0
   - name: Darkness
     uniqueID: 128419897
