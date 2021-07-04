@@ -39,7 +39,7 @@ public class InteractDialogue : IInteractibleBase
 
     private void Start()
     {
-        textTypeSpeed = GameManager.Instance.TextSpeed;
+        textTypeSpeed = GameManager.Instance==null ?  GameManager.Instance.TextSpeed : 4;
         myAudioSource = GetComponent<AudioSource>();
         typeInteraction = InteractionType.DialogInteraction;
         textDisplay = UIManager.Instance.GetDialogueText();

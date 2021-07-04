@@ -15,9 +15,15 @@ public class CameraSwapper : MonoBehaviour
 
     bool shutlights = false;
 
+    Collider2D col;
+
     private void Awake()
     {
+        col = GetComponent<Collider2D>();
         myCamera = GetComponentInChildren<CinemachineVirtualCamera>();
+        //Rigidbody2D bd = gameObject.AddComponent<Rigidbody2D>();
+        //bd.gravityScale = 0;
+        //bd.sleepMode = RigidbodySleepMode2D.NeverSleep;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,6 +42,7 @@ public class CameraSwapper : MonoBehaviour
 
     private void LightsOFF()
     {
+        col.isTrigger = true;
         if (shutlights) //cancel invoke doesnt work??
         {
             foreach (Light2D light in lights)
@@ -52,8 +59,11 @@ public class CameraSwapper : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             //myCamera.enabled = false;
+            col.isTrigger = false;
             shutlights = true;
             Invoke(nameof(LightsOFF), waitLightsOFF);
         }
     }
+
+    
 }

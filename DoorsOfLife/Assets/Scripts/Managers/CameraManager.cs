@@ -22,11 +22,14 @@ public class CameraManager : MonoBehaviour
 
     public void SwitchActiveCamera(CinemachineVirtualCamera newCamera)
     {
-        if (activeCamera)
+        if (newCamera)
         {
-            activeCamera.enabled = false;
-        }
-        newCamera.enabled = true;
-        activeCamera = newCamera;
+            if (activeCamera)
+            {
+                activeCamera.enabled = false;
+            }
+            newCamera.enabled = true;
+            activeCamera = newCamera;
+        }  
     }
 }

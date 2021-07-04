@@ -124,6 +124,12 @@ public class UIManager : MonoBehaviour
             resolutionsDrop.value = Screen.resolutions.ToList().IndexOf(Screen.currentResolution);
         }      
     }
+
+    private void Start()
+    {
+        PromptsChange();
+    }
+
     private void CustomSettup()
     {
         DontDestroyOnLoad(this.gameObject);
