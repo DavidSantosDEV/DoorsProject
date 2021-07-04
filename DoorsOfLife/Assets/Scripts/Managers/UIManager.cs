@@ -4,6 +4,7 @@ using TMPro;
 using System.Linq;  
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -15,6 +16,12 @@ public enum CharacterReactions{
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject playerInputMenuPrefab;
+    [SerializeField]
+    private GameObject prefabEventSystem;
+
+
     [SerializeField]
     private GameObject parentUIObject;
     [SerializeField]
@@ -133,14 +140,15 @@ public class UIManager : MonoBehaviour
     private void CustomSettup()
     {
         DontDestroyOnLoad(this.gameObject);
-        //DontDestroyOnLoad(eventSystemUI.gameObject);
         DontDestroyOnLoad(parentUIObject);
     }
 
     public void FindNewEventSystem()
     {
-        eventSystemUI = FindObjectOfType<EventSystem>(); //Okay let me go into detail how utterly retarded unity can be, I have to create a new event system for EVERY scene i have in game.
+        eventSystemUI = Instantiate(prefabEventSystem).GetComponent<EventSystem>(); //FindObjectOfType<EventSystem>(); //Okay let me go into detail how utterly retarded unity can be, I have to create a new event system for EVERY scene i have in game.
         //                                                  Why you ask?? Well simple unity does not recognize that this event system works everytime a scene is changed, so, great, I have to do this retarded mess
+        if(GameManager.Instance.GetCurrentScene()==0)
+        Instantiate(playerInputMenuPrefab);
     }
 
     //Settup changes between Gameplay etc
@@ -159,7 +167,19 @@ public class UIManager : MonoBehaviour
         SelectButton(firstButtonMenu);
         //eventSystemUI.SetSelectedGameObject(firstButtonMenu);
         eventSystemUI.enabled = true;
+
+        //ResetInput();
     }
+
+    /*private void ResetInput()
+    {
+        inputPlayer = FindObjectOfType<PlayerInput>();
+        inputPlayer.enabled = false;
+        Debug.Log(inputPlayer);
+
+        Debug.Log(inputPlayer);
+        inputPlayer.enabled = true;
+    }*/
 
     //
 
@@ -421,7 +441,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void HideGameOver()
-    {
+    {  
         GameOverCanvas.SetActive(false);
     }
 

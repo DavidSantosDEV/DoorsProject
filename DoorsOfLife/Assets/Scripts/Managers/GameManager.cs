@@ -211,7 +211,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         Debug.Log("Scene Loaded");
-
+        //if (level == 0) Destroy(player.gameObject.transform.parent);
         UIManager.Instance.HideLoadingScreen();
         yield return null;
 
@@ -234,13 +234,19 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             //Menu
+            if (player) //Doesnt fucking work cause unity is retarded
+            {
+                Destroy(player.gameObject.transform.parent.gameObject);
+            }
             if (previousScene != 0)
             {
-                UIManager.Instance.SettupMenu();
+                
                 UIManager.Instance.ShowMenuStuff();
                 UIManager.Instance.HidePauseCanvas();
                 UIManager.Instance.HideGameOver();
                 UIManager.Instance.HideGameplayStuff();
+
+                UIManager.Instance.SettupMenu();
             }      
         }
         else

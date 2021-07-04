@@ -14,6 +14,9 @@ public class PlayerHearts : HeartSystemBase
         if (mainContainer == null)
         {
             mainContainer = UIManager.Instance.GetHeartContainerPlayer();
+            List<GameObject> children = new List<GameObject>();
+            foreach (Transform child in mainContainer.transform) children.Add(child.gameObject);
+            children.ForEach(child => Destroy(child));
         }
         base.Start();
     }
