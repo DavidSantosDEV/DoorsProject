@@ -60,13 +60,18 @@ public class PuzzleChessMaster : PuzzleMasterBase
 
     private IEnumerator UnlockDoorRoutine()
     {
-        CameraFollow.Instance.SetTarget(door.gameObject.transform);
-        GameManager.Instance.GetPlayer().IsInteracting(InteractionType.DialogInteraction);
-        yield return new WaitForSeconds(timeCam/2);
-        door.OpenDoorNoKey();
-        yield return new WaitForSeconds(timeCam / 2);
-        CameraFollow.Instance.SetTarget(GameManager.Instance.GetPlayer().transform);
-        base.DoAction();
+        if (door)
+        {
+            CameraManager.Instance?.SetFollow(door.transform);
+            //CameraFollow.Instance.SetTarget(door.gameObject.transform);
+            GameManager.Instance.GetPlayer().IsInteracting(InteractionType.DialogInteraction);
+            yield return new WaitForSeconds(timeCam / 2);
+            door.OpenDoorNoKey();
+            yield return new WaitForSeconds(timeCam / 2);
+            CameraManager.Instance?.SetFollow(null);
+            //CameraFollow.Instance.SetTarget(GameManager.Instance.GetPlayer().transform);
+            base.DoAction();
+        }
     }
 
     public override void ResetPuzzle()
@@ -102,6 +107,8 @@ public class PuzzleChessMaster : PuzzleMasterBase
                 GameManager.Instance.GetPlayer().interactionData.ResetData();
                 GameManager.Instance.GetPlayer().interactionData.Interactible = myDiagInteract;
                 GameManager.Instance.GetPlayer().interactionData.Interact();
+
+                hasClue = true;
                 //switch (timesWarned)
                 //{
                 //  default:
