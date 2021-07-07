@@ -169,10 +169,18 @@ public class EnemyScript : MonoBehaviour
         enemyPathSetter.enabled = isVisible;
     }
 
+    protected PlayerController player;
+
     protected virtual void Start()
     {
-        GameManager.Instance.OnEnemiesPause += OnGamePause;
-        GameManager.Instance.GameUnPaused += OnGameUnPause;
+        if (GameManager.Instance)
+        {
+            GameManager.Instance.OnEnemiesPause += OnGamePause;
+            GameManager.Instance.GameUnPaused += OnGameUnPause;
+        }
+
+        player = GameManager.Instance != null ? GameManager.Instance.GetPlayer() : FindObjectOfType<PlayerController>();
+
     }
 
     protected virtual void OnDrawGizmos()
@@ -220,9 +228,9 @@ public class EnemyScript : MonoBehaviour
             }
             else
             {
-                if (PathUtilities.IsPathPossible(AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node, AstarPath.active.GetNearest(GameManager.Instance.GetPlayer().GetPositionVector3(), NNConstraint.Default).node)) //<- Mombo jumbo for "If you can reach the player
+                if (PathUtilities.IsPathPossible(AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node, AstarPath.active.GetNearest(player.GetPositionVector3() /*GameManager.Instance.GetPlayer().GetPositionVector3()*/, NNConstraint.Default).node)) //<- Mombo jumbo for "If you can reach the player
                 {
-                    if (canAttack && Vector2.Distance(transform.position, GameManager.Instance.GetPlayer().GetPositionVector2()) < rangeToAttack)
+                    if (canAttack && Vector2.Distance(transform.position,player.GetPositionVector2() /*GameManager.Instance.GetPlayer().GetPositionVector2()*/) < rangeToAttack)
                     {
                         Attack();
                     }
@@ -272,7 +280,7 @@ public class EnemyScript : MonoBehaviour
 
     protected void FindTarget()
     {
-        if (Vector2.Distance(transform.position, GameManager.Instance.GetPlayer().GetPositionVector2()) < findPlayerDistance)
+        if (Vector2.Distance(transform.position, player.GetPositionVector2() /*GameManager.Instance.GetPlayer().GetPositionVector2()*/) < findPlayerDistance)
         {
             returning = false;
             isChasing = true;
@@ -282,7 +290,7 @@ public class EnemyScript : MonoBehaviour
 
     private void SetTargetPlayer()
     {
-        enemyPathSetter.target = GameManager.Instance.GetPlayer().transform;
+        enemyPathSetter.target = player.transform;//GameManager.Instance.GetPlayer().transform;
     }
 
     #region Movement
@@ -340,7 +348,8 @@ public class EnemyScript : MonoBehaviour
     {
         StopMovement();
         //state = EnemyState.Attacking;
-        directionForAttack = GameManager.Instance.GetPlayer().GetPositionVector3() - transform.position;
+        directionForAttack = player.GetPositionVector3() - transform.position;
+        //directionForAttack = GameManager.Instance.GetPlayer().GetPositionVector3() - transform.position;
         if (Mathf.Abs(directionForAttack.x) > Mathf.Abs(directionForAttack.y))
         {
             if (directionForAttack.x > 0)

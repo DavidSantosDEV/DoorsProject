@@ -106,9 +106,9 @@ public class DollNPC : IInteractibleBase
 
     private void Start()
     {
-        textTypeSpeed = GameManager.Instance.TextSpeed;
-        textDisplay = UIManager.Instance.GetDialogueText();
-        textNameDisplay = UIManager.Instance.GetDialogueSpeakerNameText();
+        textTypeSpeed = GameManager.Instance!=null ? GameManager.Instance.TextSpeed : 30;
+        textDisplay = UIManager.Instance?.GetDialogueText();
+        textNameDisplay = UIManager.Instance?.GetDialogueSpeakerNameText();
     }
 
     public override void OnInteract()

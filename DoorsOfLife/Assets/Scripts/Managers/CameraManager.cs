@@ -7,6 +7,8 @@ public class CameraManager : MonoBehaviour
 {
     private bool isFollowingTarget=false;
 
+    private List<CinemachineVirtualCamera> camerasToClear;
+
     public static CameraManager Instance { get; private set; } = null;
     private void Awake()
     {
@@ -19,6 +21,14 @@ public class CameraManager : MonoBehaviour
             Destroy(this);
         }
     }
+
+    private Transform player;
+
+    private void Start()
+    {
+        player = GameManager.Instance!=null ? GameManager.Instance.GetPlayer().transform : FindObjectOfType<PlayerController>().transform;
+    }
+
 
     private CinemachineVirtualCamera activeCamera;
 
@@ -39,7 +49,7 @@ public class CameraManager : MonoBehaviour
             }
             else
             {
-                activeCamera.Follow = null;
+                activeCamera.Follow = player;
             }
         }  
     }
@@ -67,7 +77,7 @@ public class CameraManager : MonoBehaviour
 
     private void ClearFollow()
     {
-        currentTarget = null;
+        currentTarget = player;
         isFollowingTarget = false;
         activeCamera.Follow = null;
     }

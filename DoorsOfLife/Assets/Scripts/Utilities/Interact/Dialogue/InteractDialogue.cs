@@ -39,13 +39,13 @@ public class InteractDialogue : IInteractibleBase
 
     private void Start()
     {
-        textTypeSpeed = GameManager.Instance==null ?  GameManager.Instance.TextSpeed : 4;
+        textTypeSpeed = GameManager.Instance!=null ?  GameManager.Instance.TextSpeed : 4;
         myAudioSource = GetComponent<AudioSource>();
         typeInteraction = InteractionType.DialogInteraction;
-        textDisplay = UIManager.Instance.GetDialogueText();
+        textDisplay = UIManager.Instance?.GetDialogueText();
 
         if(showName)
-        textNameDisplay = UIManager.Instance.GetDialogueSpeakerNameText();
+        textNameDisplay = UIManager.Instance?.GetDialogueSpeakerNameText();
     }
 
     public override void OnInteract()

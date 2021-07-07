@@ -11,6 +11,13 @@ public class bonk : MonoBehaviour
     }
     public void Dispose()
     {
-        myhandler.DeActivate();
+        if (myhandler)
+        {
+            myhandler.DeActivate();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4550849797387133932}
   - component: {fileID: 9015101381324982268}
   - component: {fileID: 7963593949392326846}
+  - component: {fileID: 5533843577697599734}
   m_Layer: 7
   m_Name: Bonk
   m_TagString: Untagged
@@ -113,5 +114,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a796f97f0db7c54596a202510df3f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5533843577697599734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962680511273925654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beea006688814374db3a13e9b4556346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

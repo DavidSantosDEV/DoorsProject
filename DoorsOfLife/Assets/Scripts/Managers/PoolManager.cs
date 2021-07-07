@@ -145,6 +145,8 @@ public class PoolManager : MonoBehaviour
             if (queues.ContainsValue(objectQueue))
             {
                 objectQueue.Enqueue(objectToDespawn);
+                objectToDespawn.transform.position = transform.position;
+                objectToDespawn.transform.rotation = transform.rotation;
             }
         }
         else

@@ -27,7 +27,8 @@ public class EnemySpider : EnemyScript
         Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, meleePointWidth, enemyHitLayer);
         if (hit /*&& hit.CompareTag("Player")*/)
         {
-            GameManager.Instance.GetPlayer().PlayerHeartsComponent.TakeDamage(damagetoGive);
+            player.PlayerHeartsComponent.TakeDamage(damagetoGive);
+            //GameManager.Instance.GetPlayer().PlayerHeartsComponent.TakeDamage(damagetoGive);
             //PlayerController.Instance.playerHealthComponent.TakeDamage(damagetoGive);
             Debug.Log("Damage given to player: " + damagetoGive);
             

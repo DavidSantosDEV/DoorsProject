@@ -47,6 +47,7 @@ public class EnemyHearts : HeartSystemBase
                 {
                     bonk.transform.position = bonkPoint[chosen].position;
                     bonk.transform.rotation = bonkPoint[chosen].rotation;
+                    bonk.SetActive(true);
                 }
                 else
                 {

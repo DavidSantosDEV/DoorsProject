@@ -37,14 +37,14 @@ public class DoorInteractible : IInteractibleBase
 
     private void Start()
     {
-        typeSpeed = GameManager.Instance.TextSpeed;
+        typeSpeed = GameManager.Instance!=null? GameManager.Instance.TextSpeed : 30;
 
         myCol = GetComponent<Collider2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAudioSource = GetComponent<AudioSource>();
         if (myAudioSource) myAudioSource = gameObject.AddComponent<AudioSource>();
 
-        textDisplay = UIManager.Instance.GetDialogueText();
+        textDisplay = UIManager.Instance?.GetDialogueText();
         if (!textDisplay) Debug.Log("null text");
     }
 

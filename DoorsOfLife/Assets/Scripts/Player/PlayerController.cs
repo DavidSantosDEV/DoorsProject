@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
     public void ShowPrompt(string text)
     {
         interactCanvas.SetActive(true);
-        imgPrompt.sprite = UIManager.Instance.getInteractSprite();
+        imgPrompt.sprite = UIManager.Instance?.getInteractSprite();
         textPrompt.text = text;
     }
     public void HidePrompt()
