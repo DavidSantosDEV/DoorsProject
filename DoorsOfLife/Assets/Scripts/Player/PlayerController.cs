@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using Cinemachine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine;
 
@@ -25,7 +26,6 @@ public class PlayerController : MonoBehaviour
     public PlayerMovement PlayerMovementComponent => playerMovement; // <<--
     public PlayerWeapon PlayerWeaponComponent => playerWeapon; //<<--
     public PlayerAnimation PlayerAnimationComponent =>playerAnimation;
-    //public PlayerHealth PlayerHealthComponent => playerHealthComponent;
     public PlayerHearts PlayerHeartsComponent => playerHeartsComponent;
 
     //Input
@@ -100,13 +100,6 @@ public class PlayerController : MonoBehaviour
     private void debugCompletePuzzle()
     {
         if (!Debug.isDebugBuild) return;
-        /*PuzzlePlayMaster pz=
-        FindObjectOfType<PuzzlePlayMaster>();
-        if (pz)
-        {
-            pz.debugCompletePuzzle();
-        }*/
-
         FindObjectOfType<PuzzleMasterOrder>().DebugFunc();
     }
 
@@ -115,31 +108,6 @@ public class PlayerController : MonoBehaviour
         if (!Debug.isDebugBuild) return;
         PuzzleChessMaster pz = FindObjectOfType<PuzzleChessMaster>();
         if (pz) pz.debugCompletePuzzle();
-    }
-
-    bool s = true;
-
-    private void DebugFunc4()
-    {
-        if (s)
-        {
-            GetComponentInParent<HeartSystemBase>().TakeDamage(1.5f);
-        }
-        else
-        {
-            GetComponentInParent<HeartSystemBase>().Heal(1);
-        }
-        //s = !s;   
-    }
-
-    [SerializeField]
-    private Transform debugee;
-
-    private void DebugFunc5()
-    {
-        FindObjectOfType<CinemachineVirtualCamera>().Follow = debugee;
-        //UIManager.Instance.UpgradeMenuHeart();
-        //FindObjectOfType<DollNPC>().ProgressionNPC++;
     }
     #endregion
 
@@ -158,7 +126,7 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    private void OnEnable()
+    public void Config()
     {
         #region Debug
         myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
@@ -167,9 +135,6 @@ public class PlayerController : MonoBehaviour
 
         myPlayerControls.Gameplay.Debug3.started += cntx => DebugFunc3();
 
-        myPlayerControls.Gameplay.Debug4.started += cntx => DebugFunc4();
-
-        myPlayerControls.Gameplay.Debug5.started += cntx => DebugFunc5();
         #endregion
 
         #region Gameplay
@@ -195,8 +160,6 @@ public class PlayerController : MonoBehaviour
             playerHeartsComponent.OnDamageTaken += OnDamageTaken;
             playerHeartsComponent.OnDeath += OnIsDead;
         }
-        
-
 
         #endregion
         #region In Interaction
@@ -207,6 +170,11 @@ public class PlayerController : MonoBehaviour
         //myInput.controlsChangedEvent.AddListener(OnControlsChanged);
     }
 
+    private void Start()
+    {
+        Config();
+    }
+
     void OnDamageTaken()
     {
         playerAnimation.PlayHitAnimation();
@@ -214,7 +182,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance) //TEMPORARY
+        if (GameManager.Instance)
         {
             if (!inCutscene && !(GameManager.Instance.GameIsPaused))
             {
@@ -228,6 +196,9 @@ public class PlayerController : MonoBehaviour
                 CheckForInteractible();
             }
         }
+
+        OnMovement(myPlayerControls.Gameplay.Movement.ReadValue<Vector2>());
+
 
     }
 
@@ -258,9 +229,19 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log(currentActionMap);
         currentControlScheme = myInput.currentControlScheme;
-        
+
+        SceneManager.activeSceneChanged += SceneChanged;
 
         HidePrompt();
+    }
+
+
+
+    private void SceneChanged(Scene scene, Scene newScene)
+    {
+        if(this)
+        transform.parent.position = GameObject.FindGameObjectWithTag("StartingPoint").transform.position;
+        //Config();
     }
 
     private void UpdateLastMovement()
@@ -390,6 +371,13 @@ public class PlayerController : MonoBehaviour
         UpdateMovement();
     }
 
+    private void OnMovement(Vector2 mov)
+    {
+        rawMovementInput = new Vector2(isXInverted ? -mov.x : mov.x,
+            isYInverted ? -mov.y : mov.y);
+        UpdateMovement();
+    }
+
     private void onStopMovement(InputAction.CallbackContext context)
     {
         rawMovementInput = Vector2.zero;
@@ -424,28 +412,6 @@ public class PlayerController : MonoBehaviour
 
     
 #region UIRelated
-    /*public void OnControlsChanged(PlayerInput arg1)
-    {
-        if (currentControlScheme != myInput.currentControlScheme)
-        {
-            Debug.Log(myInput.devices[0].ToString());
-            currentControlScheme = myInput.currentControlScheme;
-            Debug.Log(currentControlScheme);
-
-            imgPrompt.sprite = UIManager.Instance.getInteractSprite();
-
-            if (UIManager.Instance != null)
-            {
-                UIManager.Instance.PromptsChange();
-            }
-            if (GamepadRumbler.Instance != null) 
-            { 
-                GamepadRumbler.Instance.SetGamepad(); 
-            }
-
-            //interactionData.ControlsChanged();
-        }
-    }*/
 
     #endregion
     //Switching Control types
@@ -481,6 +447,12 @@ public class PlayerController : MonoBehaviour
         currentActionMap = actionMapInteraction;
     }
 
+
+    public void Revive()
+    {
+        EnableGameplayControls();
+        playerHeartsComponent.ResetComponent();
+    }
 
     private void OnDrawGizmos()
     {

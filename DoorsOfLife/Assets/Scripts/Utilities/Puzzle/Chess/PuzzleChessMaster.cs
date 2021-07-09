@@ -7,8 +7,6 @@ public class PuzzleChessMaster : PuzzleMasterBase
     [Header("Moving pieces")]
     [SerializeField]
     private int maxMovesBeforeWarning = 5;
-    [SerializeField]
-    private string dialogue;
 
     private int currentMoveAmmount;
     private bool hasClue = false;
@@ -50,13 +48,13 @@ public class PuzzleChessMaster : PuzzleMasterBase
         StartCoroutine(UnlockDoorRoutine());
     }
 
-    private void DisableMovementOfChilds()
+    /*private void DisableMovementOfChilds()
     {
         foreach(PuzzleCollider child in myColliders)
         {
             child.ReturnFitObject().IsInteractible = false;
         }
-    }
+    }*/
 
     private IEnumerator UnlockDoorRoutine()
     {
@@ -97,7 +95,7 @@ public class PuzzleChessMaster : PuzzleMasterBase
         if (hasClue==false)
         {
             currentMoveAmmount++;
-            if (currentMoveAmmount == maxMovesBeforeWarning)
+            if (currentMoveAmmount >= maxMovesBeforeWarning)
             {
                 Debug.Log("Moved it too many times");
                 //Do Dialogue
@@ -109,15 +107,6 @@ public class PuzzleChessMaster : PuzzleMasterBase
                 GameManager.Instance.GetPlayer().interactionData.Interact();
 
                 hasClue = true;
-                //switch (timesWarned)
-                //{
-                //  default:
-                //case 0:
-
-                //  break;
-
-
-                //}
             }
         }
     }

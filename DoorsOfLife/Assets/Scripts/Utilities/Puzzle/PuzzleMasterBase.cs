@@ -39,6 +39,16 @@ public class PuzzleMasterBase : MonoBehaviour
         DoAction();
     }
 
+    protected void DisableMovementOfChilds()
+    {
+        foreach (PuzzleCollider child in myColliders)
+        {
+            InteractPushObject obj = child.ReturnFitObject();
+            obj.IsInteractible = false;
+            obj.canPush = false;
+        }
+    }
+
     public virtual void ResetPuzzle()
     {
         Debug.Log("Puzzle Reset");

@@ -6,6 +6,8 @@ using System;
 using UnityEngine.Audio;
 using UnityEngine;
 
+//Unity has consistently proved that its one of the worst engines to work with, no wonder UE4 is the golden boy
+//New input system is a buggy mess! Cant change scenes without it breaking something
 public enum DoorsAndNumbers : int
 {
     HouseDoor = 0,
@@ -16,6 +18,11 @@ public class GameManager : MonoBehaviour
 {
     public event Action OnEnemiesPause;
     public event Action GameUnPaused;
+
+    [SerializeField]
+    private int maxHealthPlayer=5;
+
+    private float currentHealth;
 
 
     [SerializeField]
@@ -263,20 +270,30 @@ public class GameManager : MonoBehaviour
                 {
                     player = Instantiate(playerPrefab).GetComponent<PlayerController>();
                 }
-                DontDestroyOnLoad(player.gameObject.transform.parent);
+                //DontDestroyOnLoad(player.gameObject.transform.parent);
             }
-            
+            //player.transform.parent.gameObject.SetActive(false);
+            //player.transform.parent.gameObject.SetActive(true);
+
         }
     }
 
     #endregion
 
+    public void ReloadScene()
+    {
+        Openlevel(GetCurrentScene());
+        player.Revive();
+    }
+
+
     public void CloseGame()
     {
-        if (Debug.isDebugBuild)
+        
+        /*if (Debug.isDebugBuild)
         {
             UnityEditor.EditorApplication.isPlaying = false;
-        }
+        }*/
         Application.Quit();
     }
 

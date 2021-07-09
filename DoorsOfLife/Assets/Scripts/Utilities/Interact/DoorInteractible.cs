@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using TMPro;
 using UnityEngine;
 
 public class DoorInteractible : IInteractibleBase
 {
+    [SerializeField]
+    private UnityEvent eventCompleteExtra;
+
     [SerializeField]
     bool IsLocked = true;
 
@@ -119,6 +123,8 @@ public class DoorInteractible : IInteractibleBase
             Destroy(myCol);
             Destroy(myAudioSource);
             Destroy(this);
+
+            eventCompleteExtra.Invoke();
         }
 
 

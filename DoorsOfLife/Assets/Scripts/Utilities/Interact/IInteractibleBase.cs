@@ -31,7 +31,8 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
     public virtual void OnInteract()
     {
         Debug.Log("Interacted: " + gameObject.name);
-        GameManager.Instance.GetPlayer().IsInteracting(typeInteraction);
+        GameManager.Instance?.GetPlayer().IsInteracting(typeInteraction);
+
     }
 
     public virtual void OnContinueInteract()

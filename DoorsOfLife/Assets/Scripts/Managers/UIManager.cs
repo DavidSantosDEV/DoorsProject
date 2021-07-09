@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private EventSystem eventSystemUI;
     [SerializeField]
-    private GameObject creditsObject;
+    private GameObject creditsObject;   
 
     [Header("Pause Menu")]
     [SerializeField]
@@ -437,11 +437,14 @@ public class UIManager : MonoBehaviour
     {
         GameOverCanvas.SetActive(true);
         eventSystemUI.SetSelectedGameObject(firstSelectedDeathButton);
-        //eventSystemMenu.enabled = true;
+        eventSystemUI.enabled = true;
+        Cursor.visible = true;
     }
 
     public void HideGameOver()
-    {  
+    {
+        Cursor.visible = false;
+        eventSystemUI.enabled = false;
         GameOverCanvas.SetActive(false);
     }
 

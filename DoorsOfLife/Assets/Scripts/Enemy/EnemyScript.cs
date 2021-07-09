@@ -247,11 +247,13 @@ public class EnemyScript : MonoBehaviour
 
     private void OnGamePause()
     {
+        if(this)
         enabled = false;
     }
 
     private void OnGameUnPause()
     {
+        if(this)
         enabled = true;
     }
 

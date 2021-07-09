@@ -62,4 +62,11 @@ public class PlayerHearts : HeartSystemBase
             //throw new NotImplementedException();
         }
     }
+
+    public void ResetComponent()
+    {
+        isDead = false;
+        health = maxHealth;
+        UpdateHearts();
+    }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Interactible
   - Puz
   - TestHeart
+  - StartingPoint
   layers:
   - Default
   - TransparentFX

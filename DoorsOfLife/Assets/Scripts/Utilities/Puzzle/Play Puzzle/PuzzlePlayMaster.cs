@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PuzzlePlayMaster : PuzzleMasterBase
 {
-    [SerializeField]
-    private UnityEvent ChessPuzzleEvent;
 
     [SerializeField]
     private GameObject[] myMovables;
@@ -45,7 +43,7 @@ public class PuzzlePlayMaster : PuzzleMasterBase
     {
         Debug.Log("Puzzle complete!");
         showGameObject.SetActive(true);
-        ChessPuzzleEvent.Invoke();
+        DisableMovementOfChilds();
         base.DoAction();
     }
 
