@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HideWhenOverlay : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
+
+    public SpriteRenderer[] spriteRenderer;
     bool bfade = false;
     [SerializeField][Range(0,1)]
     private float minAlphaAmmount;
@@ -38,20 +39,27 @@ public class HideWhenOverlay : MonoBehaviour
     {
         if (bfade)
         {
-            float currentAlpha = spriteRenderer.color.a;
+            float currentAlpha = spriteRenderer[0].color.a;
             currentAlpha -= 1 * Time.deltaTime;
-            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, currentAlpha);
-            if(currentAlpha <= minAlphaAmmount)
+            foreach(SpriteRenderer spt in spriteRenderer)
             {
-                
+                spt.color = new Color(spt.color.r, spt.color.g, spt.color.b, currentAlpha);
+
+            }
+            if (currentAlpha <= minAlphaAmmount)
+            {
                 enabled = false;
             }
         }
         else
         {
-            float currentAlpha = spriteRenderer.color.a;
+            float currentAlpha = spriteRenderer[0].color.a;
             currentAlpha += 1 * Time.deltaTime;
-            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, currentAlpha);
+            foreach (SpriteRenderer spt in spriteRenderer)
+            {
+                spt.color = new Color(spt.color.r, spt.color.g, spt.color.b, currentAlpha);
+
+            }
             if (currentAlpha >= 1)
             {
                 enabled = false;
