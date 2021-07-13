@@ -63,6 +63,12 @@ public class PlayerHearts : HeartSystemBase
         }
     }
 
+    public void SetHealth(float newVal)
+    {
+        health = newVal;
+        UpdateHearts();
+    }
+
     public void ResetComponent()
     {
         isDead = false;

@@ -33,10 +33,14 @@ public class InteractionData : ScriptableObject
 
     public void ContinueInteract()
     {
-        if (myInteractible.IsInteractible)
+        if (myInteractible)
         {
-            myInteractible.OnContinueInteract();
+            if (myInteractible.IsInteractible)
+            {
+                myInteractible.OnContinueInteract();
+            }
         }
+
     }
 
     public bool IsSameInteractible(IInteractibleBase newInteractible)

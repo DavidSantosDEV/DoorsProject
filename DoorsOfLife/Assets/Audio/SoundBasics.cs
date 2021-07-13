@@ -12,7 +12,6 @@ public class SoundBasics : ScriptableObject
     const string AUDIOMASTER_KEY = "MasterVolume";
     const string AUDIOMUSIC_KEY = "MusicVolume";
     const string AUDIOSFX_KEY = "SFXVolume";
-    const string AUDIODIALOGUE_KEY = "DialogueVolume";
 
     #region Variables
     [SerializeField]
@@ -23,8 +22,6 @@ public class SoundBasics : ScriptableObject
     string audioMusic;
     [SerializeField]
     string audioSFX;
-    [SerializeField]
-    string audioDialogue;
     #endregion
 
     public void RestorePreviousValues()
@@ -32,8 +29,7 @@ public class SoundBasics : ScriptableObject
         mixer.SetFloat(audioMaster, PlayerPrefs.GetFloat(AUDIOMASTER_KEY));
         mixer.SetFloat(audioMusic, PlayerPrefs.GetFloat(AUDIOMUSIC_KEY));
         mixer.SetFloat(audioSFX, PlayerPrefs.GetFloat(AUDIOSFX_KEY));
-        mixer.SetFloat(audioDialogue, PlayerPrefs.GetFloat(AUDIODIALOGUE_KEY));
-        UIManager.Instance.SetValuesAllVolume(PlayerPrefs.GetFloat(AUDIOMASTER_KEY), PlayerPrefs.GetFloat(AUDIOSFX_KEY), PlayerPrefs.GetFloat(AUDIOMUSIC_KEY), PlayerPrefs.GetFloat(AUDIODIALOGUE_KEY));
+        UIManager.Instance.SetValuesAllVolume(PlayerPrefs.GetFloat(AUDIOMASTER_KEY), PlayerPrefs.GetFloat(AUDIOSFX_KEY), PlayerPrefs.GetFloat(AUDIOMUSIC_KEY));
     }
 
     private float GetCalculatedAudioValue(float value)
@@ -56,12 +52,6 @@ public class SoundBasics : ScriptableObject
         SaveVolume(AUDIOSFX_KEY, volume);
     }
 
-    public void SetVolumeDialogue(float volume)
-    {
-        volume = GetCalculatedAudioValue(volume);
-        mixer.SetFloat(audioDialogue, volume);
-        SaveVolume(AUDIODIALOGUE_KEY, volume);
-    }
     public void SetVolumeMusic(float volume)
     {
         volume = GetCalculatedAudioValue(volume);

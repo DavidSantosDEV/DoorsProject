@@ -95,8 +95,6 @@ public class UIManager : MonoBehaviour
     private Slider sfxAudioSlider;
     [SerializeField]
     private Slider musicAudioSlider;
-    [SerializeField]
-    private Slider dialogueAudioSlider;
 
     [Header("Visual Settings")]
     [SerializeField]
@@ -260,6 +258,16 @@ public class UIManager : MonoBehaviour
         textShard.SetActive(true);
         yield return new WaitForSeconds(2);
         textShard.SetActive(false);
+
+    }
+
+    public void UpdatePortraitPain()
+    {
+
+    }
+
+    public void UpdatePortraitNormal()
+    {
 
     }
 
@@ -451,11 +459,14 @@ public class UIManager : MonoBehaviour
 
     //Audio Related stuff
 
-    public void SetValuesAllVolume(float master, float sfx, float music, float dialogue)
+    public void SetValuesAllVolume(float master, float sfx, float music)
     {
-        if (masterAudioSlider) masterAudioSlider.value = Mathf.Pow(10,master/20);
-        if (sfxAudioSlider) sfxAudioSlider.value = Mathf.Pow(10,sfx/20);
-        if (musicAudioSlider) musicAudioSlider.value = Mathf.Pow(10,music/20);
-        if (dialogueAudioSlider) dialogueAudioSlider.value = Mathf.Pow(10,dialogue/20);
+        float temp = Mathf.Clamp(Mathf.Pow(10, master / 20), masterAudioSlider.minValue, masterAudioSlider.maxValue);
+        //masterAudioSlider.value = temp;
+
+        masterAudioSlider?.SetValueWithoutNotify(temp);
+        sfxAudioSlider?.SetValueWithoutNotify(Mathf.Clamp(Mathf.Pow(10, sfx / 20), sfxAudioSlider.minValue, sfxAudioSlider.maxValue));
+        
+        musicAudioSlider?.SetValueWithoutNotify(Mathf.Clamp(Mathf.Pow(10,music/20),musicAudioSlider.minValue,musicAudioSlider.maxValue));
     }
 }
