@@ -187,6 +187,7 @@ public class UIManager : MonoBehaviour
     public void ShowMenuStuff()
     {
         MainMenuCanvas.SetActive(true);
+        Cursor.visible = true;
     }
 
     public void HideMenuStuff()
@@ -209,6 +210,7 @@ public class UIManager : MonoBehaviour
     public void HideGameplayStuff()
     {
         GameplayCanvas.SetActive(false);
+        Cursor.visible = true; //seems to work here
     }
 
     //Loading Screen
