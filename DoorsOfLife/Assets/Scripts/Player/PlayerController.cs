@@ -94,13 +94,27 @@ public class PlayerController : MonoBehaviour
     private void DebugGameOver()
     {
         if(Debug.isDebugBuild)
-        GameManager.Instance.ShowGameOver();
+        GameManager.Instance?.ShowGameOver();
     }
 
+    bool test;
+    EnemyScript ene;
     private void debugCompletePuzzle()
     {
-        if (!Debug.isDebugBuild) return;
-        FindObjectOfType<PuzzleMasterOrder>()?.DebugFunc();
+        if (Debug.isDebugBuild)
+        {
+            if (test == false)
+            {
+                //ene = new EnemyScript();
+                MusicManager.Instance?.AddEnemyAlert(ene);
+                test = true;
+            }
+            else
+            {
+                MusicManager.Instance?.RemoveEnemyAlert(ene);
+                test = false;
+            }
+        }
     }
 
     private void DebugFunc3()

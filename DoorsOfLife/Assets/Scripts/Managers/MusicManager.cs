@@ -28,6 +28,10 @@ public class MusicManager : MonoBehaviour
     [SerializeField]
     private AudioSource auxSource;
 
+    [Header("Time")]
+    [SerializeField]
+    private float speedChangeMusic=1;
+
     public static MusicManager Instance { get; private set; } = null;
 
     private void Awake()
@@ -44,10 +48,15 @@ public class MusicManager : MonoBehaviour
     }
     private void CustomSetup() //Add stuff here when needed
     {
+        extraSourceCombat.clip = songCombat;
+        extraSourceCombat.volume = 0;
+        extraSourceCombat.Play();
+
         //SceneManager.activeSceneChanged += scene => UpdateMusicLevel();
         DontDestroyOnLoad(gameObject);
     }
 
+    [SerializeField][ShowOnly]
     List<EnemyScript> enemiesActive = new List<EnemyScript>();
 
     public void AddEnemyAlert(EnemyScript en)
@@ -62,6 +71,7 @@ public class MusicManager : MonoBehaviour
         UpdateMusicCombat();
     }
 
+    private bool ActivatingCombat = false;
     public void UpdateMusicCombat()
     {
         if (enemiesActive.Count == 0)
@@ -76,12 +86,57 @@ public class MusicManager : MonoBehaviour
 
     private void StopCombatMusic()
     {
-
+        ActivatingCombat = false;
+        StopCoroutine(IncreaseCombatVol());
+        StartCoroutine(DecreaseCombatVol());
     }
 
     private void ActivateCombatMusic()
     {
+        ActivatingCombat = true;
+        StopCoroutine(DecreaseCombatVol());
+        StartCoroutine(IncreaseCombatVol());
+    }
 
+    private IEnumerator IncreaseCombatVol()
+    {
+        while (extraSourceCombat.volume < 1)
+        {
+            if (ActivatingCombat)
+            {
+                float delta = 1 * Time.deltaTime * (speedChangeMusic / 1);
+                extraSourceCombat.volume += Mathf.Clamp01(delta);
+                mainSource.volume -= Mathf.Clamp01(delta);
+                yield return null;
+            }
+
+        }
+        if (ActivatingCombat)
+        {
+            mainSource.volume = 0;
+            extraSourceCombat.volume = 1;
+        }
+
+    }
+
+    private IEnumerator DecreaseCombatVol()
+    {
+        while (extraSourceCombat.volume > 0)
+        {
+            if (!ActivatingCombat)
+            {
+                float delta = 1 * Time.deltaTime * (speedChangeMusic / 1);
+                extraSourceCombat.volume -= delta;
+                mainSource.volume += delta;
+                yield return null;
+            }
+
+        }
+        if (!ActivatingCombat)
+        {
+            mainSource.volume = 1;
+            extraSourceCombat.volume = 0;
+        }
     }
 
     public void ActivateMenuMusic()

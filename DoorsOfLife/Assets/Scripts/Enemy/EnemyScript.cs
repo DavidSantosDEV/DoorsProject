@@ -262,11 +262,9 @@ public class EnemyScript : MonoBehaviour
         isChasing = false;
 
         enemyPathSetter.target = startPos;
-
-        /*if (!isVisible)
-        {*/
-        //StartCoroutine(nameof(AmIHomeYet));
         returning = true;
+
+        MusicManager.Instance?.RemoveEnemyAlert(this);
         Debug.Log("Started courotine");
         //}
         
@@ -287,6 +285,7 @@ public class EnemyScript : MonoBehaviour
             returning = false;
             isChasing = true;
             SetTargetPlayer();
+            MusicManager.Instance?.AddEnemyAlert(this);
         }
     }
 
@@ -402,6 +401,7 @@ public class EnemyScript : MonoBehaviour
     #region Death Code
     public void OnEnemyDied()
     {
+        MusicManager.Instance?.RemoveEnemyAlert(this);
         isDead = true;
         enemyPathAI.enabled = false;
         enemyBody.bodyType = RigidbodyType2D.Static;
@@ -418,7 +418,6 @@ public class EnemyScript : MonoBehaviour
     public void LetMeDie() //Called by Animator
     {
         Destroy(gameObject.transform.parent.gameObject);
-        //Destroy(gameObject);
     }
 
     #endregion
