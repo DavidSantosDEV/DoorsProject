@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetAudioPrevious();
-
+        MusicManager.Instance.ActivateMenuMusic();
         //SetCollisionEnemies();
     }
 
@@ -154,7 +154,10 @@ public class GameManager : MonoBehaviour
 
     private void PauseGameNoCanvas()
     {
-        OnEnemiesPause.Invoke();
+        if(OnEnemiesPause != null)
+        {
+            OnEnemiesPause.Invoke();
+        }
         Time.timeScale = 0;
         gamepaused = true;
     }
@@ -233,6 +236,7 @@ public class GameManager : MonoBehaviour
                 UIManager.Instance.HideGameplayStuff();
 
                 UIManager.Instance.SettupMenu();
+                //MusicManager.Instance.ActivateMenuMusic();
             }      
         }
         else
@@ -247,16 +251,25 @@ public class GameManager : MonoBehaviour
                 player = FindObjectOfType<PlayerController>();
                 if (!player)
                 {
-                    player = Instantiate(playerPrefab).GetComponent<PlayerController>();
+                    GameObject p = Instantiate(playerPrefab);
+                    player = p.GetComponentInChildren<PlayerController>(); //its supposed to be in child
                 }
+
+                
                 //DontDestroyOnLoad(player.gameObject.transform.parent);
             }
-            if (currentHealth == 0) currentHealth = player.PlayerHeartsComponent.MaxHealth;
+            if (currentHealth <= 0)
+            {
+                currentHealth = player.PlayerHeartsComponent.MaxHealth;
+            }
             player.PlayerHeartsComponent.SetHealth(currentHealth);
+
             //player.transform.parent.gameObject.SetActive(false);
             //player.transform.parent.gameObject.SetActive(true);
 
         }
+
+        MusicManager.Instance?.UpdateMusicLevel(SceneManager.GetActiveScene().buildIndex);
     }
 
     #endregion

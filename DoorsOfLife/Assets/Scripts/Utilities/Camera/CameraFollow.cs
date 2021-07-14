@@ -38,7 +38,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (!target)
         {
-            target = GameManager.Instance.GetPlayer().transform;//PlayerController.Instance.transform;
+            //target = GameManager.Instance.GetPlayer().transform;//PlayerController.Instance.transform;
         }
 
         //CameraShake.Instance.SettupComponent(transform);

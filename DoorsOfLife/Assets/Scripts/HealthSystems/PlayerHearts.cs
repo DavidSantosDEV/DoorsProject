@@ -21,7 +21,9 @@ public class PlayerHearts : HeartSystemBase
                 children.ForEach(child => Destroy(child));
             }
         }
-        base.Start();
+        CreateHearts(maxHealth);
+        UpdateHearts();
+        //base.Start();
     }
 
     public override void TakeDamage(float dmg)
@@ -34,8 +36,9 @@ public class PlayerHearts : HeartSystemBase
             CameraShake.Instance.AddTrauma(t);
             GamepadRumbler.Instance.RumbleDamaged(dmg, health,t);
             //GamepadRumbler.Instance.RumbleLinear(lowStart, lowEnd, highStart, highEnd, t / tDivisor);
-            OnDamageTaken.Invoke();
+            OnDamageTaken.Invoke(); 
         }
+        UpdateGameManagerHearts();
     }
 
     public override void Heal(float ammount)
@@ -45,6 +48,7 @@ public class PlayerHearts : HeartSystemBase
         {
             OnHealed.Invoke();
         }
+        UpdateGameManagerHearts();
     }
 
     protected override void Die()
@@ -66,9 +70,12 @@ public class PlayerHearts : HeartSystemBase
     public void SetHealth(float newVal)
     {
         health = newVal;
-        UpdateHearts();
     }
 
+    private void UpdateGameManagerHearts()
+    {
+        GameManager.Instance?.UpdatePlayerHealth(health);
+    }
     public void ResetComponent()
     {
         isDead = false;

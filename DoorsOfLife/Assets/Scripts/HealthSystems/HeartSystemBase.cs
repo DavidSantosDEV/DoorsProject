@@ -32,6 +32,7 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
     [SerializeField][ShowOnly]
     protected bool isInvincible=false;
 
+    [SerializeField][ShowOnly]
     private float _health;
 
     public int MaxHealth => maxHealth;
@@ -45,6 +46,7 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
         set
         {
             _health = Mathf.Round(value * 2) / 2;
+            UpdateHearts();
         }
     }
 
@@ -59,7 +61,7 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
         CreateHearts(maxHealth);
     }
 
-    private void CreateHearts(int val)
+    protected void CreateHearts(int val)
     {
         Debug.Log("Working: ");
         

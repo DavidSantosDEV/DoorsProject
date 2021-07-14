@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
     private void debugCompletePuzzle()
     {
         if (!Debug.isDebugBuild) return;
-        FindObjectOfType<PuzzleMasterOrder>().DebugFunc();
+        FindObjectOfType<PuzzleMasterOrder>()?.DebugFunc();
     }
 
     private void DebugFunc3()
