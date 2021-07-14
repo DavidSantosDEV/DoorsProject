@@ -1176,14 +1176,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songMainMenu: {fileID: 8300000, guid: a758b9b3b3c45df4481ffb896644c7ca, type: 3}
   songHouse: {fileID: 8300000, guid: faeab497ed6525e49892b0cbaed4cf8e, type: 3}
-  songGarden: {fileID: 0}
+  songGarden: {fileID: 8300000, guid: ca399bcf4860d214eae464b88a3078fb, type: 3}
   songCombat: {fileID: 8300000, guid: 3294199c4896e7441bc5118ea382582b, type: 3}
   songDeath: {fileID: 8300000, guid: 6d5b60865b127fb499ee3acd20c506a7, type: 3}
-  songVictory: {fileID: 0}
+  songVictory: {fileID: 8300000, guid: 5aa1a7c9ebe4cfd4dadc568cfbc7a7b1, type: 3}
   mainSource: {fileID: 705034508}
   extraSourceCombat: {fileID: 1601881276}
   auxSource: {fileID: 1768029379}
   speedChangeMusic: 1
+  enemiesActive: []
 --- !u!4 &1266113396
 Transform:
   m_ObjectHideFlags: 0
@@ -1440,10 +1441,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2382950478708869271, guid: a56f9e8fb93c21148916a5d348a22ed6, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

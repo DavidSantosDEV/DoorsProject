@@ -48,9 +48,15 @@ public class MusicManager : MonoBehaviour
     }
     private void CustomSetup() //Add stuff here when needed
     {
+        mainSource.loop = true;
+
         extraSourceCombat.clip = songCombat;
         extraSourceCombat.volume = 0;
+        extraSourceCombat.loop = true;
         extraSourceCombat.Play();
+
+        auxSource.loop = false;
+        auxSource.playOnAwake = false;
 
         //SceneManager.activeSceneChanged += scene => UpdateMusicLevel();
         DontDestroyOnLoad(gameObject);
@@ -159,6 +165,9 @@ public class MusicManager : MonoBehaviour
 
     public void UpdateMusicLevel(int level)
     {
+        enemiesActive.Clear();
+        mainSource.volume = 1;
+        extraSourceCombat.volume = 0;
         switch (level)
         {
             case 0:
@@ -178,13 +187,27 @@ public class MusicManager : MonoBehaviour
 
     public void StopMusic()
     {
-
+        mainSource.clip = null;
     }
 
-    public void StopMenuMusic()
+
+    //sfx
+
+    public void PlayDefeatSound()
+    {
+        auxSource.clip = songDeath;
+        auxSource.Play();
+    }
+
+    public void PlayWinSound()
+    {
+        auxSource.clip = songVictory;
+        auxSource.Play();
+    }
+    //---
+    public void PlayWinMusic()
     {
 
     }
-
 
 }
