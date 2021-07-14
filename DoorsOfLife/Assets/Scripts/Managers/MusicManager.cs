@@ -17,12 +17,16 @@ public class MusicManager : MonoBehaviour
     private AudioClip songCombat;
     [SerializeField]
     private AudioClip songDeath;
+    [SerializeField]
+    private AudioClip songVictory;
 
     [Header("Sources")]
     [SerializeField]
     private AudioSource mainSource;
     [SerializeField]
     private AudioSource extraSourceCombat;
+    [SerializeField]
+    private AudioSource auxSource;
 
     public static MusicManager Instance { get; private set; } = null;
 

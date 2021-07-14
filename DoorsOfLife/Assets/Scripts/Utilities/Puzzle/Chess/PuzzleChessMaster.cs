@@ -11,9 +11,9 @@ public class PuzzleChessMaster : PuzzleMasterBase
     private int currentMoveAmmount;
     private bool hasClue = false;
 
-    public void SetHasClue(bool val)
+    public void SetHasClue()
     {
-        hasClue = val;
+        hasClue = true;
     }
 
     private InteractDialogue myDiagInteract;

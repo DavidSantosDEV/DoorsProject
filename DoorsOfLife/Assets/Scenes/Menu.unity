@@ -1179,8 +1179,10 @@ MonoBehaviour:
   songGarden: {fileID: 0}
   songCombat: {fileID: 0}
   songDeath: {fileID: 8300000, guid: 6d5b60865b127fb499ee3acd20c506a7, type: 3}
+  songVictory: {fileID: 0}
   mainSource: {fileID: 705034508}
   extraSourceCombat: {fileID: 0}
+  auxSource: {fileID: 0}
 --- !u!4 &1266113396
 Transform:
   m_ObjectHideFlags: 0

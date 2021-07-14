@@ -13,6 +13,9 @@ public class PuzzlePlayMaster : PuzzleMasterBase
     List<Vector2> originalPositions = new List<Vector2>();
 
     [SerializeField]
+    private PuzzleChessMaster pzC;
+
+    [SerializeField]
     private GameObject showGameObject;
 
     protected override void Start()
@@ -43,6 +46,10 @@ public class PuzzlePlayMaster : PuzzleMasterBase
     {
         Debug.Log("Puzzle complete!");
         showGameObject.SetActive(true);
+        if (pzC != null)
+        {
+            pzC.SetHasClue();
+        }
         DisableMovementOfChilds();
         base.DoAction();
     }
