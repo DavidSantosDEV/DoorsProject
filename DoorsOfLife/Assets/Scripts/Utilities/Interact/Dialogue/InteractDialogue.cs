@@ -81,6 +81,7 @@ public class InteractDialogue : IInteractibleBase
 
     private IEnumerator Type()
     {
+        CheckForEvent();
         if (SentencesAndEvents[Index].sound)
         {
             if (myAudioSource)
@@ -96,7 +97,6 @@ public class InteractDialogue : IInteractibleBase
             if (textDisplay.text == SentencesAndEvents[Index].Sentence)//sentences[Index])
             {
                 //Check if it has event and then allow to continue
-                CheckForEvent();
                 canContinue = true;
                 UIManager.Instance.ShowContinueDialogueButton();
             }
@@ -154,7 +154,7 @@ public class InteractDialogue : IInteractibleBase
     {
         StopCoroutine(nameof(Type));
         textDisplay.text = SentencesAndEvents[Index].Sentence; //sentences[Index];
-        CheckForEvent();
+        //CheckForEvent();
         canContinue = true;
     }
 
@@ -170,6 +170,23 @@ public class InteractDialogue : IInteractibleBase
     {
         displaySpeakerName = name;
         //update text
+    }
+
+    public void SwapSentences(DialogAndEvent[] newS)
+    {
+        SentencesAndEvents = newS;
+    }
+
+    public void StartShowImage()
+    {
+        showImage = true;
+        UIManager.Instance.ShowDialogueCase(showImage, showName);
+    }
+
+    public void StartShowName()
+    {
+        showName = true;
+        UIManager.Instance.ShowDialogueCase(showImage, showName);
     }
 
     private void ChangeReaction()

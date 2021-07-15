@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System;
 using UnityEngine;
 
 public class IInteractibleBase : MonoBehaviour,IInteractible
 {
+    public event Action OnInteractionStopped;
+
     [Header("Interactible Settings")]
     [SerializeField]
     protected AudioSource interactionSound;
@@ -45,6 +48,10 @@ public class IInteractibleBase : MonoBehaviour,IInteractible
         Debug.Log("Interaction Stopped");
         GameManager.Instance.GetPlayer().StoppedInteracting();
         isInteractible = multipleUse;
+        if (OnInteractionStopped != null)
+        {
+            OnInteractionStopped.Invoke();
+        }
     }
 
     /*[SerializeField]

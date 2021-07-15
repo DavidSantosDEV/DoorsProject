@@ -6,16 +6,16 @@ using UnityEngine;
 public class ColActivator : MonoBehaviour
 {
     [SerializeField]
-    private string tagP = "Player";
+    protected string tagP = "Player";
 
-    IInteractibleBase mydiagInteract;
+    protected IInteractibleBase mydiagInteract;
 
     private void Awake()
     {
         mydiagInteract = GetComponent<IInteractibleBase>();
     }
 
-    private void Activate()
+    protected void Activate()
     {
         if (mydiagInteract == null)
         {

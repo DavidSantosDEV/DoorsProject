@@ -55,12 +55,15 @@ public class PlayerController : MonoBehaviour
     private PlayerControls myPlayerControls;
     private PlayerInput myInput;
 
+
     public PlayerInput PlayerInputComponent
     {
         get => myInput;
     }
 
     public bool inCutscene=false;
+
+    //public bool canAttack = false;
 
     private void OnDestroy()
     {
@@ -97,26 +100,6 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance?.ShowGameOver();
     }
 
-    bool test;
-    EnemyScript ene;
-    private void debugCompletePuzzle()
-    {
-        if (Debug.isDebugBuild)
-        {
-            if (test == false)
-            {
-                //ene = new EnemyScript();
-                MusicManager.Instance?.AddEnemyAlert(ene);
-                test = true;
-            }
-            else
-            {
-                MusicManager.Instance?.RemoveEnemyAlert(ene);
-                test = false;
-            }
-        }
-    }
-
     private void DebugFunc3()
     {
         if (!Debug.isDebugBuild) return;
@@ -127,11 +110,15 @@ public class PlayerController : MonoBehaviour
 
     #region showingPrompt
 
-    public void ShowPrompt(string text)
+    public void ShowPrompt(IInteractibleBase inte)
     {
-        interactCanvas.SetActive(true);
-        imgPrompt.sprite = UIManager.Instance?.getInteractSprite();
-        textPrompt.text = text;
+        if (inte.IsInteractible)
+        {
+            interactCanvas.SetActive(true);
+            imgPrompt.sprite = UIManager.Instance?.getInteractSprite();
+            textPrompt.text = inte.InteractionText;
+        }
+
     }
     public void HidePrompt()
     {
@@ -145,7 +132,7 @@ public class PlayerController : MonoBehaviour
         #region Debug
         myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
 
-        myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzle();
+        //myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzle();
 
         myPlayerControls.Gameplay.Debug3.started += cntx => DebugFunc3();
 
@@ -315,7 +302,7 @@ public class PlayerController : MonoBehaviour
                 if (interactionData.IsEmpty())
                 {
                     interactionData.Interactible = interactible;
-                    ShowPrompt(interactible.InteractionText);
+                    ShowPrompt(interactible);
                     Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green);
                 }
                 else
@@ -323,7 +310,7 @@ public class PlayerController : MonoBehaviour
                     if (!interactionData.IsSameInteractible(interactible))
                     {
                         interactionData.Interactible = interactible;
-                        ShowPrompt(interactible.InteractionText);
+                        ShowPrompt(interactible);
                         Debug.DrawRay(startpos, lastMovementInput * interactReach, Color.green);
                     }
                     else
@@ -398,7 +385,7 @@ public class PlayerController : MonoBehaviour
         UpdateMovement();
     }
 
-    public bool canAttack = true;
+    public bool canAttack = false;
 
     private void OnAttack(InputAction.CallbackContext context)
     {

@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
 
     private bool gamepaused=false;
 
+    public bool playerCanAttack=false;
+
     public bool GameIsPaused => gamepaused;
 
     public static GameManager Instance { get; private set; } = null;
@@ -263,6 +265,7 @@ public class GameManager : MonoBehaviour
                 currentHealth = player.PlayerHeartsComponent.MaxHealth;
             }
             player.PlayerHeartsComponent.SetHealth(currentHealth);
+            player.canAttack = playerCanAttack;
 
             //player.transform.parent.gameObject.SetActive(false);
             //player.transform.parent.gameObject.SetActive(true);
