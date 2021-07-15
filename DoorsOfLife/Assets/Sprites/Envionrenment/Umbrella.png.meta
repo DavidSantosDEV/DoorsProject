@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: d462b50c6c7d7f34c872f2cae6db0add
+guid: c69d8b62e8f65b243a7962ecd4d479d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5855519435100697407
-    second: TableBrown_0
+      213: -4519137077466534252
+    second: Umbrella_0
   - first:
-      213: 5406437037035852439
-    second: TableBrown_1
-  - first:
-      213: 5212797293770984412
-    second: TableBrown_2
-  - first:
-      213: -6643623291527186715
-    second: TableBrown_3
+      213: 2403818488957660228
+    second: Umbrella_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -77,7 +71,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -89,7 +83,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -103,85 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TableBrown_0
+      name: Umbrella_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
+        x: 24
+        y: 6
+        width: 16
+        height: 24
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f33b29007ebf24150800000000000000
-      internalID: 5855519435100697407
+      spriteID: 49e6f4e75ccc841c0800000000000000
+      internalID: -4519137077466534252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TableBrown_1
+      name: Umbrella_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
+        x: 88
+        y: 6
+        width: 25
         height: 32
-      alignment: 0
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 792990537d5870b40800000000000000
-      internalID: 5406437037035852439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TableBrown_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdb46552583975840800000000000000
-      internalID: 5212797293770984412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TableBrown_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e6b207d0db1dc3a0800000000000000
-      internalID: -6643623291527186715
+      spriteID: 44c66d20e241c5120800000000000000
+      internalID: 2403818488957660228
       vertices: []
       indices: 
       edges: []
