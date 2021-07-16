@@ -48,7 +48,7 @@ public class StringListProgression //I considered a struct but then I couldnt do
 
 
 
-public class DollNPC : IInteractibleBase
+public class BaseNPC : IInteractibleBase
 {
     private AudioSource myAudioSource = null;
 
