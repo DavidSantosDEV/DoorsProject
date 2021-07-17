@@ -171,14 +171,9 @@ public class GameManager : MonoBehaviour
         gamepaused = true;
     }
 
-    public void StopEnemies()
-    {
-        OnEnemiesPause.Invoke();
-    }
 
     public void ShowGameOver()
     {
-        //PauseGameNoCanvas();
         UIManager.Instance.ShowGameOver();
     }
 

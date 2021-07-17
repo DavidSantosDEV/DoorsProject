@@ -93,12 +93,7 @@ public class PlayerController : MonoBehaviour
     }
 
     
-    #region debugFunctions
-    private void DebugGameOver()
-    {
-        if(Debug.isDebugBuild)
-        GameManager.Instance?.ShowGameOver();
-    }
+ 
 
     private void DebugFunc3()
     {
@@ -106,7 +101,7 @@ public class PlayerController : MonoBehaviour
         PuzzleChessMaster pz = FindObjectOfType<PuzzleChessMaster>();
         if (pz) pz.debugCompletePuzzle();
     }
-    #endregion
+
 
     #region showingPrompt
 
@@ -130,7 +125,7 @@ public class PlayerController : MonoBehaviour
     public void Config()
     {
         #region Debug
-        myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
+        //myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
 
         //myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzle();
 
@@ -407,8 +402,8 @@ public class PlayerController : MonoBehaviour
     {
         MusicManager.Instance?.PlayDefeatSound();
         MusicManager.Instance?.ClearCombatMusic();
+        playerMovement.MakeBodyStatic();
         playerAnimation.PlayDeathAnimation();
-        EnableMenuControls();
     }
 
     #endregion
@@ -453,8 +448,11 @@ public class PlayerController : MonoBehaviour
 
     public void Revive()
     {
-        EnableGameplayControls();
+        //EnableGameplayControls();
+        EnableMovement();
         playerHeartsComponent.ResetComponent();
+        playerMovement.MakeBodyDynamic();
+        //playerAnimation.
     }
 
     private void OnDrawGizmos()

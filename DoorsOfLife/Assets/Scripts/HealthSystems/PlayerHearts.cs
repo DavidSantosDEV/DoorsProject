@@ -29,6 +29,7 @@ public class PlayerHearts : HeartSystemBase
     public override void TakeDamage(float dmg)
     {
         base.TakeDamage(dmg);
+        if (isDead || isInvincible) return;
         if (OnDamageTaken!=null)
         {
             //UIManager.Instance.UpdateHealth(currentHealth, maxHealth);
@@ -53,18 +54,8 @@ public class PlayerHearts : HeartSystemBase
 
     protected override void Die()
     {
-        //base.Die(); I don't want his hearts gone
-        
-        if (OnDeath!=null)
-        {
-            //GameManager.Instance.ShowGameOver();
-            OnDeath.Invoke();// <-Crucial;
-        }
-        else
-        {
-            GameManager.Instance.ShowGameOver();
-            //throw new NotImplementedException();
-        }
+        base.Die();
+        OnDeath.Invoke();// <-Crucial;
     }
 
     public void SetHealth(float newVal)
@@ -78,6 +69,7 @@ public class PlayerHearts : HeartSystemBase
     }
     public void ResetComponent()
     {
+        mainContainer.gameObject.SetActive(true);
         isDead = false;
         health = maxHealth;
         UpdateHearts();

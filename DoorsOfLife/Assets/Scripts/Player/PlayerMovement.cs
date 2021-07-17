@@ -7,21 +7,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField]
     private float movementSpeed=5f;
-    //[SerializeField]
-    //private float dodgeAmmount = 4f;
-    //[SerializeField]
-    //private float rollTime=3f;
-    //[SerializeField]
-    //private float rollTimeDropMultiplier = 5f;
-    //[SerializeField]
-    //private float dropMinCheck = 4f;
-    //private float curRollTime;
-    //private Vector2 currentDodgedirection;
-    //private Vector2 lastmovementInput;
 
-    //private bool isDodging = false;
-    //Components needed
-    public Rigidbody2D myBody;
+    [SerializeField]
+    private Rigidbody2D myBody;
 
     private Vector2 movementDirection;
 
@@ -46,18 +34,15 @@ public class PlayerMovement : MonoBehaviour
         _parent.PlayerAnimationComponent.UpdateMovementSpeed(0);
     }
 
-    //private bool canMove = true;
-
-    /*public void DisableMovement()
+    public void MakeBodyStatic()
     {
-        ClearMovement();
-        canMove = false;
-    }*/
+        myBody.bodyType = RigidbodyType2D.Static;
+    }
 
-    /*public void EnableMovement()
+    public void MakeBodyDynamic()
     {
-        canMove = true;
-    }*/
+        myBody.bodyType = RigidbodyType2D.Dynamic;
+    }
 
     public void UpdateMovementData(Vector2 movement)
     {

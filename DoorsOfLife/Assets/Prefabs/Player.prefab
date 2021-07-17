@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  meleeWidth: 0.45
+  meleeWidth: 0.55
   meleeRange: 0.55
   attackPoint: {fileID: 2985027686580726682}
   weaponHitLayers:
@@ -570,7 +570,6 @@ MonoBehaviour:
   imgPrompt: {fileID: 771620575}
   textPrompt: {fileID: 649939863}
   inCutscene: 0
-  debugee: {fileID: 0}
   canAttack: 1
 --- !u!114 &2985027686227906103
 MonoBehaviour:
@@ -682,6 +681,7 @@ MonoBehaviour:
   maxHealth: 5
   isDead: 0
   isInvincible: 0
+  _health: 0
 --- !u!1 &2985027686580726683
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2985027688147305498}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

@@ -451,14 +451,13 @@ public class UIManager : MonoBehaviour
         Cursor.visible = true;*/
     }
 
-    float speedChangeFade=1;
+    [SerializeField]
+    private float speedChangeFade=1;
 
     private IEnumerator BlackScreenShow()
     {
         while (gameOverBlack.color.a < 1)
         {
-
-
             float delta = 1 * Time.deltaTime * (speedChangeFade / 1);
             float val = gameOverBlack.color.a + delta;
             gameOverBlack.color = new Color(gameOverBlack.color.r, gameOverBlack.color.g, gameOverBlack.color.b, Mathf.Clamp01(val));
@@ -467,7 +466,9 @@ public class UIManager : MonoBehaviour
 
 
         }
+        yield return new WaitForSeconds(1 / speedChangeFade);
         GameManager.Instance.ReloadScene();
+        yield return new WaitForSeconds(1 / speedChangeFade);
         while (gameOverBlack.color.a > 0)
         {
 
