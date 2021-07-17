@@ -44,7 +44,6 @@ public class InteractDialogue : IInteractibleBase
         typeInteraction = InteractionType.DialogInteraction;
         textDisplay = UIManager.Instance?.GetDialogueText();
 
-        if(showName)
         textNameDisplay = UIManager.Instance?.GetDialogueSpeakerNameText();
     }
 
@@ -120,7 +119,8 @@ public class InteractDialogue : IInteractibleBase
         if (showImage)
         {
             ChangeReaction();
-        }     
+        }
+        
         StartCoroutine(nameof(Type));
     }
 
@@ -178,7 +178,6 @@ public class InteractDialogue : IInteractibleBase
     public void AssignSpeakerName(string name)
     {
         displaySpeakerName = name;
-        //update text
     }
 
     public void SwapSentences(DialogAndEvent[] newS)
@@ -189,6 +188,7 @@ public class InteractDialogue : IInteractibleBase
     public void StartShowImage()
     {
         showImage = true;
+        textNameDisplay.text = displaySpeakerName;
         UIManager.Instance.ShowDialogueCase(showImage, showName);
     }
 

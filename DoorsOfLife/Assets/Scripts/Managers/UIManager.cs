@@ -34,6 +34,8 @@ public class UIManager : MonoBehaviour
     private GameObject LoadingCanvas;
     [SerializeField]
     private GameObject GameOverCanvas;
+    [SerializeField]
+    private Image gameOverBlack;
 
 
     [Header("Main Menu Stuff")]
@@ -143,9 +145,14 @@ public class UIManager : MonoBehaviour
 
     public void FindNewEventSystem()
     {
-        eventSystemUI = Instantiate(prefabEventSystem).GetComponent<EventSystem>(); //FindObjectOfType<EventSystem>(); //Okay let me go into detail how utterly retarded unity can be, I have to create a new event system for EVERY scene i have in game.
-        //                                                  Why you ask?? Well simple unity does not recognize that this event system works everytime a scene is changed, so, great, I have to do this retarded mess
-        if(GameManager.Instance.GetCurrentScene()==0)
+        eventSystemUI = FindObjectOfType<EventSystem>();
+        if (eventSystemUI == null)
+        {
+            eventSystemUI = Instantiate(prefabEventSystem).GetComponent<EventSystem>(); //FindObjectOfType<EventSystem>(); //Okay let me go into detail how utterly retarded unity can be, I have to create a new event system for EVERY scene i have in game.
+
+        }
+        // Why you ask?? Well simple unity does not recognize that this event system works everytime a scene is changed, so, great, I have to do this retarded mess
+        if (GameManager.Instance.GetCurrentScene()==0)
         Instantiate(playerInputMenuPrefab);
     }
 
@@ -437,10 +444,42 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameOver()
     {
-        GameOverCanvas.SetActive(true);
-        eventSystemUI.SetSelectedGameObject(firstSelectedDeathButton);
+        StartCoroutine(BlackScreenShow());
+
+        /*eventSystemUI.SetSelectedGameObject(firstSelectedDeathButton);
         eventSystemUI.enabled = true;
-        Cursor.visible = true;
+        Cursor.visible = true;*/
+    }
+
+    float speedChangeFade=1;
+
+    private IEnumerator BlackScreenShow()
+    {
+        while (gameOverBlack.color.a < 1)
+        {
+
+
+            float delta = 1 * Time.deltaTime * (speedChangeFade / 1);
+            float val = gameOverBlack.color.a + delta;
+            gameOverBlack.color = new Color(gameOverBlack.color.r, gameOverBlack.color.g, gameOverBlack.color.b, Mathf.Clamp01(val));
+            MusicManager.Instance?.SetMainVolume(-val);
+            yield return null;
+
+
+        }
+        GameManager.Instance.ReloadScene();
+        while (gameOverBlack.color.a > 0)
+        {
+
+            float delta = 1 * Time.deltaTime * (speedChangeFade / 1);
+            float val = gameOverBlack.color.a - delta;
+            gameOverBlack.color = new Color(gameOverBlack.color.r, gameOverBlack.color.g, gameOverBlack.color.b, Mathf.Clamp01(val));
+            float music = MusicManager.Instance.GetCurrentMainVolume() + (val);
+            MusicManager.Instance?.SetMainVolume(music);
+            Debug.Log("Music val: " + music);
+            yield return null;
+            
+        }
     }
 
     public void HideGameOver()

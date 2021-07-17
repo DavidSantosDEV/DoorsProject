@@ -77,6 +77,16 @@ public class MusicManager : MonoBehaviour
         UpdateMusicCombat();
     }
 
+    public float GetCurrentMainVolume()
+    {
+        return mainSource.volume;
+    }
+
+    public void SetMainVolume(float val)
+    {
+        mainSource.volume = val;
+    }
+
     public void ClearCombatMusic()
     {
         enemiesActive.Clear();

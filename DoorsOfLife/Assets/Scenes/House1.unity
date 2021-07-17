@@ -4949,7 +4949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479229280903bc748bffe75a642c888f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!43 &33328877
+--- !u!43 &39819670
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6330,8 +6330,8 @@ MonoBehaviour:
   - {x: 2.9800034, y: 0.5, z: 0}
   - {x: -1.0199966, y: 0.5, z: 0}
   m_ShapePathHash: -1161828985
-  m_Mesh: {fileID: 33328877}
-  m_InstanceId: 71240
+  m_Mesh: {fileID: 39819670}
+  m_InstanceId: 39380
 --- !u!4 &250328889
 Transform:
   m_ObjectHideFlags: 0
@@ -22281,7 +22281,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1
   m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
+  m_AlphaBlendOnOverlap: 1
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360

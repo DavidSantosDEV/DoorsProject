@@ -178,10 +178,8 @@ public class GameManager : MonoBehaviour
 
     public void ShowGameOver()
     {
-        PauseGameNoCanvas();
+        //PauseGameNoCanvas();
         UIManager.Instance.ShowGameOver();
-        Debug.Log("Game Over");
-        //ChangeToMenu();
     }
 
     #endregion
