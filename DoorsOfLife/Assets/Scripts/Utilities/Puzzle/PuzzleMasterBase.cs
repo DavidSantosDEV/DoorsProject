@@ -9,7 +9,9 @@ public class PuzzleMasterBase : MonoBehaviour
     [SerializeField]
     protected PuzzleCollider[] myColliders;
 
-    bool isComplete = false;
+    protected bool isComplete = false;
+
+    public bool IsComplete => isComplete;
 
     protected virtual void Start()
     {
@@ -55,6 +57,5 @@ public class PuzzleMasterBase : MonoBehaviour
     public virtual void ResetPuzzle()
     {
         Debug.Log("Puzzle Reset");
-        if (isComplete) return;
     }
 }

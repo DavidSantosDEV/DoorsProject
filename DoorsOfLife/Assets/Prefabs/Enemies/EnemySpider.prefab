@@ -312,6 +312,7 @@ MonoBehaviour:
   maxHealth: 6
   isDead: 0
   isInvincible: 0
+  _health: 0
   bonkPoint:
   - {fileID: 4293465120406972318}
   - {fileID: 4978798842178911369}
@@ -342,15 +343,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deAggroTime: 10
-  findPlayerDistance: 3
-  rangeToAttack: 1.4
-  timeBetweenAttack: 1
+  findPlayerDistance: 2.7
+  rangeToAttack: 1.25
+  timeBetweenAttack: 2.4
   vanishAfterDeathTime: 2
   parentPosOrganizer: {fileID: 0}
   maxStartDistance: 10
   attackPoint: {fileID: 8617100946899029658}
   meleePointWidth: 1
-  meleeAttackRange: 0.8
+  meleeAttackRange: 0.7
   damage: 1
   damageDifferentiation: 0.5
   enemyHitLayer:

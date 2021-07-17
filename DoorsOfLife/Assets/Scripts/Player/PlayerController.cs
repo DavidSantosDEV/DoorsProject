@@ -405,6 +405,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnIsDead()
     {
+        MusicManager.Instance?.PlayDefeatSound();
+        MusicManager.Instance?.ClearCombatMusic();
         playerAnimation.PlayDeathAnimation();
         EnableMenuControls();
     }

@@ -177,6 +177,8 @@ public class EnemyScript : MonoBehaviour
         {
             GameManager.Instance.OnEnemiesPause += OnGamePause;
             GameManager.Instance.GameUnPaused += OnGameUnPause;
+
+            GameManager.Instance.AddEnemy(this);
         }
 
         player = GameManager.Instance != null ? GameManager.Instance.GetPlayer() : FindObjectOfType<PlayerController>();
@@ -270,6 +272,11 @@ public class EnemyScript : MonoBehaviour
         
     }
 
+    public void ResetSelf()
+    {
+        SetStateReturning();
+    }
+
     protected void FarFromStart()
     {
         if (Vector2.Distance(transform.position, startPos.position) > maxStartDistance)
@@ -282,10 +289,13 @@ public class EnemyScript : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, player.GetPositionVector2() /*GameManager.Instance.GetPlayer().GetPositionVector2()*/) < findPlayerDistance)
         {
-            returning = false;
-            isChasing = true;
-            SetTargetPlayer();
-            MusicManager.Instance?.AddEnemyAlert(this);
+            if (player.PlayerHeartsComponent.IsDead == false)
+            {
+                returning = false;
+                isChasing = true;
+                SetTargetPlayer();
+                MusicManager.Instance?.AddEnemyAlert(this);
+            }
         }
     }
 

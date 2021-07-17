@@ -55,6 +55,13 @@ public class GameManager : MonoBehaviour
 
     public bool GameIsPaused => gamepaused;
 
+    private PlayerCheckPoint currenCheckPoint = null;
+
+    public void SetCheckPoint(PlayerCheckPoint newCheck)
+    {
+        currenCheckPoint = newCheck;
+    }
+
     public static GameManager Instance { get; private set; } = null;
 
     // Start is called before the first frame update
@@ -227,6 +234,7 @@ public class GameManager : MonoBehaviour
             //Menu
             if (player) //Doesnt fucking work cause unity is retarded
             {
+                currentHealth = player.PlayerHeartsComponent.MaxHealth;
                 Destroy(player.gameObject.transform.parent.gameObject);
             }
             if (previousScene != 0)
@@ -243,6 +251,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            currentEnemies.Clear();
+
             //Game
             UIManager.Instance.SettupGameplay();
             UIManager.Instance.HideMenuStuff();
@@ -277,10 +287,47 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    private List<EnemyScript> currentEnemies= new List<EnemyScript>();
+
+    public void AddEnemy(EnemyScript NewEnemy)
+    {
+        currentEnemies.Add(NewEnemy);
+    }
+
+    private void ClearCurrentEnemies()
+    {
+        List<EnemyScript> toDelete = new List<EnemyScript>();
+        foreach(EnemyScript e in currentEnemies)
+        {
+            if (e)
+            {
+                e.ResetSelf();
+            }
+            else
+            {
+                toDelete.Add(e);
+            }
+        }
+        foreach(EnemyScript e in toDelete) //Cleaning in case of deaths
+        {
+            currentEnemies.Remove(e);
+        }
+    }
+
     public void ReloadScene()
     {
-        Openlevel(GetCurrentScene());
+        //Openlevel(GetCurrentScene());
+        if (currenCheckPoint)
+        {
+            player.transform.parent.position = currenCheckPoint.GetSpawnPoint();
+        }
+        else
+        {
+            player.transform.parent.position = GameObject.FindGameObjectWithTag("StartingPoint").transform.position;
+        }
         player.Revive();
+
+        ClearCurrentEnemies();
     }
 
 

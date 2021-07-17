@@ -37,6 +37,8 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
 
     public int MaxHealth => maxHealth;
 
+    public bool IsDead => isDead;
+
     protected float health
     {
         get

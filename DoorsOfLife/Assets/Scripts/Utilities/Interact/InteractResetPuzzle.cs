@@ -15,6 +15,10 @@ public class InteractResetPuzzle : IInteractibleBase
     public override void OnInteract()
     {
         base.OnInteract();
-        myPuzzleMaster.ResetPuzzle();
+        if (myPuzzleMaster.IsComplete == false)
+        {
+            myPuzzleMaster.ResetPuzzle();
+
+        }
     }
 }

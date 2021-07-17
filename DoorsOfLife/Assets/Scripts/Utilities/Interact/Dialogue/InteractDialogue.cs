@@ -76,6 +76,15 @@ public class InteractDialogue : IInteractibleBase
         }
     }
 
+    public void SwapAvatar(Sprite avatar)
+    {
+        UIManager.Instance.SetAvatarDialogue(avatar);
+    }
+
+    public void SwapDisplayName(string name)
+    {
+        textNameDisplay.text = name;
+    }
 
     // Dialogue Related stuff
 
@@ -193,6 +202,10 @@ public class InteractDialogue : IInteractibleBase
     {
         switch (SentencesAndEvents[Index].reaction)
         {
+            case CharacterReaction.Normal:
+                UIManager.Instance.SetAvatarDialogue(displayAvatar);
+                break;
+
             case CharacterReaction.Happy:
                 UIManager.Instance.SetAvatarDialogue(happySprite);
                 break;

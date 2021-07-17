@@ -77,6 +77,12 @@ public class MusicManager : MonoBehaviour
         UpdateMusicCombat();
     }
 
+    public void ClearCombatMusic()
+    {
+        enemiesActive.Clear();
+        extraSourceCombat.volume = 0;
+    }
+
     private bool ActivatingCombat = false;
     public void UpdateMusicCombat()
     {

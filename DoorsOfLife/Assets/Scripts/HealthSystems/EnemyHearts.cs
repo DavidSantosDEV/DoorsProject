@@ -20,7 +20,6 @@ public class EnemyHearts : HeartSystemBase
     public override void TakeDamage(float dmg)
     {
         base.TakeDamage(dmg);
-        
         if (isDead || isInvincible) return;
         SpawnRandomBonk();
         _animator.PlayHitAnimation();

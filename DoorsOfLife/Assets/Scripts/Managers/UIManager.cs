@@ -263,15 +263,7 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void UpdatePortraitPain()
-    {
 
-    }
-
-    public void UpdatePortraitNormal()
-    {
-
-    }
 
     private void Update() //I DO NOT LIKE THIS ONE BIT BUT UNITY FORCED MY HAND eventsystem.lastselectedgameobject is obsolete!
     {

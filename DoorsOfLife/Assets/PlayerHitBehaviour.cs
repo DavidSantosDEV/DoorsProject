@@ -24,7 +24,7 @@ public class PlayerHitBehaviour : StateMachineBehaviour
             }
         }
         hearts?.InvicibilitySet(true);
-        UIManager.Instance?.UpdatePortraitPain();
+        GameManager.Instance?.GetPlayer().StopMovement();
     //    
     }
 
@@ -38,7 +38,7 @@ public class PlayerHitBehaviour : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         hearts?.InvicibilitySet(false);
-        UIManager.Instance?.UpdatePortraitNormal();
+        GameManager.Instance?.GetPlayer().EnableMovement();
     //    
     }
 
