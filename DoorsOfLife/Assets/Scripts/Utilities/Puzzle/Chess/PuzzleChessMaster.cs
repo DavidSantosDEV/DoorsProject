@@ -60,14 +60,10 @@ public class PuzzleChessMaster : PuzzleMasterBase
     {
         if (door)
         {
-            CameraManager.Instance?.SetFollow(door.transform);
             //CameraFollow.Instance.SetTarget(door.gameObject.transform);
             GameManager.Instance.GetPlayer().IsInteracting(InteractionType.DialogInteraction);
             yield return new WaitForSeconds(timeCam / 2);
             door.OpenDoorNoKey();
-            yield return new WaitForSeconds(timeCam / 2);
-            CameraManager.Instance?.SetFollow(null);
-            //CameraFollow.Instance.SetTarget(GameManager.Instance.GetPlayer().transform);
             base.DoAction();
         }
     }

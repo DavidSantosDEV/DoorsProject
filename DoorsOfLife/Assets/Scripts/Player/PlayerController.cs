@@ -63,17 +63,6 @@ public class PlayerController : MonoBehaviour
 
     public bool inCutscene=false;
 
-    //public bool canAttack = false;
-
-    private void OnDestroy()
-    {
-        interactionData.ResetData();
-        //Instance = null;
-        interactCanvas = null;
-    }
-
-
-    private string currentControlScheme; //Basically useless variable, delete when time available
 
     #region ActionMaps
     private string currentActionMap;
@@ -125,17 +114,12 @@ public class PlayerController : MonoBehaviour
     public void Config()
     {
         #region Debug
-        //myPlayerControls.Gameplay.DebugL1.started += cntx => DebugGameOver();
-
-        //myPlayerControls.Gameplay.DebugR1.started += cntx => debugCompletePuzzle();
 
         myPlayerControls.Gameplay.Debug3.started += cntx => DebugFunc3();
 
         #endregion
 
         #region Gameplay
-        myPlayerControls.Gameplay.Movement.performed += OnMovement;
-        myPlayerControls.Gameplay.Movement.canceled += onStopMovement;
 
         myPlayerControls.Gameplay.Interact.started += OnInteract;
 
@@ -224,7 +208,7 @@ public class PlayerController : MonoBehaviour
         myInput.actions.FindActionMap(actionMapMenu).Disable();
 
         Debug.Log(currentActionMap);
-        currentControlScheme = myInput.currentControlScheme;
+        
 
         SceneManager.activeSceneChanged += SceneChanged;
 
@@ -272,9 +256,10 @@ public class PlayerController : MonoBehaviour
     {
         if (canMove)
         {
-            playerMovement.UpdateMovementData(rawMovementInput.normalized);
+            Vector2 inputProcessed = new Vector2(Mathf.RoundToInt(rawMovementInput.x), Mathf.RoundToInt(rawMovementInput.y)); //This improves the thumbstick movement
+            playerMovement.UpdateMovementData(inputProcessed.normalized);
 
-            playerAnimation.UpdateMovementAnimation(rawMovementInput);
+            playerAnimation.UpdateMovementAnimation(inputProcessed);
 
             UpdateLastMovement();
         }

@@ -191,11 +191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camShakeActive: 1
-  trauma: 0
-  traumaFalloff: 0.2
-  traumaDecay: 1.3
-  traumaMultiplier: 5
-  traumaMagnitude: 0.008
+  traumaMult: 10
+  traumaDecay: 0.3
 --- !u!114 &5509070753767249880
 MonoBehaviour:
   m_ObjectHideFlags: 0

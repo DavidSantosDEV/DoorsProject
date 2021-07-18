@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour
@@ -7,9 +8,15 @@ public class CameraShake : MonoBehaviour
 
     public bool camShakeActive = true;
 
+    private float trauma = 0;
+
+    [SerializeField]
+    private float traumaMult=10;
+    [SerializeField]
+    private float traumaDecay=0.3f;
     //private Transform cameraTransform=null;
 
-    [SerializeField][Range(0,1)]
+    /*[SerializeField][Range(0,1)]
     private float trauma;
 
     [SerializeField][Range(0,1)]
@@ -22,7 +29,7 @@ public class CameraShake : MonoBehaviour
     private float traumaMultiplier=5;
 
     [SerializeField][Range(0,0.1f)]
-    private float traumaMagnitude = 0.008f;
+    private float traumaMagnitude = 0.008f;*/
 
 
     public void AddTrauma(float value)
@@ -32,7 +39,7 @@ public class CameraShake : MonoBehaviour
     }
 
 
-    private float timeCounter;
+    //private float timeCounter;
 
     public static CameraShake Instance { get; private set; } = null;
 
@@ -48,32 +55,25 @@ public class CameraShake : MonoBehaviour
         }
 
     }
-    /*public void SettupComponent(Transform camera)
-    {
-        cameraTransform = camera;
-    }*/
 
-    private float GetFloat(float seed)
+    //private CinemachineVirtualCamera cam;
+    private CinemachineBasicMultiChannelPerlin perlinChanel;
+    public void SettupComponent(CinemachineBasicMultiChannelPerlin newCam)
     {
-        return (Mathf.PerlinNoise(seed, timeCounter) - 0.5f) * 2;
-    }
-
-    private Vector3 GetVector3()
-    {
-        return new Vector3(
-            GetFloat(1),
-            GetFloat(10),
-            0
-            );
+        perlinChanel = newCam;
     }
 
     private void Update()
     {
         if (camShakeActive && trauma>0)
         {
-            timeCounter += Time.deltaTime* Mathf.Pow(trauma,traumaFalloff/*0.2f*/)*traumaMultiplier;
-            Vector3 newPos = GetVector3()*traumaMagnitude;
-            transform.localPosition = transform.localPosition + newPos;
+            //timeCounter += Time.deltaTime* Mathf.Pow(trauma,traumaFalloff/*0.2f*/)*traumaMultiplier;
+            //Vector3 newPos = GetVector3()*traumaMagnitude;
+            if (perlinChanel)
+            {
+                perlinChanel.m_AmplitudeGain = trauma*traumaMult;
+                //transform.localPosition = transform.localPosition + newPos;
+            }
             trauma = Mathf.Clamp01(trauma- (Time.deltaTime * traumaDecay));
         }
     }

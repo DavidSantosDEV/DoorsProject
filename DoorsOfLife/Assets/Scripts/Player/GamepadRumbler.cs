@@ -131,7 +131,7 @@ public class GamepadRumbler : MonoBehaviour
 
     public void RumbleDamaged(float dmg, float currentHealth, float t)
     {
-
+        RumbleLinear(dmg, dmg, dmg, currentHealth, t);
     }
 
     private void OnDestroy()

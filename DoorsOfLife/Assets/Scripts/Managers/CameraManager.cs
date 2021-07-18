@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    private bool isFollowingTarget=false;
 
     private List<CinemachineVirtualCamera> camerasToClear;
 
@@ -32,7 +31,7 @@ public class CameraManager : MonoBehaviour
 
     private CinemachineVirtualCamera activeCamera;
 
-    public void SwitchActiveCamera(CinemachineVirtualCamera newCamera)
+    public void SwitchActiveCamera(CinemachineVirtualCamera newCamera, CinemachineBasicMultiChannelPerlin perlin)
     {
         if (newCamera)
         {
@@ -42,43 +41,8 @@ public class CameraManager : MonoBehaviour
             }
             newCamera.enabled = true;
             activeCamera = newCamera;
-
-            if (isFollowingTarget)
-            {
-                activeCamera.Follow=currentTarget;
-            }
-            else
-            {
-                activeCamera.Follow = player;
-            }
+            CameraShake.Instance.SettupComponent(perlin);
         }  
     }
-
-    private Transform currentTarget=null;
-
-    public void SetFollow(Transform target)
-    {
-        currentTarget = target;
-        activeCamera.Follow = target;
-        isFollowingTarget = target != null;
-    }
-
-    public void SetFollow(Transform target, float time)
-    {
-        currentTarget = target;
-        activeCamera.Follow = target;
-        isFollowingTarget = target != null;
-
-        if (isFollowingTarget)
-        {
-            Invoke(nameof(ClearFollow), time);
-        }
-    }
-
-    private void ClearFollow()
-    {
-        currentTarget = player;
-        isFollowingTarget = false;
-        activeCamera.Follow = null;
-    }
+   
 }

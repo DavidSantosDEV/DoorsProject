@@ -45,6 +45,8 @@ public class PlayerMenuController : MonoBehaviour
             if (UIManager.Instance != null) UIManager.Instance.PromptsChange();
             if (GamepadRumbler.Instance != null) GamepadRumbler.Instance.SetGamepad();
 
+            InputActionRebindingExtensions.RemoveAllBindingOverrides(myInput.currentActionMap);
+
             //playerVisuals.UpdatePlayerVisuals(); //Line of code to update ui when you make it
             //RemoveAllBindingOverrides();
         }

@@ -8,6 +8,9 @@ public class CameraSwapper : MonoBehaviour
     [SerializeField]
     private Light2D[] lights;
 
+    [SerializeField]
+    private bool followPlayer=false;
+
     private CinemachineVirtualCamera myCamera;
 
     [SerializeField]
@@ -17,19 +20,36 @@ public class CameraSwapper : MonoBehaviour
 
     Collider2D col;
 
+    private CinemachineBasicMultiChannelPerlin perlin;
+
     private void Awake()
     {
         col = GetComponent<Collider2D>();
         myCamera = GetComponentInChildren<CinemachineVirtualCamera>();
-        //Rigidbody2D bd = gameObject.AddComponent<Rigidbody2D>();
-        //bd.gravityScale = 0;
-        //bd.sleepMode = RigidbodySleepMode2D.NeverSleep;
+        perlin = myCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        perlin.m_AmplitudeGain = 0;
     }
+
+    private void Start()
+    {
+        if (followPlayer)
+        {
+            if (GameManager.Instance)
+            {
+                myCamera.Follow = GameManager.Instance.GetPlayer().transform;
+            }
+            else
+            {
+                myCamera.Follow = FindObjectOfType<PlayerController>().transform;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerFeet"))
         {
-            CameraManager.Instance?.SwitchActiveCamera(myCamera);
+            CameraManager.Instance?.SwitchActiveCamera(myCamera,perlin);
             //myCamera.enabled = true;
             shutlights = false;
             CancelInvoke(nameof(waitLightsOFF));
