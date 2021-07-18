@@ -65,6 +65,7 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
 
     protected void CreateHearts(int val)
     {
+        if (GameManager.Instance == null) return;
         Debug.Log("Working: ");
         
         if (rowIndex == 0)
