@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine;
 using Cinemachine;
@@ -27,13 +28,19 @@ public class CameraSwapper : MonoBehaviour
         col = GetComponent<Collider2D>();
         myCamera = GetComponentInChildren<CinemachineVirtualCamera>();
         perlin = myCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        perlin.m_AmplitudeGain = 0;
+        if (perlin)
+        {
+            perlin.m_AmplitudeGain = 0;
+        }
     }
 
     private void Start()
     {
+
+        lights = lights.Where(val => val != null).ToArray();
         if (followPlayer)
         {
+            myCamera.GetCinemachineComponent<CinemachineTransposer>().m_BindingMode = CinemachineTransposer.BindingMode.LockToTargetWithWorldUp;
             if (GameManager.Instance)
             {
                 myCamera.Follow = GameManager.Instance.GetPlayer().transform;
@@ -55,6 +62,7 @@ public class CameraSwapper : MonoBehaviour
             CancelInvoke(nameof(waitLightsOFF));
             foreach (Light2D light in lights)
             {
+                if(light)
                 light.enabled = true;
             }
         }
@@ -67,6 +75,7 @@ public class CameraSwapper : MonoBehaviour
         {
             foreach (Light2D light in lights)
             {
+                if(light)
                 light.enabled = false;
             }
         }

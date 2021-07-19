@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
 
         #region Menu
 
-        myPlayerControls.Menu.UnPause.started += cntx => GameManager.Instance.PauseToggle();
+        //myPlayerControls.Menu.UnPause.started += cntx => GameManager.Instance.PauseToggle();
 
         #endregion
 
