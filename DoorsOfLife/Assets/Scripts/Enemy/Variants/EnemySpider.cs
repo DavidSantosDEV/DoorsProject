@@ -39,6 +39,6 @@ public class EnemySpider : EnemyScript
     {
         base.OnDrawGizmos();
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, meleePointWidth);
     }
 }

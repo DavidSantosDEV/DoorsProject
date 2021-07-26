@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractPushObject : IInteractibleBase
 {
+    [SerializeField]
+    private float YOffset=0;
 
     [SerializeField]
     private float moveDistanceMultiplier = 1;
@@ -22,6 +24,12 @@ public class InteractPushObject : IInteractibleBase
 
     private Vector3 origPos;
     private Vector3 targetPos;
+
+    bool willReset=true;
+    public void ToBeSetNotInteractible()
+    {
+        willReset = false;
+    }
 
     private void Start()
     {
@@ -52,22 +60,26 @@ public class InteractPushObject : IInteractibleBase
 
     private bool CheckCollision(Vector3 direction)
     {
-        RaycastHit2D[] _hits = Physics2D.RaycastAll(transform.position, direction, raySize, layersCheck);
+        Vector3 offset = new Vector3(0, YOffset, 0);
+        Vector3 StartPoint = transform.position - offset;
+        Debug.Log(StartPoint);
+        RaycastHit2D[] _hits = Physics2D.RaycastAll(StartPoint, direction, raySize, layersCheck);
 
         foreach (RaycastHit2D hit in _hits)
         {
             if (hit.transform.gameObject != gameObject)
             {
-                Debug.DrawRay(transform.position, direction * raySize, Color.red);
+                Debug.DrawRay(StartPoint, direction * raySize, Color.red);
                 return true;
             }
         }
-        Debug.DrawRay(transform.position, direction * raySize, Color.green);
+        Debug.DrawRay(StartPoint, direction * raySize, Color.green);
         return false;
     }
 
     private IEnumerator Move(Vector3 direction)
     {
+        interactionSound?.Play();
         isInteractible = false;
         isMoving = true;
         float elapsedTime = 0;
@@ -84,8 +96,9 @@ public class InteractPushObject : IInteractibleBase
         transform.position = targetPos;
 
         isMoving = false;
-        isInteractible = true;
 
+        isInteractible = willReset;//true;
+        willReset = true;
         if (moveLine.Count > 0)
         {
             Vector2 moveVal = moveLine[0];

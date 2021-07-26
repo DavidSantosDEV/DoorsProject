@@ -11,6 +11,34 @@ public class ParticleLightAdder : MonoBehaviour
     [SerializeField]
     private float lightmultiplier=1;
 
+    [SerializeField]
+    private bool hideParticles=false;
+
+    public bool HideParticles
+    {
+        get => hideParticles;
+        set => hideParticles=value;
+    }
+
+    public void StartEnableLights()
+    {
+        StartCoroutine(IncreaseLight());
+    }
+
+    [SerializeField][Range(0,1)]
+    float intensity = 1;
+    [SerializeField]
+    private float speed=1;
+    private IEnumerator IncreaseLight()
+    {
+        while (intensity < 1)
+        {
+            intensity = Mathf.Clamp01(intensity += Time.deltaTime * speed);
+            yield return null;
+        }
+        intensity = 1;
+    }
+
     struct LightAndComponent
     {
         public GameObject obj;
@@ -66,9 +94,12 @@ public class ParticleLightAdder : MonoBehaviour
                 {
                     LightsAndComponents[i].obj.transform.localPosition = m_Particles[i].position;
                 }   
-                LightsAndComponents[i].obj.SetActive(true);
-                LightsAndComponents[i].component.intensity =lightmultiplier * Mathf.Clamp(m_Particles[i].GetCurrentSize(m_ParticleSystem), 0, 1);
+
+                LightsAndComponents[i].obj.SetActive(!hideParticles);
+                LightsAndComponents[i].component.intensity = intensity * (  lightmultiplier * Mathf.Clamp(m_Particles[i].GetCurrentSize(m_ParticleSystem), 0, 1));
                 LightsAndComponents[i].component.color = m_Particles[i].GetCurrentColor(m_ParticleSystem);
+
+
             }
             else
             {

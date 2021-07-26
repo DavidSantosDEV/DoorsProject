@@ -8,7 +8,7 @@ public class ColActivatorWeapon : ColActivator
     private bool playerHasWeapon = false;
 
     [SerializeField]
-    private DialogAndEvent[] newSentences;
+    private DialogueAndEvent[] newSentences;
 
     InteractDialogue diagSys;
 

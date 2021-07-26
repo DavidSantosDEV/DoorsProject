@@ -20,6 +20,10 @@ public class MusicManager : MonoBehaviour
     [SerializeField]
     private AudioClip songVictory;
 
+    [Header("Sounds")]
+    [SerializeField]
+    private AudioClip textSound;
+
     [Header("Sources")]
     [SerializeField]
     private AudioSource mainSource;
@@ -27,6 +31,8 @@ public class MusicManager : MonoBehaviour
     private AudioSource extraSourceCombat;
     [SerializeField]
     private AudioSource auxSource;
+    [SerializeField]
+    private AudioSource textSource;
 
     [Header("Time")]
     [SerializeField]
@@ -58,8 +64,16 @@ public class MusicManager : MonoBehaviour
         auxSource.loop = false;
         auxSource.playOnAwake = false;
 
+        textSource.playOnAwake = false;
+        textSource.loop = false;
+        textSource.clip = textSound;
         //SceneManager.activeSceneChanged += scene => UpdateMusicLevel();
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void PlayTextEffect()
+    {
+        textSource.Play();
     }
 
     [SerializeField][ShowOnly]

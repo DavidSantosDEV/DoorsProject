@@ -149,6 +149,7 @@ public class DoorInteractible : IInteractibleBase
         foreach (char letter in SentencetoType.ToCharArray())
         {
             textDisplay.text += letter;
+            MusicManager.Instance?.PlayTextEffect();
             if (textDisplay.text == SentencetoType)
             {
                 isFinished = true;

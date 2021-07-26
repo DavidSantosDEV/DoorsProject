@@ -89,6 +89,7 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
 
     private GameObject ContainerCreator()
     {
+        Debug.Log(this.gameObject);
         GameObject container = Instantiate(heartContainerPrefab, mainContainer.gameObject.transform);
         return container;
     }
@@ -154,6 +155,7 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
     protected virtual void Die()
     {
         isDead = true;
+        if(mainContainer)
         mainContainer.gameObject.SetActive(false);
     }
 

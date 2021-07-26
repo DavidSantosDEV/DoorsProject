@@ -51,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        myBody.velocity = movementDirection * movementSpeed;
+        if(myBody.bodyType == RigidbodyType2D.Dynamic)
+        {
+            myBody.velocity = movementDirection * movementSpeed;
+        }
+        
     }
 }

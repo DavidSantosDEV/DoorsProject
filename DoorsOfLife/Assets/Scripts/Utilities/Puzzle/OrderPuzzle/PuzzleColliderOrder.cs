@@ -6,16 +6,20 @@ public class PuzzleColliderOrder : MonoBehaviour
 {
     [SerializeField]
     private InteractPushObject myFitObject;
+    [SerializeField]
+    private float YOffset = 0.5f;
 
     private Vector2 directionReturn;
 
+    [SerializeField][ShowOnly]
     private bool isSet;
 
     private PuzzleMasterOrder myMaster;
 
     private void Start()
     {
-        directionReturn = -(transform.position - myFitObject.transform.position).normalized;
+        Vector3 objPos = (myFitObject.transform.position - new Vector3(0, YOffset, 0));
+        directionReturn = -(transform.position - objPos).normalized;
         Debug.Log(directionReturn);
     }
 
@@ -31,7 +35,7 @@ public class PuzzleColliderOrder : MonoBehaviour
         if (collision.gameObject == myFitObject.gameObject)
         {
             isSet = true;
-            myFitObject.IsInteractible = false;
+            myFitObject.ToBeSetNotInteractible() ;
             myMaster.UpdateMaster(this);
         }
     }

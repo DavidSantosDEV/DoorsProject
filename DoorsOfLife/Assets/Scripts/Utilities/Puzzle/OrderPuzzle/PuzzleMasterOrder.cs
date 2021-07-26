@@ -10,7 +10,7 @@ public class PuzzleMasterOrder : MonoBehaviour
     [SerializeField]
     List<PuzzleColliderOrder> collidersAndOrder = new List<PuzzleColliderOrder>();
 
-    public static UnityEventBase puzzleComplete;
+    public UnityEvent puzzleComplete;
 
     private int currentIndex=0;
 
@@ -62,6 +62,7 @@ public class PuzzleMasterOrder : MonoBehaviour
 
     private void PuzzleComplete()
     {
+        puzzleComplete.Invoke();
         //ResetPuzzle();
         //Debug.Log("yeah");
 

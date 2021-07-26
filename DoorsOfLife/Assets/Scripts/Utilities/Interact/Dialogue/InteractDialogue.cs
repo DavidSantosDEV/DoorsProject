@@ -25,7 +25,7 @@ public class InteractDialogue : IInteractibleBase
     //[SerializeField]
     //private string[] sentences;
     [SerializeField]
-    DialogAndEvent[] SentencesAndEvents;
+    DialogueAndEvent[] SentencesAndEvents;
 
 
     [Header("Reaction Display")]
@@ -102,6 +102,7 @@ public class InteractDialogue : IInteractibleBase
         foreach (char letter in SentencesAndEvents[Index].Sentence.ToCharArray())//sentences[Index].ToCharArray())
         {
             textDisplay.text += letter;
+            MusicManager.Instance?.PlayTextEffect();
             if (textDisplay.text == SentencesAndEvents[Index].Sentence)//sentences[Index])
             {
                 //Check if it has event and then allow to continue
@@ -180,7 +181,11 @@ public class InteractDialogue : IInteractibleBase
         displaySpeakerName = name;
     }
 
-    public void SwapSentences(DialogAndEvent[] newS)
+    public DialogueAndEvent[] GetSentences()
+    {
+        return SentencesAndEvents;
+    }
+    public void SwapSentences(DialogueAndEvent[] newS)
     {
         SentencesAndEvents = newS;
     }

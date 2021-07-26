@@ -28,6 +28,14 @@ public class PlayerController : MonoBehaviour
     public PlayerAnimation PlayerAnimationComponent =>playerAnimation;
     public PlayerHearts PlayerHeartsComponent => playerHeartsComponent;
 
+    [SerializeField]
+    private AudioSource stepSource;
+
+    public void PlayStep()
+    {
+        stepSource?.Play();
+    }
+
     //Input
     [Header("Input Settings")]
     [SerializeField]
