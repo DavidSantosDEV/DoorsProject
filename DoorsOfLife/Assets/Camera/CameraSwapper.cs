@@ -40,7 +40,12 @@ public class CameraSwapper : MonoBehaviour
         lights = lights.Where(val => val != null).ToArray();
         if (followPlayer)
         {
-            myCamera.GetCinemachineComponent<CinemachineTransposer>().m_BindingMode = CinemachineTransposer.BindingMode.LockToTargetWithWorldUp;
+            CinemachineTransposer cinTrans = myCamera.GetCinemachineComponent<CinemachineTransposer>();
+            if (!cinTrans)
+            {
+                cinTrans = myCamera.AddCinemachineComponent<CinemachineTransposer>();
+            }
+            cinTrans.m_BindingMode = CinemachineTransposer.BindingMode.LockToTargetWithWorldUp;
             if (GameManager.Instance)
             {
                 myCamera.Follow = GameManager.Instance.GetPlayer().transform;
