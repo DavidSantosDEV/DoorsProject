@@ -34,6 +34,8 @@ public class PlayerWeapon : MonoBehaviour
 
     private Vector2 currentAttackDirection;
 
+    [SerializeField]
+    private AudioSource weaponAudioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,8 +73,9 @@ public class PlayerWeapon : MonoBehaviour
         currentAttackChain = 0;
     }*/
 
-    private void doAttack()
+    private void doAttack()//Called in animator
     {
+        weaponAudioSource?.Play();
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, meleeWidth, weaponHitLayers);
         foreach(Collider2D hit in hits)
         {
