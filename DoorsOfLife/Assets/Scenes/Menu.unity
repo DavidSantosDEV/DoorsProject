@@ -697,7 +697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852505209635304337, guid: ac8b2af7fa1e3e6499a1122a8c1ac127, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852505210432372268, guid: ac8b2af7fa1e3e6499a1122a8c1ac127, type: 3}
       propertyPath: m_RootOrder
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68456efcc5601141b281c456c58a5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
+  level: 1
 --- !u!114 &1808105262 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2955890221817963306, guid: ac8b2af7fa1e3e6499a1122a8c1ac127, type: 3}

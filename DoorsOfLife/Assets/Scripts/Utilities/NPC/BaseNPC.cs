@@ -206,6 +206,7 @@ public class BaseNPC : IInteractibleBase
 
         foreach (char letter in levelAndStrings[progressionLevel].AudioEventsDialogue[Index].Dialogue.ToCharArray())//sentences[Index].ToCharArray())
         {
+            MusicManager.Instance?.PlayTextEffect();
             textDisplay.text += letter;
             if (textDisplay.text == levelAndStrings[progressionLevel].AudioEventsDialogue[Index].Dialogue)//sentences[Index])
             {

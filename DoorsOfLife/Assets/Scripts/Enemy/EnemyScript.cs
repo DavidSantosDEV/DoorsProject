@@ -130,8 +130,12 @@ public class EnemyScript : MonoBehaviour
     #endregion
 
 
+    private AudioSource sourceAttack;
+
     void Awake()
     {
+        sourceAttack = GetComponentInParent<AudioSource>();
+
         GameObject stpos = new GameObject("Startpos_"+gameObject.name);
         stpos.transform.position = transform.position;    
         startPos = stpos.transform;
@@ -385,6 +389,8 @@ public class EnemyScript : MonoBehaviour
         }
         
         enemyAnimation.PlayAttackMeleeAnimation(directionForAttack);
+
+        sourceAttack?.Play();
 
         canAttack = false;
         Invoke(nameof(ResetAttack), timeBetweenAttack);
