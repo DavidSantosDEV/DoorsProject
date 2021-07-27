@@ -14,11 +14,20 @@ public class LightColorChanger : MonoBehaviour
     [SerializeField][Range(0.01f,100)]
     private float time=1;
 
+    public float SpeedTime => time;
+
     private bool isLerping = false;
 
     private List<int> nextInLine = new List<int>();
 
     private int currentIndex = 0;
+
+    private List<Lamp> myLamps = new List<Lamp>();
+
+    public void AddReference(Lamp newLamp)
+    {
+        myLamps.Add(newLamp);
+    }
 
     public void ChangeColorPlus1()
     {
@@ -36,6 +45,10 @@ public class LightColorChanger : MonoBehaviour
             if (isLerping==false)
             {
                 StartCoroutine(ColorChanging(index));
+                foreach(Lamp lmp in myLamps)
+                {
+                    lmp.IncrementLight(0.5f);
+                }
             }
             else
             {

@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 4385763848943954472}
   - component: {fileID: 4385763848943954475}
   - component: {fileID: 4385763848943954474}
+  - component: {fileID: 4632636739754458779}
   m_Layer: 6
   m_Name: SheetDeco_0
   m_TagString: Untagged
@@ -153,6 +154,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6052971, y: 0.6360531}
   m_EdgeRadius: 0
+--- !u!114 &4632636739754458779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385763848943954473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000001327965ffbc2a244139923a4a791d171598d6f8f71bb4674611b17ed21dd2e603988a707
+  m_ShapePath:
+  - {x: -0.4325657, y: -1.1097946, z: 0}
+  - {x: -0.73509693, y: -1.5874386, z: 0}
+  - {x: 0.04594612, y: -1.8068333, z: 0}
+  - {x: 0.7480078, y: -1.5874386, z: 0}
+  - {x: 0.44085598, y: -1.1310997, z: 0}
+  - {x: 0.62563324, y: -0.81141853, z: 0}
+  - {x: 1.3272076, y: -0.6747608, z: 0}
+  - {x: 1.6519108, y: 0.1150589, z: 0}
+  - {x: 1.1429167, y: 0.8083439, z: 0}
+  - {x: 0.0025539398, y: 2.0663528, z: 0}
+  - {x: -1.0293179, y: 0.91672707, z: 0}
+  - {x: -1.6741028, y: 0.079956055, z: 0}
+  - {x: -1.3318481, y: -0.6835365, z: 0}
+  - {x: -0.612236, y: -0.8151722, z: 0}
+  m_ShapePathHash: -923023291
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -276054
 --- !u!1 &4385763849317575995
 GameObject:
   m_ObjectHideFlags: 0
