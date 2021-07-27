@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using Pathfinding;
 using UnityEngine;
 
@@ -71,6 +72,9 @@ public class EnemyScript : MonoBehaviour
     private bool isChasing = false;
     private bool isVisible=true;
     private bool returning = false;
+
+    [SerializeField]
+    private UnityEvent onEnemyDieEvent;
 
     #region Visibility
     //The why these two functions need to exist is the following, he has a max distance yes,
@@ -411,7 +415,6 @@ public class EnemyScript : MonoBehaviour
 
     #endregion
 
-
     //Death Related code
 
     #region Death Code
@@ -433,6 +436,7 @@ public class EnemyScript : MonoBehaviour
 
     public void LetMeDie() //Called by Animator
     {
+        onEnemyDieEvent.Invoke();
         Destroy(gameObject.transform.parent.gameObject);
     }
 

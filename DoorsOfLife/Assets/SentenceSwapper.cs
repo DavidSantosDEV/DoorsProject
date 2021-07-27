@@ -11,6 +11,9 @@ public class DialogueData //Weird unity doesnt allow twodimensional arrays to be
 public class SentenceSwapper : MonoBehaviour
 {
     [SerializeField]
+    private bool returnOriginal = true;
+
+    [SerializeField]
     private DialogueData[] newOnes;
 
     [SerializeField]
@@ -42,8 +45,16 @@ public class SentenceSwapper : MonoBehaviour
         }
         else
         {
-            ReturnOriginals();
-            times = 0;
+            if (returnOriginal)
+            {
+                ReturnOriginals();
+                times = 0;
+            }
+            else
+            {
+                objectOfSwap.SwapSentences(newOnes[newOnes.Length - 1].dialog);
+            }
+
         }
     }
 
