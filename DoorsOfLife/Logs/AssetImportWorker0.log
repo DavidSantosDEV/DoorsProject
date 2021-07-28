@@ -1547,3 +1547,42 @@ Received Import Request.
 Start importing Assets/Sprites/FrogYellow.png using Guid(f843c7303d45edf4fb69bca374364ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cda96b2ef0496b5b7b1df5ceab01bf6e') in 0.019796 seconds
   Import took 0.025868 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 49692.973761 seconds.
+  path: Assets/Scenes/Level1.unity
+  artifactKey: Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1.unity using Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eee60deb0faca8ce649a4eb1d054b53') in 0.014774 seconds
+  Import took 0.049002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.965482 seconds.
+  path: Assets/Scenes/House1.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/House1.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e270359bfb45dae38fafb2c5d23adcf2') in 0.006853 seconds
+  Import took 0.012997 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002013 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.136 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.7 MB.
+System memory in use after: 167.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4631.
+Total: 2.799600 ms (FindLiveObjects: 0.384500 ms CreateObjectMapping: 0.094800 ms MarkObjects: 2.282400 ms  DeleteObjects: 0.037000 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
