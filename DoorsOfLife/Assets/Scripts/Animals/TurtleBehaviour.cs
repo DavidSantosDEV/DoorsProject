@@ -8,6 +8,11 @@ public class TurtleBehaviour : MonoBehaviour
     private float speed=1;
 
     [SerializeField]
+    private LayerMask layersToCheck;
+    [SerializeField]
+    private float raySize = 2;
+
+    [SerializeField]
     private float changeDirTime=3;
 
     private Vector2 curDir;
@@ -23,6 +28,11 @@ public class TurtleBehaviour : MonoBehaviour
     private void ChangeDirection()
     {
         curDir = Random.rotationUniform * Vector2.up;
+        CheckFlip();
+    }
+
+    private void CheckFlip()
+    {
         if (curDir.x > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
@@ -36,18 +46,18 @@ public class TurtleBehaviour : MonoBehaviour
     // Start is called before the first frame update
     private void FixedUpdate()
     {
+        if (Physics2D.Raycast(transform.position, transform.right, raySize, layersToCheck))
+        {
+            curDir = new Vector2(-curDir.x, curDir.y) ;
+            CheckFlip();
+        }
         mybody.velocity = curDir * speed;
-        
-
     }
 
-    private void OnBecameVisible()
+    private void OnDrawGizmos()
     {
-        enabled = true;
-    }
-
-    private void OnBecameInvisible()
-    {
-        enabled = false;
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(transform.position, this.transform.right * raySize);
+        //Gizmos.DrawLine(transform.position, transform.right * raySize);
     }
 }

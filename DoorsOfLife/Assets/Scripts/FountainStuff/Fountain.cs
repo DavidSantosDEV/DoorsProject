@@ -10,9 +10,6 @@ public class Fountain : MonoBehaviour
 
     private Animator anim;
 
-    [SerializeField]
-    private ParticleSystem part;
-
     private bool isWatering = false;
     private void Awake()
     {

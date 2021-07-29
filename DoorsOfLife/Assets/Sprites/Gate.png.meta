@@ -100,12 +100,12 @@ TextureImporter:
       name: Gate_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 35
-        width: 64
-        height: 45
-      alignment: 9
-      pivot: {x: 0.5, y: 0.63}
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +121,12 @@ TextureImporter:
       name: Gate_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 22
-        width: 82
-        height: 58
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

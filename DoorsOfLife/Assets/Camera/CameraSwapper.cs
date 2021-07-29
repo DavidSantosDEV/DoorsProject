@@ -27,11 +27,15 @@ public class CameraSwapper : MonoBehaviour
     {
         col = GetComponent<Collider2D>();
         myCamera = GetComponentInChildren<CinemachineVirtualCamera>();
-        perlin = myCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        if (perlin)
+        if (myCamera)
         {
-            perlin.m_AmplitudeGain = 0;
+            perlin = myCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            if (perlin)
+            {
+                perlin.m_AmplitudeGain = 0;
+            }
         }
+
     }
 
     private void Start()
@@ -40,20 +44,24 @@ public class CameraSwapper : MonoBehaviour
         lights = lights.Where(val => val != null).ToArray();
         if (followPlayer)
         {
-            CinemachineTransposer cinTrans = myCamera.GetCinemachineComponent<CinemachineTransposer>();
-            if (!cinTrans)
+            if (myCamera)
             {
-                cinTrans = myCamera.AddCinemachineComponent<CinemachineTransposer>();
+                CinemachineTransposer cinTrans = myCamera.GetCinemachineComponent<CinemachineTransposer>();
+                if (!cinTrans)
+                {
+                    cinTrans = myCamera.AddCinemachineComponent<CinemachineTransposer>();
+                }
+                cinTrans.m_BindingMode = CinemachineTransposer.BindingMode.LockToTargetWithWorldUp;
+                if (GameManager.Instance)
+                {
+                    myCamera.Follow = GameManager.Instance.GetPlayer().transform;
+                }
+                else
+                {
+                    myCamera.Follow = FindObjectOfType<PlayerController>().transform;
+                }
             }
-            cinTrans.m_BindingMode = CinemachineTransposer.BindingMode.LockToTargetWithWorldUp;
-            if (GameManager.Instance)
-            {
-                myCamera.Follow = GameManager.Instance.GetPlayer().transform;
-            }
-            else
-            {
-                myCamera.Follow = FindObjectOfType<PlayerController>().transform;
-            }
+
         }
     }
 

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: PondFishTile
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 4018951409968432913, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: 4954527221822037461, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: -2994543634370884309, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: -4180678751045326086, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: -5326581058004601195, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: 5420376330950766073, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: 1145119866622809543, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: -5706047973111349029, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: 6467040725363410375, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  - {fileID: -1760046018024613206, guid: dff70e2fe8a97024cad847295b5647e7, type: 3}
+  m_MinSpeed: 6
+  m_MaxSpeed: 7
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
