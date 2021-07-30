@@ -9,6 +9,10 @@ public class BossGate : MonoBehaviour
     [SerializeField]
     private Collider2D colEntrance, colExit;
 
+    [SerializeField]
+    private Sprite openGate;
+    [SerializeField]
+    private Sprite closedGate;
 
     private bool isClosed = true;
     public bool IsClosed =>isClosed;
@@ -23,12 +27,14 @@ public class BossGate : MonoBehaviour
 
     public void OpenGateEntrance()
     {
-
+        rendererGateEntrance.sprite = openGate;
+        colEntrance.isTrigger = true;
     }
 
     public void CloseGateEntrance()
     {
-
+        rendererGateEntrance.sprite = closedGate;
+        colEntrance.isTrigger = false;
     }
 
 }

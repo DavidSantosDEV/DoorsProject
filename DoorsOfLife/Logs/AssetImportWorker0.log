@@ -15,11 +15,11 @@ C:/Users/David/Documents/GitHub/DoorsProject/DoorsOfLife
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62404
+54449
 Successfully changed project path to: C:/Users/David/Documents/GitHub/DoorsProject/DoorsOfLife
 C:/Users/David/Documents/GitHub/DoorsProject/DoorsOfLife
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 81.78 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 71.21 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -36,1588 +36,320 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56368
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56280
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001830 seconds.
+Registered in 0.001858 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 79.16 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 70.64 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.956 seconds
+- Completed reload, in  0.900 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002072 seconds.
+Registered in 0.001674 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 81.31 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 77.25 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.016 seconds
+- Completed reload, in  1.004 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3821 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 170.5 MB.
 System memory in use after: 170.7 MB.
 
 Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 4273.
-Total: 3.149100 ms (FindLiveObjects: 0.603600 ms CreateObjectMapping: 0.120600 ms MarkObjects: 2.322600 ms  DeleteObjects: 0.101100 ms)
+Total: 2.645000 ms (FindLiveObjects: 0.432400 ms CreateObjectMapping: 0.103600 ms MarkObjects: 2.039400 ms  DeleteObjects: 0.068500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Level1.unity
-  artifactKey: Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level1.unity using Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e3f322cea43ec1643c75d443d5d7291') in 0.021045 seconds
-  Import took 0.028374 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001926 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.890 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 158.6 MB.
-System memory in use after: 158.8 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4277.
-Total: 2.459200 ms (FindLiveObjects: 0.373700 ms CreateObjectMapping: 0.094900 ms MarkObjects: 1.972900 ms  DeleteObjects: 0.016500 ms)
-
-========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 3.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.5 MB.
-System memory in use after: 86.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 4277.
-Total: 2.756300 ms (FindLiveObjects: 0.395900 ms CreateObjectMapping: 0.094800 ms MarkObjects: 2.246300 ms  DeleteObjects: 0.018000 ms)
-
-========================================================================
-Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 86.5 MB.
-System memory in use after: 86.7 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 4277.
-Total: 2.674700 ms (FindLiveObjects: 0.372600 ms CreateObjectMapping: 0.106600 ms MarkObjects: 2.182500 ms  DeleteObjects: 0.012100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001993 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 158.7 MB.
-System memory in use after: 158.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4281.
-Total: 2.834500 ms (FindLiveObjects: 0.428800 ms CreateObjectMapping: 0.101600 ms MarkObjects: 2.279300 ms  DeleteObjects: 0.022800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002005 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.888 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 158.7 MB.
-System memory in use after: 158.9 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4285.
-Total: 3.029200 ms (FindLiveObjects: 0.394500 ms CreateObjectMapping: 0.105700 ms MarkObjects: 2.507500 ms  DeleteObjects: 0.020300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1971.287211 seconds.
-  path: Assets/Scenes/Level1.unity
-  artifactKey: Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level1.unity using Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76ed8227a7440eb352c3e5862f5e81d4') in 0.017084 seconds
-  Import took 0.023349 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 337.864811 seconds.
-  path: Assets/Prefabs/LampMast.prefab
-  artifactKey: Guid(e89210e12018f2844bf49f8f66666764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/LampMast.prefab using Guid(e89210e12018f2844bf49f8f66666764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19f157945c980a3ba4146d3eea78533a') in 0.185123 seconds
-  Import took 0.192517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 171.574898 seconds.
-  path: Assets/Scenes/House1.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/House1.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa4fa0bf501dba6b66371014dd17e51a') in 0.005892 seconds
-  Import took 0.012043 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001907 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.894 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 163.9 MB.
-System memory in use after: 164.1 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4334.
-Total: 3.325100 ms (FindLiveObjects: 0.542800 ms CreateObjectMapping: 0.096400 ms MarkObjects: 2.649400 ms  DeleteObjects: 0.035100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 113.876176 seconds.
-  path: Assets/Scenes/Level1.unity
-  artifactKey: Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level1.unity using Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dba28a7a1870c645da45c5bc9cdbce86') in 0.017650 seconds
-  Import took 0.023642 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002377 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.980 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 163.9 MB.
-System memory in use after: 164.1 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4338.
-Total: 2.527400 ms (FindLiveObjects: 0.409100 ms CreateObjectMapping: 0.097700 ms MarkObjects: 2.000500 ms  DeleteObjects: 0.019000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 219.024668 seconds.
-  path: Assets/Prefabs/LampMast.prefab
-  artifactKey: Guid(e89210e12018f2844bf49f8f66666764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/LampMast.prefab using Guid(e89210e12018f2844bf49f8f66666764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deedb46de8088f5752e4e39e4f97359d') in 0.135195 seconds
-  Import took 0.141440 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 221.742999 seconds.
-  path: Assets/Scenes/Level1.unity
-  artifactKey: Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level1.unity using Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6500599338be5e53348625f85b7832e') in 0.002453 seconds
-  Import took 0.008778 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.478393 seconds.
-  path: Assets/Scenes/House1.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/House1.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b516d066e919de37665e304d316e1b47') in 0.002253 seconds
-  Import took 0.007902 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002097 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.916 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.0 MB.
-System memory in use after: 164.3 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4378.
-Total: 2.752100 ms (FindLiveObjects: 0.411600 ms CreateObjectMapping: 0.094200 ms MarkObjects: 2.229400 ms  DeleteObjects: 0.015900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005653 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.408 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.0 MB.
-System memory in use after: 164.3 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4382.
-Total: 5.842300 ms (FindLiveObjects: 0.644200 ms CreateObjectMapping: 0.138600 ms MarkObjects: 5.031100 ms  DeleteObjects: 0.026600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1702.277959 seconds.
-  path: Assets/Scenes/Level1.unity
-  artifactKey: Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level1.unity using Guid(02035a6dcb35db34ebc7b63f69be9216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddcedad29754e72d7bfb2b6bf700b315') in 0.025185 seconds
-  Import took 0.033513 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 152.482349 seconds.
-  path: Assets/Animation/NPCs/FrogElder_0.controller
-  artifactKey: Guid(47371ef0073eb494b941b68873cd1cb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation/NPCs/FrogElder_0.controller using Guid(47371ef0073eb494b941b68873cd1cb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59b5ffbd1d9d968a9d0b7ee5b11cffb') in 0.009449 seconds
-  Import took 0.015929 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001927 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.885 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.1 MB.
-System memory in use after: 164.3 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4386.
-Total: 2.612900 ms (FindLiveObjects: 0.365100 ms CreateObjectMapping: 0.100000 ms MarkObjects: 2.125700 ms  DeleteObjects: 0.021300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 168.889361 seconds.
-  path: Assets/Sprites/FloorColored.png
-  artifactKey: Guid(2667e1e320873c14aa0f3a9214396f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/FloorColored.png using Guid(2667e1e320873c14aa0f3a9214396f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e5c60d11d0fcac74b967d888ce54fbd') in 0.074308 seconds
-  Import took 0.080465 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.676485 seconds.
-  path: Assets/Sprites/FloorColored.png
-  artifactKey: Guid(2667e1e320873c14aa0f3a9214396f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/FloorColored.png using Guid(2667e1e320873c14aa0f3a9214396f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4ebc8122af117eed3473acb88e59938') in 0.011387 seconds
-  Import took 0.017616 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.352486 seconds.
-  path: Assets/Sprites/FloorColored.png
-  artifactKey: Guid(2667e1e320873c14aa0f3a9214396f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/FloorColored.png using Guid(2667e1e320873c14aa0f3a9214396f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aed25c41bef1a1995938eae7a1b45481') in 0.015939 seconds
-  Import took 0.022074 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001995 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.910 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.1 MB.
-System memory in use after: 164.3 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4396.
-Total: 2.715900 ms (FindLiveObjects: 0.449000 ms CreateObjectMapping: 0.121400 ms MarkObjects: 2.126000 ms  DeleteObjects: 0.018600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002299 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.945 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.1 MB.
-System memory in use after: 164.3 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4400.
-Total: 2.690500 ms (FindLiveObjects: 0.443400 ms CreateObjectMapping: 0.094500 ms MarkObjects: 2.130500 ms  DeleteObjects: 0.020500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 355.032682 seconds.
-  path: Assets/Sprites/Envionrenment/House/Furnitures 1.png
-  artifactKey: Guid(36ea1a7caebe33147b9a38ed0b2df855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Furnitures 1.png using Guid(36ea1a7caebe33147b9a38ed0b2df855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90862c8a5e14b2e791e3186492185317') in 0.057935 seconds
-  Import took 0.064585 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.552911 seconds.
-  path: Assets/Sprites/Envionrenment/House/Furnitures.png
-  artifactKey: Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Furnitures.png using Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b88916efc631cc1673bc96b87976a80e') in 0.012132 seconds
-  Import took 0.018288 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.138298 seconds.
-  path: Assets/Sprites/Envionrenment/House/Furnitures.png
-  artifactKey: Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Furnitures.png using Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dc4248473135371e10dcd7b0b40a280') in 0.009188 seconds
-  Import took 0.014912 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.737626 seconds.
-  path: Assets/Sprites/Envionrenment/House/Furnitures.png
-  artifactKey: Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Furnitures.png using Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2891b08f3a2c23f746df0d88f6d757d') in 0.081655 seconds
-  Import took 0.087577 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001986 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.885 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.3 MB.
-System memory in use after: 164.5 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4495.
-Total: 2.815500 ms (FindLiveObjects: 0.565100 ms CreateObjectMapping: 0.094600 ms MarkObjects: 2.137400 ms  DeleteObjects: 0.017500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 334.311456 seconds.
-  path: Assets/Sprites/Envionrenment/House/Furnitures.png
-  artifactKey: Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Furnitures.png using Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83f9c0dccd41389bf503637c2512f90') in 0.097278 seconds
-  Import took 0.103805 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002224 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.902 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.3 MB.
-System memory in use after: 164.5 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4500.
-Total: 2.626100 ms (FindLiveObjects: 0.408700 ms CreateObjectMapping: 0.094700 ms MarkObjects: 2.104500 ms  DeleteObjects: 0.017300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 221.323759 seconds.
-  path: Assets/Sprites/Envionrenment/House/Furnitures.png
-  artifactKey: Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Envionrenment/House/Furnitures.png using Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b74e011f56f11fbcbd00a608a73acd2') in 0.109731 seconds
-  Import took 0.116200 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 417.141147 seconds.
-  path: Assets/Sprites/Frogs/ChildFroggyPortrait.png
-  artifactKey: Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/ChildFroggyPortrait.png using Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e06baa0e5e5cee07e6691a5cddcba29') in 0.011051 seconds
+  path: Assets/Sprites/Frogs
+  artifactKey: Guid(c85a88b2ced29a440817f1bd579fa4ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Frogs using Guid(c85a88b2ced29a440817f1bd579fa4ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49f5e85b95d3308d1cb51d755dde4acc') in 0.011001 seconds
   Import took 0.017209 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Sprites/Frogs/ElderFrogPortrait.png
-  artifactKey: Guid(80615286a0089974d98b133999900209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/ElderFrogPortrait.png using Guid(80615286a0089974d98b133999900209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bebb104cce9458af117f4ef73aed96c3') in 0.011133 seconds
-  Import took 0.016809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/Sprites/Frogs/LadyFrogPortrait.png
-  artifactKey: Guid(03079f0ce377b3d458778a1df7dfc491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/LadyFrogPortrait.png using Guid(03079f0ce377b3d458778a1df7dfc491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f92c09b1df3bdfe697ae80cfdb1a75e1') in 0.012412 seconds
-  Import took 0.019038 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/Sprites/Frogs/FairyFroggyPortrait.png
-  artifactKey: Guid(97efe1af350033543b6eb7fc8b9fa03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/FairyFroggyPortrait.png using Guid(97efe1af350033543b6eb7fc8b9fa03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a00c29e6da4283e2d3260f400baed3f') in 0.012304 seconds
-  Import took 0.018641 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/Sprites/Frogs/RedFroggyPortrait.png
-  artifactKey: Guid(3dd103e3e33f0dd41806ea11a395fd9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/RedFroggyPortrait.png using Guid(3dd103e3e33f0dd41806ea11a395fd9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab63d844f22051e07f2f8b7d85a23bc') in 0.011238 seconds
-  Import took 0.017204 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.317328 seconds.
-  path: Assets/Sprites/Frogs/ChildFroggyPortrait.png
-  artifactKey: Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/ChildFroggyPortrait.png using Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '231197dde331638de0c8fc04313e74d0') in 0.010690 seconds
-  Import took 0.017112 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.256065 seconds.
-  path: Assets/Sprites/Frogs/ChildFroggyPortrait.png
-  artifactKey: Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/ChildFroggyPortrait.png using Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '564d4562e41b077a99390502e9d7af02') in 0.011788 seconds
-  Import took 0.017705 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.764805 seconds.
-  path: Assets/Sprites/Frogs/ChildFroggyPortrait.png
-  artifactKey: Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/ChildFroggyPortrait.png using Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12a4af777dc7e98f139c53c0e8516292') in 0.006095 seconds
-  Import took 0.012081 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Sprites/Frogs/ElderFrogPortrait.png
-  artifactKey: Guid(80615286a0089974d98b133999900209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/ElderFrogPortrait.png using Guid(80615286a0089974d98b133999900209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd633752fa7d41efefd7eb26b06af626f') in 0.011260 seconds
-  Import took 0.017504 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Sprites/Frogs/LadyFrogPortrait.png
-  artifactKey: Guid(03079f0ce377b3d458778a1df7dfc491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/LadyFrogPortrait.png using Guid(03079f0ce377b3d458778a1df7dfc491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97d28a090c6bb0f77ccacd3eb9fee08b') in 0.009203 seconds
-  Import took 0.015474 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Sprites/Frogs/FairyFroggyPortrait.png
-  artifactKey: Guid(97efe1af350033543b6eb7fc8b9fa03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/FairyFroggyPortrait.png using Guid(97efe1af350033543b6eb7fc8b9fa03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7666a06777845acb9f092a7104dd1eae') in 0.010290 seconds
-  Import took 0.016214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/Sprites/Frogs/LadyFrogPortrait.png
-  artifactKey: Guid(03079f0ce377b3d458778a1df7dfc491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/LadyFrogPortrait.png using Guid(03079f0ce377b3d458778a1df7dfc491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97d28a090c6bb0f77ccacd3eb9fee08b') in 0.005202 seconds
-  Import took 0.010644 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/Sprites/Frogs/RedFroggyPortrait.png
-  artifactKey: Guid(3dd103e3e33f0dd41806ea11a395fd9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/RedFroggyPortrait.png using Guid(3dd103e3e33f0dd41806ea11a395fd9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87b835895afcd591bb4051d51f721399') in 0.008130 seconds
-  Import took 0.013602 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.651974 seconds.
-  path: Assets/Sprites/Frogs/ChildFroggyPortrait.png
-  artifactKey: Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/ChildFroggyPortrait.png using Guid(ed0300fe9d290e84e9cb1a08a1e974b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b60e720e4f0b35525c965185bb4d47c') in 0.010560 seconds
-  Import took 0.016630 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.784533 seconds.
-  path: Assets/Sprites/Frogs/ElderFrogPortrait.png
-  artifactKey: Guid(80615286a0089974d98b133999900209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/ElderFrogPortrait.png using Guid(80615286a0089974d98b133999900209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '092c3a919b1f920b9a9a020d14969086') in 0.011317 seconds
-  Import took 0.016958 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.670368 seconds.
-  path: Assets/Sprites/Frogs/FairyFroggyPortrait.png
-  artifactKey: Guid(97efe1af350033543b6eb7fc8b9fa03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/FairyFroggyPortrait.png using Guid(97efe1af350033543b6eb7fc8b9fa03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '432d7f7a9052c479a7d057f231881167') in 0.011376 seconds
-  Import took 0.017438 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.278986 seconds.
-  path: Assets/Sprites/Frogs/LadyFrogPortrait.png
-  artifactKey: Guid(03079f0ce377b3d458778a1df7dfc491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/LadyFrogPortrait.png using Guid(03079f0ce377b3d458778a1df7dfc491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de7f77d69c7135b6ebe66c0c81295f93') in 0.011786 seconds
-  Import took 0.017834 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.194330 seconds.
-  path: Assets/Sprites/Frogs/RedFroggyPortrait.png
-  artifactKey: Guid(3dd103e3e33f0dd41806ea11a395fd9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Frogs/RedFroggyPortrait.png using Guid(3dd103e3e33f0dd41806ea11a395fd9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7ff14cdb06a102f3f1e0e68a50f8114') in 0.011574 seconds
-  Import took 0.017573 seconds .
-
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001957 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.892 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.3 MB.
-System memory in use after: 164.6 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4505.
-Total: 2.677900 ms (FindLiveObjects: 0.407700 ms CreateObjectMapping: 0.097000 ms MarkObjects: 2.152200 ms  DeleteObjects: 0.019500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002087 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.900 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.3 MB.
-System memory in use after: 164.6 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4509.
-Total: 2.900500 ms (FindLiveObjects: 0.385400 ms CreateObjectMapping: 0.098100 ms MarkObjects: 2.396600 ms  DeleteObjects: 0.019000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 143.986281 seconds.
-  path: Assets/Sprites/SoldierBoy.png
-  artifactKey: Guid(3cc86ae7e94942b48b88c35b449cca33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/SoldierBoy.png using Guid(3cc86ae7e94942b48b88c35b449cca33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c89e338632d0d5ae66b67e1390da5d8c') in 0.056832 seconds
-  Import took 0.062670 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001934 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.883 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.3 MB.
-System memory in use after: 164.6 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4515.
-Total: 3.263300 ms (FindLiveObjects: 0.588500 ms CreateObjectMapping: 0.130500 ms MarkObjects: 2.517000 ms  DeleteObjects: 0.025800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002735 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.884 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.3 MB.
-System memory in use after: 164.6 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4519.
-Total: 2.683000 ms (FindLiveObjects: 0.401100 ms CreateObjectMapping: 0.108500 ms MarkObjects: 2.152300 ms  DeleteObjects: 0.020100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002085 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.870 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.4 MB.
-System memory in use after: 164.6 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4523.
-Total: 3.572400 ms (FindLiveObjects: 0.540100 ms CreateObjectMapping: 0.097900 ms MarkObjects: 2.912300 ms  DeleteObjects: 0.020100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 781.494001 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Animated.prefab
-  artifactKey: Guid(75a72d6ac5c20374f9f9ca489cd2d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Animated.prefab using Guid(75a72d6ac5c20374f9f9ca489cd2d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8eda813e45143249177d50331293d2b') in 0.024741 seconds
-  Import took 0.032447 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Poppy_2.asset
-  artifactKey: Guid(e955345721b907b4ea0126764d299a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Poppy_2.asset using Guid(e955345721b907b4ea0126764d299a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f08898ac628f3a317779c092a921289') in 0.024863 seconds
-  Import took 0.030217 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000248 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Poppy_0.asset
-  artifactKey: Guid(3407d3caf4058094199529c1e6de5ded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Poppy_0.asset using Guid(3407d3caf4058094199529c1e6de5ded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc097d99f421c0a93834c42b862e8f04') in 0.009256 seconds
-  Import took 0.014576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Poppy_3.asset
-  artifactKey: Guid(7077a1e9047cb0944be5a72bf8e63e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Poppy_3.asset using Guid(7077a1e9047cb0944be5a72bf8e63e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac56942db3670aa6df51f76d4a858e6') in 0.009322 seconds
-  Import took 0.014921 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Poppy_1.asset
-  artifactKey: Guid(2581b7523b15b7a43a4ed49b3fab4e2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Poppy_1.asset using Guid(2581b7523b15b7a43a4ed49b3fab4e2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e3b1023f9c16d700c1bdd074fbe7f8c') in 0.009475 seconds
-  Import took 0.015568 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.044323 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_0.asset
-  artifactKey: Guid(c56b99280e00885449983556eba35628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_0.asset using Guid(c56b99280e00885449983556eba35628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03af77125319d6a05ee0bfc7ece22d5b') in 0.016934 seconds
-  Import took 0.022901 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_49.asset
-  artifactKey: Guid(c0d77ea78d22a644cb79b71f6d98b83c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_49.asset using Guid(c0d77ea78d22a644cb79b71f6d98b83c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '051e4ecb70995f7a4e0bfcc7d4ee7cfe') in 0.010238 seconds
-  Import took 0.016150 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_62.asset
-  artifactKey: Guid(b66a2089379b8ad41a120e7bde000d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_62.asset using Guid(b66a2089379b8ad41a120e7bde000d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64e7c625f0b1baa44e08505da9093a58') in 0.011734 seconds
-  Import took 0.017577 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_47.asset
-  artifactKey: Guid(d742ba3cbbe71ce43b77f100679bb699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_47.asset using Guid(d742ba3cbbe71ce43b77f100679bb699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a537afff8fa8c893adedeaab35211d4') in 0.010425 seconds
-  Import took 0.017294 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_24.asset
-  artifactKey: Guid(a8429351829593846983e1c0e1dff458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_24.asset using Guid(a8429351829593846983e1c0e1dff458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a912b84790d3db9bda7791901f1c4c5') in 0.011978 seconds
-  Import took 0.018197 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_51.asset
-  artifactKey: Guid(29fede600dd867b47b69a1aa060e730a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_51.asset using Guid(29fede600dd867b47b69a1aa060e730a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2400fce6a075bca6eb8a7d03e78167a2') in 0.009869 seconds
-  Import took 0.015590 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_33.asset
-  artifactKey: Guid(b371a8d435ac922478f7789c2cd4e0db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_33.asset using Guid(b371a8d435ac922478f7789c2cd4e0db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e834ce9b7597aea03f277d5e0cd988d') in 0.010643 seconds
-  Import took 0.015854 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000209 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_48.asset
-  artifactKey: Guid(54e55af4527249146bf743c484660c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_48.asset using Guid(54e55af4527249146bf743c484660c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0181cbf57dfc4ce6be04d8343c1a7cd0') in 0.010079 seconds
-  Import took 0.015840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_22.asset
-  artifactKey: Guid(e8100c40fb30e984bb1944095efc2871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_22.asset using Guid(e8100c40fb30e984bb1944095efc2871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e6349b447d41cc6d161f3edb1b19d26') in 0.010361 seconds
-  Import took 0.016505 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_11.asset
-  artifactKey: Guid(7d44ddb277f1bf84594eb78dfbeacbf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_11.asset using Guid(7d44ddb277f1bf84594eb78dfbeacbf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2b21f309c10189563ba2e99ab24be6') in 0.010920 seconds
-  Import took 0.016658 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_6.asset
-  artifactKey: Guid(1d6cc03ec8a284a4f9348d2aa31ae462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_6.asset using Guid(1d6cc03ec8a284a4f9348d2aa31ae462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd494819de2361bc29b85297369246887') in 0.010181 seconds
-  Import took 0.016248 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_35.asset
-  artifactKey: Guid(f94acd780e4f0f44e9f5ad28d6cce29f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_35.asset using Guid(f94acd780e4f0f44e9f5ad28d6cce29f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db069a230e1b5cad14972303d1f22b74') in 0.010267 seconds
-  Import took 0.015981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000173 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_38.asset
-  artifactKey: Guid(e9e4cdb11bc00a54bb138653af6c6f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_38.asset using Guid(e9e4cdb11bc00a54bb138653af6c6f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd1e5eba210bf242f9ce7919f524b73') in 0.011173 seconds
-  Import took 0.016760 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_46.asset
-  artifactKey: Guid(1705586ccf7f7f645b5df4305c5008f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_46.asset using Guid(1705586ccf7f7f645b5df4305c5008f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77551286c3328e5f5df978e36ba4e8fd') in 0.010581 seconds
-  Import took 0.016536 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_50.asset
-  artifactKey: Guid(fa5e7750fbbdaf448b5eec32d2fd374b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_50.asset using Guid(fa5e7750fbbdaf448b5eec32d2fd374b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07067a6f8b2c171fcaf08e5d9c52edf') in 0.010463 seconds
-  Import took 0.016050 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_52.asset
-  artifactKey: Guid(686a59ad98a954b44ad324ba9eef4e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_52.asset using Guid(686a59ad98a954b44ad324ba9eef4e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0225e5f576209cd3fda52d40472ea718') in 0.010694 seconds
-  Import took 0.016039 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_26.asset
-  artifactKey: Guid(966f03487a506824d9d1d6658f3399a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_26.asset using Guid(966f03487a506824d9d1d6658f3399a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28bad819ef62b7a5f4fbfd68b6cc8d8e') in 0.012520 seconds
-  Import took 0.018750 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_5.asset
-  artifactKey: Guid(efeae0dfcc371f4409ce55ab70925574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_5.asset using Guid(efeae0dfcc371f4409ce55ab70925574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f317a12fd5d3bf53773b37a64a3b26f2') in 0.010000 seconds
-  Import took 0.016144 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000227 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_20.asset
-  artifactKey: Guid(83515220016fe554ab01cca8c8e2aca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_20.asset using Guid(83515220016fe554ab01cca8c8e2aca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc639e0340a1094b87eed2b26acf7702') in 0.010584 seconds
-  Import took 0.016131 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_18.asset
-  artifactKey: Guid(8b871cdac05cdfb4b955d843ed9f0492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_18.asset using Guid(8b871cdac05cdfb4b955d843ed9f0492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba9c41eacdbcb8498ec0de232362c6e6') in 0.009329 seconds
-  Import took 0.015316 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_8.asset
-  artifactKey: Guid(72e7b72c78c524f4994fae97429db512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_8.asset using Guid(72e7b72c78c524f4994fae97429db512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c709c4b47c08df7709e3230566952ab6') in 0.010517 seconds
-  Import took 0.016499 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_56.asset
-  artifactKey: Guid(2d5ae7ff6bd1640498fa26ad4e725b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_56.asset using Guid(2d5ae7ff6bd1640498fa26ad4e725b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211e95efbc13a222541327c39db3cf52') in 0.010510 seconds
-  Import took 0.017755 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_68.asset
-  artifactKey: Guid(bdbe5f566fd1729469c04102b986fb8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_68.asset using Guid(bdbe5f566fd1729469c04102b986fb8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c79d8353a950b0bcae2d639386ba407') in 0.010845 seconds
-  Import took 0.016079 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_15.asset
-  artifactKey: Guid(ffa497e3db389cd458720584f5d08839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_15.asset using Guid(ffa497e3db389cd458720584f5d08839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92df99aa1dbd045fe617d2e9e15e1572') in 0.010571 seconds
-  Import took 0.015960 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_57.asset
-  artifactKey: Guid(93cac57bfddb019458c39e35bedf4454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_57.asset using Guid(93cac57bfddb019458c39e35bedf4454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e70dc13ca3d89bc5f6075d4cbf51c8a6') in 0.011463 seconds
-  Import took 0.017380 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_61.asset
-  artifactKey: Guid(6ac52abd0bd70a64881cc15744d87f33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_61.asset using Guid(6ac52abd0bd70a64881cc15744d87f33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40128bd39e12b851fef1802fd1871d88') in 0.010920 seconds
-  Import took 0.016247 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_30.asset
-  artifactKey: Guid(189dfcfda35484a4d9013e197d06259e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_30.asset using Guid(189dfcfda35484a4d9013e197d06259e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1a49322a0afbf4c41871743f014713d') in 0.010200 seconds
-  Import took 0.016245 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_27.asset
-  artifactKey: Guid(0177a1caca9daec42930d4e646634b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_27.asset using Guid(0177a1caca9daec42930d4e646634b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a5fbcb9c8fff16cc26739800340d52') in 0.009686 seconds
-  Import took 0.015643 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_12.asset
-  artifactKey: Guid(d86be61cb70924e4a9fc6f2cb11cac14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_12.asset using Guid(d86be61cb70924e4a9fc6f2cb11cac14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c4d07418f4177179ff9650918eb2f85') in 0.010589 seconds
-  Import took 0.015897 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_29.asset
-  artifactKey: Guid(b5340498fbf1f7443a0e88331e3d9513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_29.asset using Guid(b5340498fbf1f7443a0e88331e3d9513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc0f5e74473bdf52b7f3bf417ac9d7e8') in 0.010267 seconds
-  Import took 0.015788 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_16.asset
-  artifactKey: Guid(82eba0e3163e9e644becd0e749a02333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_16.asset using Guid(82eba0e3163e9e644becd0e749a02333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f39abff968b7459ed1c3d610ebeca412') in 0.010816 seconds
-  Import took 0.015791 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_2.asset
-  artifactKey: Guid(a11aa6b5f6ddefb4aa6f531378e9ad4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_2.asset using Guid(a11aa6b5f6ddefb4aa6f531378e9ad4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '159678d1a2ecdf299befb2dafb2a1694') in 0.010579 seconds
-  Import took 0.015978 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_21.asset
-  artifactKey: Guid(b3401dda52f7b9f40bfc70441d80077f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_21.asset using Guid(b3401dda52f7b9f40bfc70441d80077f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c4bc9e14ddef1c0583b0c22afc93080') in 0.010663 seconds
-  Import took 0.016292 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000173 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_32.asset
-  artifactKey: Guid(64beef78bc27c574eb03517093b841b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_32.asset using Guid(64beef78bc27c574eb03517093b841b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fa32822950f9c44cf196e48e34a854c') in 0.011059 seconds
-  Import took 0.016286 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_53.asset
-  artifactKey: Guid(f20888123fbb6aa44b92ec7a7726d37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_53.asset using Guid(f20888123fbb6aa44b92ec7a7726d37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f56a1fffaad08ecd02bde5ed71290825') in 0.011487 seconds
-  Import took 0.017200 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_58.asset
-  artifactKey: Guid(98f5665d3c72ad54ebd794ff2e9a11b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_58.asset using Guid(98f5665d3c72ad54ebd794ff2e9a11b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '714afad913318bbe6bf8e089677a7e1c') in 0.009395 seconds
-  Import took 0.015032 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000153 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_43.asset
-  artifactKey: Guid(47370a270ea0ae843acfbe1a8aa7ec5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_43.asset using Guid(47370a270ea0ae843acfbe1a8aa7ec5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8b9a1997b40a737cbe838b008028262') in 0.010655 seconds
-  Import took 0.015377 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_45.asset
-  artifactKey: Guid(bdba6b39c021422429e7a1172a73875a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_45.asset using Guid(bdba6b39c021422429e7a1172a73875a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09c784e988295b787c67f90bf2b9d22') in 0.009735 seconds
-  Import took 0.025719 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_65.asset
-  artifactKey: Guid(c89ac58941948d3499e28ddbcc657a73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_65.asset using Guid(c89ac58941948d3499e28ddbcc657a73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c32f36d00a8eff9eb6be2dd64d401588') in 0.010316 seconds
-  Import took 0.015900 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_59.asset
-  artifactKey: Guid(d1269cbe5bfed0c419f2898f395275fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_59.asset using Guid(d1269cbe5bfed0c419f2898f395275fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f64f460033fa41526572e2a73d6e589c') in 0.010165 seconds
-  Import took 0.016179 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_63.asset
-  artifactKey: Guid(69629226fe80ecc499fa8cc4a4c96f37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_63.asset using Guid(69629226fe80ecc499fa8cc4a4c96f37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ad331c671b2d780516e96b444801da8') in 0.009449 seconds
-  Import took 0.015081 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_64.asset
-  artifactKey: Guid(2f7080aeb9dec4a43b642207b599179f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_64.asset using Guid(2f7080aeb9dec4a43b642207b599179f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9986ad2084df885766c10c12289a5f31') in 0.010593 seconds
-  Import took 0.016011 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_55.asset
-  artifactKey: Guid(49c4d048d5bc41e43a8bf66cc8a6b2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_55.asset using Guid(49c4d048d5bc41e43a8bf66cc8a6b2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '698f4feaa8030f2b677d0bb831ee6e08') in 0.010844 seconds
-  Import took 0.016804 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_4.asset
-  artifactKey: Guid(04e3e812a65e6c34eb9dc6263b444599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_4.asset using Guid(04e3e812a65e6c34eb9dc6263b444599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9f938571ba6761a9d7ebe466b51f75') in 0.010811 seconds
-  Import took 0.017078 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_67.asset
-  artifactKey: Guid(e5b155a2c6dc124459bfeef562dc6aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_67.asset using Guid(e5b155a2c6dc124459bfeef562dc6aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da369d236871d092520d03531a33a35') in 0.010311 seconds
-  Import took 0.016435 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_60.asset
-  artifactKey: Guid(36e6449c796547c49b0df258ec635c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_60.asset using Guid(36e6449c796547c49b0df258ec635c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a265305caf4cdc5fe624a59a3a90011') in 0.010290 seconds
-  Import took 0.015716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_36.asset
-  artifactKey: Guid(bc4323f5f2fcb274a893d47875365079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_36.asset using Guid(bc4323f5f2fcb274a893d47875365079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7cf361b7a07e06ecd6c47a276e05da4') in 0.009886 seconds
-  Import took 0.016412 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_7.asset
-  artifactKey: Guid(dfb09ae81f20aee47b07f336ea3c3448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_7.asset using Guid(dfb09ae81f20aee47b07f336ea3c3448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd246370fa37612e0dbfe050c7696bdb9') in 0.010061 seconds
-  Import took 0.015704 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_9.asset
-  artifactKey: Guid(25f2a73f5813772459dddf2f07898a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_9.asset using Guid(25f2a73f5813772459dddf2f07898a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2756748967b03710b52fac7ae572f115') in 0.011060 seconds
-  Import took 0.017016 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000171 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_28.asset
-  artifactKey: Guid(dbf6ed48a71d15a4793830f28cf1976d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_28.asset using Guid(dbf6ed48a71d15a4793830f28cf1976d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27a9b20649f1b1a70680093539d6ab7c') in 0.009353 seconds
-  Import took 0.014452 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_3.asset
-  artifactKey: Guid(3da70bc04cd0efb4aba3a9c6ff336227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_3.asset using Guid(3da70bc04cd0efb4aba3a9c6ff336227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93a2d68cbaff0663a70593866b69a937') in 0.009862 seconds
-  Import took 0.014931 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_19.asset
-  artifactKey: Guid(3930104393199984584e8775dafaafbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_19.asset using Guid(3930104393199984584e8775dafaafbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ff049bdaac619cf21c19f4286ce708') in 0.011149 seconds
-  Import took 0.016454 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000188 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_14.asset
-  artifactKey: Guid(bde24a57e3965a748bf789e285660416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_14.asset using Guid(bde24a57e3965a748bf789e285660416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2d085d70435fc9ee431c189241f87a1') in 0.009943 seconds
-  Import took 0.015388 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000130 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_37.asset
-  artifactKey: Guid(936ef19571fae6b4d98bfdb3ccb70f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_37.asset using Guid(936ef19571fae6b4d98bfdb3ccb70f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fafc280f5ace886f11e6221ea86c7e0a') in 0.010849 seconds
-  Import took 0.015942 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_34.asset
-  artifactKey: Guid(9f439362fd54dc44e9ef3e25dd0ce9b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_34.asset using Guid(9f439362fd54dc44e9ef3e25dd0ce9b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e782fac9752fdd0aeb33df4a7c70bca') in 0.010331 seconds
-  Import took 0.015853 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_23.asset
-  artifactKey: Guid(0918fbe238553b549a35bbdaaddde9b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_23.asset using Guid(0918fbe238553b549a35bbdaaddde9b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d03528b9318237960f76e19066b34bd') in 0.010864 seconds
-  Import took 0.016616 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000163 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_1.asset
-  artifactKey: Guid(2877c21b4418ac348beeed5adb076d71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_1.asset using Guid(2877c21b4418ac348beeed5adb076d71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c98b5657c467e95c04408f782a47ba21') in 0.010343 seconds
-  Import took 0.016021 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_10.asset
-  artifactKey: Guid(ffbd0dad8d8791348a2edc10761f8089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_10.asset using Guid(ffbd0dad8d8791348a2edc10761f8089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17944d58dfa4c09ff8ab1ed789c80cea') in 0.010877 seconds
-  Import took 0.016684 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_54.asset
-  artifactKey: Guid(59be8720ace6e464baf99159b4059589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_54.asset using Guid(59be8720ace6e464baf99159b4059589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd13221f7456a21c5b03608dc1e0ff8d0') in 0.011042 seconds
-  Import took 0.016598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_10.asset
-  artifactKey: Guid(ffbd0dad8d8791348a2edc10761f8089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_10.asset using Guid(ffbd0dad8d8791348a2edc10761f8089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17944d58dfa4c09ff8ab1ed789c80cea') in 0.007380 seconds
-  Import took 0.012695 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_40.asset
-  artifactKey: Guid(d49f407abbcf7a14dbbf83417ca1332e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_40.asset using Guid(d49f407abbcf7a14dbbf83417ca1332e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99099916c551809df6530c65cb6010df') in 0.010560 seconds
-  Import took 0.016241 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_41.asset
-  artifactKey: Guid(2745ca481d6addc4f89b92f9d237d243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_41.asset using Guid(2745ca481d6addc4f89b92f9d237d243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe5acf914bdc4c80c4f572feb36e3404') in 0.010171 seconds
-  Import took 0.015382 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_31.asset
-  artifactKey: Guid(cb4bbf206ea88984292dd3d2b7e89d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_31.asset using Guid(cb4bbf206ea88984292dd3d2b7e89d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e53c690256e50109bbf678d7e992f22') in 0.010806 seconds
-  Import took 0.015854 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_13.asset
-  artifactKey: Guid(9759f1707cd09c24f9e8aded9fbe49cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_13.asset using Guid(9759f1707cd09c24f9e8aded9fbe49cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd538709aff7c485d2ff6bb83d92411a') in 0.010806 seconds
-  Import took 0.016170 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_66.asset
-  artifactKey: Guid(c84cba42bc3fbd24681b5e2d68353d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_66.asset using Guid(c84cba42bc3fbd24681b5e2d68353d31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0207b5dda6b150b16a414e712197869e') in 0.010128 seconds
-  Import took 0.015829 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_25.asset
-  artifactKey: Guid(08c8efd7cf9edf34faa00a5208454761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_25.asset using Guid(08c8efd7cf9edf34faa00a5208454761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '848fe53cdd12f0b8a483dded795bdbb3') in 0.011249 seconds
-  Import took 0.016299 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_17.asset
-  artifactKey: Guid(f113bc0cc048cb94dbfafe4883e59eb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_17.asset using Guid(f113bc0cc048cb94dbfafe4883e59eb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d981b2c8fd28983c21e61e2f308ac7f') in 0.010549 seconds
-  Import took 0.015925 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_39.asset
-  artifactKey: Guid(e64bba4cdf5367f46b57a66d436fe2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_39.asset using Guid(e64bba4cdf5367f46b57a66d436fe2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa5b9bf82f518f0482a82076f0d61c8d') in 0.010312 seconds
-  Import took 0.015809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_44.asset
-  artifactKey: Guid(b1914d699051e4a4090637450476485a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_44.asset using Guid(b1914d699051e4a4090637450476485a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3faec4601cfc372aa3801ae7fd717f2') in 0.009902 seconds
-  Import took 0.015842 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_42.asset
-  artifactKey: Guid(bc294997ad02ae647ac9758130da459e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass/hyptosis_tile-art-batch-1_42.asset using Guid(bc294997ad02ae647ac9758130da459e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40133061368348d4d026ffd647b7caf6') in 0.011164 seconds
-  Import took 0.016639 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.455610 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Animated.prefab
-  artifactKey: Guid(75a72d6ac5c20374f9f9ca489cd2d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Animated.prefab using Guid(75a72d6ac5c20374f9f9ca489cd2d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd56d9ad6f739bef962e656f813f6e68f') in 0.003440 seconds
-  Import took 0.008977 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.377847 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Animated.prefab
-  artifactKey: Guid(75a72d6ac5c20374f9f9ca489cd2d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Animated.prefab using Guid(75a72d6ac5c20374f9f9ca489cd2d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ad585d5045c5c5ba97e97c1cc182744') in 0.003235 seconds
-  Import took 0.008964 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001915 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.911 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.8 MB.
-System memory in use after: 165.1 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4529.
-Total: 2.816300 ms (FindLiveObjects: 0.357400 ms CreateObjectMapping: 0.094500 ms MarkObjects: 2.346100 ms  DeleteObjects: 0.017400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 99.282759 seconds.
-  path: Assets/Sprites/Gate.png
-  artifactKey: Guid(3831776aaefbec741850b010de9ca1dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Gate.png using Guid(3831776aaefbec741850b010de9ca1dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7a03558fd90d2d8a0f43c2138bdfaa') in 0.050887 seconds
-  Import took 0.057280 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 55.391664 seconds.
-  path: Assets/Sprites/Gate.png
-  artifactKey: Guid(3831776aaefbec741850b010de9ca1dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Gate.png using Guid(3831776aaefbec741850b010de9ca1dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf340f271f27eaeffb5f916ae5462db2') in 0.013497 seconds
-  Import took 0.019209 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001918 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.896 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.9 MB.
-System memory in use after: 165.1 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4539.
-Total: 2.698300 ms (FindLiveObjects: 0.387300 ms CreateObjectMapping: 0.094900 ms MarkObjects: 2.197300 ms  DeleteObjects: 0.017600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 191.952781 seconds.
-  path: Assets/TESTING MATERIAL/SpritesSets/Ass
-  artifactKey: Guid(a8101aea6bc641b4fb2420efe07deba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/SpritesSets/Ass using Guid(a8101aea6bc641b4fb2420efe07deba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '680b37bd031a2a6c578b226eb40bd00e') in 0.010970 seconds
-  Import took 0.016971 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.503457 seconds.
-  path: Assets/TESTING MATERIAL/PondFishTile.asset
-  artifactKey: Guid(b42cc9aecb73a0b4ea423c429e9e5910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/PondFishTile.asset using Guid(b42cc9aecb73a0b4ea423c429e9e5910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fcf678239afc8d76bbd174ad7884ac0') in 0.014111 seconds
-  Import took 0.020000 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001925 seconds.
+Registered in 0.002042 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.895 seconds
+- Completed reload, in  0.917 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.9 MB.
-System memory in use after: 165.1 MB.
+System memory in use before: 158.6 MB.
+System memory in use after: 158.8 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4543.
-Total: 2.632700 ms (FindLiveObjects: 0.415900 ms CreateObjectMapping: 0.095200 ms MarkObjects: 2.105600 ms  DeleteObjects: 0.015000 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4277.
+Total: 2.803700 ms (FindLiveObjects: 0.477400 ms CreateObjectMapping: 0.221700 ms MarkObjects: 2.082300 ms  DeleteObjects: 0.021400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001976 seconds.
+Registered in 0.001955 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.884 seconds
+- Completed reload, in  0.865 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 164.9 MB.
-System memory in use after: 165.1 MB.
+System memory in use before: 158.7 MB.
+System memory in use after: 158.9 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4547.
-Total: 2.591400 ms (FindLiveObjects: 0.363200 ms CreateObjectMapping: 0.093900 ms MarkObjects: 2.116800 ms  DeleteObjects: 0.016100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 51.453810 seconds.
-  path: Assets/TESTING MATERIAL/PondFishTile.asset
-  artifactKey: Guid(b42cc9aecb73a0b4ea423c429e9e5910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/PondFishTile.asset using Guid(b42cc9aecb73a0b4ea423c429e9e5910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '509c86b47866c1b5e53712bb026cf262') in 0.013648 seconds
-  Import took 0.019487 seconds .
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4281.
+Total: 2.431600 ms (FindLiveObjects: 0.385900 ms CreateObjectMapping: 0.090000 ms MarkObjects: 1.935000 ms  DeleteObjects: 0.019800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.050653 seconds.
-  path: Assets/TESTING MATERIAL/Poppy_0.controller
-  artifactKey: Guid(10653c267c560c544805817e50c906f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/Poppy_0.controller using Guid(10653c267c560c544805817e50c906f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2004f249a4bffe9621c322ee7e4e45fb') in 0.007485 seconds
-  Import took 0.013265 seconds .
+  Time since last request: 7586.657022 seconds.
+  path: Assets/Sprites/Envionrenment/House/Furnitures.png
+  artifactKey: Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Envionrenment/House/Furnitures.png using Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6e9fb510fc791f7438f1256bcc9a18e') in 0.375810 seconds
+  Import took 0.470276 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.689304 seconds.
-  path: Assets/TESTING MATERIAL/DownLeftIdle_Anim.anim
-  artifactKey: Guid(96773f89b60038f498eea4240d01a42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/DownLeftIdle_Anim.anim using Guid(96773f89b60038f498eea4240d01a42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ef08049fbf0671e96f927240cbd69b6') in 0.009691 seconds
-  Import took 0.015595 seconds .
+  Time since last request: 17.424843 seconds.
+  path: Assets/Sprites/Envionrenment/House/Furnitures.png
+  artifactKey: Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Envionrenment/House/Furnitures.png using Guid(46d9c23ccb48a164b825dd59fa8716c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a0ae6f01b7962f667c976752597c492') in 0.052975 seconds
+  Import took 0.058730 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002436 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.934 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3658 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.8 MB.
+System memory in use after: 162.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4382.
+Total: 2.606800 ms (FindLiveObjects: 0.399300 ms CreateObjectMapping: 0.091800 ms MarkObjects: 2.095000 ms  DeleteObjects: 0.018700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.003749 seconds.
-  path: Assets/TESTING MATERIAL/DownLeftIdle_Anim.anim
-  artifactKey: Guid(96773f89b60038f498eea4240d01a42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/DownLeftIdle_Anim.anim using Guid(96773f89b60038f498eea4240d01a42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ef08049fbf0671e96f927240cbd69b6') in 0.003153 seconds
-  Import took 0.008404 seconds .
+  Time since last request: 765.307094 seconds.
+  path: Assets/Scripts/SetenceSwapperGate.cs
+  artifactKey: Guid(3d4f683a73f2cb64c8332699f5818060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SetenceSwapperGate.cs using Guid(3d4f683a73f2cb64c8332699f5818060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfff11bc16588072732fc8ee9d57ce6f') in 0.015564 seconds
+  Import took 0.022061 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001949 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.867 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.8 MB.
+System memory in use after: 162.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4387.
+Total: 3.662800 ms (FindLiveObjects: 0.574200 ms CreateObjectMapping: 0.133900 ms MarkObjects: 2.925400 ms  DeleteObjects: 0.028000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.826785 seconds.
-  path: Assets/TESTING MATERIAL/WalkDown_Anim.anim
-  artifactKey: Guid(9015cb91fb09bb84ea1b4c4a2b99918d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/WalkDown_Anim.anim using Guid(9015cb91fb09bb84ea1b4c4a2b99918d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a434f8a35cf35fe85bd7642f51419bc') in 0.008074 seconds
-  Import took 0.015396 seconds .
+  Time since last request: 430.794969 seconds.
+  path: Assets/Scripts/SetenceSwapperGate.cs
+  artifactKey: Guid(3d4f683a73f2cb64c8332699f5818060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SetenceSwapperGate.cs using Guid(3d4f683a73f2cb64c8332699f5818060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e4c5b74f89116dcbb927769df25679e') in 0.006620 seconds
+  Import took 0.012545 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.005075 seconds.
-  path: Assets/TESTING MATERIAL/WalkDown_Anim.anim
-  artifactKey: Guid(9015cb91fb09bb84ea1b4c4a2b99918d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/WalkDown_Anim.anim using Guid(9015cb91fb09bb84ea1b4c4a2b99918d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a434f8a35cf35fe85bd7642f51419bc') in 0.002819 seconds
-  Import took 0.008135 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002028 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.008 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.8 MB.
+System memory in use after: 162.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4391.
+Total: 2.635800 ms (FindLiveObjects: 0.415200 ms CreateObjectMapping: 0.101000 ms MarkObjects: 2.103400 ms  DeleteObjects: 0.015100 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 1.341646 seconds.
-  path: Assets/TESTING MATERIAL/UpRightIdle_Anim.anim
-  artifactKey: Guid(6fc7ae43686fba84696e7f008dbc3630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/UpRightIdle_Anim.anim using Guid(6fc7ae43686fba84696e7f008dbc3630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87bb47e82ea5237530dca7cdc2e64c7') in 0.010115 seconds
-  Import took 0.016069 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001978 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 162.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4395.
+Total: 3.441300 ms (FindLiveObjects: 0.613500 ms CreateObjectMapping: 0.122800 ms MarkObjects: 2.683600 ms  DeleteObjects: 0.020400 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000656 seconds.
-  path: Assets/TESTING MATERIAL/UpRightIdle_Anim.anim
-  artifactKey: Guid(6fc7ae43686fba84696e7f008dbc3630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/UpRightIdle_Anim.anim using Guid(6fc7ae43686fba84696e7f008dbc3630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87bb47e82ea5237530dca7cdc2e64c7') in 0.002587 seconds
-  Import took 0.006958 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002122 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.905 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 162.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4399.
+Total: 2.833000 ms (FindLiveObjects: 0.396100 ms CreateObjectMapping: 0.094500 ms MarkObjects: 2.322300 ms  DeleteObjects: 0.018900 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 1.335359 seconds.
-  path: Assets/TESTING MATERIAL/UpLeftIdle_Anim.anim
-  artifactKey: Guid(04c23475d65214b409a4ca95653db348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/UpLeftIdle_Anim.anim using Guid(04c23475d65214b409a4ca95653db348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a07f4eaec8dc0d0b1ad1d3911dcaaff1') in 0.007924 seconds
-  Import took 0.014181 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002010 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 162.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4403.
+Total: 3.127400 ms (FindLiveObjects: 0.558100 ms CreateObjectMapping: 0.210400 ms MarkObjects: 2.340700 ms  DeleteObjects: 0.017000 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.002446 seconds.
-  path: Assets/TESTING MATERIAL/UpLeftIdle_Anim.anim
-  artifactKey: Guid(04c23475d65214b409a4ca95653db348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/UpLeftIdle_Anim.anim using Guid(04c23475d65214b409a4ca95653db348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a07f4eaec8dc0d0b1ad1d3911dcaaff1') in 0.002851 seconds
-  Import took 0.007845 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002278 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.925 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 162.1 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4407.
+Total: 4.496700 ms (FindLiveObjects: 0.640700 ms CreateObjectMapping: 0.169100 ms MarkObjects: 3.664500 ms  DeleteObjects: 0.020900 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 7.101065 seconds.
-  path: Assets/TESTING MATERIAL/Poppy.anim
-  artifactKey: Guid(64cd0e62bfb473941b4dc975ee3905a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/Poppy.anim using Guid(64cd0e62bfb473941b4dc975ee3905a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a31a0963352a99a2b5b2404b0ca5c893') in 0.007562 seconds
-  Import took 0.013590 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002187 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.883 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 162.2 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4411.
+Total: 2.534300 ms (FindLiveObjects: 0.374500 ms CreateObjectMapping: 0.093200 ms MarkObjects: 2.049800 ms  DeleteObjects: 0.015700 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.004107 seconds.
-  path: Assets/TESTING MATERIAL/Poppy.anim
-  artifactKey: Guid(64cd0e62bfb473941b4dc975ee3905a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/Poppy.anim using Guid(64cd0e62bfb473941b4dc975ee3905a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a31a0963352a99a2b5b2404b0ca5c893') in 0.002698 seconds
-  Import took 0.007806 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001958 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.850 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 162.2 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 2.089540 seconds.
-  path: Assets/TESTING MATERIAL/DownRightIdle_Anim.anim
-  artifactKey: Guid(27428b0bc58c4ba49b1db0f2b998d064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/DownRightIdle_Anim.anim using Guid(27428b0bc58c4ba49b1db0f2b998d064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1bd4c205eb54438f2eb5bec0d78e51b') in 0.007905 seconds
-  Import took 0.013927 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004879 seconds.
-  path: Assets/TESTING MATERIAL/DownRightIdle_Anim.anim
-  artifactKey: Guid(27428b0bc58c4ba49b1db0f2b998d064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TESTING MATERIAL/DownRightIdle_Anim.anim using Guid(27428b0bc58c4ba49b1db0f2b998d064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1bd4c205eb54438f2eb5bec0d78e51b') in 0.002964 seconds
-  Import took 0.008255 seconds .
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4415.
+Total: 2.565800 ms (FindLiveObjects: 0.459200 ms CreateObjectMapping: 0.099800 ms MarkObjects: 1.991200 ms  DeleteObjects: 0.014600 ms)
 

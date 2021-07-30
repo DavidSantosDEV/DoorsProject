@@ -55,7 +55,6 @@ public class ColActivatorWeapon : ColActivator
             Activate();
         }
 
-        //ChangeDiag();
     }
 
     private void ChangeDiag()

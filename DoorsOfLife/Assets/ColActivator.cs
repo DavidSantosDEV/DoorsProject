@@ -8,10 +8,12 @@ public class ColActivator : MonoBehaviour
     [SerializeField]
     protected string tagP = "Player";
 
+    [SerializeField]
     protected IInteractibleBase mydiagInteract;
 
     private void Awake()
     {
+        if(!mydiagInteract)
         mydiagInteract = GetComponent<IInteractibleBase>();
     }
 

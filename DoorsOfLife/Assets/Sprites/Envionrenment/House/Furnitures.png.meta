@@ -799,10 +799,10 @@ TextureImporter:
       name: Furnitures_26
       rect:
         serializedVersion: 2
-        x: 376
-        y: 115
+        x: 373
+        y: 120
         width: 68
-        height: 57
+        height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

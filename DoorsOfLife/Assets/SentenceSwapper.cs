@@ -11,18 +11,25 @@ public class DialogueData //Weird unity doesnt allow twodimensional arrays to be
 public class SentenceSwapper : MonoBehaviour
 {
     [SerializeField]
-    private bool returnOriginal = true;
+    protected bool returnOriginal = true;
 
     [SerializeField]
-    private DialogueData[] newOnes;
+    protected DialogueData[] newOnes;
 
     [SerializeField]
-    private InteractDialogue objectOfSwap;
+    protected InteractDialogue objectOfSwap;
 
-    private DialogueAndEvent[] original;
+    protected DialogueAndEvent[] original;
 
-    private int times=0;
+    protected int times=0;
 
+    protected bool stopSwitching = false;
+
+    public bool StopSwitching
+    {
+        get => stopSwitching;
+        set => stopSwitching = value;
+    }
 
     private void Start()
     {
@@ -30,8 +37,9 @@ public class SentenceSwapper : MonoBehaviour
         objectOfSwap.OnInteractionStopped += Activate;
     }
 
-    private void Activate()
+    protected virtual void Activate()
     {
+        if (stopSwitching) return;
         times++;
         SwapSentences(times-1);
         
