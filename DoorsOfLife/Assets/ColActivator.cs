@@ -23,7 +23,11 @@ public class ColActivator : MonoBehaviour
     {
         if (lastTime)
         {
-            Destroy(this.gameObject);
+            if (this && this.gameObject)
+            {
+                Destroy(this.gameObject);
+
+            }
         }
     }
 
@@ -54,8 +58,6 @@ public class ColActivator : MonoBehaviour
     }
 
     private bool lastTime=false;
-    public void InteractOneLastTime()
-    {
-        lastTime = true;
-    }
+
+    public bool LastTime { set => lastTime=value; }
 }

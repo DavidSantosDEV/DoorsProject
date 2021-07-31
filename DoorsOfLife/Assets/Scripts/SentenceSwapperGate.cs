@@ -13,6 +13,7 @@ public class SentenceSwapperGate : SentenceSwapper
     {
         isDealt = true;
         times = 0;
+        SwapSentencesFree(0);
     }
 
     protected override void Activate()
