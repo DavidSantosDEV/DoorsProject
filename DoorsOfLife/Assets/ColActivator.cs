@@ -15,6 +15,16 @@ public class ColActivator : MonoBehaviour
     {
         if(!mydiagInteract)
         mydiagInteract = GetComponent<IInteractibleBase>();
+
+        mydiagInteract.OnInteractionStopped += SentenceOver;
+    }
+
+    private void SentenceOver()
+    {
+        if (lastTime)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     protected void Activate()
@@ -41,5 +51,11 @@ public class ColActivator : MonoBehaviour
         if (collision.CompareTag(tagP)){
             Activate();
         } 
+    }
+
+    private bool lastTime=false;
+    public void InteractOneLastTime()
+    {
+        lastTime = true;
     }
 }

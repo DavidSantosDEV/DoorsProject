@@ -9,6 +9,13 @@ public class GateCloser : MonoBehaviour
 
     [SerializeField]
     private string strTag = "Player";
+
+    private void Start()
+    {
+        myGate.AddChild(this);
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(strTag))
@@ -21,6 +28,5 @@ public class GateCloser : MonoBehaviour
                 }
             }
         }
-
     }
 }

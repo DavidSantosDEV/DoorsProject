@@ -20,13 +20,32 @@ public class BossGate : MonoBehaviour
     private bool bossDead=false;
     public bool BossIsDead => bossDead;
 
+    private List<GateCloser> mychild= new List<GateCloser>();
+
+    public void AddChild(GateCloser c)
+    {
+        mychild.Add(c);
+    }
+
     public void OnBossDeath()
     {
+        bossDead = true;
+        OpenGateEntrance();
 
+        rendererGateExit.sprite = openGate;
+
+        Destroy(colExit);
+        Destroy(colEntrance);
+
+        foreach(GateCloser c in mychild)
+        {
+            Destroy(c);
+        }
     }
 
     public void OpenGateEntrance()
     {
+        isClosed = false;
         rendererGateEntrance.sprite = openGate;
         colEntrance.isTrigger = true;
     }

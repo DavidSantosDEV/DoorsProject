@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   intensity:
-    m_OverrideState: 0
-    m_Value: 0.107
+    m_OverrideState: 1
+    m_Value: 0.137
     min: 0
     max: 1
 --- !u!114 &-7301682004608217301
@@ -35,21 +35,21 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.189
+    m_Value: 0.49
     min: -1
     max: 1
   xMultiplier:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0.353
     min: 0
     max: 1
   yMultiplier:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
     min: 0
     max: 1
   center:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
   scale:
     m_OverrideState: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
 --- !u!114 &-5557461385551923744
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -85,28 +85,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   threshold:
-    m_OverrideState: 1
-    m_Value: 0.9
+    m_OverrideState: 0
+    m_Value: 5.27
     min: 0
   intensity:
-    m_OverrideState: 1
-    m_Value: 1.08
+    m_OverrideState: 0
+    m_Value: 0.03
     min: 0
   scatter:
     m_OverrideState: 0
-    m_Value: 0.7
+    m_Value: 0
     min: 0
     max: 1
   clamp:
     m_OverrideState: 0
-    m_Value: 65472
+    m_Value: 65474.75
     min: 0
   tint:
     m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.55522346, g: 0, b: 1, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -125,29 +125,6 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
     min: 0
---- !u!114 &-3134948760922928321
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
-  m_Name: LiftGammaGain
-  m_EditorClassIdentifier: 
-  active: 0
-  m_AdvancedMode: 0
-  lift:
-    m_OverrideState: 0
-    m_Value: {x: 0.9558337, y: 0.91166735, z: 1, w: 0.29823062}
-  gamma:
-    m_OverrideState: 0
-    m_Value: {x: 0.8796631, y: 1, z: 0.95301116, w: 0.15164278}
-  gain:
-    m_OverrideState: 0
-    m_Value: {x: 0.81549543, y: 1, z: 0.774194, w: 0}
 --- !u!114 &-40796269163727155
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -164,7 +141,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 0
-    m_Value: 0.83
+    m_Value: 1.53
   contrast:
     m_OverrideState: 0
     m_Value: -31
@@ -172,18 +149,18 @@ MonoBehaviour:
     max: 100
   colorFilter:
     m_OverrideState: 0
-    m_Value: {r: 1, g: 0.9575472, b: 0.9575472, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
   hueShift:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 180
     min: -180
     max: 180
   saturation:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -100
     min: -100
     max: 100
 --- !u!114 &11400000
@@ -206,7 +183,6 @@ MonoBehaviour:
   - {fileID: -7301682004608217301}
   - {fileID: 4080915534215561622}
   - {fileID: 787540871890763308}
-  - {fileID: -3134948760922928321}
 --- !u!114 &787540871890763308
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -262,7 +238,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.249
+    m_Value: 0.1
     min: 0
     max: 1
   smoothness:

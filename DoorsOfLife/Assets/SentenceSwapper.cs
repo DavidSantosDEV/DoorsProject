@@ -60,7 +60,11 @@ public class SentenceSwapper : MonoBehaviour
             }
             else
             {
-                objectOfSwap.SwapSentences(newOnes[newOnes.Length - 1].dialog);
+                if (!(newOnes.Length - 1 < 0))
+                {
+                    objectOfSwap.SwapSentences(newOnes[newOnes.Length - 1].dialog);
+                }
+                
             }
 
         }

@@ -9,7 +9,7 @@ public class bonk : MonoBehaviour
     {
         myhandler = GetComponent<PoolHandler>();
     }
-    public void Dispose()
+    public void Dispose() //caled by animator
     {
         if (myhandler)
         {
