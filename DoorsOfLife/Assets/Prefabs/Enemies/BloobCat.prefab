@@ -206,6 +206,7 @@ Transform:
   m_Children:
   - {fileID: 44707756980774706}
   - {fileID: 1318823151377032884}
+  - {fileID: 5876488890961368628}
   m_Father: {fileID: 44707755765703367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -324,16 +325,22 @@ MonoBehaviour:
   rangeToAttack: 2
   timeBetweenAttack: 5
   vanishAfterDeathTime: 10
-  startPos: {fileID: 0}
+  parentPosOrganizer: {fileID: 0}
   maxStartDistance: 10
   attackPoint: {fileID: 44707756980774706}
   meleePointWidth: 1
   meleeAttackRange: 3
-  damage: 20
-  damageDifferentiation: 3
+  damage: 2
+  damageDifferentiation: 0.5
   enemyHitLayer:
     serializedVersion: 2
     m_Bits: 1024
+  onEnemyDieEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerDieEvent:
+    m_PersistentCalls:
+      m_Calls: []
   extraRange: 3.01
 --- !u!114 &5781715066155602882
 MonoBehaviour:
@@ -347,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9949db1640433a74381b4e0645a3a47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainContainer: {fileID: 0}
+  mainContainer: {fileID: 5876488890139453016}
   prefabHeart: {fileID: 2751011981204235093, guid: aa20d199aa25df74fb1995fcc40fc414, type: 3}
   heartContainerPrefab: {fileID: 2698553206333151610, guid: 8b73996480e2ee24984be0a22132c083, type: 3}
   maxHeartsRow: 10
@@ -357,6 +364,9 @@ MonoBehaviour:
   maxHealth: 10
   isDead: 0
   isInvincible: 0
+  _health: 0
+  bonkPoint: []
+  prefabBonk: {fileID: 0}
 --- !u!1 &44707756980774705
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,3 +542,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1243271933
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 44707756433989664}
+    m_Modifications:
+    - target: {fileID: 5876488889787663561, guid: 4261e49ab57a7184c88c8b1330bd3c5c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5876488889787663561, guid: 4261e49ab57a7184c88c8b1330bd3c5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5876488889787663561, guid: 4261e49ab57a7184c88c8b1330bd3c5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.91
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4261e49ab57a7184c88c8b1330bd3c5c, type: 3}
+--- !u!224 &5876488890961368628 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5876488889787663561, guid: 4261e49ab57a7184c88c8b1330bd3c5c, type: 3}
+  m_PrefabInstance: {fileID: 1243271933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5876488890139453016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5876488891314238629, guid: 4261e49ab57a7184c88c8b1330bd3c5c, type: 3}
+  m_PrefabInstance: {fileID: 1243271933}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
