@@ -75,6 +75,9 @@ public class EnemyScript : MonoBehaviour
 
     [SerializeField]
     private UnityEvent onEnemyDieEvent;
+    [SerializeField]
+    private UnityEvent onPlayerDieEvent;
+
 
     #region Visibility
     //The why these two functions need to exist is the following, he has a max distance yes,
@@ -190,6 +193,7 @@ public class EnemyScript : MonoBehaviour
         }
 
         player = GameManager.Instance != null ? GameManager.Instance.GetPlayer() : FindObjectOfType<PlayerController>();
+        player.GetComponent<PlayerHearts>().OnDeath += onPlayerDieEvent.Invoke;
 
     }
 
@@ -438,8 +442,10 @@ public class EnemyScript : MonoBehaviour
     {
         onEnemyDieEvent.Invoke();
         Destroy(gameObject.transform.parent.gameObject);
+        
     }
 
     #endregion
 
+    
 }

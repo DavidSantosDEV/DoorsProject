@@ -8,9 +8,6 @@ public class GateCloser : MonoBehaviour
     private BossGate myGate;
 
     [SerializeField]
-    private EnemyHearts enH;
-
-    [SerializeField]
     private string strTag = "Player";
 
     private void Start()
@@ -27,7 +24,6 @@ public class GateCloser : MonoBehaviour
             {
                 if (!myGate.IsClosed && !myGate.BossIsDead)
                 {
-                    enH.Heal(enH.MaxHealth);
                     myGate.CloseGateEntrance();
                 }
             }

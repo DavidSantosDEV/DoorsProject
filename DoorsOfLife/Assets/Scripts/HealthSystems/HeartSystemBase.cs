@@ -117,6 +117,13 @@ public class HeartSystemBase : MonoBehaviour //TODO GET A VERTICAL ALIGNER TO TH
         UpdateHearts();
     }
 
+    public virtual void HealFull()
+    {
+        health = maxHealth;
+        UpdateHearts();
+    }
+
+
     protected void UpdateHearts()
     {
         float heartFill = _health;

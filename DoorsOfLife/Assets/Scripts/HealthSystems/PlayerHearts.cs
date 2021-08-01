@@ -55,7 +55,7 @@ public class PlayerHearts : HeartSystemBase
     protected override void Die()
     {
         base.Die();
-        OnDeath.Invoke();// <-Crucial;
+        OnDeath?.Invoke();// <-Crucial;
     }
 
     public void SetHealth(float newVal)

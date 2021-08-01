@@ -444,21 +444,27 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameOver()
     {
-        StartCoroutine(BlackScreenShow());
+        StartCoroutine(BlackScreenShow(speedChangeFade));
 
         /*eventSystemUI.SetSelectedGameObject(firstSelectedDeathButton);
         eventSystemUI.enabled = true;
         Cursor.visible = true;*/
     }
 
+    public void ShowThanksForPlaying()
+    {
+
+    }
+
+
     [SerializeField]
     private float speedChangeFade=1;
 
-    private IEnumerator BlackScreenShow()
+    private IEnumerator BlackScreenShow(float speed)
     {
         while (gameOverBlack.color.a < 1)
         {
-            float delta = 1 * Time.deltaTime * (speedChangeFade / 1);
+            float delta = 1 * Time.deltaTime * (speed / 1);
             float val = gameOverBlack.color.a + delta;
             gameOverBlack.color = new Color(gameOverBlack.color.r, gameOverBlack.color.g, gameOverBlack.color.b, Mathf.Clamp01(val));
             MusicManager.Instance?.SetMainVolume(-val);
@@ -466,13 +472,13 @@ public class UIManager : MonoBehaviour
 
 
         }
-        yield return new WaitForSeconds(1 / speedChangeFade);
+        yield return new WaitForSeconds(1 / speed);
         GameManager.Instance.ReloadScene();
-        yield return new WaitForSeconds(1 / speedChangeFade);
+        yield return new WaitForSeconds(1 / speed);
         while (gameOverBlack.color.a > 0)
         {
 
-            float delta = 1 * Time.deltaTime * (speedChangeFade / 1);
+            float delta = 1 * Time.deltaTime * (speed / 1);
             float val = gameOverBlack.color.a - delta;
             gameOverBlack.color = new Color(gameOverBlack.color.r, gameOverBlack.color.g, gameOverBlack.color.b, Mathf.Clamp01(val));
             float music = MusicManager.Instance.GetCurrentMainVolume() + (val);
