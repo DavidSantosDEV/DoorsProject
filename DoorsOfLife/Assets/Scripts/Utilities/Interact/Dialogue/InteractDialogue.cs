@@ -55,6 +55,7 @@ public class InteractDialogue : IInteractibleBase
         UIManager.Instance.ShowDialogueCase(showImage,showName);
         if(showName)
         textNameDisplay.text = displaySpeakerName;
+        ChangeColorNormal();
         StartTyping();
     }
     public override void OnContinueInteract()
@@ -222,5 +223,15 @@ public class InteractDialogue : IInteractibleBase
                 UIManager.Instance.SetAvatarDialogue(sadSprite);
                 break;
         }
+    }
+
+    public void ChangeColorTutorial()
+    {
+        UIManager.Instance?.ChangeTextBoxColorTutorial();
+    }
+
+    public void ChangeColorNormal()
+    {
+        UIManager.Instance?.ChangeTextBoxColorWhite();
     }
 }

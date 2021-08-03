@@ -6,7 +6,7 @@ public class EndGame : MonoBehaviour
 {
     private void EndGameFunc()
     {
-        UIManager.Instance.ShowThanksForPlaying();
+        UIManager.Instance?.ShowThanksForPlaying();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

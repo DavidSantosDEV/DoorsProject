@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     private Image gameOverBlack;
 
 
+
     [Header("Main Menu Stuff")]
     [SerializeField]
     private GameObject firstButtonMenu;
@@ -65,6 +66,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Gameplay")]
     [SerializeField]
+    private Image dialogBoxImage;
+    [SerializeField]
     private VerticalLayoutGroup heartContainer;
     [SerializeField]
     private GameObject textShard;
@@ -83,10 +86,6 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image dialogueButtonPromptImage=null;
 
-    [Header("Game Over screen")]
-    [SerializeField]
-    private GameObject firstSelectedDeathButton;
-
 
     [Header("Audio Sliders")]
     [SerializeField]
@@ -102,8 +101,27 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TMP_Dropdown resolutionsDrop;
 
+    [Header("Thanks for playing")]
+    [SerializeField]
+    private TextMeshProUGUI textPlaying;
+
 
     public static UIManager Instance { get; private set; } = null;
+
+    public void ChangeTextBoxColorTutorial()
+    {
+        //FFB537;
+        Color cChange = new Color(255, 230, 61);
+        dialogBoxImage.color = new Color(cChange.r, cChange.g, cChange.b, 1);
+        Debug.Log(dialogBoxImage.color);
+        //dialogBoxImage.color = cChange;
+    }
+
+    public void ChangeTextBoxColorWhite()
+    {
+        dialogBoxImage.color = Color.white;
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -175,18 +193,6 @@ public class UIManager : MonoBehaviour
 
         //ResetInput();
     }
-
-    /*private void ResetInput()
-    {
-        inputPlayer = FindObjectOfType<PlayerInput>();
-        inputPlayer.enabled = false;
-        Debug.Log(inputPlayer);
-
-        Debug.Log(inputPlayer);
-        inputPlayer.enabled = true;
-    }*/
-
-    //
 
 
     //Menu Stuff
@@ -453,9 +459,38 @@ public class UIManager : MonoBehaviour
 
     public void ShowThanksForPlaying()
     {
+        GameManager.Instance.GetPlayer().inCutscene = true;
+        StartCoroutine(ThanksforPlaying());
 
     }
 
+    [SerializeField]
+    float thanksforPlayingSpeed=1;
+    [SerializeField]
+    float waitTimeEnd=3;
+    private IEnumerator ThanksforPlaying()
+    {
+        while (gameOverBlack.color.a < 1)
+        {
+            float delta = 1 * Time.deltaTime * (thanksforPlayingSpeed / 1);
+            float val = gameOverBlack.color.a + delta;
+            gameOverBlack.color = new Color(gameOverBlack.color.r, gameOverBlack.color.g, gameOverBlack.color.b, Mathf.Clamp01(val));
+            MusicManager.Instance?.SetMainVolume(-val);
+            yield return null;
+        }
+        MusicManager.Instance?.SetMainVolume(0);
+        while (textPlaying.color.a<1)
+        {
+            float delta = 1 * Time.deltaTime * (thanksforPlayingSpeed / 1);
+            float val = textPlaying.color.a + delta;
+            textPlaying.color = new Color(textPlaying.color.r, textPlaying.color.g, textPlaying.color.b, Mathf.Clamp01(val));
+            yield return null;
+        }
+        yield return new WaitForSeconds(waitTimeEnd);
+        textPlaying.color = new Color(Color.white.r,Color.white.g,Color.white.b,0);
+        gameOverBlack.color = new Color(gameOverBlack.color.r, gameOverBlack.color.g, gameOverBlack.color.b, 0);
+        GameManager.Instance?.Openlevel(0);
+    }
 
     [SerializeField]
     private float speedChangeFade=1;

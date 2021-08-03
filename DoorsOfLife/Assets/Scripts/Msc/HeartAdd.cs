@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class HeartAdd : MonoBehaviour
 {
+    [SerializeField]
+    GameObject destroyMe;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             GameManager.Instance.GetPlayer().PlayerHeartsComponent.UpgradeHealth(1);
             Destroy(gameObject);
+            if (destroyMe)
+            {
+                Destroy(destroyMe);
+            }
         }
     }
 }

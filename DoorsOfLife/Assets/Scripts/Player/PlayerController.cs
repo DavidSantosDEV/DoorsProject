@@ -185,7 +185,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        OnMovement(myPlayerControls.Gameplay.Movement.ReadValue<Vector2>());
+        if (inCutscene == false)
+        {
+            OnMovement(myPlayerControls.Gameplay.Movement.ReadValue<Vector2>());
+        }
+        else
+        {
+            OnMovement(Vector2.zero);
+        }
 
 
     }
