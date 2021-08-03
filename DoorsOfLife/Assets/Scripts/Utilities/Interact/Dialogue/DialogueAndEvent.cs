@@ -17,6 +17,8 @@ public enum CharacterReaction
 [System.Serializable] 
 public class DialogueAndEvent
 {
+    public bool tutorialText=false;
+
     public string Sentence;
     public UnityEvent SentenceEvent = null;
     public CharacterReaction reaction;

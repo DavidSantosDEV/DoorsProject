@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System.Linq;
+using System.Text;
 
 public class InteractDialogue : IInteractibleBase
 {
@@ -88,8 +90,11 @@ public class InteractDialogue : IInteractibleBase
 
     // Dialogue Related stuff
 
+
+
     private IEnumerator Type()
     {
+        
         CheckForEvent();
         if (SentencesAndEvents[Index].sound)
         {
@@ -99,18 +104,37 @@ public class InteractDialogue : IInteractibleBase
                 myAudioSource.Play();
             } 
         }
-        
+        bool alternate = true;
         foreach (char letter in SentencesAndEvents[Index].Sentence.ToCharArray())//sentences[Index].ToCharArray())
         {
-            textDisplay.text += letter;
-            MusicManager.Instance?.PlayTextEffect();
-            if (textDisplay.text == SentencesAndEvents[Index].Sentence)//sentences[Index])
+            StringBuilder builder = new StringBuilder();
+            if(letter == '<')
             {
-                //Check if it has event and then allow to continue
-                canContinue = true;
-                UIManager.Instance.ShowContinueDialogueButton();
+                builder.Clear();
+                alternate = false;
+            }else if (letter=='>')
+            {
+                alternate = true;
+                textDisplay.text += builder.ToString();
             }
-            yield return new WaitForSeconds(1/textTypeSpeed);
+
+            if (alternate)
+            {
+                textDisplay.text += letter;
+                MusicManager.Instance?.PlayTextEffect();
+                if (textDisplay.text == SentencesAndEvents[Index].Sentence)//sentences[Index])
+                {
+                    //Check if it has event and then allow to continue
+                    canContinue = true;
+                    UIManager.Instance.ShowContinueDialogueButton();
+                }
+                yield return new WaitForSeconds(1 / textTypeSpeed);
+            }
+            else
+            {
+                builder.Append(letter);
+            }
+            
         }
     }
 
