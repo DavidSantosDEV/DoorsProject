@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class BossGate : MonoBehaviour
@@ -13,6 +14,9 @@ public class BossGate : MonoBehaviour
     private Sprite openGate;
     [SerializeField]
     private Sprite closedGate;
+
+    [SerializeField]
+    private UnityEvent bossDeathEvent;
 
     private bool isClosed = true;
     public bool IsClosed =>isClosed;
@@ -29,6 +33,7 @@ public class BossGate : MonoBehaviour
 
     public void OnBossDeath()
     {
+        bossDeathEvent?.Invoke();
         bossDead = true;
         OpenGateEntrance();
 

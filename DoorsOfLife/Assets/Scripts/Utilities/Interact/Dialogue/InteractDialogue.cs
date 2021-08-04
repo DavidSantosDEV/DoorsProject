@@ -104,35 +104,42 @@ public class InteractDialogue : IInteractibleBase
                 myAudioSource.Play();
             } 
         }
-        bool alternate = true;
+        bool write = true;
+        StringBuilder builder = new StringBuilder();
         foreach (char letter in SentencesAndEvents[Index].Sentence.ToCharArray())//sentences[Index].ToCharArray())
         {
-            StringBuilder builder = new StringBuilder();
-            if(letter == '<')
+            //This code is to detect fancy <color="red"></color> and the like
+            if (letter == '<')
             {
-                builder.Clear();
-                alternate = false;
-            }else if (letter=='>')
+                write = false;
+            }else if (letter == '>')
             {
-                alternate = true;
+                builder.Append(letter);
                 textDisplay.text += builder.ToString();
+                builder.Clear();
+                if(textDisplay.text == SentencesAndEvents[Index].Sentence)
+                {
+                    canContinue = true;
+                    UIManager.Instance.ShowContinueDialogueButton();
+                } 
+                write = true;
+                continue; //Dont do the rest
             }
 
-            if (alternate)
+            if (write == false)
+            {
+                builder.Append(letter);
+            }
+            else
             {
                 textDisplay.text += letter;
                 MusicManager.Instance?.PlayTextEffect();
                 if (textDisplay.text == SentencesAndEvents[Index].Sentence)//sentences[Index])
                 {
-                    //Check if it has event and then allow to continue
                     canContinue = true;
                     UIManager.Instance.ShowContinueDialogueButton();
                 }
                 yield return new WaitForSeconds(1 / textTypeSpeed);
-            }
-            else
-            {
-                builder.Append(letter);
             }
             
         }

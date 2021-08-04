@@ -31,7 +31,7 @@ public class ColActivator : MonoBehaviour
         }
     }
 
-    protected void Activate()
+    public void Activate() //I just made it public to use it quick now
     {
         if (mydiagInteract == null)
         {
