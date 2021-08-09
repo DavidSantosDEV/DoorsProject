@@ -108,20 +108,6 @@ public class UIManager : MonoBehaviour
 
     public static UIManager Instance { get; private set; } = null;
 
-    public void ChangeTextBoxColorTutorial()
-    {
-        //FFB537;
-        Color cChange = new Color(255, 230, 61);
-        dialogBoxImage.color = new Color(cChange.r, cChange.g, cChange.b, 1);
-        Debug.Log(dialogBoxImage.color);
-        //dialogBoxImage.color = cChange;
-    }
-
-    public void ChangeTextBoxColorWhite()
-    {
-        dialogBoxImage.color = Color.white;
-    }
-
     private void Awake()
     {
         if (Instance == null)

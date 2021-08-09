@@ -713,7 +713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852505209635304337, guid: ac8b2af7fa1e3e6499a1122a8c1ac127, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852505209635304366, guid: ac8b2af7fa1e3e6499a1122a8c1ac127, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852505210432372268, guid: ac8b2af7fa1e3e6499a1122a8c1ac127, type: 3}
       propertyPath: m_RootOrder
