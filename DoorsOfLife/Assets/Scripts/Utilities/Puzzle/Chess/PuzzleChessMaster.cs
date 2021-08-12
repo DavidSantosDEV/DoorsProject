@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PuzzleChessMaster : PuzzleMasterBase
 {
+    [SerializeField]
+    private UnityEvent eventPuzzleComplete;
+
     [Header("Moving pieces")]
     [SerializeField]
     private int maxMovesBeforeWarning = 5;
@@ -45,6 +49,7 @@ public class PuzzleChessMaster : PuzzleMasterBase
     {
         GameManager.Instance.SetKey(DoorsAndNumbers.HouseDoor, true);
         DisableMovementOfChilds();
+        eventPuzzleComplete?.Invoke();
         StartCoroutine(UnlockDoorRoutine());
     }
 

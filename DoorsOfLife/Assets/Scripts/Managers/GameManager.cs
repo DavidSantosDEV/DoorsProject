@@ -225,9 +225,9 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             //Menu
+            currentHealth = 5;
             if (player) //Doesnt fucking work cause unity is retarded
             {
-                currentHealth = player.PlayerHeartsComponent.MaxHealth;
                 Destroy(player.gameObject.transform.parent.gameObject);
             }
             if (previousScene != 0)

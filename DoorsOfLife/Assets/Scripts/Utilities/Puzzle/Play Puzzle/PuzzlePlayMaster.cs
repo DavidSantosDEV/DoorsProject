@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PuzzlePlayMaster : PuzzleMasterBase
 {
+    [SerializeField]
+    private UnityEvent endPuzzleEvent;
 
     [SerializeField]
     private GameObject[] myMovables;
@@ -51,6 +53,7 @@ public class PuzzlePlayMaster : PuzzleMasterBase
             pzC.SetHasClue();
         }
         DisableMovementOfChilds();
+        endPuzzleEvent?.Invoke();
         base.DoAction();
     }
 

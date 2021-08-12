@@ -67,8 +67,13 @@ public class MusicManager : MonoBehaviour
         textSource.playOnAwake = false;
         textSource.loop = false;
         textSource.clip = textSound;
-        //SceneManager.activeSceneChanged += scene => UpdateMusicLevel();
+        SceneManager.activeSceneChanged += OnSceneLoaded;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void OnSceneLoaded(Scene scene, Scene newScene)
+    {
+        ClearCombatMusic();
     }
 
     public void PlayTextEffect()

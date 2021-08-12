@@ -40,6 +40,7 @@ public class PoolManager : MonoBehaviour
         {
             Instance = this;
             InstantiateObjects();
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
