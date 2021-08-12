@@ -33,6 +33,8 @@ public class MusicManager : MonoBehaviour
     private AudioSource auxSource;
     [SerializeField]
     private AudioSource textSource;
+    [SerializeField]
+    private AudioSource blingSource;
 
     [Header("Time")]
     [SerializeField]
@@ -239,10 +241,10 @@ public class MusicManager : MonoBehaviour
         auxSource.clip = songVictory;
         auxSource.Play();
     }
-    //---
-    public void PlayWinMusic()
+    
+
+    public void playBling()
     {
-
+        blingSource?.Play();
     }
-
 }
