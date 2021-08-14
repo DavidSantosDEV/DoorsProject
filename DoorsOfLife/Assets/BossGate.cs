@@ -26,6 +26,8 @@ public class BossGate : MonoBehaviour
 
     private List<GateCloser> mychild= new List<GateCloser>();
 
+    [SerializeField]
+    private GameObject tedy;
     public void AddChild(GateCloser c)
     {
         mychild.Add(c);
@@ -35,12 +37,13 @@ public class BossGate : MonoBehaviour
     {
         bossDeathEvent?.Invoke();
         bossDead = true;
-        OpenGateEntrance();
+        //OpenGateEntrance();
 
-        rendererGateExit.sprite = openGate;
+        //rendererGateExit.sprite = openGate;
 
-        Destroy(colExit);
-        Destroy(colEntrance);
+
+
+        tedy.SetActive(true);
 
         foreach(GateCloser c in mychild)
         {

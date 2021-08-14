@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AvatarSwapper : MonoBehaviour
+public class AvatarSwapper : MonoBehaviour //I DONT EVEN KNOW WHY THIS EXISTS
 {
     [SerializeField]
     private Sprite[] avatars;

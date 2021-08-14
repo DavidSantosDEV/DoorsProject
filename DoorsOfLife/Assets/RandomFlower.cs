@@ -16,6 +16,8 @@ public class RandomFlower : MonoBehaviour
 
     private void Start()
     {
-        myRenderer.sprite = randomList[Random.Range(0, randomList.Length - 1)];
+        int rnd = Random.Range(25, (25*randomList.Length));
+        rnd = Mathf.RoundToInt( (25 * randomList.Length) / rnd);
+        myRenderer.sprite = randomList[rnd];
     }
 }
