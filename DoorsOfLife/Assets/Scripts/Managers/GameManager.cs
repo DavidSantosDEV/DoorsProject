@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetAudioPrevious();
-        MusicManager.Instance.ActivateMenuMusic();
+        MusicManager.Instance?.ActivateMenuMusic();
         //SetCollisionEnemies();
     }
 

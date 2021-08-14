@@ -67,7 +67,7 @@ public class PuzzleChessMaster : PuzzleMasterBase
         {
             //CameraFollow.Instance.SetTarget(door.gameObject.transform);
             GameManager.Instance.GetPlayer().IsInteracting(InteractionType.DialogInteraction);
-            yield return new WaitForSeconds(timeCam / 2);
+            yield return new WaitForSeconds(timeCam / 4);
             door.OpenDoorNoKey();
             base.DoAction();
         }

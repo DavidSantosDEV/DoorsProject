@@ -33,6 +33,10 @@ public class SentenceSwapper : MonoBehaviour
 
     private void Start()
     {
+        if (!objectOfSwap)
+        {
+            objectOfSwap = GetComponent<InteractDialogue>();
+        }
         original = objectOfSwap.GetSentences();
         objectOfSwap.OnInteractionStopped += Activate;
     }
