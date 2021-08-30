@@ -41,7 +41,7 @@ public class ColActivator : MonoBehaviour
         {
             if (GameManager.Instance)
             {
-                GameManager.Instance.GetPlayer().inCutscene = true;
+                GameManager.Instance.GetPlayer().InCutscene = true;
                 GameManager.Instance.GetPlayer().interactionData.ResetData();
                 GameManager.Instance.GetPlayer().interactionData.Interactible = mydiagInteract;
                 GameManager.Instance.GetPlayer().interactionData.Interact();

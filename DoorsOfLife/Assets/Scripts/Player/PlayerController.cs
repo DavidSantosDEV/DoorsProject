@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioSource stepSource;
 
-    public void PlayStep()
+    public void PlayStep() // Animator
     {
         stepSource?.Play();
     }
@@ -69,8 +69,13 @@ public class PlayerController : MonoBehaviour
         get => myInput;
     }
 
-    public bool inCutscene=false;
+    private bool inCutscene=false;
 
+    public bool InCutscene
+    {
+        get => inCutscene;
+        set => inCutscene = value;
+    }
 
     #region ActionMaps
     private string currentActionMap;
@@ -89,8 +94,6 @@ public class PlayerController : MonoBehaviour
         return transform.position;
     }
 
-    
- 
 
     private void DebugFunc3()
     {
@@ -119,7 +122,7 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    public void Config()
+    public void Config() //Its all here just cause
     {
         #region Debug
 
@@ -153,9 +156,26 @@ public class PlayerController : MonoBehaviour
         #region In Interaction
         myPlayerControls.InInteraction.ContinueInteract.started += ContinueInteract;
 
+        currentControlScheme = myInput.currentControlScheme;
         #endregion
 
         //myInput.controlsChangedEvent.AddListener(OnControlsChanged);
+    }
+
+    private string currentControlScheme;
+    public void OnControlsChanged()
+    {
+        if (currentControlScheme != myInput.currentControlScheme)
+        {
+            Debug.Log(myInput.devices[0].ToString());
+            currentControlScheme = myInput.currentControlScheme;
+            Debug.Log(currentControlScheme);
+
+            if (UIManager.Instance != null) UIManager.Instance.PromptsChange();
+            if (GamepadRumbler.Instance != null) GamepadRumbler.Instance.SetGamepad();
+
+            InputActionRebindingExtensions.RemoveAllBindingOverrides(myInput.currentActionMap);
+        }
     }
 
     private void Start()

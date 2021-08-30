@@ -102,7 +102,7 @@ public class PuzzleChessMaster : PuzzleMasterBase
                 //Do Dialogue
                 currentMoveAmmount = 0;
 
-                GameManager.Instance.GetPlayer().inCutscene = true;
+                GameManager.Instance.GetPlayer().InCutscene = true;
                 GameManager.Instance.GetPlayer().interactionData.ResetData();
                 GameManager.Instance.GetPlayer().interactionData.Interactible = myDiagInteract;
                 GameManager.Instance.GetPlayer().interactionData.Interact();

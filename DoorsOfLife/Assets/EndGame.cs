@@ -26,7 +26,7 @@ public class EndGame : MonoBehaviour
             if (GameManager.Instance)
             {
                 interacted = true;
-                GameManager.Instance.GetPlayer().inCutscene = true;
+                GameManager.Instance.GetPlayer().InCutscene = true;
                 GameManager.Instance.GetPlayer().interactionData.ResetData();
                 GameManager.Instance.GetPlayer().interactionData.Interactible = diag;
                 GameManager.Instance.GetPlayer().interactionData.Interact();

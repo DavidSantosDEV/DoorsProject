@@ -16,10 +16,10 @@ MonoBehaviour:
   northButtonPlayStation: {fileID: -9205221584584489300, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
   westButtonPlayStation: {fileID: 1202984965197363600, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
   eastButtonPlayStation: {fileID: -1863859237976802683, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
-  southButtonMicrosoft: {fileID: 21300052, guid: fe9aa33e50412c242bd73e9324bc7922, type: 3}
-  northButtonMicrosoft: {fileID: 21300050, guid: fe9aa33e50412c242bd73e9324bc7922, type: 3}
-  westButtonMicrosoft: {fileID: 21300048, guid: fe9aa33e50412c242bd73e9324bc7922, type: 3}
-  eastButtonMicrosoft: {fileID: 21300054, guid: fe9aa33e50412c242bd73e9324bc7922, type: 3}
+  southButtonMicrosoft: {fileID: 2130535880278150251, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
+  northButtonMicrosoft: {fileID: -7058561907366660472, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
+  westButtonMicrosoft: {fileID: 1161201145128540330, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
+  eastButtonMicrosoft: {fileID: 184950751378207249, guid: 5836e663428a50b4db2d6841f29932b8, type: 3}
   R1Trigger: {fileID: 21300030, guid: 10045ad39fef69944b33bedc39310592, type: 3}
   R2Trigger: {fileID: 21300034, guid: 10045ad39fef69944b33bedc39310592, type: 3}
   L1Trigger: {fileID: 21300028, guid: 10045ad39fef69944b33bedc39310592, type: 3}

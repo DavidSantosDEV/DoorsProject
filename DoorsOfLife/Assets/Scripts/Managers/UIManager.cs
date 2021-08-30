@@ -347,10 +347,12 @@ public class UIManager : MonoBehaviour
 
     public void PromptsChange()
     {
-        if(imageButtonInteract)
-        imageButtonInteract.sprite = deviceInputPromptData.GetButtonInteractSprite();
+        Sprite sprite = deviceInputPromptData.GetButtonInteractSprite();
+        if (imageButtonInteract)
+        imageButtonInteract.sprite = sprite;
         if(dialogueButtonPromptImage)
-        dialogueButtonPromptImage.sprite = deviceInputPromptData.GetButtonInteractSprite();
+        dialogueButtonPromptImage.sprite = sprite;
+
     }
 
     public Sprite getInteractSprite()
@@ -445,7 +447,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowThanksForPlaying()
     {
-        GameManager.Instance.GetPlayer().inCutscene = true;
+        GameManager.Instance.GetPlayer().InCutscene = true;
         StartCoroutine(ThanksforPlaying());
 
     }

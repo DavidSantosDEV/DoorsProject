@@ -71,9 +71,9 @@ public class InteractDialogue : IInteractibleBase
         UIManager.Instance.HideDialogueCase();
         Index = 0;
         canContinue = false;
-        if(GameManager.Instance.GetPlayer().inCutscene == true)
+        if(GameManager.Instance.GetPlayer().InCutscene == true)
         {
-            GameManager.Instance.GetPlayer().inCutscene =false;
+            GameManager.Instance.GetPlayer().InCutscene =false;
         }
     }
 

@@ -87,7 +87,7 @@ public class DoorInteractible : IInteractibleBase
         IsLocked = false;
         PlaySound(openSound);
         PlayerController player = GameManager.Instance.GetPlayer();
-        player.inCutscene = true;
+        player.InCutscene = true;
         player.interactionData.ResetData();
         player.interactionData.Interactible = this;
         //player.IsInteracting(typeInteraction);
@@ -115,7 +115,7 @@ public class DoorInteractible : IInteractibleBase
         UIManager.Instance.HideDialogueCase();
         isFinished = false;
         SentencetoType = "";
-        GameManager.Instance.GetPlayer().inCutscene = false;
+        GameManager.Instance.GetPlayer().InCutscene = false;
         if (IsLocked == false/*isOpen*/)
         {
             Debug.Log("Am OPEN");
