@@ -42,8 +42,8 @@ public class PlayerMenuController : MonoBehaviour
             currentControlScheme = myInput.currentControlScheme;
             Debug.Log(currentControlScheme);
 
-            if (UIManager.Instance != null) UIManager.Instance.PromptsChange();
-            if (GamepadRumbler.Instance != null) GamepadRumbler.Instance.SetGamepad();
+            UIManager.Instance?.PromptsChange();
+            GamepadRumbler.Instance?.SetGamepad();
 
             InputActionRebindingExtensions.RemoveAllBindingOverrides(myInput.currentActionMap);
 

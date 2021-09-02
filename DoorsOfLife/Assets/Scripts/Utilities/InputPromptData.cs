@@ -49,6 +49,8 @@ public class InputPromptData : ScriptableObject
                 UIManager.Instance.SelectMenuStuff(false);
                 return southButtonPlayStation;
 
+            case null:
+            case "":
             case "Keyboard":
             case "Keyboard:/Keyboard":
                 UIManager.Instance.SelectMenuStuff(true);
