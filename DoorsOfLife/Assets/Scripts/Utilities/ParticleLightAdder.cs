@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine;
 
 [RequireComponent(typeof(ParticleSystem))]
 public class ParticleLightAdder : MonoBehaviour
 {
     [SerializeField]
-    private Light2D prefabLight;
+    private UnityEngine.Rendering.Universal.Light2D prefabLight;
     [SerializeField]
     private float lightmultiplier=1;
 
@@ -42,9 +42,9 @@ public class ParticleLightAdder : MonoBehaviour
     struct LightAndComponent
     {
         public GameObject obj;
-        public Light2D component;
+        public UnityEngine.Rendering.Universal.Light2D component;
 
-        public LightAndComponent(GameObject obje,Light2D lightc)
+        public LightAndComponent(GameObject obje,UnityEngine.Rendering.Universal.Light2D lightc)
         {
             obj = obje;
             component = lightc;
@@ -70,7 +70,7 @@ public class ParticleLightAdder : MonoBehaviour
         for (int i=0;i< count; i++)
         {
             GameObject newObject = Instantiate(prefabLight.gameObject, transform);
-            Light2D newLight = newObject.GetComponent<Light2D>();
+            UnityEngine.Rendering.Universal.Light2D newLight = newObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
             LightAndComponent add = new LightAndComponent(newObject, newLight);
             LightsAndComponents.Add(add);
         }

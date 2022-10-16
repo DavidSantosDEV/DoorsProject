@@ -90,7 +90,7 @@ TextureImporter:
       213: -4283172999852914212
     second: DarkTileset_28
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -111,6 +111,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -120,8 +121,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 0
     wrapV: 0
     wrapW: 0
@@ -149,6 +150,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -164,6 +166,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
@@ -796,6 +846,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      DarkTileset_0: -5555646038861404221
+      DarkTileset_15: -5676127395475889862
+      DarkTileset_2: 8049268599639262504
+      DarkTileset_14: 6564748489182600243
+      DarkTileset_11: 7286278016833025011
+      DarkTileset_6: -6968606400235564893
+      DarkTileset_1: -5940712991462757650
+      DarkTileset_24: 5825325175311511228
+      DarkTileset_5: 3773742802453879254
+      DarkTileset_18: -657315419998723397
+      DarkTileset_27: -9164146871778411585
+      DarkTileset_17: 2584322758969393953
+      DarkTileset_16: 6680498403593492152
+      DarkTileset_21: 2078558317328389501
+      DarkTileset_25: -5332503089575753161
+      DarkTileset_23: 3707402514279565944
+      DarkTileset_4: 3875608639676930110
+      DarkTileset_3: 6849939753845396266
+      DarkTileset_8: 3068268302411815936
+      DarkTileset_28: -4283172999852914212
+      DarkTileset_12: 1112796155502783851
+      DarkTileset_13: -217236332887621547
+      DarkTileset_22: 2385589177728366433
+      DarkTileset_9: -3443309641177753779
+      DarkTileset_19: -254619674118674074
+      DarkTileset_10: -978440425249927726
+      DarkTileset_20: -5399945808565504590
+      DarkTileset_26: -3130439477450049986
+      DarkTileset_7: -408316473386840162
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

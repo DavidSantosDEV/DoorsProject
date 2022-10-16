@@ -141,7 +141,7 @@ TextureImporter:
       213: 1736681121211773040
     second: TitleAnim_45
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -162,6 +162,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -171,8 +172,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -200,6 +201,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -215,6 +217,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1204,6 +1254,53 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TitleAnim_24: 7836794927543806801
+      TitleAnim_45: 1736681121211773040
+      TitleAnim_18: -6688550095919014304
+      TitleAnim_35: 1080596140001804196
+      TitleAnim_7: -7317946055784088989
+      TitleAnim_4: -123788280294035948
+      TitleAnim_33: 6936938674011438800
+      TitleAnim_44: -5816853350819004360
+      TitleAnim_16: 6934600599607143498
+      TitleAnim_19: -480181356450455795
+      TitleAnim_23: -6716840300129605969
+      TitleAnim_5: -2603614996578460099
+      TitleAnim_13: 359902668284937804
+      TitleAnim_28: 7292601376796550442
+      TitleAnim_25: 8349079388190826472
+      TitleAnim_14: -8754186173473756170
+      TitleAnim_0: 7209433623894213101
+      TitleAnim_32: 9201055044422946870
+      TitleAnim_38: 8752792751076343772
+      TitleAnim_9: -1815503660066015312
+      TitleAnim_15: 3132964499641076608
+      TitleAnim_17: -3663529809537719266
+      TitleAnim_42: -8267620190691004348
+      TitleAnim_3: 6011371279644712566
+      TitleAnim_10: -5613148059602836536
+      TitleAnim_11: 8722438517399464177
+      TitleAnim_20: 3342035822655451573
+      TitleAnim_41: -1392192942393211457
+      TitleAnim_40: 7326018386312413055
+      TitleAnim_43: 8447202102140202869
+      TitleAnim_1: -5794586844253908658
+      TitleAnim_21: -1329281627463294555
+      TitleAnim_31: 8195064261405433778
+      TitleAnim_39: 3035320695023959683
+      TitleAnim_36: 4756907080276634455
+      TitleAnim_8: 1220209837033715493
+      TitleAnim_29: -8235838870478638207
+      TitleAnim_30: 3136594943092093323
+      TitleAnim_37: -166589472076843388
+      TitleAnim_27: 2206584036917094115
+      TitleAnim_34: 2408389834497187847
+      TitleAnim_22: -4767940361262887969
+      TitleAnim_2: 830756539083266535
+      TitleAnim_26: 6880203210170649604
+      TitleAnim_12: -1440180562176247158
+      TitleAnim_6: 6453005053635180907
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

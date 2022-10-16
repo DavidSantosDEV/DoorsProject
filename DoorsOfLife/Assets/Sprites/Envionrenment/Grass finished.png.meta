@@ -591,7 +591,7 @@ TextureImporter:
       213: 642163373312372836
     second: Grass finished_195
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -612,6 +612,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -621,8 +622,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -650,6 +651,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -665,6 +667,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4804,6 +4854,203 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Grass finished_27: -5009095845180379943
+      Grass finished_157: 6816428340956738940
+      Grass finished_170: 6756198816887313781
+      Grass finished_176: 953402477488711615
+      Grass finished_109: 4944007342998264862
+      Grass finished_12: -6185033725000039691
+      Grass finished_60: -1359496404291247604
+      Grass finished_55: 9160669467546497846
+      Grass finished_11: -4067556837636803115
+      Grass finished_128: -4355876654798802208
+      Grass finished_61: -2125393427222217727
+      Grass finished_191: -416264732381899794
+      Grass finished_9: -950381707276450590
+      Grass finished_88: -7928124408610345402
+      Grass finished_171: 347707255635639996
+      Grass finished_54: 2573323763448089821
+      Grass finished_64: 1281537962301574922
+      Grass finished_71: 7482518062475716452
+      Grass finished_189: 3254246094669900710
+      Grass finished_33: -3217611156725546987
+      Grass finished_86: 3162914577512181433
+      Grass finished_37: 8274103137560272935
+      Grass finished_4: 489923465612382354
+      Grass finished_39: -6132288098025268906
+      Grass finished_49: -3769932151754169362
+      Grass finished_70: -198888693185087454
+      Grass finished_13: 4393736147847415518
+      Grass finished_136: 9190239984190955710
+      Grass finished_1: 761571550571320379
+      Grass finished_0: 2159362576897644826
+      Grass finished_73: -1754104205583969916
+      Grass finished_53: -4313434460277313075
+      Grass finished_30: 5742890283042111534
+      Grass finished_120: 5643233010920980704
+      Grass finished_160: -7716863353539330982
+      Grass finished_164: -3663491503114373022
+      Grass finished_45: 7965651845684883427
+      Grass finished_141: 7827394581326841181
+      Grass finished_163: 3846537571112575516
+      Grass finished_178: 7115659319706033537
+      Grass finished_41: -5405013361440724364
+      Grass finished_69: 4281256407228198058
+      Grass finished_144: 7362121083718584208
+      Grass finished_66: 5683703009569209116
+      Grass finished_132: -6184414432389039102
+      Grass finished_182: 5105102783651402519
+      Grass finished_50: -9053610425782009859
+      Grass finished_126: -4569915463757804503
+      Grass finished_72: -6942764772079013677
+      Grass finished_20: 3708661689390785601
+      Grass finished_46: -8131687112201771755
+      Grass finished_83: -1535810918709327168
+      Grass finished_190: 5954131359684702623
+      Grass finished_42: -3966590396501706547
+      Grass finished_193: -3709416334848773163
+      Grass finished_106: 1932981701044481282
+      Grass finished_76: -4358999307480875906
+      Grass finished_149: 2018502961701270397
+      Grass finished_151: 1430681168729240258
+      Grass finished_77: 5530472686378245460
+      Grass finished_19: 1102411323605102541
+      Grass finished_47: 7035880977041114346
+      Grass finished_147: -2097315498623013569
+      Grass finished_48: -6665546563690199523
+      Grass finished_34: -8293122628602026712
+      Grass finished_7: -5036048409775567921
+      Grass finished_97: 1368973104568731273
+      Grass finished_111: 5437316212539404046
+      Grass finished_185: 7056951589841722742
+      Grass finished_116: 2650807955223803769
+      Grass finished_125: -6017849033122856618
+      Grass finished_105: -720004731810169112
+      Grass finished_119: -7925330685760843974
+      Grass finished_173: -8790723336939634368
+      Grass finished_31: -7797418577677614172
+      Grass finished_179: -3214724169617415651
+      Grass finished_78: -1738768471245686517
+      Grass finished_177: 552312276512339356
+      Grass finished_183: 2230860920933715479
+      Grass finished_112: -7612229982262258699
+      Grass finished_155: -8569132932447051765
+      Grass finished_194: 8180411144311290562
+      Grass finished_95: -8555741408027412249
+      Grass finished_62: 8872455987870710141
+      Grass finished_63: -1426543736644040958
+      Grass finished_100: 5023096852472540981
+      Grass finished_148: 3763023188602803042
+      Grass finished_18: -2919076895857303961
+      Grass finished_23: -2395360774820863514
+      Grass finished_127: 4790008736215704168
+      Grass finished_10: 8148562828149783072
+      Grass finished_57: -2065319770566341300
+      Grass finished_153: -4152217294407527686
+      Grass finished_79: -7090304129102271242
+      Grass finished_159: 4781195487142876773
+      Grass finished_80: 1404646924473551157
+      Grass finished_103: -964047242557819026
+      Grass finished_28: 6164392591246885496
+      Grass finished_5: 1537064364602045963
+      Grass finished_26: -6249657632931268550
+      Grass finished_142: 6659547903985925312
+      Grass finished_124: 5870185991950164324
+      Grass finished_84: -4603603239872722355
+      Grass finished_75: 7570892955925775917
+      Grass finished_59: -7633677778125208609
+      Grass finished_3: -1883019997194046338
+      Grass finished_188: -6401363927518420413
+      Grass finished_123: 2400036900315141371
+      Grass finished_133: 2223079268614297443
+      Grass finished_108: 3266514400300013298
+      Grass finished_129: 7267048876918214528
+      Grass finished_118: 3393196315172087655
+      Grass finished_192: 4447022168992471029
+      Grass finished_114: 8612638854499806572
+      Grass finished_161: 9089084272693971600
+      Grass finished_175: 3452558454779006585
+      Grass finished_43: -885361379436618522
+      Grass finished_56: -9074737157500884143
+      Grass finished_93: -8485255633379067228
+      Grass finished_138: -5468336593510823468
+      Grass finished_85: 8327812639535290727
+      Grass finished_122: 1931742163736298593
+      Grass finished_184: -2807587599241280443
+      Grass finished_35: 1173541098789196003
+      Grass finished_38: -2460758362655030792
+      Grass finished_139: 5178532212325569844
+      Grass finished_107: -6671051701119476874
+      Grass finished_145: -4471083658531536026
+      Grass finished_6: -2784613300571933228
+      Grass finished_101: 1705004513111563669
+      Grass finished_90: -4873445405176685433
+      Grass finished_134: -8639996880142889953
+      Grass finished_40: -6901418211907855968
+      Grass finished_25: 6672178899429069520
+      Grass finished_195: 642163373312372836
+      Grass finished_131: 7913118828697793940
+      Grass finished_44: 4361560162771038334
+      Grass finished_186: -8538979231106041269
+      Grass finished_154: 4023795006040387496
+      Grass finished_140: -7321108374404761864
+      Grass finished_117: 7538200656759010272
+      Grass finished_21: 8068096713016724575
+      Grass finished_150: 8253667282348555946
+      Grass finished_121: -3360155161771791844
+      Grass finished_67: -1304728681737574623
+      Grass finished_94: 2908672584576850642
+      Grass finished_137: 2523393204053401304
+      Grass finished_143: -1213358692710638053
+      Grass finished_146: -7798260461494868995
+      Grass finished_180: 4612407149123044922
+      Grass finished_168: 3987357683490864074
+      Grass finished_17: -7301675858703396469
+      Grass finished_158: -338731538598417568
+      Grass finished_16: 6981856924587349809
+      Grass finished_87: -2915297320272215737
+      Grass finished_51: 7189867137327922935
+      Grass finished_174: 5091243795053496506
+      Grass finished_91: 788058036846943881
+      Grass finished_130: -6692311552282393366
+      Grass finished_162: -400718481862855480
+      Grass finished_110: -1458842980625538854
+      Grass finished_8: 5833381645592397844
+      Grass finished_82: -3650784384641560456
+      Grass finished_68: -3965887989901604424
+      Grass finished_99: -9183639949709235022
+      Grass finished_81: -3921194607186275844
+      Grass finished_169: 6176867175405747518
+      Grass finished_181: 1733341137078128263
+      Grass finished_187: 4193510629965667902
+      Grass finished_113: 25944948325231359
+      Grass finished_98: -8689012925862563414
+      Grass finished_102: -350142559155873227
+      Grass finished_96: -5978966380792477873
+      Grass finished_65: 1577707760991171483
+      Grass finished_2: 756041707104345156
+      Grass finished_165: -7041345171144840790
+      Grass finished_14: -615852151075725599
+      Grass finished_152: 942470076536607870
+      Grass finished_166: -7944766231295212987
+      Grass finished_104: 4373855592433202365
+      Grass finished_15: 2446543973562521407
+      Grass finished_36: -3517366603950111426
+      Grass finished_115: -3312984872902644917
+      Grass finished_167: -6038516752781724784
+      Grass finished_89: 582874829059370506
+      Grass finished_32: -4250010198984941199
+      Grass finished_22: 1187624311065103161
+      Grass finished_135: -3807631452855786727
+      Grass finished_172: -5143600541741339825
+      Grass finished_29: -3625720195413567697
+      Grass finished_74: 2752374644538695170
+      Grass finished_156: 2204626252569023691
+      Grass finished_92: -2041766594135152131
+      Grass finished_58: 4670973184880247231
+      Grass finished_24: -8956557679376393552
+      Grass finished_52: -180380917526876880
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

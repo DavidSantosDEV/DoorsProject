@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine;
 
 public class LightFlicker : MonoBehaviour
@@ -9,12 +9,12 @@ public class LightFlicker : MonoBehaviour
     private float ScaleOfX=1;
     [SerializeField]
     private float Minspeed=1,MaxSpeed=40;
-    Light2D myLight;
+    UnityEngine.Rendering.Universal.Light2D myLight;
 
     // Start is called before the first frame update
     void Awake()
     {
-        myLight = GetComponent<Light2D>();
+        myLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
     }
 
     // Update is called once per frame

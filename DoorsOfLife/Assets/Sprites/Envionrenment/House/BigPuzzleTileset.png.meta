@@ -75,7 +75,7 @@ TextureImporter:
       213: -2172263279870170027
     second: BigPuzzleTileset_23
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -96,6 +96,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -105,8 +106,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -134,6 +135,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -149,6 +151,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
@@ -676,6 +726,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BigPuzzleTileset_2: -4058118894651047197
+      BigPuzzleTileset_14: 1940286267292212625
+      BigPuzzleTileset_0: -3499325021430396869
+      BigPuzzleTileset_9: -7713806746772042864
+      BigPuzzleTileset_22: 6920265482272257616
+      BigPuzzleTileset_4: 7917322758413746693
+      BigPuzzleTileset_7: 7682675948321587944
+      BigPuzzleTileset_17: -3687260860756554993
+      BigPuzzleTileset_19: 3269622904577164373
+      BigPuzzleTileset_1: 3855303692724815983
+      BigPuzzleTileset_10: 3616408059203049683
+      BigPuzzleTileset_23: -2172263279870170027
+      BigPuzzleTileset_16: 8156592632511772856
+      BigPuzzleTileset_12: -2748612050995596959
+      BigPuzzleTileset_3: -6686771759898947552
+      BigPuzzleTileset_8: 1248927167725501289
+      BigPuzzleTileset_11: -887282680286388477
+      BigPuzzleTileset_15: -7311148217471487124
+      BigPuzzleTileset_20: 8815801215906689438
+      BigPuzzleTileset_6: -7591480261521822651
+      BigPuzzleTileset_5: 2789762419234610641
+      BigPuzzleTileset_13: 6973879966931255825
+      BigPuzzleTileset_21: -1797765145180518567
+      BigPuzzleTileset_18: -1451396356519274149
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

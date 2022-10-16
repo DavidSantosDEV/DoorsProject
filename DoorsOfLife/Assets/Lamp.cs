@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine;
 
 public class Lamp : MonoBehaviour
@@ -9,7 +9,7 @@ public class Lamp : MonoBehaviour
     private LightColorChanger master;
 
     [SerializeField]
-    private Light2D myLight;
+    private UnityEngine.Rendering.Universal.Light2D myLight;
 
     private float time = 1;
 

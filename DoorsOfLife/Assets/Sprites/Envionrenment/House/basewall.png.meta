@@ -204,7 +204,7 @@ TextureImporter:
       213: 4798043170399241503
     second: basewall_66
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -225,6 +225,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -234,8 +235,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -263,6 +264,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -303,6 +305,30 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -1732,6 +1758,74 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      basewall_21: -1783865558547786808
+      basewall_56: -9149653587378740568
+      basewall_38: -3966959242542959579
+      basewall_29: 6698325320433494215
+      basewall_4: 4483350199682261104
+      basewall_13: 3275929098789195800
+      basewall_34: 4076466236517072921
+      basewall_62: -158689983258876958
+      basewall_3: -1227539154357368443
+      basewall_18: -1074094325528267102
+      basewall_33: -1045534777598038408
+      basewall_12: 8825837516127494880
+      basewall_49: 8584494177132905748
+      basewall_53: -7026523444341593049
+      basewall_44: -8042887879068557251
+      basewall_16: -4318727923561838751
+      basewall_46: 9148799541103017514
+      basewall_8: 6689141890291314897
+      basewall_14: 4185153502055760449
+      basewall_23: -2813062906833392834
+      basewall_65: 3933386873676214745
+      basewall_25: 7388630513493361226
+      basewall_31: -5626773354060839026
+      basewall_2: 9044942474406043921
+      basewall_30: -1381105569022248207
+      basewall_35: -2300247055776532554
+      basewall_36: 6121995610841004063
+      basewall_52: 500487990778891149
+      basewall_41: -2405544188671672897
+      basewall_5: 6689037071943109569
+      basewall_28: -1184226870667724540
+      basewall_64: 6901327528470845977
+      basewall_47: -2284069518425583803
+      basewall_19: -2699422738487401999
+      basewall_57: 2365804104727700198
+      basewall_20: -4367859747342519821
+      basewall_22: -174171767822132483
+      basewall_11: 7244581825336169589
+      basewall_54: 1962482866507911262
+      basewall_59: 5709153550791667127
+      basewall_6: -5064906800852629160
+      basewall_55: 4388768833760120996
+      basewall_26: -780263829048248675
+      basewall_40: -7064108005030944207
+      basewall_43: 1933991110925532927
+      basewall_51: 295293985540484726
+      basewall_42: 1312979490401721523
+      basewall_37: 8404248913646001402
+      basewall_32: -6300213573879075148
+      basewall_17: -8846940973900700444
+      basewall_24: -1025533265389871943
+      basewall_9: 3428474404526494657
+      basewall_50: -3810807611228415771
+      basewall_60: 6166762095816710334
+      basewall_66: 4798043170399241503
+      basewall_27: -3428038323234342800
+      basewall_45: -8262822686834669636
+      basewall_48: 313697081155156079
+      basewall_61: 3290273293847990521
+      basewall_1: 599771875247168363
+      basewall_10: 6706884405557720554
+      basewall_63: -2041004640207238050
+      basewall_7: -5876474759789013871
+      basewall_0: -4387308502401618561
+      basewall_58: -5565057490888657314
+      basewall_15: 3803796881995281885
+      basewall_39: -792281359754140235
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

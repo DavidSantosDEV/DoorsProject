@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine;
 using Cinemachine;
 public class CameraSwapper : MonoBehaviour
 {
     [SerializeField]
-    private Light2D[] lights;
+    private UnityEngine.Rendering.Universal.Light2D[] lights;
 
     [SerializeField]
     private bool followPlayer=false;
@@ -73,7 +73,7 @@ public class CameraSwapper : MonoBehaviour
             //myCamera.enabled = true;
             shutlights = false;
             CancelInvoke(nameof(waitLightsOFF));
-            foreach (Light2D light in lights)
+            foreach (UnityEngine.Rendering.Universal.Light2D light in lights)
             {
                 if(light)
                 light.enabled = true;
@@ -86,7 +86,7 @@ public class CameraSwapper : MonoBehaviour
         col.isTrigger = true;
         if (shutlights) //cancel invoke doesnt work??
         {
-            foreach (Light2D light in lights)
+            foreach (UnityEngine.Rendering.Universal.Light2D light in lights)
             {
                 if(light)
                 light.enabled = false;

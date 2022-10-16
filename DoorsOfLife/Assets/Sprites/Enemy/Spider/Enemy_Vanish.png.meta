@@ -114,7 +114,7 @@ TextureImporter:
       213: 4745447012430954964
     second: Enemy_Vanish_36
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -135,6 +135,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -144,8 +145,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -173,6 +174,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -188,6 +190,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -988,6 +1038,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Enemy_Vanish_13: -6322206031936344871
+      Enemy_Vanish_23: -5896595020530075674
+      Enemy_Vanish_24: 785273600057704993
+      Enemy_Vanish_12: -7735369781284232536
+      Enemy_Vanish_19: -9075148797755631978
+      Enemy_Vanish_9: -6938282351826693911
+      Enemy_Vanish_6: 4692930999004801339
+      Enemy_Vanish_30: -8386046908852092191
+      Enemy_Vanish_4: -267649813124061421
+      Enemy_Vanish_15: 2610308692025943983
+      Enemy_Vanish_25: -1934407253561650683
+      Enemy_Vanish_2: -7880997314382526873
+      Enemy_Vanish_8: 5361848605368479579
+      Enemy_Vanish_0: 5090951812875778553
+      Enemy_Vanish_20: -8547043724326417029
+      Enemy_Vanish_5: 4352450022081578843
+      Enemy_Vanish_16: -2273929583770534980
+      Enemy_Vanish_31: -17369373111025179
+      Enemy_Vanish_28: 6826246746173662312
+      Enemy_Vanish_22: 8663271492566329618
+      Enemy_Vanish_18: 6689995113732249822
+      Enemy_Vanish_26: -2859768935896610756
+      Enemy_Vanish_21: -6211052884468024558
+      Enemy_Vanish_10: 1771889635232797644
+      Enemy_Vanish_33: 68013683151036621
+      Enemy_Vanish_7: -3971392416477486305
+      Enemy_Vanish_11: 8736195210970989512
+      Enemy_Vanish_14: -6753651111061527737
+      Enemy_Vanish_27: -8734968931622298165
+      Enemy_Vanish_35: -4217819891339002558
+      Enemy_Vanish_32: 2547814290540466199
+      Enemy_Vanish_3: -5062321416376568277
+      Enemy_Vanish_34: 4590398897206901477
+      Enemy_Vanish_1: 1906728570382726633
+      Enemy_Vanish_29: -7913779523423941418
+      Enemy_Vanish_36: 4745447012430954964
+      Enemy_Vanish_17: 5338287050384978443
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

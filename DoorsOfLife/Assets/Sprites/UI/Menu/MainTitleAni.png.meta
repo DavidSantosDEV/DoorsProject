@@ -141,7 +141,7 @@ TextureImporter:
       213: -1941650652015304910
     second: MainTitleAni_45
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -162,6 +162,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -171,8 +172,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -200,6 +201,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -215,6 +217,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1204,6 +1254,53 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MainTitleAni_34: 8994588424953974194
+      MainTitleAni_40: -3635961765372482303
+      MainTitleAni_2: -7169953265090134314
+      MainTitleAni_11: 2396833929252561236
+      MainTitleAni_25: 1527316827160940353
+      MainTitleAni_33: 8285151134685574254
+      MainTitleAni_1: 3337386944528526786
+      MainTitleAni_15: -1752009484723542613
+      MainTitleAni_32: 7287014899200730466
+      MainTitleAni_35: -3854786219576982979
+      MainTitleAni_13: -1145741510875694413
+      MainTitleAni_38: 8637559213428515735
+      MainTitleAni_39: 8696711092696439428
+      MainTitleAni_36: -7109997580588204871
+      MainTitleAni_12: -7156334463474873761
+      MainTitleAni_22: -1827910877702510469
+      MainTitleAni_45: -1941650652015304910
+      MainTitleAni_27: 8053119518358029284
+      MainTitleAni_0: 7398779898298322611
+      MainTitleAni_19: -498584999949107576
+      MainTitleAni_6: -23399054443127632
+      MainTitleAni_8: 4749678085921584819
+      MainTitleAni_20: 2296638701032809862
+      MainTitleAni_42: 2891955397138490279
+      MainTitleAni_18: -4577144847099374204
+      MainTitleAni_24: 2785450875692567183
+      MainTitleAni_14: 846342224936214446
+      MainTitleAni_9: -370740600442821818
+      MainTitleAni_16: 2237625947863331696
+      MainTitleAni_5: -9136295337453245987
+      MainTitleAni_21: 5489651033251320344
+      MainTitleAni_28: 8387851350776924866
+      MainTitleAni_3: 7729583192538904493
+      MainTitleAni_4: -299202581882854806
+      MainTitleAni_17: -6058807466612346700
+      MainTitleAni_7: 4477113686297672326
+      MainTitleAni_43: -997283872002742072
+      MainTitleAni_41: -6518540115117511213
+      MainTitleAni_10: -848586733078616159
+      MainTitleAni_44: -9096460981195714057
+      MainTitleAni_29: -2628114365447241893
+      MainTitleAni_37: -8792981391255988591
+      MainTitleAni_31: 3941744545887415315
+      MainTitleAni_26: 5191117803646624908
+      MainTitleAni_23: -1495176259328090014
+      MainTitleAni_30: -1662016007251294955
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

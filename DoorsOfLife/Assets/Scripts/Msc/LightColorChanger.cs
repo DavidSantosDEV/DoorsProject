@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine;
 
 public class LightColorChanger : MonoBehaviour
 {
     [SerializeField]
-    private Light2D myLight;
+    private UnityEngine.Rendering.Universal.Light2D myLight;
 
     [SerializeField]
     private Color[] colors;

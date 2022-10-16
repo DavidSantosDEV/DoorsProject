@@ -78,7 +78,7 @@ TextureImporter:
       213: -8250855776969453808
     second: MC_Die_24
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -99,6 +99,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -108,8 +109,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -137,6 +138,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -176,6 +178,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -724,6 +750,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MC_Die_24: -8250855776969453808
+      MC_Die_19: -5507285275142586380
+      MC_Die_0: 7288316224070418305
+      MC_Die_2: -5117764356859661377
+      MC_Die_9: -4686278290132479675
+      MC_Die_23: 4048996608312638259
+      MC_Die_11: 1119427300598952669
+      MC_Die_8: -181663935358866614
+      MC_Die_6: 6607243493008698874
+      MC_Die_14: -5671429165810086725
+      MC_Die_21: 5437728806409670357
+      MC_Die_5: -8090656025760611249
+      MC_Die_18: -5615660489962059922
+      MC_Die_20: -1891425707980255152
+      MC_Die_16: -5158547469385688143
+      MC_Die_3: 3228752130837247950
+      MC_Die_22: 3140896408894897412
+      MC_Die_1: -7322026236972818380
+      MC_Die_10: -6331688761028966668
+      MC_Die_12: -614651499878794962
+      MC_Die_13: -5837346761022685420
+      MC_Die_17: 8194835788916271671
+      MC_Die_4: -4802554281864831872
+      MC_Die_15: -7621013325665724297
+      MC_Die_7: 4930555213119576132
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

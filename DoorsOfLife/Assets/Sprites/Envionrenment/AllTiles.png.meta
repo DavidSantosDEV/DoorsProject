@@ -360,7 +360,7 @@ TextureImporter:
       213: 4057508346442866540
     second: AllTiles_118
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -381,6 +381,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -390,8 +391,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -419,6 +420,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -434,6 +436,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2956,6 +3006,126 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      AllTiles_68: 7552249549433837653
+      AllTiles_5: -1232528933831792395
+      AllTiles_30: -3131562235928835677
+      AllTiles_71: 1243442079860429819
+      AllTiles_39: 3434084095921984464
+      AllTiles_46: 6603650797910206938
+      AllTiles_96: -3490555828653476215
+      AllTiles_70: 2917495947093836135
+      AllTiles_93: 6524106067864086259
+      AllTiles_113: -1525881875794376884
+      AllTiles_100: -7723210566686370031
+      AllTiles_52: 5121825817967402477
+      AllTiles_45: 662095587520604516
+      AllTiles_104: -2781377546500861557
+      AllTiles_53: 4046981002818578458
+      AllTiles_4: 7895384742571321490
+      AllTiles_22: -6691122871423776401
+      AllTiles_1: -8438103457733878819
+      AllTiles_33: 6886464477584136071
+      AllTiles_57: 2873934822366558742
+      AllTiles_111: 1244112272320096847
+      AllTiles_115: 5242777822073486001
+      AllTiles_14: -5649290280074263317
+      AllTiles_101: -5550014524948496276
+      AllTiles_32: 4577257793387881655
+      AllTiles_84: 1408314864756496494
+      AllTiles_56: -3410705199764463112
+      AllTiles_2: 5703267056257131416
+      AllTiles_77: -7019084249466688531
+      AllTiles_69: -6800374995192829393
+      AllTiles_61: -124686030242882389
+      AllTiles_66: 8174773102681792533
+      AllTiles_91: 3242759630337294529
+      AllTiles_23: -16035613739227545
+      AllTiles_76: -7791425262882485854
+      AllTiles_24: -7177602291853156001
+      AllTiles_37: 6443642791664729654
+      AllTiles_55: 3722486117324158979
+      AllTiles_49: 538125205531273668
+      AllTiles_94: 2072925303959187599
+      AllTiles_29: -4625265219408736718
+      AllTiles_41: 3803299294894353597
+      AllTiles_54: -7846622210125173930
+      AllTiles_47: 476469413565867559
+      AllTiles_16: -5850681836745961247
+      AllTiles_12: -7720188335755736216
+      AllTiles_51: 518951034058598197
+      AllTiles_107: 8467746220919378865
+      AllTiles_103: -8744595980675949623
+      AllTiles_19: 7483861268176443561
+      AllTiles_62: -8831038695752826584
+      AllTiles_21: 7189860070007506798
+      AllTiles_0: 3277168512447367278
+      AllTiles_11: 6982933390692764106
+      AllTiles_27: 640347707055442915
+      AllTiles_95: 5455381875073650698
+      AllTiles_6: 6200219522821138877
+      AllTiles_85: 3971807393900180028
+      AllTiles_105: 4169820610484341810
+      AllTiles_114: -6851149621549836742
+      AllTiles_108: 2600880258272739385
+      AllTiles_92: -8118129068494834966
+      AllTiles_73: 2201065242813501296
+      AllTiles_20: 9074594442442092315
+      AllTiles_102: 4971589671549999692
+      AllTiles_31: 6719933209707680052
+      AllTiles_87: -8964292443876445739
+      AllTiles_117: -7363198033929767608
+      AllTiles_17: 8230631550692259764
+      AllTiles_106: 1919855282478503562
+      AllTiles_10: 3793335183810941559
+      AllTiles_81: 6642384705517001756
+      AllTiles_36: -4578533900827207790
+      AllTiles_72: -916793561849992327
+      AllTiles_109: -4884164193397692676
+      AllTiles_64: -8964820487789896114
+      AllTiles_74: -686723085361465912
+      AllTiles_34: 2656681246544130459
+      AllTiles_38: 4668179114270135445
+      AllTiles_59: 577470734865067309
+      AllTiles_99: -8919565297300998415
+      AllTiles_3: -6137043926851693033
+      AllTiles_112: -3716201144908046855
+      AllTiles_15: 6087783428068127133
+      AllTiles_9: -5770602162501412050
+      AllTiles_8: 11123991528390194
+      AllTiles_35: 1709852097511302838
+      AllTiles_82: -6126272268293597475
+      AllTiles_43: 4238621064677976128
+      AllTiles_18: 5650896978936526133
+      AllTiles_63: 4856382559231605212
+      AllTiles_67: -531519899703959333
+      AllTiles_86: -1315999020310887689
+      AllTiles_88: -6619812833183422988
+      AllTiles_90: -6206128928487800419
+      AllTiles_42: -6767841204191009847
+      AllTiles_78: 4927220161489125186
+      AllTiles_89: 6819447719333631953
+      AllTiles_65: -435416761550107392
+      AllTiles_79: 8228746609517548870
+      AllTiles_116: 7242049215193514804
+      AllTiles_26: -9042678032944250009
+      AllTiles_40: -9003125534460269212
+      AllTiles_28: 2561028890761737084
+      AllTiles_75: -1832405049373532819
+      AllTiles_44: -2935996370346643238
+      AllTiles_58: 4172714921666217117
+      AllTiles_110: 593217633579557974
+      AllTiles_50: 5605261748210100183
+      AllTiles_80: -1373778269521717787
+      AllTiles_83: -6536259065787525251
+      AllTiles_97: 4315397315665482953
+      AllTiles_98: 5849878873259620806
+      AllTiles_60: -8463747250980850916
+      AllTiles_118: 4057508346442866540
+      AllTiles_48: -1001872047109676530
+      AllTiles_25: 6460459030506499902
+      AllTiles_13: -3438897694727611290
+      AllTiles_7: -6150920847993863799
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

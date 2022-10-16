@@ -273,7 +273,7 @@ TextureImporter:
       213: -8327038910987162702
     second: basewall_painted_89
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -294,6 +294,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -303,8 +304,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -332,6 +333,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -347,6 +349,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2260,6 +2310,97 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      basewall_painted_55: 8284211150272269322
+      basewall_painted_76: -7490531442853569761
+      basewall_painted_25: -4568621258264979623
+      basewall_painted_69: 1401767240472703865
+      basewall_painted_37: -6910973062817605369
+      basewall_painted_65: -8727686969224593173
+      basewall_painted_74: -6622633730684496242
+      basewall_painted_61: -4710673512904470233
+      basewall_painted_21: -7919283254131571423
+      basewall_painted_22: 7747029132078812538
+      basewall_painted_53: -8149537453593576880
+      basewall_painted_68: 776389542755097197
+      basewall_painted_73: 703495000112403929
+      basewall_painted_4: 7975119474251023209
+      basewall_painted_67: -3510441673269744926
+      basewall_painted_80: 5704729008431576051
+      basewall_painted_83: -2590086694507035605
+      basewall_painted_41: -2303616886277703116
+      basewall_painted_30: 5797777547477130275
+      basewall_painted_59: -3405470246882462243
+      basewall_painted_51: -4183008637724298018
+      basewall_painted_29: 6497371464017681379
+      basewall_painted_3: 4461333724177938270
+      basewall_painted_32: 155510901843329839
+      basewall_painted_49: -4373384795690104497
+      basewall_painted_54: 8237038588315774238
+      basewall_painted_40: -3053715408392488116
+      basewall_painted_85: -7596522502906721997
+      basewall_painted_0: -2698978521929642115
+      basewall_painted_71: 5926258144144162968
+      basewall_painted_15: -8468730487483352234
+      basewall_painted_52: -3111249480372833794
+      basewall_painted_23: 6226864655968575436
+      basewall_painted_46: 2635487414296914442
+      basewall_painted_27: -2034939185340131127
+      basewall_painted_36: -7108059592908303261
+      basewall_painted_66: -2724017428909011851
+      basewall_painted_48: 2865789279526396243
+      basewall_painted_24: -4524592596952819361
+      basewall_painted_12: -5755966794512008045
+      basewall_painted_17: -1249644938605457254
+      basewall_painted_5: 5237194371335300544
+      basewall_painted_78: 3754569315037895636
+      basewall_painted_84: -3670410189924987446
+      basewall_painted_58: 5415692767734018757
+      basewall_painted_9: 6943307172118261207
+      basewall_painted_79: 6279065498255498359
+      basewall_painted_42: -3975401857333070236
+      basewall_painted_2: -3667384225593116770
+      basewall_painted_28: 882736214512861241
+      basewall_painted_47: 7272791259288793126
+      basewall_painted_39: -4325105189646805329
+      basewall_painted_44: -804109557582356563
+      basewall_painted_13: 3998689631840779355
+      basewall_painted_35: -1415948568471045948
+      basewall_painted_6: -7182668043021687864
+      basewall_painted_10: 3104171618489994839
+      basewall_painted_8: -727653603735929718
+      basewall_painted_63: -1616029611575338756
+      basewall_painted_31: 5673146482135577320
+      basewall_painted_26: 8976215562205832330
+      basewall_painted_72: -2522821318784338556
+      basewall_painted_60: 8350132385477619580
+      basewall_painted_89: -8327038910987162702
+      basewall_painted_75: 4916466538044102156
+      basewall_painted_70: -5899872814098743361
+      basewall_painted_33: -270867040305199357
+      basewall_painted_45: -4587833552086965574
+      basewall_painted_87: -4115295192599125831
+      basewall_painted_82: 2146303163373088927
+      basewall_painted_7: -3598961642679986236
+      basewall_painted_18: -48011036537780489
+      basewall_painted_14: -3570607199842280351
+      basewall_painted_43: -1189060030436075768
+      basewall_painted_88: -6849734236152867171
+      basewall_painted_19: 3127149182617723081
+      basewall_painted_16: -3541707913749330547
+      basewall_painted_1: -442763630315294726
+      basewall_painted_20: 613297407579548772
+      basewall_painted_77: -2790778482531952195
+      basewall_painted_11: -587045681106317481
+      basewall_painted_56: -7578929794928461825
+      basewall_painted_34: -1191885931794054411
+      basewall_painted_57: 7356936674196267410
+      basewall_painted_38: 6002350345444389314
+      basewall_painted_64: 2246771240506110558
+      basewall_painted_62: 8766842107272833467
+      basewall_painted_81: 133233742459951163
+      basewall_painted_50: 541361101422964745
+      basewall_painted_86: -8380655667615983493
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

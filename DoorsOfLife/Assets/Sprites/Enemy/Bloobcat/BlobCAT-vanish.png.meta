@@ -108,7 +108,7 @@ TextureImporter:
       213: -3830231850746125805
     second: BlobCAT-vanish_34
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -129,6 +129,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -138,8 +139,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -167,6 +168,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -182,6 +184,54 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -940,6 +990,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BlobCAT-vanish_23: -6940625675027856060
+      BlobCAT-vanish_16: -5446219973047115678
+      BlobCAT-vanish_28: -5292952350282625965
+      BlobCAT-vanish_8: -3875340866744485360
+      BlobCAT-vanish_22: -3234929022678382602
+      BlobCAT-vanish_24: 373601110863841077
+      BlobCAT-vanish_29: 8252314350144742812
+      BlobCAT-vanish_12: 3626734626269324171
+      BlobCAT-vanish_26: 1711969041664894465
+      BlobCAT-vanish_13: 4779103856824293900
+      BlobCAT-vanish_18: -3892033273311340025
+      BlobCAT-vanish_17: 6960656081681071040
+      BlobCAT-vanish_9: -7948089208264127676
+      BlobCAT-vanish_32: 5109119252382585057
+      BlobCAT-vanish_19: -5236183979863981201
+      BlobCAT-vanish_27: 3366933415363313604
+      BlobCAT-vanish_3: 1919218978893745349
+      BlobCAT-vanish_21: 7943842151722430933
+      BlobCAT-vanish_7: -4774542992502546257
+      BlobCAT-vanish_30: 7911681030515129451
+      BlobCAT-vanish_0: -4115381808144999440
+      BlobCAT-vanish_4: -4484164840095962425
+      BlobCAT-vanish_14: 7779414119592110795
+      BlobCAT-vanish_34: -3830231850746125805
+      BlobCAT-vanish_5: 5535933633889301631
+      BlobCAT-vanish_31: -583223516996466045
+      BlobCAT-vanish_6: 5141281852800105690
+      BlobCAT-vanish_2: 167223333331736842
+      BlobCAT-vanish_25: 4831026613208332134
+      BlobCAT-vanish_15: -2419747035167680087
+      BlobCAT-vanish_10: -4372495711309886172
+      BlobCAT-vanish_1: 226463837892030423
+      BlobCAT-vanish_20: 3479024054541471294
+      BlobCAT-vanish_33: -3752214378625970067
+      BlobCAT-vanish_11: -6241535454039685440
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
